@@ -1,0 +1,381 @@
+import { GenkiLesson } from '@/types/genki';
+import { generateLessonAudioTracks } from '../audio/audioManifest';
+
+export const lesson01: GenkiLesson = {
+  id: 'genki1-lesson01',
+  book: 'genki1',
+  lessonNumber: 1,
+  title: 'New Friends',
+  titleJapanese: 'あたらしいともだち',
+  description:
+    'Learn to introduce yourself, ask about others, and exchange basic information like names, nationalities, and occupations.',
+  objectives: [
+    'Introduce yourself in Japanese',
+    'Ask and answer questions about nationality and occupation',
+    'Use the copula です (desu)',
+    'Form basic questions with か (ka)',
+    'Count and tell your age',
+  ],
+  estimatedMinutes: 45,
+  sections: [
+    {
+      id: 'l01-dialogue',
+      type: 'dialogue',
+      title: 'Dialogue',
+      titleJapanese: 'かいわ',
+      content: {
+        dialogue: {
+          id: 'l01-d01',
+          title: 'Meeting at University',
+          titleJapanese: 'だいがくであう',
+          context:
+            'Mary, an international student from America, meets Takeshi, a Japanese student, at the university.',
+          characters: ['Mary', 'Takeshi'],
+          lines: [
+            {
+              speaker: 'Mary',
+              japanese: 'すみません。いま なんじ ですか。',
+              reading: 'すみません。いま なんじ ですか。',
+              english: 'Excuse me. What time is it now?',
+            },
+            {
+              speaker: 'Takeshi',
+              japanese: 'じゅうにじはんです。',
+              reading: 'じゅうにじはんです。',
+              english: "It's twelve thirty.",
+            },
+            {
+              speaker: 'Mary',
+              japanese: 'ありがとうございます。',
+              reading: 'ありがとうございます。',
+              english: 'Thank you very much.',
+            },
+            {
+              speaker: 'Takeshi',
+              japanese: 'あのう、りゅうがくせいですか。',
+              reading: 'あのう、りゅうがくせいですか。',
+              english: 'Um, are you an international student?',
+            },
+            {
+              speaker: 'Mary',
+              japanese: 'はい、アリゾナだいがくのがくせいです。',
+              reading: 'はい、アリゾナだいがくのがくせいです。',
+              english: "Yes, I'm a student at the University of Arizona.",
+            },
+            {
+              speaker: 'Takeshi',
+              japanese: 'そうですか。せんこうは なんですか。',
+              reading: 'そうですか。せんこうは なんですか。',
+              english: 'I see. What is your major?',
+            },
+            {
+              speaker: 'Mary',
+              japanese: 'にほんごです。いま にねんせいです。',
+              reading: 'にほんごです。いま にねんせいです。',
+              english: "Japanese. I'm a sophomore now.",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'l01-vocab',
+      type: 'vocabulary',
+      title: 'Vocabulary',
+      titleJapanese: 'たんご',
+      content: {
+        vocabulary: [
+          // Nouns - People
+          {
+            id: 'l01-v01',
+            japanese: '私',
+            reading: 'わたし',
+            romaji: 'watashi',
+            english: 'I',
+            partOfSpeech: 'noun',
+            category: 'People',
+          },
+          {
+            id: 'l01-v02',
+            japanese: '友達',
+            reading: 'ともだち',
+            romaji: 'tomodachi',
+            english: 'friend',
+            partOfSpeech: 'noun',
+            category: 'People',
+          },
+          {
+            id: 'l01-v03',
+            japanese: '学生',
+            reading: 'がくせい',
+            romaji: 'gakusei',
+            english: 'student',
+            partOfSpeech: 'noun',
+            category: 'People',
+          },
+          {
+            id: 'l01-v04',
+            japanese: '留学生',
+            reading: 'りゅうがくせい',
+            romaji: 'ryuugakusei',
+            english: 'international student',
+            partOfSpeech: 'noun',
+            category: 'People',
+          },
+          {
+            id: 'l01-v05',
+            japanese: '先生',
+            reading: 'せんせい',
+            romaji: 'sensei',
+            english: 'teacher; professor',
+            partOfSpeech: 'noun',
+            category: 'People',
+          },
+          // Nouns - Places
+          {
+            id: 'l01-v06',
+            japanese: '大学',
+            reading: 'だいがく',
+            romaji: 'daigaku',
+            english: 'university; college',
+            partOfSpeech: 'noun',
+            category: 'Places',
+          },
+          {
+            id: 'l01-v07',
+            japanese: '高校',
+            reading: 'こうこう',
+            romaji: 'koukou',
+            english: 'high school',
+            partOfSpeech: 'noun',
+            category: 'Places',
+          },
+          // Nouns - Academic
+          {
+            id: 'l01-v08',
+            japanese: '専攻',
+            reading: 'せんこう',
+            romaji: 'senkou',
+            english: 'major',
+            partOfSpeech: 'noun',
+            category: 'Academic',
+          },
+          {
+            id: 'l01-v09',
+            japanese: '一年生',
+            reading: 'いちねんせい',
+            romaji: 'ichinensei',
+            english: 'first-year student',
+            partOfSpeech: 'noun',
+            category: 'Academic',
+          },
+          {
+            id: 'l01-v10',
+            japanese: '二年生',
+            reading: 'にねんせい',
+            romaji: 'ninensei',
+            english: 'second-year student',
+            partOfSpeech: 'noun',
+            category: 'Academic',
+          },
+          {
+            id: 'l01-v11',
+            japanese: '三年生',
+            reading: 'さんねんせい',
+            romaji: 'sannensei',
+            english: 'third-year student',
+            partOfSpeech: 'noun',
+            category: 'Academic',
+          },
+          {
+            id: 'l01-v12',
+            japanese: '四年生',
+            reading: 'よねんせい',
+            romaji: 'yonensei',
+            english: 'fourth-year student',
+            partOfSpeech: 'noun',
+            category: 'Academic',
+          },
+          // Countries/Nationalities
+          {
+            id: 'l01-v13',
+            japanese: '日本',
+            reading: 'にほん',
+            romaji: 'nihon',
+            english: 'Japan',
+            partOfSpeech: 'noun',
+            category: 'Countries',
+          },
+          {
+            id: 'l01-v14',
+            japanese: 'アメリカ',
+            reading: 'アメリカ',
+            romaji: 'amerika',
+            english: 'America',
+            partOfSpeech: 'noun',
+            category: 'Countries',
+          },
+          {
+            id: 'l01-v15',
+            japanese: '日本人',
+            reading: 'にほんじん',
+            romaji: 'nihonjin',
+            english: 'Japanese person',
+            partOfSpeech: 'noun',
+            category: 'People',
+          },
+          // Numbers/Age
+          {
+            id: 'l01-v16',
+            japanese: '歳',
+            reading: 'さい',
+            romaji: 'sai',
+            english: '...years old',
+            partOfSpeech: 'counter',
+            category: 'Numbers',
+          },
+          // Expressions
+          {
+            id: 'l01-v17',
+            japanese: 'はい',
+            reading: 'はい',
+            romaji: 'hai',
+            english: 'yes',
+            partOfSpeech: 'expression',
+            category: 'Expressions',
+          },
+          {
+            id: 'l01-v18',
+            japanese: 'いいえ',
+            reading: 'いいえ',
+            romaji: 'iie',
+            english: 'no',
+            partOfSpeech: 'expression',
+            category: 'Expressions',
+          },
+          {
+            id: 'l01-v19',
+            japanese: 'すみません',
+            reading: 'すみません',
+            romaji: 'sumimasen',
+            english: "excuse me; I'm sorry",
+            partOfSpeech: 'expression',
+            category: 'Expressions',
+          },
+          {
+            id: 'l01-v20',
+            japanese: 'ありがとうございます',
+            reading: 'ありがとうございます',
+            romaji: 'arigatou gozaimasu',
+            english: 'thank you',
+            partOfSpeech: 'expression',
+            category: 'Expressions',
+          },
+        ],
+      },
+    },
+    {
+      id: 'l01-grammar',
+      type: 'grammar',
+      title: 'Grammar',
+      titleJapanese: 'ぶんぽう',
+      content: {
+        grammar: [
+          {
+            id: 'l01-g01',
+            title: 'X は Y です',
+            pattern: '[Topic] は [Noun] です',
+            explanation:
+              'This is the most basic sentence pattern in Japanese. It\'s used to state that X is Y. The particle は (wa) marks the topic of the sentence, and です (desu) is the polite copula meaning "is/am/are".',
+            culturalNote:
+              'Japanese speakers often omit the topic when it\'s clear from context. Saying わたしは (watashi wa) too often can sound self-centered.',
+            examples: [
+              {
+                japanese: '私は学生です。',
+                reading: 'わたしはがくせいです。',
+                english: 'I am a student.',
+                breakdown: '私(I) + は(topic) + 学生(student) + です(am)',
+              },
+              {
+                japanese: 'たけしさんは日本人です。',
+                reading: 'たけしさんはにほんじんです。',
+                english: 'Takeshi is Japanese.',
+                breakdown: 'たけしさん(Takeshi) + は(topic) + 日本人(Japanese person) + です(is)',
+              },
+              {
+                japanese: '山下先生は先生です。',
+                reading: 'やましたせんせいはせんせいです。',
+                english: 'Professor Yamashita is a teacher.',
+              },
+            ],
+          },
+          {
+            id: 'l01-g02',
+            title: 'Question Sentences (か)',
+            pattern: '[Statement] + か',
+            explanation:
+              'To turn a statement into a yes/no question, simply add the particle か (ka) at the end. In polite speech, the intonation doesn\'t need to rise like in English.',
+            examples: [
+              {
+                japanese: '学生ですか。',
+                reading: 'がくせいですか。',
+                english: 'Are you a student?',
+              },
+              {
+                japanese: 'りゅうがくせいですか。',
+                reading: 'りゅうがくせいですか。',
+                english: 'Are you an international student?',
+              },
+              {
+                japanese: '日本人ですか。',
+                reading: 'にほんじんですか。',
+                english: 'Are you Japanese?',
+              },
+            ],
+          },
+          {
+            id: 'l01-g03',
+            title: 'Noun の Noun',
+            pattern: '[Noun1] の [Noun2]',
+            explanation:
+              'The particle の (no) connects two nouns. It can indicate possession, affiliation, or description. The first noun modifies the second noun.',
+            examples: [
+              {
+                japanese: '東京大学の学生',
+                reading: 'とうきょうだいがくのがくせい',
+                english: 'a student of Tokyo University',
+                breakdown: '東京大学(Tokyo University) + の(of) + 学生(student)',
+              },
+              {
+                japanese: '日本語の先生',
+                reading: 'にほんごのせんせい',
+                english: 'a Japanese language teacher',
+              },
+              {
+                japanese: '私の専攻',
+                reading: 'わたしのせんこう',
+                english: 'my major',
+              },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      id: 'l01-culture',
+      type: 'culture',
+      title: 'Culture Note',
+      titleJapanese: 'ぶんかノート',
+      content: {
+        culturalNote: {
+          id: 'l01-c01',
+          title: 'Japanese Names and Titles',
+          content:
+            'In Japan, the family name comes before the given name. When meeting someone, Japanese people typically use family names with the honorific suffix -san (さん). For example, if someone\'s name is Yamamoto Yuki, you would call them Yamamoto-san. Using someone\'s first name without permission is considered too familiar or even rude.\n\nThe suffix -san is gender-neutral and can be used for anyone. Teachers and professors are called by their name plus -sensei (先生), which shows respect for their position. Never use -san for yourself!',
+          relatedLesson: 'genki1-lesson01',
+        },
+      },
+    },
+  ],
+  audioTracks: generateLessonAudioTracks('genki1', 1, 24),
+};
