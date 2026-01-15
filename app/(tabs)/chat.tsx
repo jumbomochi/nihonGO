@@ -9,7 +9,7 @@ import {
   Pressable,
   ActivityIndicator,
 } from 'react-native';
-import * as Haptics from 'expo-haptics';
+import { triggerImpact } from '@/lib/haptics';
 import { useChat } from '@/hooks/useChat';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { ChatBubble } from '@/components/chat/ChatBubble';
@@ -29,7 +29,7 @@ export default function ChatScreen() {
 
   const handleSend = useCallback(async () => {
     if (inputValue.trim() && apiKey) {
-      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      triggerImpact();
       const message = inputValue.trim();
       setInputValue('');
       await sendUserMessage(message, apiKey);
@@ -37,7 +37,7 @@ export default function ChatScreen() {
   }, [inputValue, apiKey, sendUserMessage]);
 
   const handleSuggestionPress = useCallback((text: string) => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    triggerImpact();
     setInputValue(text);
   }, []);
 

@@ -1,5 +1,5 @@
 import { Pressable, Text, ActivityIndicator } from 'react-native';
-import * as Haptics from 'expo-haptics';
+import { triggerImpact } from '@/lib/haptics';
 
 interface ButtonProps {
   onPress: () => void;
@@ -20,7 +20,7 @@ export function Button({
   const isDisabled = disabled || loading;
 
   const handlePress = async () => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    await triggerImpact();
     onPress();
   };
 

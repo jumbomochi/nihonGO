@@ -1,4 +1,4 @@
-import { useState, useId } from 'react';
+import { useState, useMemo } from 'react';
 import { TextInput, View, Text } from 'react-native';
 
 interface InputProps {
@@ -13,6 +13,12 @@ interface InputProps {
   error?: string;
 }
 
+// Generate a simple unique ID for accessibility
+let idCounter = 0;
+function generateId() {
+  return `input-label-${++idCounter}`;
+}
+
 export function Input({
   value,
   onChangeText,
@@ -25,7 +31,7 @@ export function Input({
   error,
 }: InputProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const labelId = useId();
+  const labelId = useMemo(() => generateId(), []);
 
   const borderStyle = error
     ? 'border-2 border-red-500'

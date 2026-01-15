@@ -36,13 +36,22 @@ export default function RootLayout() {
     ...FontAwesome.font,
   });
 
-  const [japaneseFontsLoaded] = useGoogleFonts({
+  // Japanese fonts are optional - don't block app loading if they fail
+  const [japaneseFontsLoaded, japaneseFontsError] = useGoogleFonts({
     NotoSansJP_400Regular,
     NotoSansJP_500Medium,
     NotoSansJP_700Bold,
   });
 
-  const loaded = fontsLoaded && japaneseFontsLoaded;
+  // Only require core fonts, Japanese fonts are optional enhancement
+  const loaded = fontsLoaded;
+
+  // Log Japanese font errors but don't throw
+  useEffect(() => {
+    if (japaneseFontsError) {
+      console.warn('Japanese fonts failed to load:', japaneseFontsError);
+    }
+  }, [japaneseFontsError]);
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {

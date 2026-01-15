@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import * as Haptics from 'expo-haptics';
+import { triggerSelection } from '@/lib/haptics';
 import { useUserStore } from '@/stores/userStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
@@ -197,7 +197,7 @@ const BookSelector = memo(function BookSelector({
   onSelectBook: (book: GenkiBook) => void;
 }) {
   const handleSelect = (book: GenkiBook) => {
-    Haptics.selectionAsync();
+    triggerSelection();
     onSelectBook(book);
   };
 
