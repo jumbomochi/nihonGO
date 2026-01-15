@@ -242,16 +242,12 @@ const BookSelector = memo(function BookSelector({
 });
 
 function BookProgress({ book }: { book: GenkiBook }) {
-  const { completedLessons, currentStreak } = useProgressStore();
-  const lessonIds = getAllLessonIds(book);
-  const completedCount = completedLessons.filter((l) =>
-    lessonIds.includes(l.topicId)
-  ).length;
-  const totalLessons = GENKI_BOOKS[book].totalLessons;
+  // Use store's getBookProgress method to avoid duplicating logic and get O(n) performance
+  const getBookProgress = useProgressStore((state) => state.getBookProgress);
+  const currentStreak = useProgressStore((state) => state.currentStreak);
+  const { completedLessons: completedCount, totalLessons, percentComplete: percentage } = getBookProgress(book);
 
   if (completedCount === 0) return null;
-
-  const percentage = Math.round((completedCount / totalLessons) * 100);
 
   return (
     <View className="mt-4 bg-green-50 dark:bg-green-900/20 rounded-2xl p-4">
@@ -284,8 +280,10 @@ function BookProgress({ book }: { book: GenkiBook }) {
 }
 
 const LessonCard = memo(function LessonCard({ lesson }: { lesson: GenkiLesson }) {
-  const { isLessonCompleted } = useProgressStore();
-  const completed = isLessonCompleted(lesson.id);
+  // Use selector to only re-render when THIS lesson's completion status changes
+  const completed = useProgressStore((state) =>
+    state.completedLessons.some((l) => l.topicId === lesson.id)
+  );
   const hasContent = lesson.sections.length > 0;
 
   const handlePress = () => {

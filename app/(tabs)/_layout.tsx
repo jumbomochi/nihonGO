@@ -1,10 +1,11 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
-
-import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+
+// Sakura theme colors matching the app's design
+const TINT_COLOR = '#ec4899';
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
@@ -19,7 +20,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: TINT_COLOR,
         tabBarStyle: {
           backgroundColor: colorScheme === 'dark' ? '#111827' : '#ffffff',
           borderTopColor: colorScheme === 'dark' ? '#1f2937' : '#e5e7eb',

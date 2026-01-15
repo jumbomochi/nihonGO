@@ -33,9 +33,11 @@ export default function ChatScreen() {
 
   useEffect(() => {
     if (messages.length > 0) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         flatListRef.current?.scrollToEnd({ animated: true });
       }, 100);
+      // Clean up timer on unmount or when messages change rapidly
+      return () => clearTimeout(timer);
     }
   }, [messages]);
 

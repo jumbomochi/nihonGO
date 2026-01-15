@@ -78,31 +78,26 @@ function createDefaultLessonProgress(
 function calculateStreak(streaks: DailyStreak[]): number {
   if (streaks.length === 0) return 0;
 
-  const sorted = [...streaks].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-
   const today = getToday();
   const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
 
-  // Check if the most recent activity is today or yesterday
-  if (sorted[0].date !== today && sorted[0].date !== yesterday) {
+  // Use Set for O(1) lookup instead of O(n log n) sorting
+  const streakDates = new Set(streaks.map((s) => s.date));
+
+  // Check if active streak exists (activity today or yesterday)
+  if (!streakDates.has(today) && !streakDates.has(yesterday)) {
     return 0;
   }
 
   let streak = 0;
-  let expectedDate = sorted[0].date === today ? today : yesterday;
+  let currentDate = streakDates.has(today) ? today : yesterday;
 
-  for (const day of sorted) {
-    if (day.date === expectedDate) {
-      streak++;
-      // Move to previous day
-      const prevDate = new Date(expectedDate);
-      prevDate.setDate(prevDate.getDate() - 1);
-      expectedDate = prevDate.toISOString().split('T')[0];
-    } else {
-      break;
-    }
+  // Count consecutive days backwards
+  while (streakDates.has(currentDate)) {
+    streak++;
+    const prevDate = new Date(currentDate);
+    prevDate.setDate(prevDate.getDate() - 1);
+    currentDate = prevDate.toISOString().split('T')[0];
   }
 
   return streak;

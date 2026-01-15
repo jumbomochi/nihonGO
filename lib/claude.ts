@@ -62,7 +62,8 @@ ${chineseContext}
 export async function sendMessage(
   messages: Message[],
   userContext: UserContext,
-  apiKey: string
+  apiKey: string,
+  signal?: AbortSignal
 ): Promise<string> {
   // Validate inputs
   if (!apiKey || apiKey.trim().length === 0) {
@@ -85,15 +86,20 @@ export async function sendMessage(
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 1024,
+        max_tokens: 2048,
         system: buildSystemPrompt(userContext),
         messages: messages.map((m) => ({
           role: m.role,
           content: m.content,
         })),
       }),
+      signal,
     });
   } catch (error) {
+    // Re-throw abort errors as-is for proper handling
+    if (error instanceof Error && error.name === 'AbortError') {
+      throw error;
+    }
     // Network errors (no internet, DNS failure, etc.)
     if (error instanceof TypeError) {
       throw new NetworkError('Failed to connect to API');
