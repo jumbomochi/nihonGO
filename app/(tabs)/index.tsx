@@ -1,13 +1,15 @@
-import React, { useEffect, useState, useMemo, memo } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import {
   View,
   Text,
   SafeAreaView,
   ScrollView,
   Pressable,
+  ActivityIndicator,
 } from 'react-native';
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import * as Haptics from 'expo-haptics';
 import { useUserStore } from '@/stores/userStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
@@ -50,49 +52,22 @@ export default function LearnScreen() {
     .map((id) => getLessonOrPlaceholder(id))
     .filter((l): l is GenkiLesson => l !== undefined);
 
-  if (!apiKey && !isLoading) {
+  // Show loading state
+  if (isLoading) {
     return (
-      <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
-        <View className="flex-1 px-6 py-8 justify-center">
-          <View className="items-center mb-8">
-            <FontAwesome name="key" size={48} color="#ec4899" />
-            <Text className="text-2xl font-bold text-gray-900 dark:text-white mt-4 text-center">
-              API Key Required
-            </Text>
-            <Text className="text-base text-gray-600 dark:text-gray-400 mt-2 text-center">
-              Enter your Claude API key to start learning with your AI tutor
-            </Text>
-          </View>
-
-          <View className="gap-4">
-            <Input
-              value={apiKeyInput}
-              onChangeText={setApiKeyInput}
-              placeholder="sk-ant-..."
-              label="Claude API Key"
-              secureTextEntry
-              autoCapitalize="none"
-            />
-            <Button
-              title="Save API Key"
-              onPress={handleSaveApiKey}
-              disabled={!apiKeyInput.trim()}
-            />
-            <Text className="text-sm text-gray-500 dark:text-gray-500 text-center">
-              Your API key is stored securely on your device
-            </Text>
-          </View>
-        </View>
+      <SafeAreaView className="flex-1 bg-white dark:bg-gray-900 items-center justify-center">
+        <ActivityIndicator size="large" color="#ec4899" />
+        <Text className="text-gray-500 dark:text-gray-400 mt-4">Loading...</Text>
       </SafeAreaView>
     );
   }
 
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
-      <ScrollView className="flex-1" contentContainerClassName="px-6 py-6">
+      <ScrollView className="flex-1" contentContainerClassName="px-6 py-6 max-w-tablet self-center w-full">
         {/* Header */}
         <View className="mb-6">
-          <Text className="text-sm text-sakura-500 font-medium mb-1">
+          <Text className="text-sm text-sakura-600 font-medium mb-1">
             Welcome back
           </Text>
           <Text className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -101,7 +76,37 @@ export default function LearnScreen() {
         </View>
 
         {/* API Key Section */}
-        {showApiKeyInput ? (
+        {!apiKey ? (
+          <View className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-5 mb-6 border border-amber-200 dark:border-amber-800">
+            <View className="flex-row items-center mb-3">
+              <FontAwesome name="key" size={20} color="#d97706" />
+              <Text className="text-lg font-semibold text-amber-800 dark:text-amber-200 ml-3">
+                API Key Required
+              </Text>
+            </View>
+            <Text className="text-amber-700 dark:text-amber-300 mb-4">
+              Enter your Claude API key to unlock AI-powered lessons and chat.
+            </Text>
+            <Input
+              value={apiKeyInput}
+              onChangeText={setApiKeyInput}
+              placeholder="sk-ant-..."
+              label="Claude API Key"
+              secureTextEntry
+              autoCapitalize="none"
+            />
+            <View className="mt-4">
+              <Button
+                title="Save API Key"
+                onPress={handleSaveApiKey}
+                disabled={!apiKeyInput.trim()}
+              />
+            </View>
+            <Text className="text-xs text-amber-600 dark:text-amber-400 text-center mt-3">
+              Your API key is stored securely on your device
+            </Text>
+          </View>
+        ) : showApiKeyInput ? (
           <View className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 mb-6">
             <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Update API Key
@@ -136,7 +141,9 @@ export default function LearnScreen() {
         ) : (
           <Pressable
             onPress={() => setShowApiKeyInput(true)}
-            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 mb-6 flex-row items-center"
+            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 mb-6 flex-row items-center active:bg-gray-100 dark:active:bg-gray-700"
+            accessibilityRole="button"
+            accessibilityLabel="API key configured. Tap to update."
           >
             <FontAwesome name="check-circle" size={20} color="#22c55e" />
             <Text className="text-gray-600 dark:text-gray-400 ml-3 flex-1">
@@ -189,16 +196,22 @@ const BookSelector = memo(function BookSelector({
   selectedBook: GenkiBook;
   onSelectBook: (book: GenkiBook) => void;
 }) {
+  const handleSelect = (book: GenkiBook) => {
+    Haptics.selectionAsync();
+    onSelectBook(book);
+  };
+
   return (
-    <View className="flex-row gap-3">
+    <View className="flex-row gap-3" accessibilityRole="tablist">
       <Pressable
-        onPress={() => onSelectBook('genki1')}
+        onPress={() => handleSelect('genki1')}
         className={`flex-1 p-4 rounded-xl border-2 ${
           selectedBook === 'genki1'
             ? 'border-sakura-500 bg-sakura-50 dark:bg-sakura-900/20'
             : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
         }`}
         accessibilityRole="tab"
+        accessibilityLabel="Genki I, Lessons 1 through 12"
         accessibilityState={{ selected: selectedBook === 'genki1' }}
       >
         <Text
@@ -215,13 +228,14 @@ const BookSelector = memo(function BookSelector({
         </Text>
       </Pressable>
       <Pressable
-        onPress={() => onSelectBook('genki2')}
+        onPress={() => handleSelect('genki2')}
         className={`flex-1 p-4 rounded-xl border-2 ${
           selectedBook === 'genki2'
             ? 'border-sakura-500 bg-sakura-50 dark:bg-sakura-900/20'
             : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
         }`}
         accessibilityRole="tab"
+        accessibilityLabel="Genki II, Lessons 13 through 23"
         accessibilityState={{ selected: selectedBook === 'genki2' }}
       >
         <Text
@@ -343,7 +357,7 @@ const LessonCard = memo(function LessonCard({ lesson }: { lesson: GenkiLesson })
               </View>
             )}
           </View>
-          <Text className="text-sm text-sakura-500 font-japanese mb-1">
+          <Text className="text-sm text-sakura-600 font-japanese mb-1">
             {lesson.titleJapanese}
           </Text>
           <Text

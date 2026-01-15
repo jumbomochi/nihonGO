@@ -63,7 +63,7 @@ function GrammarCard({ point }: { point: GrammarPoint }) {
               <Text className="text-lg text-gray-900 dark:text-white font-japanese leading-8">
                 {example.japanese}
               </Text>
-              <Text className="text-base text-sakura-500 mt-1 font-japanese">
+              <Text className="text-base text-sakura-600 mt-1 font-japanese">
                 {example.reading}
               </Text>
               <Text className="text-base text-gray-600 dark:text-gray-400 mt-1">

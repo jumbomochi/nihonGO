@@ -139,7 +139,7 @@ function GenkiLessonScreen({
           <Text className="text-lg font-semibold text-gray-900 dark:text-white">
             Lesson {lesson.lessonNumber}: {lesson.title}
           </Text>
-          <Text className="text-sm text-sakura-500">
+          <Text className="text-sm text-sakura-600">
             {lesson.titleJapanese}
           </Text>
         </View>
@@ -478,7 +478,7 @@ function LessonContent({ content }: { content: string }) {
         if (numberedMatch) {
           return (
             <View key={index} className="flex-row pl-2">
-              <Text className="text-sakura-500 font-medium mr-2 w-6">
+              <Text className="text-sakura-600 font-medium mr-2 w-6">
                 {numberedMatch[1]}.
               </Text>
               <Text className="text-gray-700 dark:text-gray-300 flex-1 leading-6">

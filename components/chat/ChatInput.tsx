@@ -29,14 +29,20 @@ export function ChatInput({
           multiline
           className="text-base text-gray-900 dark:text-white"
           editable={!isLoading}
+          accessibilityLabel="Message input"
+          accessibilityHint="Type your message to the Japanese tutor"
         />
       </View>
       <Pressable
         onPress={onSend}
         disabled={!canSend}
         className={`w-11 h-11 rounded-full items-center justify-center ${
-          canSend ? 'bg-sakura-500' : 'bg-gray-300 dark:bg-gray-700'
+          canSend ? 'bg-sakura-500 active:bg-sakura-600' : 'bg-gray-300 dark:bg-gray-700'
         }`}
+        accessibilityRole="button"
+        accessibilityLabel="Send message"
+        accessibilityState={{ disabled: !canSend }}
+        accessibilityHint={canSend ? "Sends your message" : "Enter a message first"}
       >
         {isLoading ? (
           <ActivityIndicator color="#fff" size="small" />

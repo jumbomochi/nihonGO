@@ -32,7 +32,7 @@ export function DialogueSection({
       {dialogue.titleJapanese && (
         <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
           {dialogue.title}
-          <Text className="text-sakura-500 font-japanese"> ({dialogue.titleJapanese})</Text>
+          <Text className="text-sakura-600 font-japanese"> ({dialogue.titleJapanese})</Text>
         </Text>
       )}
 
@@ -91,7 +91,7 @@ export function DialogueSection({
                 <Text className="text-lg text-gray-900 dark:text-white font-japanese leading-8">
                   {line.japanese}
                 </Text>
-                <Text className="text-base text-sakura-500 mt-1 font-japanese">
+                <Text className="text-base text-sakura-600 mt-1 font-japanese">
                   {line.reading}
                 </Text>
                 <Text className="text-sm text-gray-600 dark:text-gray-400 mt-2 italic">

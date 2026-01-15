@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import {
   View,
   Text,
@@ -6,11 +6,15 @@ import {
   FlatList,
   KeyboardAvoidingView,
   Platform,
+  Pressable,
+  ActivityIndicator,
 } from 'react-native';
+import * as Haptics from 'expo-haptics';
 import { useChat } from '@/hooks/useChat';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { ChatBubble } from '@/components/chat/ChatBubble';
 import { ChatInput } from '@/components/chat/ChatInput';
+import { isNetworkError, getRetryMessage } from '@/lib/errors';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function ChatScreen() {
@@ -23,13 +27,19 @@ export default function ChatScreen() {
     loadApiKey();
   }, []);
 
-  const handleSend = async () => {
+  const handleSend = useCallback(async () => {
     if (inputValue.trim() && apiKey) {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
       const message = inputValue.trim();
       setInputValue('');
       await sendUserMessage(message, apiKey);
     }
-  };
+  }, [inputValue, apiKey, sendUserMessage]);
+
+  const handleSuggestionPress = useCallback((text: string) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    setInputValue(text);
+  }, []);
 
   useEffect(() => {
     if (messages.length > 0) {
@@ -74,18 +84,18 @@ export default function ChatScreen() {
               Ask me anything about Japanese! Grammar, vocabulary, culture, or just practice chatting.
             </Text>
 
-            <View className="mt-8 gap-2">
+            <View className="mt-8 gap-3">
               <SuggestionChip
                 text="How do I say 'hello'?"
-                onPress={() => setInputValue("How do I say 'hello' in Japanese?")}
+                onPress={() => handleSuggestionPress("How do I say 'hello' in Japanese?")}
               />
               <SuggestionChip
                 text="Teach me to count"
-                onPress={() => setInputValue("Can you teach me to count in Japanese?")}
+                onPress={() => handleSuggestionPress("Can you teach me to count in Japanese?")}
               />
               <SuggestionChip
                 text="What's the difference between は and が?"
-                onPress={() => setInputValue("What's the difference between は and が?")}
+                onPress={() => handleSuggestionPress("What's the difference between は and が?")}
               />
             </View>
           </View>
@@ -105,11 +115,33 @@ export default function ChatScreen() {
           />
         )}
 
+        {/* Typing indicator */}
+        {isLoading && messages.length > 0 && (
+          <View className="px-4 py-2">
+            <View className="self-start bg-gray-100 dark:bg-gray-800 rounded-2xl px-4 py-3 flex-row items-center">
+              <ActivityIndicator size="small" color="#ec4899" />
+              <Text className="text-gray-500 dark:text-gray-400 ml-2 text-sm">
+                nihonGO is typing...
+              </Text>
+            </View>
+          </View>
+        )}
+
         {error && (
-          <View className="bg-red-100 dark:bg-red-900/30 px-4 py-2">
-            <Text className="text-red-600 dark:text-red-400 text-sm text-center">
-              {error}
-            </Text>
+          <View className="bg-red-100 dark:bg-red-900/30 px-4 py-3">
+            <View className="flex-row items-start">
+              <FontAwesome name="exclamation-circle" size={16} color="#ef4444" style={{ marginTop: 2 }} />
+              <View className="flex-1 ml-2">
+                <Text className="text-red-600 dark:text-red-400 text-sm">
+                  {error}
+                </Text>
+                {getRetryMessage({ message: error } as Error) && (
+                  <Text className="text-red-500 dark:text-red-300 text-xs mt-1">
+                    {getRetryMessage({ message: error } as Error)}
+                  </Text>
+                )}
+              </View>
+            </View>
           </View>
         )}
 
@@ -133,11 +165,17 @@ function SuggestionChip({
   onPress: () => void;
 }) {
   return (
-    <Text
+    <Pressable
       onPress={onPress}
-      className="bg-sakura-100 dark:bg-sakura-900/30 text-sakura-700 dark:text-sakura-300 px-4 py-2 rounded-full text-center"
+      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+      className="bg-sakura-100 dark:bg-sakura-900/30 px-4 py-3 rounded-full active:bg-sakura-200 dark:active:bg-sakura-900/50"
+      accessibilityRole="button"
+      accessibilityLabel={text}
+      accessibilityHint="Tap to use this as your message"
     >
-      {text}
-    </Text>
+      <Text className="text-sakura-700 dark:text-sakura-300 text-center">
+        {text}
+      </Text>
+    </Pressable>
   );
 }

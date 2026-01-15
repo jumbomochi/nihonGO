@@ -91,3 +91,35 @@ export function isRecoverableError(error: unknown): boolean {
   }
   return true;
 }
+
+// Helper to check if error is a network error
+export function isNetworkError(error: unknown): boolean {
+  if (error instanceof NetworkError) {
+    return true;
+  }
+  if (error instanceof Error) {
+    const message = error.message.toLowerCase();
+    return (
+      message.includes('network') ||
+      message.includes('fetch') ||
+      message.includes('connection') ||
+      message.includes('offline') ||
+      message.includes('timeout')
+    );
+  }
+  return false;
+}
+
+// Helper to get retry suggestion based on error type
+export function getRetryMessage(error: unknown): string | null {
+  if (error instanceof RateLimitError) {
+    return 'Wait a few seconds and try again.';
+  }
+  if (isNetworkError(error)) {
+    return 'Check your internet connection and try again.';
+  }
+  if (error instanceof AuthError) {
+    return 'Update your API key in Settings.';
+  }
+  return null;
+}

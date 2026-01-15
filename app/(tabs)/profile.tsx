@@ -116,7 +116,7 @@ export default function ProfileScreen() {
               Prior languages: {profile.priorLanguages.join(', ')}
             </Text>
             {profile.knowsChinese && (
-              <Text className="text-sakura-500 mt-2">
+              <Text className="text-sakura-600 mt-2">
                 Chinese knowledge detected - kanji lessons will reference character origins
               </Text>
             )}
@@ -211,7 +211,7 @@ function ProfileRow({
 function StatItem({ value, label }: { value: string; label: string }) {
   return (
     <View className="items-center">
-      <Text className="text-2xl font-bold text-sakura-500">{value}</Text>
+      <Text className="text-2xl font-bold text-sakura-600">{value}</Text>
       <Text className="text-sm text-gray-500 dark:text-gray-400">{label}</Text>
     </View>
   );

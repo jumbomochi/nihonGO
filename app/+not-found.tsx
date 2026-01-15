@@ -11,7 +11,7 @@ export default function NotFoundScreen() {
         </Text>
 
         <Link href="/" className="mt-4 py-4">
-          <Text className="text-sm text-sakura-500">Go to home screen!</Text>
+          <Text className="text-sm text-sakura-600">Go to home screen!</Text>
         </Link>
       </View>
     </>

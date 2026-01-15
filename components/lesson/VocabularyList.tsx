@@ -66,7 +66,7 @@ function VocabularyCard({
           <Text className="text-xl font-bold text-gray-900 dark:text-white font-japanese">
             {item.japanese}
           </Text>
-          <Text className="text-base text-sakura-500 font-japanese">{item.reading}</Text>
+          <Text className="text-base text-sakura-600 font-japanese">{item.reading}</Text>
           {showRomaji && (
             <Text className="text-sm text-gray-500 italic">{item.romaji}</Text>
           )}

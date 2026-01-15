@@ -22,10 +22,16 @@ module.exports = {
           300: '#f9a8d4',
           400: '#f472b6',
           500: '#ec4899',
+          600: '#db2777',
+          700: '#be185d',
         },
       },
       fontFamily: {
-        'japanese': ['Hiragino Sans', 'Meiryo', 'sans-serif'],
+        'japanese': ['NotoSansJP_400Regular', 'Hiragino Sans', 'sans-serif'],
+      },
+      maxWidth: {
+        'content': '600px',
+        'tablet': '768px',
       },
     },
   },
