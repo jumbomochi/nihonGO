@@ -16,9 +16,20 @@ interface SettingsState {
   loadApiKey: () => Promise<void>;
 }
 
+// Check if we're in a browser environment with localStorage available
+function isLocalStorageAvailable(): boolean {
+  try {
+    return typeof window !== 'undefined' && typeof window.localStorage !== 'undefined';
+  } catch {
+    return false;
+  }
+}
+
 async function saveSecurely(key: string, value: string): Promise<void> {
   if (Platform.OS === 'web') {
-    localStorage.setItem(key, value);
+    if (isLocalStorageAvailable()) {
+      localStorage.setItem(key, value);
+    }
   } else {
     await SecureStore.setItemAsync(key, value);
   }
@@ -26,7 +37,10 @@ async function saveSecurely(key: string, value: string): Promise<void> {
 
 async function getSecurely(key: string): Promise<string | null> {
   if (Platform.OS === 'web') {
-    return localStorage.getItem(key);
+    if (isLocalStorageAvailable()) {
+      return localStorage.getItem(key);
+    }
+    return null;
   } else {
     return await SecureStore.getItemAsync(key);
   }
@@ -34,7 +48,9 @@ async function getSecurely(key: string): Promise<string | null> {
 
 async function deleteSecurely(key: string): Promise<void> {
   if (Platform.OS === 'web') {
-    localStorage.removeItem(key);
+    if (isLocalStorageAvailable()) {
+      localStorage.removeItem(key);
+    }
   } else {
     await SecureStore.deleteItemAsync(key);
   }
@@ -62,13 +78,19 @@ export const useSettingsStore = create<SettingsState>((set) => ({
 
   loadApiKey: async () => {
     set({ isLoading: true });
-    // First check for environment variable
-    if (ENV_API_KEY) {
-      set({ apiKey: ENV_API_KEY, isEnvKey: true, isLoading: false });
-      return;
+    try {
+      // First check for environment variable
+      if (ENV_API_KEY) {
+        set({ apiKey: ENV_API_KEY, isEnvKey: true, isLoading: false });
+        return;
+      }
+      // Fall back to secure storage
+      const key = await getSecurely(API_KEY_STORAGE_KEY);
+      set({ apiKey: key, isEnvKey: false, isLoading: false });
+    } catch (error) {
+      // Ensure loading state is cleared even on error
+      console.warn('Failed to load API key:', error);
+      set({ apiKey: null, isEnvKey: false, isLoading: false });
     }
-    // Fall back to secure storage
-    const key = await getSecurely(API_KEY_STORAGE_KEY);
-    set({ apiKey: key, isEnvKey: false, isLoading: false });
   },
 }));
