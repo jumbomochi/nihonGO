@@ -28,47 +28,49 @@ export function SectionTabs({
   onSelectSection,
 }: SectionTabsProps) {
   return (
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 16, paddingVertical: 12 }}
-      className="border-b border-gray-200 dark:border-gray-800"
-    >
-      <View className="flex-row gap-2">
-        {sections.map((section) => {
-          const isActive = section.id === activeSection;
-          const iconName: IconName = SECTION_ICONS[section.type] || 'circle';
+    <View className="border-b border-gray-200 dark:border-gray-800">
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 16, paddingVertical: 12 }}
+      >
+        <View className="flex-row items-center gap-2">
+          {sections.map((section) => {
+            const isActive = section.id === activeSection;
+            const iconName: IconName = SECTION_ICONS[section.type] || 'circle';
 
-          return (
-            <Pressable
-              key={section.id}
-              onPress={() => onSelectSection(section.id)}
-              className={`flex-row items-center px-4 py-3 rounded-full ${
-                isActive
-                  ? 'bg-sakura-500'
-                  : 'bg-gray-100 dark:bg-gray-800'
-              }`}
-              accessibilityRole="tab"
-              accessibilityState={{ selected: isActive }}
-            >
-              <FontAwesome
-                name={iconName}
-                size={14}
-                color={isActive ? '#fff' : '#9ca3af'}
-              />
-              <Text
-                className={`ml-2 font-medium ${
+            return (
+              <Pressable
+                key={section.id}
+                onPress={() => onSelectSection(section.id)}
+                style={{ height: 40 }}
+                className={`flex-row items-center justify-center px-4 rounded-full ${
                   isActive
-                    ? 'text-white'
-                    : 'text-gray-600 dark:text-gray-400'
+                    ? 'bg-sakura-500'
+                    : 'bg-gray-100 dark:bg-gray-800'
                 }`}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: isActive }}
               >
-                {section.title}
-              </Text>
-            </Pressable>
-          );
-        })}
-      </View>
-    </ScrollView>
+                <FontAwesome
+                  name={iconName}
+                  size={14}
+                  color={isActive ? '#fff' : '#9ca3af'}
+                />
+                <Text
+                  className={`ml-2 font-medium ${
+                    isActive
+                      ? 'text-white'
+                      : 'text-gray-600 dark:text-gray-400'
+                  }`}
+                >
+                  {section.title}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
+      </ScrollView>
+    </View>
   );
 }

@@ -1,7 +1,7 @@
 import { AudioTrack, AudioSection, GenkiBook } from '@/types/genki';
 
-// Base path for audio files
-export const AUDIO_BASE_PATH = '/workspaces/nihonGO/japanese-resources';
+// Base path for audio files (served from public/audio symlink)
+export const AUDIO_BASE_PATH = '/audio';
 
 // Helper to generate full audio path
 export function getAudioPath(

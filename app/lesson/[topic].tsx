@@ -192,6 +192,7 @@ function GenkiLessonScreen({
             {activeContent && (
               <SectionRenderer
                 section={activeContent}
+                lessonAudioTracks={lesson.audioTracks}
                 onPlayAudio={(track) => setCurrentAudioTrack(track)}
               />
             )}
@@ -228,17 +229,21 @@ function GenkiLessonScreen({
 // Render section based on type
 function SectionRenderer({
   section,
+  lessonAudioTracks,
   onPlayAudio,
 }: {
   section: LessonSection;
+  lessonAudioTracks?: AudioTrack[];
   onPlayAudio: (track: AudioTrack) => void;
 }) {
   switch (section.type) {
     case 'dialogue':
+      // Use section-level audio tracks if available, otherwise use lesson-level tracks
+      const dialogueAudio = section.audioTracks || lessonAudioTracks;
       return section.content.dialogue ? (
         <DialogueSection
           dialogue={section.content.dialogue}
-          audioTracks={section.audioTracks}
+          audioTracks={dialogueAudio}
           onPlayAudio={onPlayAudio}
         />
       ) : null;

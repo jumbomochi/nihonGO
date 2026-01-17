@@ -26,16 +26,16 @@ export const lesson01: GenkiLesson = {
       content: {
         dialogue: {
           id: 'l01-d01',
-          title: 'Meeting at University',
-          titleJapanese: 'だいがくであう',
+          title: 'New Friends',
+          titleJapanese: 'あたらしいともだち',
           context:
-            'Mary, an international student from America, meets Takeshi, a Japanese student, at the university.',
+            'Mary Hart, an international student from America, meets Takeshi Kimura at a university cafeteria.',
           characters: ['Mary', 'Takeshi'],
           lines: [
             {
               speaker: 'Mary',
-              japanese: 'すみません。いま なんじ ですか。',
-              reading: 'すみません。いま なんじ ですか。',
+              japanese: 'すみません。いま なんじですか。',
+              reading: 'すみません。いま なんじですか。',
               english: 'Excuse me. What time is it now?',
             },
             {
@@ -58,15 +58,15 @@ export const lesson01: GenkiLesson = {
             },
             {
               speaker: 'Mary',
-              japanese: 'はい、アリゾナだいがくのがくせいです。',
-              reading: 'はい、アリゾナだいがくのがくせいです。',
-              english: "Yes, I'm a student at the University of Arizona.",
+              japanese: 'はい、アリゾナだいがくの がくせいです。なまえは メアリー・ハートです。',
+              reading: 'はい、アリゾナだいがくの がくせいです。なまえは メアリー・ハートです。',
+              english: "Yes, I'm a student at the University of Arizona. My name is Mary Hart.",
             },
             {
               speaker: 'Takeshi',
-              japanese: 'そうですか。せんこうは なんですか。',
-              reading: 'そうですか。せんこうは なんですか。',
-              english: 'I see. What is your major?',
+              japanese: 'そうですか。ぼくは たけしです。よねんせいです。せんこうは れきしです。メアリーさんの せんこうは？',
+              reading: 'そうですか。ぼくは たけしです。よねんせいです。せんこうは れきしです。メアリーさんの せんこうは？',
+              english: "I see. I'm Takeshi. I'm a fourth-year student. My major is history. What's your major, Mary?",
             },
             {
               speaker: 'Mary',
