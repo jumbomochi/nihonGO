@@ -2,15 +2,20 @@ import { View, Text, Pressable } from 'react-native';
 import { useState } from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { VocabularyItem } from '@/types/genki';
+import { Button } from '@/components/common/Button';
 
 interface VocabularyListProps {
   vocabulary: VocabularyItem[];
   showRomaji?: boolean;
+  onPracticePress?: () => void;
+  showPracticeButton?: boolean;
 }
 
 export function VocabularyList({
   vocabulary,
   showRomaji = true,
+  onPracticePress,
+  showPracticeButton = false,
 }: VocabularyListProps) {
   // Group vocabulary by category
   const grouped = vocabulary.reduce(
@@ -43,6 +48,18 @@ export function VocabularyList({
           </View>
         </View>
       ))}
+
+      {showPracticeButton && onPracticePress && (
+        <View className="mt-4 bg-sakura-50 dark:bg-sakura-900/20 rounded-2xl p-5">
+          <View className="flex-row items-center mb-3">
+            <FontAwesome name="graduation-cap" size={18} color="#ec4899" />
+            <Text className="text-base font-semibold text-gray-900 dark:text-white ml-2">
+              Ready to test your knowledge?
+            </Text>
+          </View>
+          <Button title="Start Practice Quiz" onPress={onPracticePress} />
+        </View>
+      )}
     </View>
   );
 }

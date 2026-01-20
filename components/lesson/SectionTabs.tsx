@@ -1,11 +1,13 @@
 import { View, Text, Pressable, ScrollView } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { LessonSection, LessonSectionType } from '@/types/genki';
+import { QuizScore } from '@/stores/progressStore';
 
 interface SectionTabsProps {
   sections: LessonSection[];
   activeSection: string;
   onSelectSection: (sectionId: string) => void;
+  quizScores?: Record<string, QuizScore>;
 }
 
 // Properly typed icon names for FontAwesome
@@ -26,6 +28,7 @@ export function SectionTabs({
   sections,
   activeSection,
   onSelectSection,
+  quizScores = {},
 }: SectionTabsProps) {
   return (
     <View className="border-b border-gray-200 dark:border-gray-800">
@@ -38,6 +41,17 @@ export function SectionTabs({
           {sections.map((section) => {
             const isActive = section.id === activeSection;
             const iconName: IconName = SECTION_ICONS[section.type] || 'circle';
+            const quizScore = quizScores[section.id];
+
+            // Show badge for vocabulary sections with quiz scores
+            const showBadge = section.type === 'vocabulary' && quizScore;
+            const badgeColor = quizScore
+              ? quizScore.score >= 8
+                ? '#22c55e' // green for >= 80%
+                : quizScore.score >= 5
+                  ? '#d97706' // amber for >= 50%
+                  : undefined // no badge for < 50%
+              : undefined;
 
             return (
               <Pressable
@@ -66,6 +80,15 @@ export function SectionTabs({
                 >
                   {section.title}
                 </Text>
+                {showBadge && badgeColor && (
+                  <View className="ml-1.5">
+                    <FontAwesome
+                      name={quizScore.score >= 8 ? 'check-circle' : 'circle'}
+                      size={10}
+                      color={badgeColor}
+                    />
+                  </View>
+                )}
               </Pressable>
             );
           })}

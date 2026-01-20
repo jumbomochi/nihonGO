@@ -24,6 +24,14 @@ interface GenkiLessonProgress {
   totalTimeSpentSeconds: number;
 }
 
+export interface QuizScore {
+  lessonId: string;
+  sectionId: string;
+  score: number;
+  totalQuestions: number;
+  completedAt: string;
+}
+
 interface BookProgress {
   book: GenkiBook;
   completedLessons: number;
@@ -38,6 +46,7 @@ interface ProgressState {
   currentStreak: number;
   longestStreak: number;
   genkiProgress: Record<string, GenkiLessonProgress>;
+  quizScores: QuizScore[];
 
   // Actions
   completeLesson: (topicId: string, timeSpentSeconds: number) => void;
@@ -54,6 +63,10 @@ interface ProgressState {
   getGenkiLessonProgress: (lessonId: string) => GenkiLessonProgress | undefined;
   getBookProgress: (book: GenkiBook) => BookProgress;
   isSectionCompleted: (lessonId: string, sectionId: string) => boolean;
+
+  // Quiz actions
+  saveQuizScore: (score: Omit<QuizScore, 'completedAt'>) => void;
+  getBestScore: (lessonId: string, sectionId: string) => QuizScore | null;
 }
 
 function getToday(): string {
@@ -110,6 +123,7 @@ const defaultState = {
   currentStreak: 0,
   longestStreak: 0,
   genkiProgress: {} as Record<string, GenkiLessonProgress>,
+  quizScores: [] as QuizScore[],
 };
 
 export const useProgressStore = create<ProgressState>()(
@@ -297,6 +311,42 @@ export const useProgressStore = create<ProgressState>()(
       isSectionCompleted: (lessonId: string, sectionId: string) => {
         const progress = get().genkiProgress[lessonId];
         return progress?.completedSections.includes(sectionId) || false;
+      },
+
+      // Quiz methods
+      saveQuizScore: (score: Omit<QuizScore, 'completedAt'>) => {
+        const now = new Date().toISOString();
+        const fullScore: QuizScore = { ...score, completedAt: now };
+
+        set((state) => {
+          // Find existing score for this lesson/section
+          const existingIndex = state.quizScores.findIndex(
+            (s) => s.lessonId === score.lessonId && s.sectionId === score.sectionId
+          );
+
+          // Only save if it's a new high score or first attempt
+          if (existingIndex >= 0) {
+            const existing = state.quizScores[existingIndex];
+            if (score.score <= existing.score) {
+              // Not a high score, don't update
+              return state;
+            }
+            // Replace with new high score
+            const newScores = [...state.quizScores];
+            newScores[existingIndex] = fullScore;
+            return { quizScores: newScores };
+          }
+
+          // First attempt, add new score
+          return { quizScores: [...state.quizScores, fullScore] };
+        });
+      },
+
+      getBestScore: (lessonId: string, sectionId: string) => {
+        const scores = get().quizScores;
+        return scores.find(
+          (s) => s.lessonId === lessonId && s.sectionId === sectionId
+        ) || null;
       },
     }),
     {

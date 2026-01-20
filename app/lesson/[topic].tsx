@@ -6,6 +6,7 @@ import {
   ScrollView,
   Pressable,
   ActivityIndicator,
+  Modal,
 } from 'react-native';
 import { useLocalSearchParams, router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -16,7 +17,7 @@ import { useProgressStore } from '@/stores/progressStore';
 const selectIsOnline = (state: ReturnType<typeof useSettingsStore.getState>) => state.isOnline;
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
-import { GenkiLesson, LessonSection, AudioTrack } from '@/types/genki';
+import { GenkiLesson, LessonSection as LessonSectionType, AudioTrack } from '@/types/genki';
 import { isGenkiLessonId, getLessonOrPlaceholder } from '@/data/genki';
 import { getLessonAudioPath, getDialogueAudioPath, getFullDialogueAudioPath } from '@/data/genki/audio/audioManifest';
 import { AudioPlayer } from '@/components/audio/AudioPlayer';
@@ -25,6 +26,27 @@ import { VocabularyList } from '@/components/lesson/VocabularyList';
 import { GrammarSection } from '@/components/lesson/GrammarSection';
 import { DialogueSection } from '@/components/lesson/DialogueSection';
 import { CultureNote } from '@/components/lesson/CultureNote';
+import { VocabQuiz } from '@/components/practice/VocabQuiz';
+import { VocabularyItem } from '@/types/genki';
+import { QuizScore } from '@/stores/progressStore';
+
+// Helper to build quiz scores record for section tabs
+function getQuizScoresForLesson(
+  lessonId: string,
+  sections: LessonSectionType[],
+  getBestScore: (lessonId: string, sectionId: string) => QuizScore | null
+): Record<string, QuizScore> {
+  const scores: Record<string, QuizScore> = {};
+  for (const section of sections) {
+    if (section.type === 'vocabulary') {
+      const score = getBestScore(lessonId, section.id);
+      if (score) {
+        scores[section.id] = score;
+      }
+    }
+  }
+  return scores;
+}
 
 const TOPIC_INFO: Record<string, { title: string; description: string }> = {
   greetings: {
@@ -122,9 +144,14 @@ function GenkiLessonScreen({
   const [activeSection, setActiveSection] = useState<string>('');
   const [currentAudioUri, setCurrentAudioUri] = useState<string | null>(null);
   const [currentAudioTitle, setCurrentAudioTitle] = useState<string>('');
-  const { completeLesson, isLessonCompleted } = useProgressStore();
+  const { completeLesson, isLessonCompleted, getBestScore } = useProgressStore();
   const [isMarkedComplete, setIsMarkedComplete] = useState(false);
   const startTimeRef = useRef<number>(Date.now());
+
+  // Quiz state
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [quizVocabulary, setQuizVocabulary] = useState<VocabularyItem[]>([]);
+  const [quizSectionId, setQuizSectionId] = useState<string>('');
 
   const lesson = getLessonOrPlaceholder(lessonId);
   const wasAlreadyCompleted = isLessonCompleted(lessonId);
@@ -151,6 +178,13 @@ function GenkiLessonScreen({
     const uri = getFullDialogueAudioPath(lesson.book, lesson.lessonNumber);
     setCurrentAudioUri(uri);
     setCurrentAudioTitle('Full Dialogue');
+  };
+
+  // Start vocabulary quiz
+  const handleStartQuiz = (vocabulary: VocabularyItem[], sectionId: string) => {
+    setQuizVocabulary(vocabulary);
+    setQuizSectionId(sectionId);
+    setShowQuiz(true);
   };
 
   // Play individual line audio
@@ -207,6 +241,7 @@ function GenkiLessonScreen({
           sections={lesson.sections}
           activeSection={activeSection}
           onSelectSection={setActiveSection}
+          quizScores={getQuizScoresForLesson(lessonId, lesson.sections, getBestScore)}
         />
       )}
 
@@ -232,9 +267,11 @@ function GenkiLessonScreen({
             {activeContent && (
               <SectionRenderer
                 section={activeContent}
+                lessonId={lessonId}
                 lessonAudioTracks={lesson.audioTracks}
                 onPlayAudio={handlePlayFullDialogue}
                 onPlayLineAudio={handlePlayLineAudio}
+                onStartQuiz={handleStartQuiz}
               />
             )}
 
@@ -263,6 +300,20 @@ function GenkiLessonScreen({
           </>
         )}
       </ScrollView>
+
+      {/* Quiz Modal */}
+      <Modal
+        visible={showQuiz}
+        animationType="slide"
+        presentationStyle="fullScreen"
+      >
+        <VocabQuiz
+          vocabulary={quizVocabulary}
+          lessonId={lessonId}
+          sectionId={quizSectionId}
+          onClose={() => setShowQuiz(false)}
+        />
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -270,14 +321,18 @@ function GenkiLessonScreen({
 // Render section based on type
 function SectionRenderer({
   section,
+  lessonId,
   lessonAudioTracks,
   onPlayAudio,
   onPlayLineAudio,
+  onStartQuiz,
 }: {
-  section: LessonSection;
+  section: LessonSectionType;
+  lessonId: string;
   lessonAudioTracks?: AudioTrack[];
   onPlayAudio: () => void;
   onPlayLineAudio?: (lineIndex: number, speaker: string) => void;
+  onStartQuiz?: (vocabulary: VocabularyItem[], sectionId: string) => void;
 }) {
   switch (section.type) {
     case 'dialogue':
@@ -294,7 +349,13 @@ function SectionRenderer({
 
     case 'vocabulary':
       return section.content.vocabulary ? (
-        <VocabularyList vocabulary={section.content.vocabulary} />
+        <VocabularyList
+          vocabulary={section.content.vocabulary}
+          showPracticeButton={section.content.vocabulary.length >= 4}
+          onPracticePress={() =>
+            onStartQuiz?.(section.content.vocabulary!, section.id)
+          }
+        />
       ) : null;
 
     case 'grammar':
