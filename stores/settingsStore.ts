@@ -11,9 +11,11 @@ interface SettingsState {
   apiKey: string | null;
   isLoading: boolean;
   isEnvKey: boolean; // Track if key is from environment
+  isOnline: boolean;
   setApiKey: (key: string) => Promise<void>;
   clearApiKey: () => Promise<void>;
   loadApiKey: () => Promise<void>;
+  setOnline: (status: boolean) => void;
 }
 
 // Check if we're in a browser environment with localStorage available
@@ -60,6 +62,7 @@ export const useSettingsStore = create<SettingsState>((set) => ({
   apiKey: null,
   isLoading: true,
   isEnvKey: false,
+  isOnline: true, // Assume online initially
 
   setApiKey: async (key: string) => {
     await saveSecurely(API_KEY_STORAGE_KEY, key);
@@ -92,5 +95,9 @@ export const useSettingsStore = create<SettingsState>((set) => ({
       console.warn('Failed to load API key:', error);
       set({ apiKey: null, isEnvKey: false, isLoading: false });
     }
+  },
+
+  setOnline: (status: boolean) => {
+    set({ isOnline: status });
   },
 }));

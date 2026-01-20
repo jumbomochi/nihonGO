@@ -11,11 +11,14 @@ import {
 import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
-import 'react-native-reanimated';
+// import 'react-native-reanimated'; // Disabled for web compatibility
 
 import { useColorScheme } from '@/components/useColorScheme';
 import { useUserStore } from '@/stores/userStore';
+import { useSettingsStore } from '@/stores/settingsStore';
+import { useNetworkStatus } from '@/hooks/useNetworkStatus';
 import { ErrorBoundary as CustomErrorBoundary } from '@/components/common/ErrorBoundary';
+import { OfflineBanner } from '@/components/common/OfflineBanner';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -76,7 +79,11 @@ function RootLayoutNav() {
   const router = useRouter();
   const segments = useSegments();
   const { profile } = useUserStore();
+  const isOnline = useSettingsStore((state) => state.isOnline);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
+
+  // Initialize network status monitoring
+  useNetworkStatus();
 
   useEffect(() => {
     // Small delay to ensure navigation is ready
@@ -102,6 +109,7 @@ function RootLayoutNav() {
   return (
     <CustomErrorBoundary>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <OfflineBanner visible={!isOnline} />
         <Stack>
           <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

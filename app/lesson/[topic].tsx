@@ -12,11 +12,13 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useLesson } from '@/hooks/useLesson';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
+
+const selectIsOnline = (state: ReturnType<typeof useSettingsStore.getState>) => state.isOnline;
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 import { GenkiLesson, LessonSection, AudioTrack } from '@/types/genki';
 import { isGenkiLessonId, getLessonOrPlaceholder } from '@/data/genki';
-import { getLessonAudioPath } from '@/data/genki/audio/audioManifest';
+import { getLessonAudioPath, getDialogueAudioPath, getFullDialogueAudioPath } from '@/data/genki/audio/audioManifest';
 import { AudioPlayer } from '@/components/audio/AudioPlayer';
 import { SectionTabs } from '@/components/lesson/SectionTabs';
 import { VocabularyList } from '@/components/lesson/VocabularyList';
@@ -48,6 +50,7 @@ const TOPIC_INFO: Record<string, { title: string; description: string }> = {
 export default function LessonScreen() {
   const { topic } = useLocalSearchParams<{ topic: string }>();
   const { apiKey, loadApiKey } = useSettingsStore();
+  const isOnline = useSettingsStore(selectIsOnline);
   const isGenki = topic ? isGenkiLessonId(topic) : false;
 
   useEffect(() => {
@@ -79,6 +82,32 @@ export default function LessonScreen() {
     return <GenkiLessonScreen lessonId={topic!} apiKey={apiKey} />;
   }
 
+  // Show offline message for AI lessons when not connected
+  if (!isOnline) {
+    return (
+      <SafeAreaView className="flex-1 bg-white dark:bg-gray-900 items-center justify-center px-6">
+        <FontAwesome name="wifi" size={48} color="#d97706" />
+        <Text className="text-lg font-semibold text-gray-900 dark:text-white mt-4 text-center">
+          Internet Required
+        </Text>
+        <Text className="text-gray-500 dark:text-gray-400 mt-2 text-center">
+          AI-generated lessons require an internet connection
+        </Text>
+        <View className="mt-6 gap-3">
+          <Button
+            title="Browse Genki Lessons"
+            onPress={() => router.replace('/(tabs)')}
+          />
+          <Button
+            title="Go Back"
+            variant="outline"
+            onPress={() => router.back()}
+          />
+        </View>
+      </SafeAreaView>
+    );
+  }
+
   return <AILessonScreen topic={topic!} apiKey={apiKey} />;
 }
 
@@ -91,9 +120,8 @@ function GenkiLessonScreen({
   apiKey: string;
 }) {
   const [activeSection, setActiveSection] = useState<string>('');
-  const [currentAudioTrack, setCurrentAudioTrack] = useState<AudioTrack | null>(
-    null
-  );
+  const [currentAudioUri, setCurrentAudioUri] = useState<string | null>(null);
+  const [currentAudioTitle, setCurrentAudioTitle] = useState<string>('');
   const { completeLesson, isLessonCompleted } = useProgressStore();
   const [isMarkedComplete, setIsMarkedComplete] = useState(false);
   const startTimeRef = useRef<number>(Date.now());
@@ -115,6 +143,22 @@ function GenkiLessonScreen({
 
   const handleBack = () => {
     router.back();
+  };
+
+  // Play full dialogue audio
+  const handlePlayFullDialogue = () => {
+    if (!lesson) return;
+    const uri = getFullDialogueAudioPath(lesson.book, lesson.lessonNumber);
+    setCurrentAudioUri(uri);
+    setCurrentAudioTitle('Full Dialogue');
+  };
+
+  // Play individual line audio
+  const handlePlayLineAudio = (lineIndex: number, speaker: string) => {
+    if (!lesson) return;
+    const uri = getDialogueAudioPath(lesson.book, lesson.lessonNumber, lineIndex, speaker);
+    setCurrentAudioUri(uri);
+    setCurrentAudioTitle(`Line ${lineIndex}: ${speaker}`);
   };
 
   if (!lesson) {
@@ -146,16 +190,12 @@ function GenkiLessonScreen({
       </View>
 
       {/* Audio Player (when playing) */}
-      {currentAudioTrack && (
+      {currentAudioUri && (
         <View className="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
           <AudioPlayer
-            uri={getLessonAudioPath(
-              lesson.book,
-              lesson.lessonNumber
-            ) + '/' + currentAudioTrack.filename}
-            title={currentAudioTrack.title}
-            titleJapanese={currentAudioTrack.titleJapanese}
-            onPlaybackComplete={() => setCurrentAudioTrack(null)}
+            uri={currentAudioUri}
+            title={currentAudioTitle}
+            onPlaybackComplete={() => setCurrentAudioUri(null)}
             compact
           />
         </View>
@@ -193,7 +233,8 @@ function GenkiLessonScreen({
               <SectionRenderer
                 section={activeContent}
                 lessonAudioTracks={lesson.audioTracks}
-                onPlayAudio={(track) => setCurrentAudioTrack(track)}
+                onPlayAudio={handlePlayFullDialogue}
+                onPlayLineAudio={handlePlayLineAudio}
               />
             )}
 
@@ -231,10 +272,12 @@ function SectionRenderer({
   section,
   lessonAudioTracks,
   onPlayAudio,
+  onPlayLineAudio,
 }: {
   section: LessonSection;
   lessonAudioTracks?: AudioTrack[];
-  onPlayAudio: (track: AudioTrack) => void;
+  onPlayAudio: () => void;
+  onPlayLineAudio?: (lineIndex: number, speaker: string) => void;
 }) {
   switch (section.type) {
     case 'dialogue':
@@ -245,6 +288,7 @@ function SectionRenderer({
           dialogue={section.content.dialogue}
           audioTracks={dialogueAudio}
           onPlayAudio={onPlayAudio}
+          onPlayLineAudio={onPlayLineAudio}
         />
       ) : null;
 

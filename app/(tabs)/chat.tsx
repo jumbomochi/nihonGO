@@ -12,6 +12,10 @@ import {
 import { triggerImpact } from '@/lib/haptics';
 import { useChat } from '@/hooks/useChat';
 import { useSettingsStore } from '@/stores/settingsStore';
+const selectApiKey = (state: ReturnType<typeof useSettingsStore.getState>) => state.apiKey;
+const selectLoadApiKey = (state: ReturnType<typeof useSettingsStore.getState>) => state.loadApiKey;
+const selectIsLoading = (state: ReturnType<typeof useSettingsStore.getState>) => state.isLoading;
+const selectIsOnline = (state: ReturnType<typeof useSettingsStore.getState>) => state.isOnline;
 import { ChatBubble } from '@/components/chat/ChatBubble';
 import { ChatInput } from '@/components/chat/ChatInput';
 import { isNetworkError, getRetryMessage } from '@/lib/errors';
@@ -19,7 +23,10 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function ChatScreen() {
   const { messages, isLoading, error, sendUserMessage, clearChat } = useChat();
-  const { apiKey, loadApiKey, isLoading: isLoadingApiKey } = useSettingsStore();
+  const apiKey = useSettingsStore(selectApiKey);
+  const loadApiKey = useSettingsStore(selectLoadApiKey);
+  const isLoadingApiKey = useSettingsStore(selectIsLoading);
+  const isOnline = useSettingsStore(selectIsOnline);
   const [inputValue, setInputValue] = useState('');
   const flatListRef = useRef<FlatList>(null);
 
@@ -28,13 +35,13 @@ export default function ChatScreen() {
   }, []);
 
   const handleSend = useCallback(async () => {
-    if (inputValue.trim() && apiKey) {
+    if (inputValue.trim() && apiKey && isOnline) {
       triggerImpact();
       const message = inputValue.trim();
       setInputValue('');
       await sendUserMessage(message, apiKey);
     }
-  }, [inputValue, apiKey, sendUserMessage]);
+  }, [inputValue, apiKey, isOnline, sendUserMessage]);
 
   const handleSuggestionPress = useCallback((text: string) => {
     triggerImpact();
@@ -150,7 +157,8 @@ export default function ChatScreen() {
           onChangeText={setInputValue}
           onSend={handleSend}
           isLoading={isLoading}
-          placeholder="Ask me anything about Japanese..."
+          disabled={!isOnline}
+          placeholder={isOnline ? "Ask me anything about Japanese..." : "Chat requires internet connection"}
         />
       </KeyboardAvoidingView>
     </SafeAreaView>

@@ -6,6 +6,7 @@ interface ChatInputProps {
   onChangeText: (text: string) => void;
   onSend: () => void;
   isLoading?: boolean;
+  disabled?: boolean;
   placeholder?: string;
 }
 
@@ -14,9 +15,10 @@ export function ChatInput({
   onChangeText,
   onSend,
   isLoading = false,
+  disabled = false,
   placeholder = 'Type a message...',
 }: ChatInputProps) {
-  const canSend = value.trim().length > 0 && !isLoading;
+  const canSend = value.trim().length > 0 && !isLoading && !disabled;
 
   return (
     <View className="flex-row items-end gap-2 px-4 py-3 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
@@ -28,7 +30,7 @@ export function ChatInput({
           placeholderTextColor="#9ca3af"
           multiline
           className="text-base text-gray-900 dark:text-white"
-          editable={!isLoading}
+          editable={!isLoading && !disabled}
           accessibilityLabel="Message input"
           accessibilityHint="Type your message to the Japanese tutor"
         />
