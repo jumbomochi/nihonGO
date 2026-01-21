@@ -64,6 +64,25 @@ export interface GrammarPoint {
   relatedGrammar?: string[]; // IDs of related grammar points
 }
 
+// Grammar comparison for similar grammar points
+export interface GrammarComparison {
+  id: string;
+  grammarA: string; // ID of first grammar point
+  grammarB: string; // ID of second grammar point
+  keyDifferences: {
+    aspect: string; // e.g., "Formality", "Usage"
+    grammarA: string; // How A handles this
+    grammarB: string; // How B handles this
+  }[];
+  commonMistakes: string[];
+  usageTip: string;
+  contrastExamples: {
+    situation: string;
+    grammarA: { japanese: string; english: string };
+    grammarB: { japanese: string; english: string };
+  }[];
+}
+
 // Dialogue line
 export interface DialogueLine {
   speaker: string;
