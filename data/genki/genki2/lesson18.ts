@@ -1,0 +1,156 @@
+import { GenkiLesson } from '@/types/genki';
+import { generateLessonAudioTracks } from '../audio/audioManifest';
+
+export const lesson18: GenkiLesson = {
+  id: 'genki2-lesson18',
+  book: 'genki2',
+  lessonNumber: 18,
+  title: "John's Part-Time Job",
+  titleJapanese: 'ジョンのアルバイト',
+  description: 'Learn about transitive and intransitive verb pairs, doing multiple actions simultaneously with ～ながら, and expressing change over time.',
+  objectives: [
+    'Understand and use transitive/intransitive verb pairs',
+    'Express simultaneous actions using ～ながら',
+    'Describe changes using ～てくる and ～ていく',
+    'Talk about part-time jobs and work experiences',
+  ],
+  estimatedMinutes: 90,
+  sections: [
+    {
+      id: 'l18-dialogue',
+      type: 'dialogue',
+      title: 'Dialogue',
+      titleJapanese: 'かいわ',
+      content: {
+        dialogue: {
+          id: 'l18-d01',
+          title: 'Part-Time Job',
+          titleJapanese: 'アルバイト',
+          context: 'John talks to his friend about his new part-time job at a convenience store.',
+          characters: ['Friend', 'John'],
+          lines: [
+            { speaker: 'Friend', japanese: 'ジョン、さいきんいそがしそうだね。', reading: 'じょん、さいきんいそがしそうだね。', english: 'John, you seem busy lately.' },
+            { speaker: 'John', japanese: 'うん、コンビニでアルバイトをはじめたんだ。', reading: 'うん、こんびにでアルバイトをはじめたんだ。', english: 'Yeah, I started a part-time job at a convenience store.' },
+            { speaker: 'Friend', japanese: 'へえ、どう？たいへん？', reading: 'へえ、どう？たいへん？', english: 'Oh, really? How is it? Is it tough?' },
+            { speaker: 'John', japanese: 'はじめはたいへんだったけど、だんだんなれてきたよ。', reading: 'はじめはたいへんだったけど、だんだんなれてきたよ。', english: "It was tough at first, but I've gradually gotten used to it." },
+            { speaker: 'Friend', japanese: 'よかったね。しごとは何をするの？', reading: 'よかったね。しごとはなにをするの？', english: "That's good. What do you do at work?" },
+            { speaker: 'John', japanese: 'レジをしながら、しなものをならべたりするんだ。', reading: 'れじをしながら、しなものをならべたりするんだ。', english: 'I arrange products while working the register.' },
+          ],
+        },
+      },
+    },
+    {
+      id: 'l18-vocab',
+      type: 'vocabulary',
+      title: 'Vocabulary',
+      titleJapanese: 'たんご',
+      content: {
+        vocabulary: [
+          { id: 'l18-v01', japanese: 'アルバイト', reading: 'あるばいと', romaji: 'arubaito', english: 'part-time job', partOfSpeech: 'noun' },
+          { id: 'l18-v02', japanese: 'きゅうりょう', reading: 'きゅうりょう', romaji: 'kyuuryou', english: 'salary; pay', partOfSpeech: 'noun' },
+          { id: 'l18-v03', japanese: 'じきゅう', reading: 'じきゅう', romaji: 'jikyuu', english: 'hourly wage', partOfSpeech: 'noun' },
+          { id: 'l18-v04', japanese: 'レジ', reading: 'れじ', romaji: 'reji', english: 'cash register', partOfSpeech: 'noun' },
+          { id: 'l18-v05', japanese: 'コンビニ', reading: 'こんびに', romaji: 'konbini', english: 'convenience store', partOfSpeech: 'noun' },
+          { id: 'l18-v06', japanese: 'しなもの', reading: 'しなもの', romaji: 'shinamono', english: 'goods; products', partOfSpeech: 'noun' },
+          { id: 'l18-v07', japanese: 'おきゃくさん', reading: 'おきゃくさん', romaji: 'okyakusan', english: 'customer', partOfSpeech: 'noun' },
+          { id: 'l18-v08', japanese: 'けいけん', reading: 'けいけん', romaji: 'keiken', english: 'experience', partOfSpeech: 'noun' },
+          { id: 'l18-v09', japanese: 'あける', reading: 'あける', romaji: 'akeru', english: 'to open (transitive)', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v10', japanese: 'あく', reading: 'あく', romaji: 'aku', english: 'to open (intransitive)', partOfSpeech: 'verb', category: 'Verbs (う-verbs)' },
+          { id: 'l18-v11', japanese: 'しめる', reading: 'しめる', romaji: 'shimeru', english: 'to close (transitive)', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v12', japanese: 'しまる', reading: 'しまる', romaji: 'shimaru', english: 'to close (intransitive)', partOfSpeech: 'verb', category: 'Verbs (う-verbs)' },
+          { id: 'l18-v13', japanese: 'つける', reading: 'つける', romaji: 'tsukeru', english: 'to turn on (transitive)', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v14', japanese: 'つく', reading: 'つく', romaji: 'tsuku', english: 'to turn on (intransitive)', partOfSpeech: 'verb', category: 'Verbs (う-verbs)' },
+          { id: 'l18-v15', japanese: 'けす', reading: 'けす', romaji: 'kesu', english: 'to turn off (transitive)', partOfSpeech: 'verb', category: 'Verbs (う-verbs)' },
+          { id: 'l18-v16', japanese: 'きえる', reading: 'きえる', romaji: 'kieru', english: 'to go out (intransitive)', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v17', japanese: 'ならべる', reading: 'ならべる', romaji: 'naraberu', english: 'to line up (transitive)', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v18', japanese: 'ならぶ', reading: 'ならぶ', romaji: 'narabu', english: 'to stand in line (intransitive)', partOfSpeech: 'verb', category: 'Verbs (う-verbs)' },
+          { id: 'l18-v19', japanese: 'なれる', reading: 'なれる', romaji: 'nareru', english: 'to get used to', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v20', japanese: 'やめる', reading: 'やめる', romaji: 'yameru', english: 'to quit; to stop', partOfSpeech: 'verb', category: 'Verbs (る-verbs)' },
+          { id: 'l18-v21', japanese: 'だんだん', reading: 'だんだん', romaji: 'dandan', english: 'gradually', partOfSpeech: 'adverb' },
+          { id: 'l18-v22', japanese: 'ますます', reading: 'ますます', romaji: 'masumasu', english: 'more and more', partOfSpeech: 'adverb' },
+          { id: 'l18-v23', japanese: 'とうとう', reading: 'とうとう', romaji: 'toutou', english: 'finally; at last', partOfSpeech: 'adverb' },
+        ],
+      },
+    },
+    {
+      id: 'l18-grammar',
+      type: 'grammar',
+      title: 'Grammar',
+      titleJapanese: 'ぶんぽう',
+      content: {
+        grammar: [
+          {
+            id: 'l18-g01',
+            title: 'Transitive and Intransitive Verbs',
+            pattern: 'Transitive: Subject は Object を Verb / Intransitive: Subject が Verb',
+            explanation: 'Transitive verbs (他動詞) take a direct object marked with を. Intransitive verbs (自動詞) describe something that happens without an agent. Many come in pairs.',
+            culturalNote: 'Japanese often prefers intransitive expressions to avoid assigning blame.',
+            examples: [
+              { japanese: '私がドアをあけました。', reading: 'わたしがどあをあけました。', english: 'I opened the door. (transitive)' },
+              { japanese: 'ドアがあきました。', reading: 'どあがあきました。', english: 'The door opened. (intransitive)' },
+            ],
+          },
+          {
+            id: 'l18-g02',
+            title: 'ながら (Simultaneous Actions)',
+            pattern: 'Verb stem + ながら',
+            explanation: 'The verb before ながら is the secondary action, and the main verb at the end is the primary focus. Both actions must be done by the same person.',
+            culturalNote: '"Walking while using your smartphone" (歩きスマホ) has become a safety concern in Japan.',
+            examples: [
+              { japanese: '音楽を聞きながら、べんきょうします。', reading: 'おんがくをききながら、べんきょうします。', english: 'I study while listening to music.' },
+              { japanese: 'コーヒーを飲みながら、しんぶんを読みます。', reading: 'こーひーをのみながら、しんぶんをよみます。', english: 'I read the newspaper while drinking coffee.' },
+            ],
+          },
+          {
+            id: 'l18-g03',
+            title: 'てくる (Change Toward Present)',
+            pattern: 'て-form + くる',
+            explanation: '～てくる describes a change that has been happening up until now and continues to the present.',
+            culturalNote: 'This pattern is often used to describe seasonal changes.',
+            examples: [
+              { japanese: 'だんだんさむくなってきました。', reading: 'だんだんさむくなってきました。', english: 'It has gradually become cold.' },
+              { japanese: '日本語がわかるようになってきました。', reading: 'にほんごがわかるようになってきました。', english: "I've come to understand Japanese." },
+            ],
+          },
+          {
+            id: 'l18-g04',
+            title: 'ていく (Change Into Future)',
+            pattern: 'て-form + いく',
+            explanation: '～ていく describes a change that will continue from now into the future.',
+            culturalNote: 'Commonly used in speeches about future intentions.',
+            examples: [
+              { japanese: 'これからもがんばっていきます。', reading: 'これからもがんばっていきます。', english: 'I will continue to do my best from now on.' },
+              { japanese: 'だんだんあたたかくなっていくでしょう。', reading: 'だんだんあたたかくなっていくでしょう。', english: 'It will probably get warmer gradually.' },
+            ],
+          },
+          {
+            id: 'l18-g05',
+            title: 'ばかり (Just Did / Nothing But)',
+            pattern: 'た-form + ばかり; Dictionary form + ばかり',
+            explanation: '～たばかり means "just did" (recently completed). With dictionary form, it means "do nothing but ~".',
+            culturalNote: 'Parents often complain that children do ゲームばかり.',
+            examples: [
+              { japanese: '日本にきたばかりです。', reading: 'にほんにきたばかりです。', english: 'I just came to Japan.' },
+              { japanese: 'ゲームばかりしています。', reading: 'げーむばかりしています。', english: 'He does nothing but play games.' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      id: 'l18-culture',
+      type: 'culture',
+      title: 'Culture Note',
+      titleJapanese: 'ぶんかノート',
+      content: {
+        culturalNote: {
+          id: 'l18-c01',
+          title: 'Part-Time Jobs in Japan',
+          content: 'Part-time jobs (アルバイト, from German "Arbeit") are extremely common among Japanese students. Japanese convenience stores (コンビニ) offer remarkably efficient service following the principle "okyakusama wa kamisama" (the customer is god).',
+          relatedLesson: 'genki2-lesson18',
+        },
+      },
+    },
+  ],
+  audioTracks: generateLessonAudioTracks('genki2', 18, 18),
+};
