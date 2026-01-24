@@ -3,6 +3,7 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { GenkiBook } from '@/types/genki';
 import { getAllLessonIds, GENKI_BOOKS } from '@/data/genki';
+import { AlphabetProgress } from '@/types/alphabet';
 
 interface LessonProgress {
   topicId: string;
@@ -47,6 +48,7 @@ interface ProgressState {
   longestStreak: number;
   genkiProgress: Record<string, GenkiLessonProgress>;
   quizScores: QuizScore[];
+  alphabetProgress: Record<string, AlphabetProgress>;
 
   // Actions
   completeLesson: (topicId: string, timeSpentSeconds: number) => void;
@@ -67,6 +69,15 @@ interface ProgressState {
   // Quiz actions
   saveQuizScore: (score: Omit<QuizScore, 'completedAt'>) => void;
   getBestScore: (lessonId: string, sectionId: string) => QuizScore | null;
+
+  // Alphabet progress actions
+  completeAlphabetSection: (
+    lessonId: string,
+    section: 'learn' | 'write' | 'quiz',
+    score?: number,
+    total?: number
+  ) => void;
+  getAlphabetProgress: (lessonId: string) => AlphabetProgress | undefined;
 }
 
 function getToday(): string {
@@ -124,6 +135,7 @@ const defaultState = {
   longestStreak: 0,
   genkiProgress: {} as Record<string, GenkiLessonProgress>,
   quizScores: [] as QuizScore[],
+  alphabetProgress: {} as Record<string, AlphabetProgress>,
 };
 
 export const useProgressStore = create<ProgressState>()(
@@ -347,6 +359,55 @@ export const useProgressStore = create<ProgressState>()(
         return scores.find(
           (s) => s.lessonId === lessonId && s.sectionId === sectionId
         ) || null;
+      },
+
+      // Alphabet progress methods
+      completeAlphabetSection: (
+        lessonId: string,
+        section: 'learn' | 'write' | 'quiz',
+        score?: number,
+        total?: number
+      ) => {
+        const now = new Date().toISOString();
+        set((state) => {
+          const existing = state.alphabetProgress[lessonId] || {
+            lessonId,
+            learnCompleted: false,
+            writeCompleted: false,
+            quizBestScore: null,
+            quizTotalQuestions: null,
+            completedAt: null,
+          };
+
+          const updated = { ...existing };
+
+          if (section === 'learn') {
+            updated.learnCompleted = true;
+          } else if (section === 'write') {
+            updated.writeCompleted = true;
+          } else if (section === 'quiz' && score !== undefined) {
+            if (updated.quizBestScore === null || score > updated.quizBestScore) {
+              updated.quizBestScore = score;
+              updated.quizTotalQuestions = total ?? 10;
+            }
+          }
+
+          // Mark as completed if all sections done
+          if (updated.learnCompleted && updated.writeCompleted && updated.quizBestScore !== null) {
+            updated.completedAt = now;
+          }
+
+          return {
+            alphabetProgress: {
+              ...state.alphabetProgress,
+              [lessonId]: updated,
+            },
+          };
+        });
+      },
+
+      getAlphabetProgress: (lessonId: string) => {
+        return get().alphabetProgress[lessonId];
       },
     }),
     {
