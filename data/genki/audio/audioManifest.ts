@@ -43,6 +43,30 @@ export function getLessonAudioPath(
   return `${AUDIO_BASE_PATH}/${bookFolder}/${textbookFolder}/${lessonFolder}`;
 }
 
+// Get full dialogue audio path for a lesson
+export function getFullDialogueAudioPath(
+  book: GenkiBook,
+  lessonNumber: number
+): string {
+  const lessonPath = getLessonAudioPath(book, lessonNumber);
+  const prefix = `K${lessonNumber.toString().padStart(2, '0')}`;
+  return `${lessonPath}/${prefix}_01.mp3`;
+}
+
+// Get individual dialogue line audio path
+export function getDialogueAudioPath(
+  book: GenkiBook,
+  lessonNumber: number,
+  lineIndex: number,
+  _speaker: string
+): string {
+  const lessonPath = getLessonAudioPath(book, lessonNumber);
+  const prefix = `K${lessonNumber.toString().padStart(2, '0')}`;
+  // Dialogue lines typically start at track 2 (track 1 is full dialogue)
+  const trackNumber = lineIndex + 2;
+  return `${lessonPath}/${prefix}_${trackNumber.toString().padStart(2, '0')}.mp3`;
+}
+
 // Audio track generator for a lesson
 export function generateLessonAudioTracks(
   book: GenkiBook,

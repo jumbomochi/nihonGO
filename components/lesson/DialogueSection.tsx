@@ -6,12 +6,14 @@ interface DialogueSectionProps {
   dialogue: Dialogue;
   audioTracks?: AudioTrack[];
   onPlayAudio?: (track: AudioTrack) => void;
+  onPlayLineAudio?: (lineIndex: number, speaker: string) => void;
 }
 
 export function DialogueSection({
   dialogue,
   audioTracks,
   onPlayAudio,
+  onPlayLineAudio,
 }: DialogueSectionProps) {
   // Generate avatar colors based on character name
   const getAvatarColor = (name: string): string => {
@@ -69,15 +71,20 @@ export function DialogueSection({
               className={`flex-row ${isEven ? '' : 'flex-row-reverse'}`}
             >
               {/* Speaker avatar */}
-              <View
+              <Pressable
+                onPress={() => onPlayLineAudio?.(index, line.speaker)}
                 className={`w-10 h-10 rounded-full items-center justify-center ${
                   isEven ? 'mr-3' : 'ml-3'
                 } ${getAvatarColor(line.speaker)}`}
               >
-                <Text className="text-sm font-bold text-gray-700 dark:text-gray-200">
-                  {line.speaker.charAt(0)}
-                </Text>
-              </View>
+                {onPlayLineAudio ? (
+                  <FontAwesome name="play" size={14} color="#374151" />
+                ) : (
+                  <Text className="text-sm font-bold text-gray-700 dark:text-gray-200">
+                    {line.speaker.charAt(0)}
+                  </Text>
+                )}
+              </Pressable>
 
               {/* Speech bubble */}
               <View
