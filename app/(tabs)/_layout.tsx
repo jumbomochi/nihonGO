@@ -39,6 +39,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="alphabets"
+        options={{
+          title: 'Alphabets',
+          tabBarIcon: ({ color }) => <TabBarIcon name="font" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="chat"
         options={{
           title: 'Chat',
