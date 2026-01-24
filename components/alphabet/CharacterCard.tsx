@@ -17,9 +17,9 @@ export function CharacterCard({
   size = 'large',
 }: CharacterCardProps) {
   const sizeClasses = {
-    small: { container: 'p-2', char: 'text-3xl', reading: 'text-xs' },
-    medium: { container: 'p-4', char: 'text-5xl', reading: 'text-sm' },
-    large: { container: 'p-6', char: 'text-7xl', reading: 'text-base' },
+    small: { container: 'p-2', char: 'text-3xl', reading: 'text-xs', divider: 'h-10' },
+    medium: { container: 'p-4', char: 'text-5xl', reading: 'text-sm', divider: 'h-14' },
+    large: { container: 'p-6', char: 'text-7xl', reading: 'text-base', divider: 'h-24' },
   };
 
   const styles = sizeClasses[size];
@@ -41,7 +41,7 @@ export function CharacterCard({
         </View>
 
         {/* Divider */}
-        <View className="w-px h-16 bg-gray-200 dark:bg-gray-700" />
+        <View className={`w-px ${styles.divider} bg-gray-200 dark:bg-gray-700`} />
 
         {/* Katakana */}
         <View className="items-center">

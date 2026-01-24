@@ -189,12 +189,12 @@ export function AlphabetLessonScreen({
       )}
 
       {activeSection === 'write' && (
-        <View className="flex-1 px-6 py-4">
+        <View className="flex-1 px-6 py-4 justify-center">
           {/* Character selector */}
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            className="mb-4"
+            className="mb-4 flex-grow-0"
             contentContainerClassName="gap-2"
           >
             {lesson.pairs.map((pair, index) => {
@@ -229,12 +229,14 @@ export function AlphabetLessonScreen({
             })}
           </ScrollView>
 
-          {/* Drawing canvas */}
-          <DrawingCanvas
-            targetCharacter={currentPair.hiragana.character}
-            strokeCount={currentPair.hiragana.strokeCount}
-            onComplete={handleWriteComplete}
-          />
+          {/* Drawing canvas - fixed aspect ratio for square canvas */}
+          <View className="w-full aspect-square max-h-[400px]">
+            <DrawingCanvas
+              targetCharacter={currentPair.hiragana.character}
+              strokeCount={currentPair.hiragana.strokeCount}
+              onComplete={handleWriteComplete}
+            />
+          </View>
         </View>
       )}
 
