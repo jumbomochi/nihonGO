@@ -38,6 +38,7 @@ export function AlphabetLessonScreen({
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [showQuiz, setShowQuiz] = useState(false);
   const [writtenChars, setWrittenChars] = useState<Set<string>>(new Set());
+  const [showGrid, setShowGrid] = useState(false); // Toggle between card and grid view
 
   const currentPair = lesson.pairs[currentCharIndex];
 
@@ -152,39 +153,123 @@ export function AlphabetLessonScreen({
       {activeSection === 'learn' && (
         <ScrollView
           className="flex-1"
-          contentContainerClassName="px-6 py-8 items-center"
+          contentContainerClassName="px-6 py-6"
         >
-          {/* Character Card */}
-          <CharacterCard pair={currentPair} size="large" />
-
-          {/* Stroke count info */}
-          <View className="flex-row mt-4 gap-4">
-            <Text className="text-sm text-gray-500">
-              Hiragana: {currentPair.hiragana.strokeCount} strokes
-            </Text>
-            <Text className="text-sm text-gray-500">
-              Katakana: {currentPair.katakana.strokeCount} strokes
-            </Text>
+          {/* View Toggle */}
+          <View className="flex-row justify-center mb-4">
+            <View className="flex-row bg-gray-100 dark:bg-gray-800 rounded-xl p-1">
+              <Pressable
+                onPress={() => setShowGrid(false)}
+                className={`px-4 py-2 rounded-lg ${
+                  !showGrid ? 'bg-white dark:bg-gray-700 shadow-sm' : ''
+                }`}
+              >
+                <Text
+                  className={`text-sm font-medium ${
+                    !showGrid ? 'text-sakura-600' : 'text-gray-500'
+                  }`}
+                >
+                  Card
+                </Text>
+              </Pressable>
+              <Pressable
+                onPress={() => setShowGrid(true)}
+                className={`px-4 py-2 rounded-lg ${
+                  showGrid ? 'bg-white dark:bg-gray-700 shadow-sm' : ''
+                }`}
+              >
+                <Text
+                  className={`text-sm font-medium ${
+                    showGrid ? 'text-sakura-600' : 'text-gray-500'
+                  }`}
+                >
+                  Summary
+                </Text>
+              </Pressable>
+            </View>
           </View>
 
-          {/* Navigation */}
-          <View className="flex-row items-center justify-between w-full mt-8">
-            <Pressable
-              onPress={handlePrevChar}
-              disabled={currentCharIndex === 0}
-              className={`p-4 ${currentCharIndex === 0 ? 'opacity-30' : ''}`}
-            >
-              <FontAwesome name="chevron-left" size={24} color="#ec4899" />
-            </Pressable>
+          {/* Card View - Single character */}
+          {!showGrid && (
+            <View className="items-center">
+              <CharacterCard pair={currentPair} size="large" />
 
-            <Text className="text-gray-500">
-              {currentCharIndex + 1} / {lesson.pairs.length}
-            </Text>
+              {/* Stroke count info */}
+              <View className="flex-row mt-4 gap-4">
+                <Text className="text-sm text-gray-500">
+                  Hiragana: {currentPair.hiragana.strokeCount} strokes
+                </Text>
+                <Text className="text-sm text-gray-500">
+                  Katakana: {currentPair.katakana.strokeCount} strokes
+                </Text>
+              </View>
 
-            <Pressable onPress={handleNextChar} className="p-4">
-              <FontAwesome name="chevron-right" size={24} color="#ec4899" />
-            </Pressable>
-          </View>
+              {/* Navigation */}
+              <View className="flex-row items-center justify-between w-full mt-8">
+                <Pressable
+                  onPress={handlePrevChar}
+                  disabled={currentCharIndex === 0}
+                  className={`p-4 ${currentCharIndex === 0 ? 'opacity-30' : ''}`}
+                >
+                  <FontAwesome name="chevron-left" size={24} color="#ec4899" />
+                </Pressable>
+
+                <Text className="text-gray-500">
+                  {currentCharIndex + 1} / {lesson.pairs.length}
+                </Text>
+
+                <Pressable onPress={handleNextChar} className="p-4">
+                  <FontAwesome name="chevron-right" size={24} color="#ec4899" />
+                </Pressable>
+              </View>
+            </View>
+          )}
+
+          {/* Grid View - All characters summary */}
+          {showGrid && (
+            <View>
+              <Text className="text-lg font-semibold text-gray-900 dark:text-white text-center mb-4">
+                {lesson.title}
+              </Text>
+
+              {/* Character Grid */}
+              <View className="flex-row flex-wrap justify-center gap-3">
+                {lesson.pairs.map((pair) => (
+                  <Pressable
+                    key={pair.romaji}
+                    onPress={() => {
+                      setCurrentCharIndex(lesson.pairs.indexOf(pair));
+                      setShowGrid(false);
+                    }}
+                    className="bg-white dark:bg-gray-800 rounded-xl p-3 border border-gray-200 dark:border-gray-700 items-center w-[85px]"
+                  >
+                    {/* Hiragana */}
+                    <Text className="text-3xl font-japanese text-gray-900 dark:text-white">
+                      {pair.hiragana.character}
+                    </Text>
+                    {/* Katakana */}
+                    <Text className="text-2xl font-japanese text-gray-400 mt-1">
+                      {pair.katakana.character}
+                    </Text>
+                    {/* Romaji */}
+                    <Text className="text-xs text-sakura-600 font-semibold mt-2">
+                      {pair.romaji}
+                    </Text>
+                  </Pressable>
+                ))}
+              </View>
+
+              {/* Mark as reviewed button */}
+              {!progress?.learnCompleted && (
+                <View className="mt-6 items-center">
+                  <Button
+                    title="Mark as Reviewed"
+                    onPress={() => onSectionComplete('learn')}
+                  />
+                </View>
+              )}
+            </View>
+          )}
         </ScrollView>
       )}
 

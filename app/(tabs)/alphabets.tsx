@@ -1,14 +1,16 @@
 // app/(tabs)/alphabets.tsx
 
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { View, Text, SafeAreaView, ScrollView, Pressable } from 'react-native';
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
-import { KANA_LESSONS } from '@/data/alphabet';
-import { AlphabetLesson } from '@/types/alphabet';
+import { KANA_LESSONS, ALL_HIRAGANA, ALL_KATAKANA } from '@/data/alphabet';
+import { AlphabetLesson, KanaCharacter } from '@/types/alphabet';
 
 export default function AlphabetsScreen() {
+  const [showAllChars, setShowAllChars] = useState(false);
+
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
       <ScrollView
@@ -39,6 +41,51 @@ export default function AlphabetsScreen() {
               <KanaLessonCard key={lesson.id} lesson={lesson} />
             ))}
           </View>
+
+          {/* View All Characters Button */}
+          <Pressable
+            onPress={() => setShowAllChars(!showAllChars)}
+            className="mt-4 bg-sakura-50 dark:bg-sakura-900/20 border border-sakura-200 dark:border-sakura-800 rounded-2xl p-4"
+          >
+            <View className="flex-row items-center justify-between">
+              <View className="flex-row items-center">
+                <FontAwesome name="th" size={18} color="#ec4899" />
+                <Text className="text-base font-semibold text-sakura-600 ml-3">
+                  View All Characters
+                </Text>
+              </View>
+              <FontAwesome
+                name={showAllChars ? 'chevron-up' : 'chevron-down'}
+                size={14}
+                color="#ec4899"
+              />
+            </View>
+          </Pressable>
+
+          {/* All Characters Grid */}
+          {showAllChars && (
+            <View className="mt-4 bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
+              {/* Hiragana Section */}
+              <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                Hiragana ひらがな
+              </Text>
+              <View className="flex-row flex-wrap gap-2 mb-6">
+                {ALL_HIRAGANA.map((char) => (
+                  <CharacterCell key={char.id} character={char} />
+                ))}
+              </View>
+
+              {/* Katakana Section */}
+              <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                Katakana カタカナ
+              </Text>
+              <View className="flex-row flex-wrap gap-2">
+                {ALL_KATAKANA.map((char) => (
+                  <CharacterCell key={char.id} character={char} />
+                ))}
+              </View>
+            </View>
+          )}
         </View>
 
         {/* Kanji Section (Coming Soon) */}
@@ -57,6 +104,21 @@ export default function AlphabetsScreen() {
     </SafeAreaView>
   );
 }
+
+const CharacterCell = memo(function CharacterCell({
+  character,
+}: {
+  character: KanaCharacter;
+}) {
+  return (
+    <View className="w-11 h-14 bg-gray-50 dark:bg-gray-700 rounded-lg items-center justify-center">
+      <Text className="text-2xl font-japanese text-gray-900 dark:text-white">
+        {character.character}
+      </Text>
+      <Text className="text-[10px] text-gray-400">{character.romaji}</Text>
+    </View>
+  );
+});
 
 const KanaLessonCard = memo(function KanaLessonCard({
   lesson,
