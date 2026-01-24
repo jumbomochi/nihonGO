@@ -5,6 +5,7 @@ interface QuizOptionProps {
   onPress: () => void;
   disabled?: boolean;
   state?: 'default' | 'correct' | 'incorrect' | 'missed';
+  large?: boolean;
 }
 
 export function QuizOption({
@@ -12,6 +13,7 @@ export function QuizOption({
   onPress,
   disabled = false,
   state = 'default',
+  large = false,
 }: QuizOptionProps) {
   const getBackgroundClass = () => {
     switch (state) {
@@ -50,7 +52,11 @@ export function QuizOption({
       accessibilityLabel={text}
       accessibilityState={{ disabled }}
     >
-      <Text className={`text-base text-center font-medium ${getTextClass()}`}>
+      <Text
+        className={`text-center font-medium ${getTextClass()} ${
+          large ? 'text-3xl font-japanese' : 'text-base'
+        }`}
+      >
         {text}
       </Text>
     </Pressable>
