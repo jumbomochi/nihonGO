@@ -1,6 +1,6 @@
 // data/alphabet/kana/lessons.ts
 
-import { AlphabetLesson, KanaPair, KanaRow } from '@/types/alphabet';
+import { AlphabetLesson, KanaCharacter, KanaPair, KanaRow } from '@/types/alphabet';
 import {
   HIRAGANA_A_ROW, KATAKANA_A_ROW,
   HIRAGANA_KA_ROW, KATAKANA_KA_ROW,
@@ -13,13 +13,17 @@ import {
   HIRAGANA_RA_ROW, KATAKANA_RA_ROW,
   HIRAGANA_WA_ROW, KATAKANA_WA_ROW,
 } from './characters';
-import { KanaCharacter } from '@/types/alphabet';
 
 // Helper to create pairs from hiragana and katakana arrays
 function createPairs(
   hiragana: KanaCharacter[],
   katakana: KanaCharacter[]
 ): KanaPair[] {
+  if (hiragana.length !== katakana.length) {
+    throw new Error(
+      `Hiragana and katakana arrays must have the same length. Got ${hiragana.length} hiragana and ${katakana.length} katakana.`
+    );
+  }
   return hiragana.map((h, i) => ({
     romaji: h.romaji,
     hiragana: h,
