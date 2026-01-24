@@ -1,6 +1,6 @@
 // components/alphabet/CharacterQuiz.tsx
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { View, Text, SafeAreaView, Pressable } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { KanaPair } from '@/types/alphabet';
@@ -40,7 +40,7 @@ export function CharacterQuiz({
   }, [pairs]);
 
   const currentQuestion = questions[currentIndex];
-  const score = answers.filter(Boolean).length;
+  const score = useMemo(() => answers.filter(Boolean).length, [answers]);
 
   const handleSelectAnswer = useCallback(
     (answer: string) => {
@@ -49,21 +49,26 @@ export function CharacterQuiz({
       const isCorrect = answer === currentQuestion.correctAnswer;
       setSelectedAnswer(answer);
       setShowFeedback(true);
-      setAnswers((prev) => [...prev, isCorrect]);
 
-      setTimeout(() => {
-        if (currentIndex + 1 >= questions.length) {
-          const finalScore = isCorrect ? score + 1 : score;
-          onComplete(finalScore, questions.length);
-          setShowResults(true);
-        } else {
-          setCurrentIndex((prev) => prev + 1);
-          setSelectedAnswer(null);
-          setShowFeedback(false);
-        }
-      }, FEEDBACK_DELAY_MS);
+      setAnswers((prev) => {
+        const newAnswers = [...prev, isCorrect];
+
+        setTimeout(() => {
+          if (currentIndex + 1 >= questions.length) {
+            const finalScore = newAnswers.filter(Boolean).length;
+            onComplete(finalScore, questions.length);
+            setShowResults(true);
+          } else {
+            setCurrentIndex((i) => i + 1);
+            setSelectedAnswer(null);
+            setShowFeedback(false);
+          }
+        }, FEEDBACK_DELAY_MS);
+
+        return newAnswers;
+      });
     },
-    [currentQuestion, currentIndex, questions.length, score, showFeedback, onComplete]
+    [currentQuestion, currentIndex, questions.length, showFeedback, onComplete]
   );
 
   const handleRetry = useCallback(() => {
