@@ -42,3 +42,6 @@ yarn-error.*
 
 # Japanese learning resources (large files)
 japanese-resources/
+
+# Git worktrees
+.worktrees/
