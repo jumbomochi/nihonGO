@@ -1,7 +1,8 @@
 // data/alphabet/audio.ts
 
 // Audio file paths for kana pronunciation
-// These would be bundled with the app or fetched from a CDN
+// Generated using edge-tts with ja-JP-NanamiNeural voice
+// Files are served from public/audio/kana for web
 
 export const KANA_AUDIO_BASE_PATH = '/audio/kana';
 
@@ -59,6 +60,33 @@ export const KANA_AUDIO: Record<string, KanaAudio> = {
   wa: { romaji: 'wa', audioFile: `${KANA_AUDIO_BASE_PATH}/wa.mp3` },
   wo: { romaji: 'wo', audioFile: `${KANA_AUDIO_BASE_PATH}/wo.mp3` },
   n: { romaji: 'n', audioFile: `${KANA_AUDIO_BASE_PATH}/n.mp3` },
+  // Dakuten (voiced consonants)
+  ga: { romaji: 'ga', audioFile: `${KANA_AUDIO_BASE_PATH}/ga.mp3` },
+  gi: { romaji: 'gi', audioFile: `${KANA_AUDIO_BASE_PATH}/gi.mp3` },
+  gu: { romaji: 'gu', audioFile: `${KANA_AUDIO_BASE_PATH}/gu.mp3` },
+  ge: { romaji: 'ge', audioFile: `${KANA_AUDIO_BASE_PATH}/ge.mp3` },
+  go: { romaji: 'go', audioFile: `${KANA_AUDIO_BASE_PATH}/go.mp3` },
+  za: { romaji: 'za', audioFile: `${KANA_AUDIO_BASE_PATH}/za.mp3` },
+  ji: { romaji: 'ji', audioFile: `${KANA_AUDIO_BASE_PATH}/ji.mp3` },
+  zu: { romaji: 'zu', audioFile: `${KANA_AUDIO_BASE_PATH}/zu.mp3` },
+  ze: { romaji: 'ze', audioFile: `${KANA_AUDIO_BASE_PATH}/ze.mp3` },
+  zo: { romaji: 'zo', audioFile: `${KANA_AUDIO_BASE_PATH}/zo.mp3` },
+  da: { romaji: 'da', audioFile: `${KANA_AUDIO_BASE_PATH}/da.mp3` },
+  di: { romaji: 'di', audioFile: `${KANA_AUDIO_BASE_PATH}/di.mp3` },
+  du: { romaji: 'du', audioFile: `${KANA_AUDIO_BASE_PATH}/du.mp3` },
+  de: { romaji: 'de', audioFile: `${KANA_AUDIO_BASE_PATH}/de.mp3` },
+  do: { romaji: 'do', audioFile: `${KANA_AUDIO_BASE_PATH}/do.mp3` },
+  ba: { romaji: 'ba', audioFile: `${KANA_AUDIO_BASE_PATH}/ba.mp3` },
+  bi: { romaji: 'bi', audioFile: `${KANA_AUDIO_BASE_PATH}/bi.mp3` },
+  bu: { romaji: 'bu', audioFile: `${KANA_AUDIO_BASE_PATH}/bu.mp3` },
+  be: { romaji: 'be', audioFile: `${KANA_AUDIO_BASE_PATH}/be.mp3` },
+  bo: { romaji: 'bo', audioFile: `${KANA_AUDIO_BASE_PATH}/bo.mp3` },
+  // Handakuten (p-sounds)
+  pa: { romaji: 'pa', audioFile: `${KANA_AUDIO_BASE_PATH}/pa.mp3` },
+  pi: { romaji: 'pi', audioFile: `${KANA_AUDIO_BASE_PATH}/pi.mp3` },
+  pu: { romaji: 'pu', audioFile: `${KANA_AUDIO_BASE_PATH}/pu.mp3` },
+  pe: { romaji: 'pe', audioFile: `${KANA_AUDIO_BASE_PATH}/pe.mp3` },
+  po: { romaji: 'po', audioFile: `${KANA_AUDIO_BASE_PATH}/po.mp3` },
 };
 
 export function getKanaAudioPath(romaji: string): string | null {

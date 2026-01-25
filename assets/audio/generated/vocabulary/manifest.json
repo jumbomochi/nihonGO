@@ -1,0 +1,137 @@
+{
+  "voice": "ja-JP-NanamiNeural",
+  "items": [
+    {
+      "japanese": "おはようございます",
+      "romaji": "ohayou gozaimasu",
+      "english": "Good morning",
+      "file": "ohayou_gozaimasu.mp3"
+    },
+    {
+      "japanese": "こんにちは",
+      "romaji": "konnichiwa",
+      "english": "Hello/Good afternoon",
+      "file": "konnichiwa.mp3"
+    },
+    {
+      "japanese": "こんばんは",
+      "romaji": "konbanwa",
+      "english": "Good evening",
+      "file": "konbanwa.mp3"
+    },
+    {
+      "japanese": "さようなら",
+      "romaji": "sayounara",
+      "english": "Goodbye",
+      "file": "sayounara.mp3"
+    },
+    {
+      "japanese": "ありがとうございます",
+      "romaji": "arigatou gozaimasu",
+      "english": "Thank you",
+      "file": "arigatou_gozaimasu.mp3"
+    },
+    {
+      "japanese": "すみません",
+      "romaji": "sumimasen",
+      "english": "Excuse me/Sorry",
+      "file": "sumimasen.mp3"
+    },
+    {
+      "japanese": "はい",
+      "romaji": "hai",
+      "english": "Yes",
+      "file": "hai.mp3"
+    },
+    {
+      "japanese": "いいえ",
+      "romaji": "iie",
+      "english": "No",
+      "file": "iie.mp3"
+    },
+    {
+      "japanese": "わたし",
+      "romaji": "watashi",
+      "english": "I/me",
+      "file": "watashi.mp3"
+    },
+    {
+      "japanese": "なまえ",
+      "romaji": "namae",
+      "english": "name",
+      "file": "namae.mp3"
+    },
+    {
+      "japanese": "はじめまして",
+      "romaji": "hajimemashite",
+      "english": "Nice to meet you",
+      "file": "hajimemashite.mp3"
+    },
+    {
+      "japanese": "よろしくおねがいします",
+      "romaji": "yoroshiku onegaishimasu",
+      "english": "Please treat me well",
+      "file": "yoroshiku_onegaishimasu.mp3"
+    },
+    {
+      "japanese": "いち",
+      "romaji": "ichi",
+      "english": "one",
+      "file": "ichi.mp3"
+    },
+    {
+      "japanese": "に",
+      "romaji": "ni",
+      "english": "two",
+      "file": "ni.mp3"
+    },
+    {
+      "japanese": "さん",
+      "romaji": "san",
+      "english": "three",
+      "file": "san.mp3"
+    },
+    {
+      "japanese": "よん",
+      "romaji": "yon",
+      "english": "four",
+      "file": "yon.mp3"
+    },
+    {
+      "japanese": "ご",
+      "romaji": "go",
+      "english": "five",
+      "file": "go.mp3"
+    },
+    {
+      "japanese": "ろく",
+      "romaji": "roku",
+      "english": "six",
+      "file": "roku.mp3"
+    },
+    {
+      "japanese": "なな",
+      "romaji": "nana",
+      "english": "seven",
+      "file": "nana.mp3"
+    },
+    {
+      "japanese": "はち",
+      "romaji": "hachi",
+      "english": "eight",
+      "file": "hachi.mp3"
+    },
+    {
+      "japanese": "きゅう",
+      "romaji": "kyuu",
+      "english": "nine",
+      "file": "kyuu.mp3"
+    },
+    {
+      "japanese": "じゅう",
+      "romaji": "juu",
+      "english": "ten",
+      "file": "juu.mp3"
+    }
+  ]
+}
