@@ -7,6 +7,8 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
 import { KANA_LESSONS, ALL_HIRAGANA, ALL_KATAKANA } from '@/data/alphabet';
 import { AlphabetLesson, KanaCharacter } from '@/types/alphabet';
+import { XPDisplay } from '@/components/common/XPDisplay';
+import { StreakDisplay } from '@/components/common/StreakDisplay';
 
 export default function AlphabetsScreen() {
   const [showAllChars, setShowAllChars] = useState(false);
@@ -25,6 +27,16 @@ export default function AlphabetsScreen() {
           <Text className="text-2xl font-bold text-gray-900 dark:text-white">
             Alphabets
           </Text>
+        </View>
+
+        {/* Stats Row */}
+        <View className="flex-row gap-3 mb-6">
+          <View className="flex-1">
+            <XPDisplay />
+          </View>
+          <View className="flex-1">
+            <StreakDisplay />
+          </View>
         </View>
 
         {/* Kana Section */}
