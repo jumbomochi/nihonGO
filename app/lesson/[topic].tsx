@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import {
   View,
   Text,
@@ -191,15 +191,13 @@ function GenkiLessonScreen({
     setShowQuiz(true);
   };
 
-  // Play individual line audio (using generated TTS audio)
-  const handlePlayLineAudio = (lineIndex: number, speaker: string) => {
-    if (!lesson) return;
+  // Get audio path for a dialogue line (using generated TTS audio)
+  const getLineAudioPath = useCallback((lineIndex: number, speaker: string) => {
+    if (!lesson) return '';
     // Use generated TTS audio: dialogue/001_mary.mp3, dialogue/002_takeshi.mp3, etc.
     const filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
-    const uri = getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
-    setCurrentAudioUri(uri);
-    setCurrentAudioTitle(`${speaker}`);
-  };
+    return getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
+  }, [lesson]);
 
   if (!lesson) {
     return (
@@ -276,7 +274,7 @@ function GenkiLessonScreen({
                 lessonId={lessonId}
                 lessonAudioTracks={lesson.audioTracks}
                 onPlayAudio={handlePlayFullDialogue}
-                onPlayLineAudio={handlePlayLineAudio}
+                getLineAudioPath={getLineAudioPath}
                 onStartQuiz={handleStartQuiz}
               />
             )}
@@ -330,14 +328,14 @@ function SectionRenderer({
   lessonId,
   lessonAudioTracks,
   onPlayAudio,
-  onPlayLineAudio,
+  getLineAudioPath,
   onStartQuiz,
 }: {
   section: LessonSectionType;
   lessonId: string;
   lessonAudioTracks?: AudioTrack[];
   onPlayAudio: () => void;
-  onPlayLineAudio?: (lineIndex: number, speaker: string) => void;
+  getLineAudioPath?: (lineIndex: number, speaker: string) => string;
   onStartQuiz?: (vocabulary: VocabularyItem[], sectionId: string) => void;
 }) {
   switch (section.type) {
@@ -349,7 +347,7 @@ function SectionRenderer({
           dialogue={section.content.dialogue}
           audioTracks={dialogueAudio}
           onPlayAudio={onPlayAudio}
-          onPlayLineAudio={onPlayLineAudio}
+          getLineAudioPath={getLineAudioPath}
         />
       ) : null;
 
