@@ -1,0 +1,350 @@
+{
+  "book": "genki1",
+  "lesson": 9,
+  "vocabulary_count": 40,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "歌舞伎",
+      "reading": "かぶき",
+      "romaji": "kabuki",
+      "english": "kabuki theater",
+      "audio": "vocabulary/001_kabuki.mp3"
+    },
+    {
+      "japanese": "演劇",
+      "reading": "えんげき",
+      "romaji": "engeki",
+      "english": "play; drama; theater",
+      "audio": "vocabulary/002_engeki.mp3"
+    },
+    {
+      "japanese": "公演",
+      "reading": "こうえん",
+      "romaji": "kouen",
+      "english": "performance; show",
+      "audio": "vocabulary/003_kouen.mp3"
+    },
+    {
+      "japanese": "俳優",
+      "reading": "はいゆう",
+      "romaji": "haiyuu",
+      "english": "actor",
+      "audio": "vocabulary/004_haiyuu.mp3"
+    },
+    {
+      "japanese": "コンサート",
+      "reading": "コンサート",
+      "romaji": "konsaato",
+      "english": "concert",
+      "audio": "vocabulary/005_konsaato.mp3"
+    },
+    {
+      "japanese": "チケット",
+      "reading": "チケット",
+      "romaji": "chiketto",
+      "english": "ticket",
+      "audio": "vocabulary/006_chiketto.mp3"
+    },
+    {
+      "japanese": "伝統的",
+      "reading": "でんとうてき",
+      "romaji": "dentouteki",
+      "english": "traditional",
+      "audio": "vocabulary/007_dentouteki.mp3"
+    },
+    {
+      "japanese": "有名",
+      "reading": "ゆうめい",
+      "romaji": "yuumei",
+      "english": "famous",
+      "audio": "vocabulary/008_yuumei.mp3"
+    },
+    {
+      "japanese": "特別",
+      "reading": "とくべつ",
+      "romaji": "tokubetsu",
+      "english": "special",
+      "audio": "vocabulary/009_tokubetsu.mp3"
+    },
+    {
+      "japanese": "普通",
+      "reading": "ふつう",
+      "romaji": "futsuu",
+      "english": "ordinary; normal",
+      "audio": "vocabulary/010_futsuu.mp3"
+    },
+    {
+      "japanese": "男性",
+      "reading": "だんせい",
+      "romaji": "dansei",
+      "english": "man; male",
+      "audio": "vocabulary/011_dansei.mp3"
+    },
+    {
+      "japanese": "女性",
+      "reading": "じょせい",
+      "romaji": "josei",
+      "english": "woman; female",
+      "audio": "vocabulary/012_josei.mp3"
+    },
+    {
+      "japanese": "役",
+      "reading": "やく",
+      "romaji": "yaku",
+      "english": "role",
+      "audio": "vocabulary/013_yaku.mp3"
+    },
+    {
+      "japanese": "演じる",
+      "reading": "えんじる",
+      "romaji": "enjiru",
+      "english": "to perform; to act",
+      "audio": "vocabulary/014_enjiru.mp3"
+    },
+    {
+      "japanese": "出る",
+      "reading": "でる",
+      "romaji": "deru",
+      "english": "to appear; to come out",
+      "audio": "vocabulary/015_deru.mp3"
+    },
+    {
+      "japanese": "着く",
+      "reading": "つく",
+      "romaji": "tsuku",
+      "english": "to arrive",
+      "audio": "vocabulary/016_tsuku.mp3"
+    },
+    {
+      "japanese": "届く",
+      "reading": "とどく",
+      "romaji": "todoku",
+      "english": "to reach; to be delivered",
+      "audio": "vocabulary/017_todoku.mp3"
+    },
+    {
+      "japanese": "調べる",
+      "reading": "しらべる",
+      "romaji": "shiraberu",
+      "english": "to investigate; to look up",
+      "audio": "vocabulary/018_shiraberu.mp3"
+    },
+    {
+      "japanese": "予約する",
+      "reading": "よやくする",
+      "romaji": "yoyaku suru",
+      "english": "to reserve; to book",
+      "audio": "vocabulary/019_yoyaku_suru.mp3"
+    },
+    {
+      "japanese": "卒業する",
+      "reading": "そつぎょうする",
+      "romaji": "sotsugyou suru",
+      "english": "to graduate",
+      "audio": "vocabulary/020_sotsugyou_suru.mp3"
+    },
+    {
+      "japanese": "～年前",
+      "reading": "～ねんまえ",
+      "romaji": "~nen mae",
+      "english": "~ years ago",
+      "audio": "vocabulary/021_nen_mae.mp3"
+    },
+    {
+      "japanese": "何度も",
+      "reading": "なんども",
+      "romaji": "nando mo",
+      "english": "many times",
+      "audio": "vocabulary/022_nando_mo.mp3"
+    },
+    {
+      "japanese": "来月",
+      "reading": "らいげつ",
+      "romaji": "raigetsu",
+      "english": "next month",
+      "audio": "vocabulary/023_raigetsu.mp3"
+    },
+    {
+      "japanese": "先月",
+      "reading": "せんげつ",
+      "romaji": "sengetsu",
+      "english": "last month",
+      "audio": "vocabulary/024_sengetsu.mp3"
+    },
+    {
+      "japanese": "今月",
+      "reading": "こんげつ",
+      "romaji": "kongetsu",
+      "english": "this month",
+      "audio": "vocabulary/025_kongetsu.mp3"
+    },
+    {
+      "japanese": "劇場",
+      "reading": "げきじょう",
+      "romaji": "gekijou",
+      "english": "theater (building)",
+      "audio": "vocabulary/026_gekijou.mp3"
+    },
+    {
+      "japanese": "席",
+      "reading": "せき",
+      "romaji": "seki",
+      "english": "seat",
+      "audio": "vocabulary/027_seki.mp3"
+    },
+    {
+      "japanese": "舞台",
+      "reading": "ぶたい",
+      "romaji": "butai",
+      "english": "stage",
+      "audio": "vocabulary/028_butai.mp3"
+    },
+    {
+      "japanese": "衣装",
+      "reading": "いしょう",
+      "romaji": "ishou",
+      "english": "costume",
+      "audio": "vocabulary/029_ishou.mp3"
+    },
+    {
+      "japanese": "ぜひ",
+      "reading": "ぜひ",
+      "romaji": "zehi",
+      "english": "by all means; definitely",
+      "audio": "vocabulary/030_zehi.mp3"
+    },
+    {
+      "japanese": "～でしょう",
+      "reading": "～でしょう",
+      "romaji": "~deshou",
+      "english": "probably; right?",
+      "audio": "vocabulary/031_deshou.mp3"
+    },
+    {
+      "japanese": "～から",
+      "reading": "～から",
+      "romaji": "~kara",
+      "english": "because ~",
+      "audio": "vocabulary/032_kara.mp3"
+    },
+    {
+      "japanese": "～んです",
+      "reading": "～んです",
+      "romaji": "~n desu",
+      "english": "explanatory ~",
+      "audio": "vocabulary/033_n_desu.mp3"
+    },
+    {
+      "japanese": "物",
+      "reading": "もの",
+      "romaji": "mono",
+      "english": "thing",
+      "audio": "vocabulary/034_mono.mp3"
+    },
+    {
+      "japanese": "人",
+      "reading": "ひと",
+      "romaji": "hito",
+      "english": "person",
+      "audio": "vocabulary/035_hito.mp3"
+    },
+    {
+      "japanese": "所",
+      "reading": "ところ",
+      "romaji": "tokoro",
+      "english": "place",
+      "audio": "vocabulary/036_tokoro.mp3"
+    },
+    {
+      "japanese": "時",
+      "reading": "とき",
+      "romaji": "toki",
+      "english": "time; when",
+      "audio": "vocabulary/037_toki.mp3"
+    },
+    {
+      "japanese": "こと",
+      "reading": "こと",
+      "romaji": "koto",
+      "english": "thing (abstract); matter",
+      "audio": "vocabulary/038_koto.mp3"
+    },
+    {
+      "japanese": "だけ",
+      "reading": "だけ",
+      "romaji": "dake",
+      "english": "only; just",
+      "audio": "vocabulary/039_dake.mp3"
+    },
+    {
+      "japanese": "インターネット",
+      "reading": "インターネット",
+      "romaji": "intaanetto",
+      "english": "internet",
+      "audio": "vocabulary/040_intaanetto.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Robert",
+      "japanese": "先生、歌舞伎を見たことがありますか。",
+      "english": "Professor, have you ever seen kabuki?",
+      "audio": "dialogue/001_robert.mp3"
+    },
+    {
+      "speaker": "Professor",
+      "japanese": "ええ、何度も見たことがありますよ。",
+      "english": "Yes, I have seen it many times.",
+      "audio": "dialogue/002_professor.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "歌舞伎はどんなものですか。",
+      "english": "What is kabuki like?",
+      "audio": "dialogue/003_robert.mp3"
+    },
+    {
+      "speaker": "Professor",
+      "japanese": "四百年前に始まった伝統的な演劇ですよ。",
+      "english": "It\\",
+      "audio": "dialogue/004_professor.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "男の人だけが演じるんですよね。",
+      "english": "Only men perform, right?",
+      "audio": "dialogue/005_robert.mp3"
+    },
+    {
+      "speaker": "Professor",
+      "japanese": "はい、女性の役も男性が演じます。面白いでしょう？",
+      "english": "Yes, men play women\\",
+      "audio": "dialogue/006_professor.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "まだ見たことがないから、ぜひ見てみたいです。",
+      "english": "I\\",
+      "audio": "dialogue/007_robert.mp3"
+    },
+    {
+      "speaker": "Professor",
+      "japanese": "来月、有名な俳優が出る公演がありますよ。",
+      "english": "Next month, there\\",
+      "audio": "dialogue/008_professor.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "チケットはどこで買えますか。",
+      "english": "Where can I buy tickets?",
+      "audio": "dialogue/009_robert.mp3"
+    },
+    {
+      "speaker": "Professor",
+      "japanese": "インターネットで買えますよ。学生は安いチケットがありますから。",
+      "english": "You can buy them online. There are cheap tickets for students.",
+      "audio": "dialogue/010_professor.mp3"
+    }
+  ]
+}

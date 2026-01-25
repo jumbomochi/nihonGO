@@ -63,28 +63,33 @@ def parse_lesson_file(filepath: Path) -> Dict[str, Any]:
     #   reading: '...',
     #   english: '...' or "...",  (double quotes when english contains apostrophes)
     # }
-    # First try to match with double quotes (for english with apostrophes)
+    # Match both quote styles in a single pass to preserve order
     dialogue_pattern_dq = r'\{\s*speaker:\s*\'([^\']+)\',\s*japanese:\s*\'([^\']+)\',\s*reading:\s*\'([^\']+)\',\s*english:\s*"([^"]+)"'
+    dialogue_pattern_sq = r"\{\s*speaker:\s*'([^']+)',\s*japanese:\s*'([^']+)',\s*reading:\s*'([^']+)',\s*english:\s*'([^']+)'"
+
+    # Find all matches with their positions to preserve original order
+    all_matches = []
     for match in re.finditer(dialogue_pattern_dq, content, re.DOTALL):
-        result['dialogues'].append({
+        all_matches.append((match.start(), {
             'speaker': match.group(1),
             'japanese': match.group(2),
             'reading': match.group(3),
             'english': match.group(4)
-        })
-
-    # Then try to match with single quotes
-    dialogue_pattern_sq = r"\{\s*speaker:\s*'([^']+)',\s*japanese:\s*'([^']+)',\s*reading:\s*'([^']+)',\s*english:\s*'([^']+)'"
+        }))
     for match in re.finditer(dialogue_pattern_sq, content, re.DOTALL):
-        # Avoid duplicates (check if japanese text already exists)
         japanese_text = match.group(2)
-        if not any(d['japanese'] == japanese_text for d in result['dialogues']):
-            result['dialogues'].append({
+        # Avoid duplicates
+        if not any(m[1]['japanese'] == japanese_text for m in all_matches):
+            all_matches.append((match.start(), {
                 'speaker': match.group(1),
                 'japanese': match.group(2),
                 'reading': match.group(3),
                 'english': match.group(4)
-            })
+            }))
+
+    # Sort by position in file to preserve original order
+    all_matches.sort(key=lambda x: x[0])
+    result['dialogues'] = [m[1] for m in all_matches]
 
     return result
 

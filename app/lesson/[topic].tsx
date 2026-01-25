@@ -19,7 +19,7 @@ import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 import { GenkiLesson, LessonSection as LessonSectionType, AudioTrack } from '@/types/genki';
 import { isGenkiLessonId, getLessonOrPlaceholder } from '@/data/genki';
-import { getLessonAudioPath, getDialogueAudioPath, getFullDialogueAudioPath } from '@/data/genki/audio/audioManifest';
+import { getLessonAudioPath, getDialogueAudioPath, getFullDialogueAudioPath, getGeneratedDialogueAudioPath } from '@/data/genki/audio/audioManifest';
 import { AudioPlayer } from '@/components/audio/AudioPlayer';
 import { SectionTabs } from '@/components/lesson/SectionTabs';
 import { VocabularyList } from '@/components/lesson/VocabularyList';
@@ -191,12 +191,14 @@ function GenkiLessonScreen({
     setShowQuiz(true);
   };
 
-  // Play individual line audio
+  // Play individual line audio (using generated TTS audio)
   const handlePlayLineAudio = (lineIndex: number, speaker: string) => {
     if (!lesson) return;
-    const uri = getDialogueAudioPath(lesson.book, lesson.lessonNumber, lineIndex, speaker);
+    // Use generated TTS audio: dialogue/001_mary.mp3, dialogue/002_takeshi.mp3, etc.
+    const filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
+    const uri = getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
     setCurrentAudioUri(uri);
-    setCurrentAudioTitle(`Line ${lineIndex}: ${speaker}`);
+    setCurrentAudioTitle(`${speaker}`);
   };
 
   if (!lesson) {

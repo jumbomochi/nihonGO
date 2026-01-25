@@ -3,6 +3,38 @@ import { AudioTrack, AudioSection, GenkiBook } from '@/types/genki';
 // Base path for audio files (served from public/audio symlink)
 export const AUDIO_BASE_PATH = '/audio';
 
+// Base path for generated TTS audio files
+export const GENERATED_AUDIO_BASE_PATH = '/audio/lessons';
+
+// Get generated vocabulary audio path
+export function getGeneratedVocabAudioPath(
+  book: GenkiBook,
+  lessonNumber: number,
+  filename: string
+): string {
+  const lessonFolder = `lesson${lessonNumber.toString().padStart(2, '0')}`;
+  return `${GENERATED_AUDIO_BASE_PATH}/${book}/${lessonFolder}/vocabulary/${filename}`;
+}
+
+// Get generated dialogue audio path
+export function getGeneratedDialogueAudioPath(
+  book: GenkiBook,
+  lessonNumber: number,
+  filename: string
+): string {
+  const lessonFolder = `lesson${lessonNumber.toString().padStart(2, '0')}`;
+  return `${GENERATED_AUDIO_BASE_PATH}/${book}/${lessonFolder}/dialogue/${filename}`;
+}
+
+// Get generated lesson manifest path
+export function getGeneratedManifestPath(
+  book: GenkiBook,
+  lessonNumber: number
+): string {
+  const lessonFolder = `lesson${lessonNumber.toString().padStart(2, '0')}`;
+  return `${GENERATED_AUDIO_BASE_PATH}/${book}/${lessonFolder}/manifest.json`;
+}
+
 // Helper to generate full audio path
 export function getAudioPath(
   book: GenkiBook,
