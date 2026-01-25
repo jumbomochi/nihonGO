@@ -12,6 +12,7 @@ import { useUserStore } from '@/stores/userStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
 import { Button } from '@/components/common/Button';
+import { AchievementsList } from '@/components/common/AchievementsList';
 
 const PROFICIENCY_LABELS: Record<string, string> = {
   complete_beginner: 'Complete Beginner',
@@ -159,6 +160,16 @@ export default function ProfileScreen() {
               Complete lessons to track your progress!
             </Text>
           )}
+        </View>
+
+        {/* Achievements Section */}
+        <View className="mb-6">
+          <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-4 px-4">
+            Achievements
+          </Text>
+          <View className="h-64">
+            <AchievementsList />
+          </View>
         </View>
 
         {/* Actions */}
