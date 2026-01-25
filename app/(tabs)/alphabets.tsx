@@ -9,6 +9,7 @@ import { KANA_LESSONS, ALL_HIRAGANA, ALL_KATAKANA } from '@/data/alphabet';
 import { AlphabetLesson, KanaCharacter } from '@/types/alphabet';
 import { XPDisplay } from '@/components/common/XPDisplay';
 import { StreakDisplay } from '@/components/common/StreakDisplay';
+import { ReviewQueue } from '@/components/alphabet/ReviewQueue';
 
 export default function AlphabetsScreen() {
   const [showAllChars, setShowAllChars] = useState(false);
@@ -37,6 +38,20 @@ export default function AlphabetsScreen() {
           <View className="flex-1">
             <StreakDisplay />
           </View>
+        </View>
+
+        {/* Review Queue */}
+        <View className="mb-6">
+          <ReviewQueue
+            onStartReview={(characterIds) => {
+              // Navigate to a review session
+              // For now, just navigate to first lesson
+              router.push({
+                pathname: '/alphabet/[lessonId]',
+                params: { lessonId: 'kana-lesson-01' },
+              });
+            }}
+          />
         </View>
 
         {/* Kana Section */}
