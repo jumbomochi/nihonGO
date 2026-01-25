@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { GenkiBook } from '@/types/genki';
 import { getAllLessonIds, GENKI_BOOKS } from '@/data/genki';
 import { AlphabetProgress } from '@/types/alphabet';
+import { CharacterMastery } from '@/types/games';
 
 interface LessonProgress {
   topicId: string;
@@ -50,6 +51,27 @@ interface ProgressState {
   quizScores: QuizScore[];
   alphabetProgress: Record<string, AlphabetProgress>;
 
+  // XP System
+  xp: number;
+  level: number;
+  todayXp: number;
+  lastXpDate: string | null;
+
+  // Additional streak
+  lastActivityDate: string | null;
+  streakFreezeAvailable: boolean;
+
+  // Character Mastery (SRS)
+  characterMastery: Record<string, CharacterMastery>;
+
+  // Achievements
+  unlockedAchievements: string[];
+
+  // Game Stats
+  matchingGamesWon: number;
+  speedChallengeHighScore: number;
+  perfectQuizzes: number;
+
   // Actions
   completeLesson: (topicId: string, timeSpentSeconds: number) => void;
   addWordsLearned: (count: number) => void;
@@ -78,6 +100,22 @@ interface ProgressState {
     total?: number
   ) => void;
   getAlphabetProgress: (lessonId: string) => AlphabetProgress | undefined;
+
+  // XP Methods
+  addXp: (amount: number) => void;
+  getXpForLevel: (level: number) => number;
+
+  // Additional streak method
+  useStreakFreeze: () => void;
+
+  // Character Mastery (SRS)
+  updateCharacterMastery: (characterId: string, correct: boolean) => void;
+  getCharactersDueForReview: () => CharacterMastery[];
+
+  // Game Stats
+  recordMatchingGameWin: () => void;
+  recordSpeedChallengeScore: (score: number) => void;
+  recordPerfectQuiz: () => void;
 }
 
 function getToday(): string {
@@ -136,6 +174,17 @@ const defaultState = {
   genkiProgress: {} as Record<string, GenkiLessonProgress>,
   quizScores: [] as QuizScore[],
   alphabetProgress: {} as Record<string, AlphabetProgress>,
+  xp: 0,
+  level: 1,
+  todayXp: 0,
+  lastXpDate: null,
+  lastActivityDate: null,
+  streakFreezeAvailable: false,
+  characterMastery: {} as Record<string, CharacterMastery>,
+  unlockedAchievements: [] as string[],
+  matchingGamesWon: 0,
+  speedChallengeHighScore: 0,
+  perfectQuizzes: 0,
 };
 
 export const useProgressStore = create<ProgressState>()(
@@ -408,6 +457,104 @@ export const useProgressStore = create<ProgressState>()(
 
       getAlphabetProgress: (lessonId: string) => {
         return get().alphabetProgress[lessonId];
+      },
+
+      // XP Methods
+      addXp: (amount: number) => {
+        const today = new Date().toISOString().split('T')[0];
+        set((state) => {
+          const isNewDay = state.lastXpDate !== today;
+          const newTodayXp = isNewDay ? amount : state.todayXp + amount;
+          const newTotalXp = state.xp + amount;
+          const newLevel = Math.floor(newTotalXp / 100) + 1; // 100 XP per level
+
+          return {
+            xp: newTotalXp,
+            level: newLevel,
+            todayXp: newTodayXp,
+            lastXpDate: today,
+            lastActivityDate: today,
+          };
+        });
+      },
+
+      getXpForLevel: (level: number) => {
+        return level * 100;
+      },
+
+      useStreakFreeze: () => {
+        set({ streakFreezeAvailable: false });
+      },
+
+      // Character Mastery (SRS)
+      updateCharacterMastery: (characterId: string, correct: boolean) => {
+        const now = new Date().toISOString();
+        set((state) => {
+          const existing = state.characterMastery[characterId] || {
+            characterId,
+            correctCount: 0,
+            incorrectCount: 0,
+            lastPracticed: now,
+            masteryLevel: 0,
+            nextReviewDate: now,
+          };
+
+          const newCorrect = existing.correctCount + (correct ? 1 : 0);
+          const newIncorrect = existing.incorrectCount + (correct ? 0 : 1);
+
+          // Calculate mastery level (0-5)
+          const accuracy = newCorrect / (newCorrect + newIncorrect);
+          const totalAttempts = newCorrect + newIncorrect;
+          let masteryLevel = 0;
+          if (totalAttempts >= 3 && accuracy >= 0.9) masteryLevel = 5;
+          else if (totalAttempts >= 3 && accuracy >= 0.8) masteryLevel = 4;
+          else if (totalAttempts >= 2 && accuracy >= 0.7) masteryLevel = 3;
+          else if (totalAttempts >= 2 && accuracy >= 0.6) masteryLevel = 2;
+          else if (totalAttempts >= 1) masteryLevel = 1;
+
+          // Calculate next review date based on mastery (SRS intervals)
+          const intervals = [1, 2, 4, 7, 14, 30]; // days
+          const daysUntilReview = intervals[masteryLevel] || 1;
+          const nextReview = new Date(Date.now() + daysUntilReview * 86400000);
+
+          return {
+            characterMastery: {
+              ...state.characterMastery,
+              [characterId]: {
+                characterId,
+                correctCount: newCorrect,
+                incorrectCount: newIncorrect,
+                lastPracticed: now,
+                masteryLevel,
+                nextReviewDate: nextReview.toISOString(),
+              },
+            },
+          };
+        });
+      },
+
+      getCharactersDueForReview: () => {
+        const now = new Date().toISOString();
+        const mastery = get().characterMastery;
+        return Object.values(mastery).filter((m) => m.nextReviewDate <= now);
+      },
+
+      // Game Stats
+      recordMatchingGameWin: () => {
+        set((state) => ({ matchingGamesWon: state.matchingGamesWon + 1 }));
+        get().addXp(15);
+      },
+
+      recordSpeedChallengeScore: (score: number) => {
+        set((state) => ({
+          speedChallengeHighScore: Math.max(score, state.speedChallengeHighScore),
+        }));
+        get().addXp(Math.floor(score / 2));
+      },
+
+      recordPerfectQuiz: () => {
+        set((state) => ({ perfectQuizzes: state.perfectQuizzes + 1 }));
+        get().addXp(25);
       },
     }),
     {
