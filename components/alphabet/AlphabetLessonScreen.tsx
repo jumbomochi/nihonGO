@@ -16,7 +16,7 @@ import { CharacterCard } from './CharacterCard';
 import { DrawingCanvas } from './DrawingCanvas';
 import { CharacterQuiz } from './CharacterQuiz';
 import { Button } from '@/components/common/Button';
-import { MatchingGame } from '@/components/games';
+import { MatchingGame, SpeedChallenge } from '@/components/games';
 import { MatchingPairType } from '@/types/games';
 
 type Section = 'learn' | 'write' | 'practice' | 'quiz';
@@ -43,6 +43,7 @@ export function AlphabetLessonScreen({
   const [showGrid, setShowGrid] = useState(false); // Toggle between card and grid view
   const [showMatchingGame, setShowMatchingGame] = useState(false);
   const [matchingPairType, setMatchingPairType] = useState<MatchingPairType>('hiragana-romaji');
+  const [showSpeedChallenge, setShowSpeedChallenge] = useState(false);
 
   const currentPair = lesson.pairs[currentCharIndex];
 
@@ -372,6 +373,20 @@ export function AlphabetLessonScreen({
             title="Start Matching Game"
             onPress={() => setShowMatchingGame(true)}
           />
+
+          <View className="mt-6">
+            <Text className="text-xl font-semibold text-gray-900 dark:text-white text-center mb-2">
+              Speed Challenge
+            </Text>
+            <Text className="text-gray-500 dark:text-gray-400 text-center mb-4">
+              How fast can you identify characters?
+            </Text>
+            <Button
+              title="Start Speed Challenge"
+              variant="outline"
+              onPress={() => setShowSpeedChallenge(true)}
+            />
+          </View>
         </View>
       )}
 
@@ -422,6 +437,23 @@ export function AlphabetLessonScreen({
           onClose={() => setShowMatchingGame(false)}
           onComplete={(score) => {
             // Score is handled by the game component
+          }}
+        />
+      </Modal>
+
+      {/* Speed Challenge Modal */}
+      <Modal
+        visible={showSpeedChallenge}
+        animationType="slide"
+        presentationStyle="fullScreen"
+      >
+        <SpeedChallenge
+          pairs={lesson.pairs}
+          questionCount={10}
+          timePerQuestion={5000}
+          onClose={() => setShowSpeedChallenge(false)}
+          onComplete={(score) => {
+            // Score handled by component
           }}
         />
       </Modal>
