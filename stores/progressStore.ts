@@ -5,6 +5,7 @@ import { GenkiBook } from '@/types/genki';
 import { getAllLessonIds, GENKI_BOOKS } from '@/data/genki';
 import { AlphabetProgress } from '@/types/alphabet';
 import { CharacterMastery } from '@/types/games';
+import { ACHIEVEMENTS } from '@/data/achievements';
 
 interface LessonProgress {
   topicId: string;
@@ -116,6 +117,9 @@ interface ProgressState {
   recordMatchingGameWin: () => void;
   recordSpeedChallengeScore: (score: number) => void;
   recordPerfectQuiz: () => void;
+
+  // Achievement Checking
+  checkAchievements: () => string[];
 }
 
 function getToday(): string {
@@ -476,6 +480,7 @@ export const useProgressStore = create<ProgressState>()(
             lastActivityDate: today,
           };
         });
+        get().checkAchievements();
       },
 
       getXpForLevel: (level: number) => {
@@ -555,6 +560,60 @@ export const useProgressStore = create<ProgressState>()(
       recordPerfectQuiz: () => {
         set((state) => ({ perfectQuizzes: state.perfectQuizzes + 1 }));
         get().addXp(25);
+      },
+
+      checkAchievements: () => {
+        const state = get();
+        const newUnlocks: string[] = [];
+
+        ACHIEVEMENTS.forEach((achievement) => {
+          if (state.unlockedAchievements.includes(achievement.id)) return;
+
+          let shouldUnlock = false;
+          const req = achievement.requirement;
+
+          switch (req.type) {
+            case 'streak':
+              shouldUnlock = state.currentStreak >= req.days;
+              break;
+            case 'xp':
+              shouldUnlock = state.xp >= req.amount;
+              break;
+            case 'lessons_completed':
+              const completedLessons = Object.values(state.alphabetProgress).filter(
+                (p) => p.completedAt !== null
+              ).length;
+              shouldUnlock = completedLessons >= req.count;
+              break;
+            case 'perfect_quiz':
+              shouldUnlock = state.perfectQuizzes >= req.count;
+              break;
+            case 'matching_game':
+              shouldUnlock = state.matchingGamesWon >= req.wins;
+              break;
+            case 'speed_challenge':
+              shouldUnlock = state.speedChallengeHighScore >= req.score;
+              break;
+            case 'characters_mastered':
+              const masteredChars = Object.values(state.characterMastery).filter(
+                (m) => m.masteryLevel >= 4
+              ).length;
+              shouldUnlock = masteredChars >= req.count;
+              break;
+          }
+
+          if (shouldUnlock) {
+            newUnlocks.push(achievement.id);
+          }
+        });
+
+        if (newUnlocks.length > 0) {
+          set((state) => ({
+            unlockedAchievements: [...state.unlockedAchievements, ...newUnlocks],
+          }));
+        }
+
+        return newUnlocks;
       },
     }),
     {
