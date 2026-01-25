@@ -1,13 +1,33 @@
 // components/alphabet/CharacterCard.tsx
 
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, Pressable as RNPressable } from 'react-native';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { KanaPair } from '@/types/alphabet';
+import { useKanaAudio } from '@/hooks/useKanaAudio';
 
 interface CharacterCardProps {
   pair: KanaPair;
   showReading?: boolean;
   onPress?: () => void;
   size?: 'small' | 'medium' | 'large';
+}
+
+function AudioButton({ romaji }: { romaji: string }) {
+  const { playKana, isPlaying } = useKanaAudio();
+
+  return (
+    <RNPressable
+      onPress={() => playKana(romaji)}
+      className="mt-3 w-10 h-10 bg-sakura-100 dark:bg-sakura-900/30 rounded-full items-center justify-center self-center"
+      disabled={isPlaying}
+    >
+      <FontAwesome
+        name={isPlaying ? 'volume-up' : 'volume-off'}
+        size={16}
+        color="#ec4899"
+      />
+    </RNPressable>
+  );
 }
 
 export function CharacterCard({
@@ -62,6 +82,9 @@ export function CharacterCard({
           {pair.romaji}
         </Text>
       )}
+
+      {/* Audio Button */}
+      <AudioButton romaji={pair.romaji} />
     </View>
   );
 
