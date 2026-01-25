@@ -120,9 +120,19 @@ VOCABULARY = [
 ]
 
 
-async def generate_audio(text: str, output_path: Path, voice: str = VOICE_FEMALE):
-    """Generate audio file from Japanese text."""
-    communicate = edge_tts.Communicate(text, voice)
+async def generate_audio(text: str, output_path: Path, voice: str = VOICE_FEMALE, is_kana: bool = False):
+    """Generate audio file from Japanese text.
+
+    For short sounds like single kana, we:
+    - Slow down the rate for clearer pronunciation
+    - Add trailing silence by appending a pause marker
+    """
+    if is_kana or len(text) <= 2:
+        # Slower rate for single kana, add pause marker for natural ending
+        communicate = edge_tts.Communicate(text + "。", voice, rate="-15%")
+    else:
+        communicate = edge_tts.Communicate(text, voice)
+
     await communicate.save(str(output_path))
 
 
@@ -138,7 +148,7 @@ async def generate_kana_audio():
             print(f"  Skipping {char} ({romaji}) - already exists")
             continue
         print(f"  Generating {char} ({romaji})...")
-        await generate_audio(char, output_path)
+        await generate_audio(char, output_path, is_kana=True)
 
     print("\n=== Generating Katakana Audio ===")
     katakana_dir = AUDIO_DIR / "katakana"
@@ -150,7 +160,7 @@ async def generate_kana_audio():
             print(f"  Skipping {char} ({romaji}) - already exists")
             continue
         print(f"  Generating {char} ({romaji})...")
-        await generate_audio(char, output_path)
+        await generate_audio(char, output_path, is_kana=True)
 
     print(f"\nKana audio saved to: {AUDIO_DIR}")
 
