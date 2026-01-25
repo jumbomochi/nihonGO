@@ -16,8 +16,10 @@ import { CharacterCard } from './CharacterCard';
 import { DrawingCanvas } from './DrawingCanvas';
 import { CharacterQuiz } from './CharacterQuiz';
 import { Button } from '@/components/common/Button';
+import { MatchingGame } from '@/components/games';
+import { MatchingPairType } from '@/types/games';
 
-type Section = 'learn' | 'write' | 'quiz';
+type Section = 'learn' | 'write' | 'practice' | 'quiz';
 
 interface AlphabetLessonScreenProps {
   lesson: AlphabetLesson;
@@ -39,6 +41,8 @@ export function AlphabetLessonScreen({
   const [showQuiz, setShowQuiz] = useState(false);
   const [writtenChars, setWrittenChars] = useState<Set<string>>(new Set());
   const [showGrid, setShowGrid] = useState(false); // Toggle between card and grid view
+  const [showMatchingGame, setShowMatchingGame] = useState(false);
+  const [matchingPairType, setMatchingPairType] = useState<MatchingPairType>('hiragana-romaji');
 
   const currentPair = lesson.pairs[currentCharIndex];
 
@@ -78,6 +82,7 @@ export function AlphabetLessonScreen({
   const sections: { id: Section; label: string; icon: string }[] = [
     { id: 'learn', label: 'Learn', icon: 'eye' },
     { id: 'write', label: 'Write', icon: 'pencil' },
+    { id: 'practice', label: 'Practice', icon: 'gamepad' },
     { id: 'quiz', label: 'Quiz', icon: 'question-circle' },
   ];
 
@@ -325,6 +330,51 @@ export function AlphabetLessonScreen({
         </View>
       )}
 
+      {activeSection === 'practice' && (
+        <View className="flex-1 px-6 py-8">
+          <Text className="text-xl font-semibold text-gray-900 dark:text-white text-center mb-2">
+            Matching Game
+          </Text>
+          <Text className="text-gray-500 dark:text-gray-400 text-center mb-6">
+            Match pairs to reinforce your memory
+          </Text>
+
+          {/* Pair Type Selection */}
+          <View className="gap-3 mb-6">
+            {[
+              { type: 'hiragana-romaji' as const, label: 'Hiragana ↔ Romaji' },
+              { type: 'katakana-romaji' as const, label: 'Katakana ↔ Romaji' },
+              { type: 'hiragana-katakana' as const, label: 'Hiragana ↔ Katakana' },
+            ].map((option) => (
+              <Pressable
+                key={option.type}
+                onPress={() => setMatchingPairType(option.type)}
+                className={`p-4 rounded-xl border-2 ${
+                  matchingPairType === option.type
+                    ? 'border-sakura-500 bg-sakura-50 dark:bg-sakura-900/20'
+                    : 'border-gray-200 dark:border-gray-700'
+                }`}
+              >
+                <Text
+                  className={`text-center font-medium ${
+                    matchingPairType === option.type
+                      ? 'text-sakura-600'
+                      : 'text-gray-700 dark:text-gray-300'
+                  }`}
+                >
+                  {option.label}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+
+          <Button
+            title="Start Matching Game"
+            onPress={() => setShowMatchingGame(true)}
+          />
+        </View>
+      )}
+
       {activeSection === 'quiz' && (
         <View className="flex-1 px-6 py-8 items-center justify-center">
           <FontAwesome name="question-circle" size={64} color="#ec4899" />
@@ -356,6 +406,23 @@ export function AlphabetLessonScreen({
           lessonId={lesson.id}
           onClose={() => setShowQuiz(false)}
           onComplete={handleQuizComplete}
+        />
+      </Modal>
+
+      {/* Matching Game Modal */}
+      <Modal
+        visible={showMatchingGame}
+        animationType="slide"
+        presentationStyle="fullScreen"
+      >
+        <MatchingGame
+          pairs={lesson.pairs}
+          pairType={matchingPairType}
+          pairCount={Math.min(5, lesson.pairs.length)}
+          onClose={() => setShowMatchingGame(false)}
+          onComplete={(score) => {
+            // Score is handled by the game component
+          }}
         />
       </Modal>
     </SafeAreaView>

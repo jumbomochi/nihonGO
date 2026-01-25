@@ -38,7 +38,7 @@ export default function AlphabetLessonRoute() {
   }
 
   const handleSectionComplete = (
-    section: 'learn' | 'write' | 'quiz',
+    section: 'learn' | 'write' | 'practice' | 'quiz',
     score?: number,
     total?: number
   ) => {

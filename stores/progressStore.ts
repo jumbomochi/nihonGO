@@ -96,7 +96,7 @@ interface ProgressState {
   // Alphabet progress actions
   completeAlphabetSection: (
     lessonId: string,
-    section: 'learn' | 'write' | 'quiz',
+    section: 'learn' | 'write' | 'practice' | 'quiz',
     score?: number,
     total?: number
   ) => void;
@@ -417,7 +417,7 @@ export const useProgressStore = create<ProgressState>()(
       // Alphabet progress methods
       completeAlphabetSection: (
         lessonId: string,
-        section: 'learn' | 'write' | 'quiz',
+        section: 'learn' | 'write' | 'practice' | 'quiz',
         score?: number,
         total?: number
       ) => {
@@ -438,6 +438,9 @@ export const useProgressStore = create<ProgressState>()(
             updated.learnCompleted = true;
           } else if (section === 'write') {
             updated.writeCompleted = true;
+          } else if (section === 'practice') {
+            // Practice section doesn't need to update any specific flag yet
+            // Could add practiceCompleted in the future if needed
           } else if (section === 'quiz' && score !== undefined) {
             if (updated.quizBestScore === null || score > updated.quizBestScore) {
               updated.quizBestScore = score;
