@@ -1,0 +1,165 @@
+{
+  "book": "genki2",
+  "lesson": 21,
+  "vocabulary_count": 17,
+  "dialogue_count": 6,
+  "vocabulary": [
+    {
+      "japanese": "どろぼう",
+      "reading": "どろぼう",
+      "romaji": "dorobou",
+      "english": "burglar; thief",
+      "audio": "vocabulary/001_dorobou.mp3"
+    },
+    {
+      "japanese": "警察",
+      "reading": "けいさつ",
+      "romaji": "keisatsu",
+      "english": "police",
+      "audio": "vocabulary/002_keisatsu.mp3"
+    },
+    {
+      "japanese": "犯人",
+      "reading": "はんにん",
+      "romaji": "hannin",
+      "english": "criminal; culprit",
+      "audio": "vocabulary/003_hannin.mp3"
+    },
+    {
+      "japanese": "事件",
+      "reading": "じけん",
+      "romaji": "jiken",
+      "english": "incident; case; crime",
+      "audio": "vocabulary/004_jiken.mp3"
+    },
+    {
+      "japanese": "被害",
+      "reading": "ひがい",
+      "romaji": "higai",
+      "english": "damage; harm",
+      "audio": "vocabulary/005_higai.mp3"
+    },
+    {
+      "japanese": "めちゃくちゃ",
+      "reading": "めちゃくちゃ",
+      "romaji": "mechakucha",
+      "english": "mess; chaos",
+      "audio": "vocabulary/006_mechakucha.mp3"
+    },
+    {
+      "japanese": "ぬすむ",
+      "reading": "ぬすむ",
+      "romaji": "nusumu",
+      "english": "to steal",
+      "audio": "vocabulary/007_nusumu.mp3"
+    },
+    {
+      "japanese": "こわす",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break; to destroy",
+      "audio": "vocabulary/008_kowasu.mp3"
+    },
+    {
+      "japanese": "ふむ",
+      "reading": "ふむ",
+      "romaji": "fumu",
+      "english": "to step on",
+      "audio": "vocabulary/009_fumu.mp3"
+    },
+    {
+      "japanese": "わらう",
+      "reading": "わらう",
+      "romaji": "warau",
+      "english": "to laugh",
+      "audio": "vocabulary/010_warau.mp3"
+    },
+    {
+      "japanese": "しかる",
+      "reading": "しかる",
+      "romaji": "shikaru",
+      "english": "to scold",
+      "audio": "vocabulary/011_shikaru.mp3"
+    },
+    {
+      "japanese": "ほめる",
+      "reading": "ほめる",
+      "romaji": "homeru",
+      "english": "to praise",
+      "audio": "vocabulary/012_homeru.mp3"
+    },
+    {
+      "japanese": "つかまえる",
+      "reading": "つかまえる",
+      "romaji": "tsukamaeru",
+      "english": "to catch; to arrest",
+      "audio": "vocabulary/013_tsukamaeru.mp3"
+    },
+    {
+      "japanese": "いじめる",
+      "reading": "いじめる",
+      "romaji": "ijimeru",
+      "english": "to bully; to tease",
+      "audio": "vocabulary/014_ijimeru.mp3"
+    },
+    {
+      "japanese": "かわいそう",
+      "reading": "かわいそう",
+      "romaji": "kawaisou",
+      "english": "pitiful; poor thing",
+      "audio": "vocabulary/015_kawaisou.mp3"
+    },
+    {
+      "japanese": "しかたがない",
+      "reading": "しかたがない",
+      "romaji": "shikata ga nai",
+      "english": "cannot be helped",
+      "audio": "vocabulary/016_shikata_ga_nai.mp3"
+    },
+    {
+      "japanese": "こわい",
+      "reading": "こわい",
+      "romaji": "kowai",
+      "english": "scary; afraid",
+      "audio": "vocabulary/017_kowai.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Mary",
+      "japanese": "たけしさん、どうしたの？元気なさそうだけど。",
+      "english": "Takeshi, what's wrong? You don't look well.",
+      "audio": "dialogue/001_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "えっ、本当？それは大へんだったね。何をとられたの？",
+      "english": "What? Really? That must have been terrible. What was taken?",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "ひどいね。けいさつにれんらくした？",
+      "english": "That's awful. Did you contact the police?",
+      "audio": "dialogue/003_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "きのう、どろぼうにはいられたんだ。",
+      "english": "I was burglarized yesterday.",
+      "audio": "dialogue/004_takeshi.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "パソコンとカメラをとられた。それに、へやをめちゃくちゃにされた。",
+      "english": "My computer and camera were taken. And my room was messed up.",
+      "audio": "dialogue/005_takeshi.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "うん、すぐ来てくれて、いろいろ聞かれた。",
+      "english": "Yes, they came right away and I was asked various questions.",
+      "audio": "dialogue/006_takeshi.mp3"
+    }
+  ]
+}

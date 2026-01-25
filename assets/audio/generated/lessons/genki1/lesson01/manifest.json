@@ -1,0 +1,185 @@
+{
+  "book": "genki1",
+  "lesson": 1,
+  "vocabulary_count": 19,
+  "dialogue_count": 7,
+  "vocabulary": [
+    {
+      "japanese": "私",
+      "reading": "わたし",
+      "romaji": "watashi",
+      "english": "I",
+      "audio": "vocabulary/001_watashi.mp3"
+    },
+    {
+      "japanese": "友達",
+      "reading": "ともだち",
+      "romaji": "tomodachi",
+      "english": "friend",
+      "audio": "vocabulary/002_tomodachi.mp3"
+    },
+    {
+      "japanese": "学生",
+      "reading": "がくせい",
+      "romaji": "gakusei",
+      "english": "student",
+      "audio": "vocabulary/003_gakusei.mp3"
+    },
+    {
+      "japanese": "留学生",
+      "reading": "りゅうがくせい",
+      "romaji": "ryuugakusei",
+      "english": "international student",
+      "audio": "vocabulary/004_ryuugakusei.mp3"
+    },
+    {
+      "japanese": "先生",
+      "reading": "せんせい",
+      "romaji": "sensei",
+      "english": "teacher; professor",
+      "audio": "vocabulary/005_sensei.mp3"
+    },
+    {
+      "japanese": "大学",
+      "reading": "だいがく",
+      "romaji": "daigaku",
+      "english": "university; college",
+      "audio": "vocabulary/006_daigaku.mp3"
+    },
+    {
+      "japanese": "高校",
+      "reading": "こうこう",
+      "romaji": "koukou",
+      "english": "high school",
+      "audio": "vocabulary/007_koukou.mp3"
+    },
+    {
+      "japanese": "専攻",
+      "reading": "せんこう",
+      "romaji": "senkou",
+      "english": "major",
+      "audio": "vocabulary/008_senkou.mp3"
+    },
+    {
+      "japanese": "一年生",
+      "reading": "いちねんせい",
+      "romaji": "ichinensei",
+      "english": "first-year student",
+      "audio": "vocabulary/009_ichinensei.mp3"
+    },
+    {
+      "japanese": "二年生",
+      "reading": "にねんせい",
+      "romaji": "ninensei",
+      "english": "second-year student",
+      "audio": "vocabulary/010_ninensei.mp3"
+    },
+    {
+      "japanese": "三年生",
+      "reading": "さんねんせい",
+      "romaji": "sannensei",
+      "english": "third-year student",
+      "audio": "vocabulary/011_sannensei.mp3"
+    },
+    {
+      "japanese": "四年生",
+      "reading": "よねんせい",
+      "romaji": "yonensei",
+      "english": "fourth-year student",
+      "audio": "vocabulary/012_yonensei.mp3"
+    },
+    {
+      "japanese": "日本",
+      "reading": "にほん",
+      "romaji": "nihon",
+      "english": "Japan",
+      "audio": "vocabulary/013_nihon.mp3"
+    },
+    {
+      "japanese": "アメリカ",
+      "reading": "アメリカ",
+      "romaji": "amerika",
+      "english": "America",
+      "audio": "vocabulary/014_amerika.mp3"
+    },
+    {
+      "japanese": "日本人",
+      "reading": "にほんじん",
+      "romaji": "nihonjin",
+      "english": "Japanese person",
+      "audio": "vocabulary/015_nihonjin.mp3"
+    },
+    {
+      "japanese": "歳",
+      "reading": "さい",
+      "romaji": "sai",
+      "english": "...years old",
+      "audio": "vocabulary/016_sai.mp3"
+    },
+    {
+      "japanese": "はい",
+      "reading": "はい",
+      "romaji": "hai",
+      "english": "yes",
+      "audio": "vocabulary/017_hai.mp3"
+    },
+    {
+      "japanese": "いいえ",
+      "reading": "いいえ",
+      "romaji": "iie",
+      "english": "no",
+      "audio": "vocabulary/018_iie.mp3"
+    },
+    {
+      "japanese": "ありがとうございます",
+      "reading": "ありがとうございます",
+      "romaji": "arigatou gozaimasu",
+      "english": "thank you",
+      "audio": "vocabulary/019_arigatou_gozaimasu.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Takeshi",
+      "japanese": "じゅうにじはんです。",
+      "english": "It's twelve thirty.",
+      "audio": "dialogue/001_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "はい、アリゾナだいがくの がくせいです。なまえは メアリー・ハートです。",
+      "english": "Yes, I'm a student at the University of Arizona. My name is Mary Hart.",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "そうですか。ぼくは たけしです。よねんせいです。せんこうは れきしです。メアリーさんの せんこうは？",
+      "english": "I see. I'm Takeshi. I'm a fourth-year student. My major is history. What's your major, Mary?",
+      "audio": "dialogue/003_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "にほんごです。いま にねんせいです。",
+      "english": "Japanese. I'm a sophomore now.",
+      "audio": "dialogue/004_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "すみません。いま なんじですか。",
+      "english": "Excuse me. What time is it now?",
+      "audio": "dialogue/005_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "ありがとうございます。",
+      "english": "Thank you very much.",
+      "audio": "dialogue/006_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "あのう、りゅうがくせいですか。",
+      "english": "Um, are you an international student?",
+      "audio": "dialogue/007_takeshi.mp3"
+    }
+  ]
+}

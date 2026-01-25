@@ -1,0 +1,350 @@
+{
+  "book": "genki2",
+  "lesson": 13,
+  "vocabulary_count": 40,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "あげる",
+      "reading": "あげる",
+      "romaji": "ageru",
+      "english": "to give (from me/us)",
+      "audio": "vocabulary/001_ageru.mp3"
+    },
+    {
+      "japanese": "くれる",
+      "reading": "くれる",
+      "romaji": "kureru",
+      "english": "to give (to me/us)",
+      "audio": "vocabulary/002_kureru.mp3"
+    },
+    {
+      "japanese": "もらう",
+      "reading": "もらう",
+      "romaji": "morau",
+      "english": "to receive",
+      "audio": "vocabulary/003_morau.mp3"
+    },
+    {
+      "japanese": "さしあげる",
+      "reading": "さしあげる",
+      "romaji": "sashiageru",
+      "english": "to give (humble)",
+      "audio": "vocabulary/004_sashiageru.mp3"
+    },
+    {
+      "japanese": "くださる",
+      "reading": "くださる",
+      "romaji": "kudasaru",
+      "english": "to give (honorific)",
+      "audio": "vocabulary/005_kudasaru.mp3"
+    },
+    {
+      "japanese": "いただく",
+      "reading": "いただく",
+      "romaji": "itadaku",
+      "english": "to receive (humble)",
+      "audio": "vocabulary/006_itadaku.mp3"
+    },
+    {
+      "japanese": "プレゼント",
+      "reading": "プレゼント",
+      "romaji": "purezento",
+      "english": "present; gift",
+      "audio": "vocabulary/007_purezento.mp3"
+    },
+    {
+      "japanese": "お土産",
+      "reading": "おみやげ",
+      "romaji": "omiyage",
+      "english": "souvenir",
+      "audio": "vocabulary/008_omiyage.mp3"
+    },
+    {
+      "japanese": "花",
+      "reading": "はな",
+      "romaji": "hana",
+      "english": "flower",
+      "audio": "vocabulary/009_hana.mp3"
+    },
+    {
+      "japanese": "お菓子",
+      "reading": "おかし",
+      "romaji": "okashi",
+      "english": "sweets; snacks",
+      "audio": "vocabulary/010_okashi.mp3"
+    },
+    {
+      "japanese": "ホストファミリー",
+      "reading": "ホストファミリー",
+      "romaji": "hosuto famirii",
+      "english": "host family",
+      "audio": "vocabulary/011_hosuto_famirii.mp3"
+    },
+    {
+      "japanese": "彼氏",
+      "reading": "かれし",
+      "romaji": "kareshi",
+      "english": "boyfriend",
+      "audio": "vocabulary/012_kareshi.mp3"
+    },
+    {
+      "japanese": "彼女",
+      "reading": "かのじょ",
+      "romaji": "kanojo",
+      "english": "girlfriend; she",
+      "audio": "vocabulary/013_kanojo.mp3"
+    },
+    {
+      "japanese": "～れる/られる",
+      "reading": "～れる/られる",
+      "romaji": "~reru/rareru",
+      "english": "potential form (can do)",
+      "audio": "vocabulary/014_rerurareru.mp3"
+    },
+    {
+      "japanese": "話せる",
+      "reading": "はなせる",
+      "romaji": "hanaseru",
+      "english": "can speak",
+      "audio": "vocabulary/015_hanaseru.mp3"
+    },
+    {
+      "japanese": "食べられる",
+      "reading": "たべられる",
+      "romaji": "taberareru",
+      "english": "can eat",
+      "audio": "vocabulary/016_taberareru.mp3"
+    },
+    {
+      "japanese": "来られる",
+      "reading": "こられる",
+      "romaji": "korareru",
+      "english": "can come",
+      "audio": "vocabulary/017_korareru.mp3"
+    },
+    {
+      "japanese": "できる",
+      "reading": "できる",
+      "romaji": "dekiru",
+      "english": "can do; to be able to",
+      "audio": "vocabulary/018_dekiru.mp3"
+    },
+    {
+      "japanese": "喜ぶ",
+      "reading": "よろこぶ",
+      "romaji": "yorokobu",
+      "english": "to be pleased; to rejoice",
+      "audio": "vocabulary/019_yorokobu.mp3"
+    },
+    {
+      "japanese": "届ける",
+      "reading": "とどける",
+      "romaji": "todokeru",
+      "english": "to deliver",
+      "audio": "vocabulary/020_todokeru.mp3"
+    },
+    {
+      "japanese": "貸す",
+      "reading": "かす",
+      "romaji": "kasu",
+      "english": "to lend",
+      "audio": "vocabulary/021_kasu.mp3"
+    },
+    {
+      "japanese": "借りる",
+      "reading": "かりる",
+      "romaji": "kariru",
+      "english": "to borrow",
+      "audio": "vocabulary/022_kariru.mp3"
+    },
+    {
+      "japanese": "案内する",
+      "reading": "あんないする",
+      "romaji": "annai suru",
+      "english": "to guide; to show around",
+      "audio": "vocabulary/023_annai_suru.mp3"
+    },
+    {
+      "japanese": "招待する",
+      "reading": "しょうたいする",
+      "romaji": "shoutai suru",
+      "english": "to invite",
+      "audio": "vocabulary/024_shoutai_suru.mp3"
+    },
+    {
+      "japanese": "～てあげる",
+      "reading": "～てあげる",
+      "romaji": "~te ageru",
+      "english": "to do ~ for someone",
+      "audio": "vocabulary/025_te_ageru.mp3"
+    },
+    {
+      "japanese": "～てくれる",
+      "reading": "～てくれる",
+      "romaji": "~te kureru",
+      "english": "someone does ~ for me",
+      "audio": "vocabulary/026_te_kureru.mp3"
+    },
+    {
+      "japanese": "～てもらう",
+      "reading": "～てもらう",
+      "romaji": "~te morau",
+      "english": "to have someone do ~",
+      "audio": "vocabulary/027_te_morau.mp3"
+    },
+    {
+      "japanese": "ほしい",
+      "reading": "ほしい",
+      "romaji": "hoshii",
+      "english": "to want (thing)",
+      "audio": "vocabulary/028_hoshii.mp3"
+    },
+    {
+      "japanese": "～てほしい",
+      "reading": "～てほしい",
+      "romaji": "~te hoshii",
+      "english": "want someone to do ~",
+      "audio": "vocabulary/029_te_hoshii.mp3"
+    },
+    {
+      "japanese": "誕生日",
+      "reading": "たんじょうび",
+      "romaji": "tanjoubi",
+      "english": "birthday",
+      "audio": "vocabulary/030_tanjoubi.mp3"
+    },
+    {
+      "japanese": "記念日",
+      "reading": "きねんび",
+      "romaji": "kinenbi",
+      "english": "anniversary",
+      "audio": "vocabulary/031_kinenbi.mp3"
+    },
+    {
+      "japanese": "スカーフ",
+      "reading": "スカーフ",
+      "romaji": "sukaafu",
+      "english": "scarf",
+      "audio": "vocabulary/032_sukaafu.mp3"
+    },
+    {
+      "japanese": "アクセサリー",
+      "reading": "アクセサリー",
+      "romaji": "akusesarii",
+      "english": "accessory; jewelry",
+      "audio": "vocabulary/033_akusesarii.mp3"
+    },
+    {
+      "japanese": "財布",
+      "reading": "さいふ",
+      "romaji": "saifu",
+      "english": "wallet",
+      "audio": "vocabulary/034_saifu.mp3"
+    },
+    {
+      "japanese": "時計",
+      "reading": "とけい",
+      "romaji": "tokei",
+      "english": "watch; clock",
+      "audio": "vocabulary/035_tokei.mp3"
+    },
+    {
+      "japanese": "喜んで",
+      "reading": "よろこんで",
+      "romaji": "yorokonde",
+      "english": "gladly; with pleasure",
+      "audio": "vocabulary/036_yorokonde.mp3"
+    },
+    {
+      "japanese": "もちろん",
+      "reading": "もちろん",
+      "romaji": "mochiron",
+      "english": "of course",
+      "audio": "vocabulary/037_mochiron.mp3"
+    },
+    {
+      "japanese": "～に",
+      "reading": "～に",
+      "romaji": "~ni",
+      "english": "to (recipient); from (giver with もらう)",
+      "audio": "vocabulary/038_ni.mp3"
+    },
+    {
+      "japanese": "わあ",
+      "reading": "わあ",
+      "romaji": "waa",
+      "english": "wow",
+      "audio": "vocabulary/039_waa.mp3"
+    },
+    {
+      "japanese": "何か",
+      "reading": "なにか",
+      "romaji": "nanika",
+      "english": "something",
+      "audio": "vocabulary/040_nanika.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Takeshi",
+      "japanese": "わあ、きれいなスカーフだね。誰にもらったの？",
+      "english": "Wow, that's a beautiful scarf. Who did you get it from?",
+      "audio": "dialogue/001_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "ホストファミリーのお母さんがくれたの。誕生日プレゼントに。",
+      "english": "My host family's mother gave it to me. As a birthday present.",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "うん、アメリカのチョコレートをあげた。喜んでもらえて嬉しかった。",
+      "english": "Yes, I gave her American chocolate. I was happy she was pleased.",
+      "audio": "dialogue/003_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "いいな。僕も何かもらいたいな。",
+      "english": "Nice. I want to receive something too.",
+      "audio": "dialogue/004_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "じゃあ、今度お菓子を作ってあげるよ。",
+      "english": "Then I'll make you some sweets next time.",
+      "audio": "dialogue/005_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "楽しみ！日本語も教えてもらえる？",
+      "english": "I'm looking forward to it! Can I also get you to teach me Japanese?",
+      "audio": "dialogue/006_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "もちろん！私も日本語を教えてほしいけど。",
+      "english": "Of course! Though I also want you to teach me Japanese.",
+      "audio": "dialogue/007_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "よかったね。メアリーさんは何かあげた？",
+      "english": "How nice. Did you give her something?",
+      "audio": "dialogue/008_takeshi.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "本当？メアリーさん、お菓子が作れるの？",
+      "english": "Really? Mary, you can make sweets?",
+      "audio": "dialogue/009_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "うん、アメリカでよく作っていたから。",
+      "english": "Yeah, I used to make them often in America.",
+      "audio": "dialogue/010_mary.mp3"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "book": "genki2",
+  "lesson": 19,
+  "vocabulary_count": 19,
+  "dialogue_count": 6,
+  "vocabulary": [
+    {
+      "japanese": "部長",
+      "reading": "ぶちょう",
+      "romaji": "buchou",
+      "english": "department manager",
+      "audio": "vocabulary/001_buchou.mp3"
+    },
+    {
+      "japanese": "課長",
+      "reading": "かちょう",
+      "romaji": "kachou",
+      "english": "section chief",
+      "audio": "vocabulary/002_kachou.mp3"
+    },
+    {
+      "japanese": "社長",
+      "reading": "しゃちょう",
+      "romaji": "shachou",
+      "english": "company president",
+      "audio": "vocabulary/003_shachou.mp3"
+    },
+    {
+      "japanese": "社員",
+      "reading": "しゃいん",
+      "romaji": "shain",
+      "english": "company employee",
+      "audio": "vocabulary/004_shain.mp3"
+    },
+    {
+      "japanese": "会議",
+      "reading": "かいぎ",
+      "romaji": "kaigi",
+      "english": "meeting; conference",
+      "audio": "vocabulary/005_kaigi.mp3"
+    },
+    {
+      "japanese": "出張",
+      "reading": "しゅっちょう",
+      "romaji": "shucchou",
+      "english": "business trip",
+      "audio": "vocabulary/006_shucchou.mp3"
+    },
+    {
+      "japanese": "プロジェクト",
+      "reading": "ぷろじぇくと",
+      "romaji": "purojekuto",
+      "english": "project",
+      "audio": "vocabulary/007_purojekuto.mp3"
+    },
+    {
+      "japanese": "書類",
+      "reading": "しょるい",
+      "romaji": "shorui",
+      "english": "documents",
+      "audio": "vocabulary/008_shorui.mp3"
+    },
+    {
+      "japanese": "名刺",
+      "reading": "めいし",
+      "romaji": "meishi",
+      "english": "business card",
+      "audio": "vocabulary/009_meishi.mp3"
+    },
+    {
+      "japanese": "いらっしゃる",
+      "reading": "いらっしゃる",
+      "romaji": "irassharu",
+      "english": "to be; to go; to come (honorific)",
+      "audio": "vocabulary/010_irassharu.mp3"
+    },
+    {
+      "japanese": "おっしゃる",
+      "reading": "おっしゃる",
+      "romaji": "ossharu",
+      "english": "to say (honorific)",
+      "audio": "vocabulary/011_ossharu.mp3"
+    },
+    {
+      "japanese": "ごらんになる",
+      "reading": "ごらんになる",
+      "romaji": "goran ni naru",
+      "english": "to see; to look (honorific)",
+      "audio": "vocabulary/012_goran_ni_naru.mp3"
+    },
+    {
+      "japanese": "めしあがる",
+      "reading": "めしあがる",
+      "romaji": "meshiagaru",
+      "english": "to eat; to drink (honorific)",
+      "audio": "vocabulary/013_meshiagaru.mp3"
+    },
+    {
+      "japanese": "おやすみになる",
+      "reading": "おやすみになる",
+      "romaji": "oyasumi ni naru",
+      "english": "to sleep; to rest (honorific)",
+      "audio": "vocabulary/014_oyasumi_ni_naru.mp3"
+    },
+    {
+      "japanese": "ごぞんじ",
+      "reading": "ごぞんじ",
+      "romaji": "gozonji",
+      "english": "to know (honorific)",
+      "audio": "vocabulary/015_gozonji.mp3"
+    },
+    {
+      "japanese": "なさる",
+      "reading": "なさる",
+      "romaji": "nasaru",
+      "english": "to do (honorific)",
+      "audio": "vocabulary/016_nasaru.mp3"
+    },
+    {
+      "japanese": "くださる",
+      "reading": "くださる",
+      "romaji": "kudasaru",
+      "english": "to give (honorific)",
+      "audio": "vocabulary/017_kudasaru.mp3"
+    },
+    {
+      "japanese": "しつれいする",
+      "reading": "しつれいする",
+      "romaji": "shitsurei suru",
+      "english": "to be rude; excuse me",
+      "audio": "vocabulary/018_shitsurei_suru.mp3"
+    },
+    {
+      "japanese": "ていねい",
+      "reading": "ていねい",
+      "romaji": "teinei",
+      "english": "polite; careful",
+      "audio": "vocabulary/019_teinei.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Young Employee",
+      "japanese": "しつれいします。山田部長、おいそがしいところ、すみません。",
+      "english": "Excuse me. Manager Yamada, I'm sorry to bother you when you're busy.",
+      "audio": "dialogue/001_young employee.mp3"
+    },
+    {
+      "speaker": "Manager Yamada",
+      "japanese": "いいえ、いいですよ。どうぞおかけください。",
+      "english": "No, it's fine. Please have a seat.",
+      "audio": "dialogue/002_manager yamada.mp3"
+    },
+    {
+      "speaker": "Young Employee",
+      "japanese": "ありがとうございます。先週のプロジェクトについてごそうだんしたいのですが。",
+      "english": "Thank you. I would like to consult with you about last week\\",
+      "audio": "dialogue/003_young employee.mp3"
+    },
+    {
+      "speaker": "Manager Yamada",
+      "japanese": "ああ、あのプロジェクトね。社長もごらんになりましたよ。",
+      "english": "Ah, that project. The president also looked at it.",
+      "audio": "dialogue/004_manager yamada.mp3"
+    },
+    {
+      "speaker": "Young Employee",
+      "japanese": "そうですか。社長は何とおっしゃいましたか。",
+      "english": "Is that so? What did the president say?",
+      "audio": "dialogue/005_young employee.mp3"
+    },
+    {
+      "speaker": "Manager Yamada",
+      "japanese": "とてもよくできているとおっしゃっていましたよ。",
+      "english": "He said it was very well done.",
+      "audio": "dialogue/006_manager yamada.mp3"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "book": "genki2",
+  "lesson": 20,
+  "vocabulary_count": 19,
+  "dialogue_count": 6,
+  "vocabulary": [
+    {
+      "japanese": "デパート",
+      "reading": "でぱーと",
+      "romaji": "depaato",
+      "english": "department store",
+      "audio": "vocabulary/001_depaato.mp3"
+    },
+    {
+      "japanese": "店員",
+      "reading": "てんいん",
+      "romaji": "tenin",
+      "english": "store clerk",
+      "audio": "vocabulary/002_tenin.mp3"
+    },
+    {
+      "japanese": "売り場",
+      "reading": "うりば",
+      "romaji": "uriba",
+      "english": "sales floor; department",
+      "audio": "vocabulary/003_uriba.mp3"
+    },
+    {
+      "japanese": "プレゼント",
+      "reading": "ぷれぜんと",
+      "romaji": "purezento",
+      "english": "present; gift",
+      "audio": "vocabulary/004_purezento.mp3"
+    },
+    {
+      "japanese": "スカーフ",
+      "reading": "すかーふ",
+      "romaji": "sukaafu",
+      "english": "scarf",
+      "audio": "vocabulary/005_sukaafu.mp3"
+    },
+    {
+      "japanese": "財布",
+      "reading": "さいふ",
+      "romaji": "saifu",
+      "english": "wallet",
+      "audio": "vocabulary/006_saifu.mp3"
+    },
+    {
+      "japanese": "レシート",
+      "reading": "れしーと",
+      "romaji": "reshiito",
+      "english": "receipt",
+      "audio": "vocabulary/007_reshiito.mp3"
+    },
+    {
+      "japanese": "いただく",
+      "reading": "いただく",
+      "romaji": "itadaku",
+      "english": "to receive; to eat/drink (humble)",
+      "audio": "vocabulary/008_itadaku.mp3"
+    },
+    {
+      "japanese": "さしあげる",
+      "reading": "さしあげる",
+      "romaji": "sashiageru",
+      "english": "to give (humble)",
+      "audio": "vocabulary/009_sashiageru.mp3"
+    },
+    {
+      "japanese": "もうす",
+      "reading": "もうす",
+      "romaji": "mousu",
+      "english": "to say; to be called (humble)",
+      "audio": "vocabulary/010_mousu.mp3"
+    },
+    {
+      "japanese": "いたす",
+      "reading": "いたす",
+      "romaji": "itasu",
+      "english": "to do (humble)",
+      "audio": "vocabulary/011_itasu.mp3"
+    },
+    {
+      "japanese": "まいる",
+      "reading": "まいる",
+      "romaji": "mairu",
+      "english": "to go; to come (humble)",
+      "audio": "vocabulary/012_mairu.mp3"
+    },
+    {
+      "japanese": "おる",
+      "reading": "おる",
+      "romaji": "oru",
+      "english": "to be (humble)",
+      "audio": "vocabulary/013_oru.mp3"
+    },
+    {
+      "japanese": "うかがう",
+      "reading": "うかがう",
+      "romaji": "ukagau",
+      "english": "to ask; to visit; to hear (humble)",
+      "audio": "vocabulary/014_ukagau.mp3"
+    },
+    {
+      "japanese": "はいけんする",
+      "reading": "はいけんする",
+      "romaji": "haiken suru",
+      "english": "to look at; to see (humble)",
+      "audio": "vocabulary/015_haiken_suru.mp3"
+    },
+    {
+      "japanese": "かしこまりました",
+      "reading": "かしこまりました",
+      "romaji": "kashikomarimashita",
+      "english": "Certainly (formal acknowledgment)",
+      "audio": "vocabulary/016_kashikomarimashita.mp3"
+    },
+    {
+      "japanese": "ございます",
+      "reading": "ございます",
+      "romaji": "gozaimasu",
+      "english": "to be; to have (formal copula)",
+      "audio": "vocabulary/017_gozaimasu.mp3"
+    },
+    {
+      "japanese": "おつり",
+      "reading": "おつり",
+      "romaji": "otsuri",
+      "english": "change (money)",
+      "audio": "vocabulary/018_otsuri.mp3"
+    },
+    {
+      "japanese": "包む",
+      "reading": "つつむ",
+      "romaji": "tsutsumu",
+      "english": "to wrap",
+      "audio": "vocabulary/019_tsutsumu.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Mary",
+      "japanese": "はい、母へのプレゼントをさがしているのですが。",
+      "english": "Yes, I'm looking for a present for my mother.",
+      "audio": "dialogue/001_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "じゃあ、これをいただきます。",
+      "english": "Then I'll take this one.",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Sales Clerk",
+      "japanese": "いらっしゃいませ。何かおさがしですか。",
+      "english": "Welcome. Are you looking for something?",
+      "audio": "dialogue/003_sales clerk.mp3"
+    },
+    {
+      "speaker": "Sales Clerk",
+      "japanese": "さようでございますか。どのようなものをおかんがえでしょうか。",
+      "english": "I see. What kind of thing are you thinking of?",
+      "audio": "dialogue/004_sales clerk.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "スカーフかばんか、そのへんを見せていただけますか。",
+      "english": "Could you show me scarves or bags, something like that?",
+      "audio": "dialogue/005_mary.mp3"
+    },
+    {
+      "speaker": "Sales Clerk",
+      "japanese": "かしこまりました。こちらへどうぞ。ご案内いたします。",
+      "english": "Certainly. This way, please. I will guide you.",
+      "audio": "dialogue/006_sales clerk.mp3"
+    }
+  ]
+}

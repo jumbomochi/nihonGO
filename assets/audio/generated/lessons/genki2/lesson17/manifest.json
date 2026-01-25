@@ -1,0 +1,240 @@
+{
+  "book": "genki2",
+  "lesson": 17,
+  "vocabulary_count": 26,
+  "dialogue_count": 8,
+  "vocabulary": [
+    {
+      "japanese": "ぐち",
+      "reading": "ぐち",
+      "romaji": "guchi",
+      "english": "complaint; grumble",
+      "audio": "vocabulary/001_guchi.mp3"
+    },
+    {
+      "japanese": "ふまん",
+      "reading": "ふまん",
+      "romaji": "fuman",
+      "english": "dissatisfaction",
+      "audio": "vocabulary/002_fuman.mp3"
+    },
+    {
+      "japanese": "ルームメイト",
+      "reading": "るーむめいと",
+      "romaji": "ruumeito",
+      "english": "roommate",
+      "audio": "vocabulary/003_ruumeito.mp3"
+    },
+    {
+      "japanese": "かんりにん",
+      "reading": "かんりにん",
+      "romaji": "kanrinin",
+      "english": "building manager",
+      "audio": "vocabulary/004_kanrinin.mp3"
+    },
+    {
+      "japanese": "きそく",
+      "reading": "きそく",
+      "romaji": "kisoku",
+      "english": "rule; regulation",
+      "audio": "vocabulary/005_kisoku.mp3"
+    },
+    {
+      "japanese": "となり",
+      "reading": "となり",
+      "romaji": "tonari",
+      "english": "next door; neighbor",
+      "audio": "vocabulary/006_tonari.mp3"
+    },
+    {
+      "japanese": "うわさ",
+      "reading": "うわさ",
+      "romaji": "uwasa",
+      "english": "rumor; gossip",
+      "audio": "vocabulary/007_uwasa.mp3"
+    },
+    {
+      "japanese": "じじょう",
+      "reading": "じじょう",
+      "romaji": "jijou",
+      "english": "circumstances",
+      "audio": "vocabulary/008_jijou.mp3"
+    },
+    {
+      "japanese": "めんどう",
+      "reading": "めんどう",
+      "romaji": "mendou",
+      "english": "trouble; hassle",
+      "audio": "vocabulary/009_mendou.mp3"
+    },
+    {
+      "japanese": "よてい",
+      "reading": "よてい",
+      "romaji": "yotei",
+      "english": "plan; schedule",
+      "audio": "vocabulary/010_yotei.mp3"
+    },
+    {
+      "japanese": "ニュース",
+      "reading": "にゅーす",
+      "romaji": "nyuusu",
+      "english": "news",
+      "audio": "vocabulary/011_nyuusu.mp3"
+    },
+    {
+      "japanese": "てんきよほう",
+      "reading": "てんきよほう",
+      "romaji": "tenkiyohou",
+      "english": "weather forecast",
+      "audio": "vocabulary/012_tenkiyohou.mp3"
+    },
+    {
+      "japanese": "なおす",
+      "reading": "なおす",
+      "romaji": "naosu",
+      "english": "to fix; to repair",
+      "audio": "vocabulary/013_naosu.mp3"
+    },
+    {
+      "japanese": "まもる",
+      "reading": "まもる",
+      "romaji": "mamoru",
+      "english": "to protect; to obey",
+      "audio": "vocabulary/014_mamoru.mp3"
+    },
+    {
+      "japanese": "こわす",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break; to destroy",
+      "audio": "vocabulary/015_kowasu.mp3"
+    },
+    {
+      "japanese": "よごす",
+      "reading": "よごす",
+      "romaji": "yogosu",
+      "english": "to make dirty",
+      "audio": "vocabulary/016_yogosu.mp3"
+    },
+    {
+      "japanese": "さわぐ",
+      "reading": "さわぐ",
+      "romaji": "sawagu",
+      "english": "to make noise",
+      "audio": "vocabulary/017_sawagu.mp3"
+    },
+    {
+      "japanese": "たのむ",
+      "reading": "たのむ",
+      "romaji": "tanomu",
+      "english": "to ask; to request",
+      "audio": "vocabulary/018_tanomu.mp3"
+    },
+    {
+      "japanese": "ことわる",
+      "reading": "ことわる",
+      "romaji": "kotowaru",
+      "english": "to refuse; to decline",
+      "audio": "vocabulary/019_kotowaru.mp3"
+    },
+    {
+      "japanese": "がまんする",
+      "reading": "がまんする",
+      "romaji": "gaman suru",
+      "english": "to endure",
+      "audio": "vocabulary/020_gaman_suru.mp3"
+    },
+    {
+      "japanese": "そうだんする",
+      "reading": "そうだんする",
+      "romaji": "soudan suru",
+      "english": "to consult",
+      "audio": "vocabulary/021_soudan_suru.mp3"
+    },
+    {
+      "japanese": "うるさい",
+      "reading": "うるさい",
+      "romaji": "urusai",
+      "english": "noisy; annoying",
+      "audio": "vocabulary/022_urusai.mp3"
+    },
+    {
+      "japanese": "きびしい",
+      "reading": "きびしい",
+      "romaji": "kibishii",
+      "english": "strict; harsh",
+      "audio": "vocabulary/023_kibishii.mp3"
+    },
+    {
+      "japanese": "ちょくせつ",
+      "reading": "ちょくせつ",
+      "romaji": "chokusetsu",
+      "english": "directly",
+      "audio": "vocabulary/024_chokusetsu.mp3"
+    },
+    {
+      "japanese": "どうやら",
+      "reading": "どうやら",
+      "romaji": "douyara",
+      "english": "apparently",
+      "audio": "vocabulary/025_douyara.mp3"
+    },
+    {
+      "japanese": "によると",
+      "reading": "によると",
+      "romaji": "ni yoru to",
+      "english": "according to",
+      "audio": "vocabulary/026_ni_yoru_to.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Friend",
+      "japanese": "メアリーさん、どうしたの？つかれてるみたいだけど。",
+      "english": "Mary, what's wrong? You look tired.",
+      "audio": "dialogue/001_friend.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "うん、ルームメイトがうるさくて、ぜんぜんねむれないの。",
+      "english": "Yeah, my roommate is noisy and I can't sleep at all.",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "それは大へんだね。ちょくせつ話したら？",
+      "english": "That's tough. Why don't you talk to her directly?",
+      "audio": "dialogue/003_friend.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "話したんだけど、ぜんぜん聞いてくれないの。",
+      "english": "I did talk to her, but she doesn't listen at all.",
+      "audio": "dialogue/004_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "そうだね。それがいいかもしれない。",
+      "english": "You're right. That might be good.",
+      "audio": "dialogue/005_mary.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "そうなんだ。どんなふうにうるさいの？",
+      "english": "I see. In what way is she noisy?",
+      "audio": "dialogue/006_friend.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "まいばん友だちをよんで、おそくまでパーティーするんだって。",
+      "english": "She invites friends over every night and parties until late, apparently.",
+      "audio": "dialogue/007_mary.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "じゃあ、かんりにんに言えば？",
+      "english": "Then, how about telling the building manager?",
+      "audio": "dialogue/008_friend.mp3"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "book": "genki2",
+  "lesson": 16,
+  "vocabulary_count": 40,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "忘れ物",
+      "reading": "わすれもの",
+      "romaji": "wasuremono",
+      "english": "lost item; forgotten item",
+      "audio": "vocabulary/001_wasuremono.mp3"
+    },
+    {
+      "japanese": "落とし物",
+      "reading": "おとしもの",
+      "romaji": "otoshimono",
+      "english": "dropped item",
+      "audio": "vocabulary/002_otoshimono.mp3"
+    },
+    {
+      "japanese": "交番",
+      "reading": "こうばん",
+      "romaji": "kouban",
+      "english": "police box",
+      "audio": "vocabulary/003_kouban.mp3"
+    },
+    {
+      "japanese": "棚",
+      "reading": "たな",
+      "romaji": "tana",
+      "english": "shelf",
+      "audio": "vocabulary/004_tana.mp3"
+    },
+    {
+      "japanese": "住所",
+      "reading": "じゅうしょ",
+      "romaji": "juusho",
+      "english": "address",
+      "audio": "vocabulary/005_juusho.mp3"
+    },
+    {
+      "japanese": "電話番号",
+      "reading": "でんわばんごう",
+      "romaji": "denwa bangou",
+      "english": "phone number",
+      "audio": "vocabulary/006_denwa_bangou.mp3"
+    },
+    {
+      "japanese": "届ける",
+      "reading": "とどける",
+      "romaji": "todokeru",
+      "english": "to deliver; to report",
+      "audio": "vocabulary/007_todokeru.mp3"
+    },
+    {
+      "japanese": "届く",
+      "reading": "とどく",
+      "romaji": "todoku",
+      "english": "to arrive; to reach",
+      "audio": "vocabulary/008_todoku.mp3"
+    },
+    {
+      "japanese": "見つかる",
+      "reading": "みつかる",
+      "romaji": "mitsukaru",
+      "english": "to be found",
+      "audio": "vocabulary/009_mitsukaru.mp3"
+    },
+    {
+      "japanese": "見つける",
+      "reading": "みつける",
+      "romaji": "mitsukeru",
+      "english": "to find",
+      "audio": "vocabulary/010_mitsukeru.mp3"
+    },
+    {
+      "japanese": "落とす",
+      "reading": "おとす",
+      "romaji": "otosu",
+      "english": "to drop",
+      "audio": "vocabulary/011_otosu.mp3"
+    },
+    {
+      "japanese": "落ちる",
+      "reading": "おちる",
+      "romaji": "ochiru",
+      "english": "to fall",
+      "audio": "vocabulary/012_ochiru.mp3"
+    },
+    {
+      "japanese": "置く",
+      "reading": "おく",
+      "romaji": "oku",
+      "english": "to put; to place",
+      "audio": "vocabulary/013_oku.mp3"
+    },
+    {
+      "japanese": "閉まる",
+      "reading": "しまる",
+      "romaji": "shimaru",
+      "english": "to close (intransitive)",
+      "audio": "vocabulary/014_shimaru.mp3"
+    },
+    {
+      "japanese": "閉める",
+      "reading": "しめる",
+      "romaji": "shimeru",
+      "english": "to close (transitive)",
+      "audio": "vocabulary/015_shimeru.mp3"
+    },
+    {
+      "japanese": "開く",
+      "reading": "あく",
+      "romaji": "aku",
+      "english": "to open (intransitive)",
+      "audio": "vocabulary/016_aku.mp3"
+    },
+    {
+      "japanese": "開ける",
+      "reading": "あける",
+      "romaji": "akeru",
+      "english": "to open (transitive)",
+      "audio": "vocabulary/017_akeru.mp3"
+    },
+    {
+      "japanese": "壊れる",
+      "reading": "こわれる",
+      "romaji": "kowareru",
+      "english": "to break (intransitive)",
+      "audio": "vocabulary/018_kowareru.mp3"
+    },
+    {
+      "japanese": "壊す",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break (transitive)",
+      "audio": "vocabulary/019_kowasu.mp3"
+    },
+    {
+      "japanese": "汚れる",
+      "reading": "よごれる",
+      "romaji": "yogoreru",
+      "english": "to get dirty",
+      "audio": "vocabulary/020_yogoreru.mp3"
+    },
+    {
+      "japanese": "汚す",
+      "reading": "よごす",
+      "romaji": "yogosu",
+      "english": "to make dirty",
+      "audio": "vocabulary/021_yogosu.mp3"
+    },
+    {
+      "japanese": "～てある",
+      "reading": "～てある",
+      "romaji": "~te aru",
+      "english": "is in state of (resultative)",
+      "audio": "vocabulary/022_te_aru.mp3"
+    },
+    {
+      "japanese": "～てしまう",
+      "reading": "～てしまう",
+      "romaji": "~te shimau",
+      "english": "end up doing; completely do",
+      "audio": "vocabulary/023_te_shimau.mp3"
+    },
+    {
+      "japanese": "少々",
+      "reading": "しょうしょう",
+      "romaji": "shoushou",
+      "english": "a little (formal)",
+      "audio": "vocabulary/024_shoushou.mp3"
+    },
+    {
+      "japanese": "ご～",
+      "reading": "ご～",
+      "romaji": "go~",
+      "english": "honorific prefix",
+      "audio": "vocabulary/025_go.mp3"
+    },
+    {
+      "japanese": "確認",
+      "reading": "かくにん",
+      "romaji": "kakunin",
+      "english": "confirmation",
+      "audio": "vocabulary/026_kakunin.mp3"
+    },
+    {
+      "japanese": "片付ける",
+      "reading": "かたづける",
+      "romaji": "katazukeru",
+      "english": "to tidy up; to put away",
+      "audio": "vocabulary/027_katazukeru.mp3"
+    },
+    {
+      "japanese": "片付く",
+      "reading": "かたづく",
+      "romaji": "katazuku",
+      "english": "to be tidied up",
+      "audio": "vocabulary/028_katazuku.mp3"
+    },
+    {
+      "japanese": "消す",
+      "reading": "けす",
+      "romaji": "kesu",
+      "english": "to turn off; to erase",
+      "audio": "vocabulary/029_kesu.mp3"
+    },
+    {
+      "japanese": "消える",
+      "reading": "きえる",
+      "romaji": "kieru",
+      "english": "to disappear; to go out",
+      "audio": "vocabulary/030_kieru.mp3"
+    },
+    {
+      "japanese": "つける",
+      "reading": "つける",
+      "romaji": "tsukeru",
+      "english": "to turn on; to attach",
+      "audio": "vocabulary/031_tsukeru.mp3"
+    },
+    {
+      "japanese": "つく",
+      "reading": "つく",
+      "romaji": "tsuku",
+      "english": "to be turned on; to be attached",
+      "audio": "vocabulary/032_tsuku.mp3"
+    },
+    {
+      "japanese": "直す",
+      "reading": "なおす",
+      "romaji": "naosu",
+      "english": "to fix; to repair",
+      "audio": "vocabulary/033_naosu.mp3"
+    },
+    {
+      "japanese": "直る",
+      "reading": "なおる",
+      "romaji": "naoru",
+      "english": "to be fixed; to heal",
+      "audio": "vocabulary/034_naoru.mp3"
+    },
+    {
+      "japanese": "窓",
+      "reading": "まど",
+      "romaji": "mado",
+      "english": "window",
+      "audio": "vocabulary/035_mado.mp3"
+    },
+    {
+      "japanese": "ドア",
+      "reading": "ドア",
+      "romaji": "doa",
+      "english": "door",
+      "audio": "vocabulary/036_doa.mp3"
+    },
+    {
+      "japanese": "電気",
+      "reading": "でんき",
+      "romaji": "denki",
+      "english": "electricity; light",
+      "audio": "vocabulary/037_denki.mp3"
+    },
+    {
+      "japanese": "エアコン",
+      "reading": "エアコン",
+      "romaji": "eakon",
+      "english": "air conditioner",
+      "audio": "vocabulary/038_eakon.mp3"
+    },
+    {
+      "japanese": "次から",
+      "reading": "つぎから",
+      "romaji": "tsugi kara",
+      "english": "from now on",
+      "audio": "vocabulary/039_tsugi_kara.mp3"
+    },
+    {
+      "japanese": "気をつける",
+      "reading": "きをつける",
+      "romaji": "ki wo tsukeru",
+      "english": "to be careful",
+      "audio": "vocabulary/040_ki_wo_tsukeru.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Staff",
+      "japanese": "少々お待ちください。探してみます。",
+      "english": "Please wait a moment. I'll look for it.",
+      "audio": "dialogue/001_staff.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "あ、それです！よかった、見つかって。",
+      "english": "Oh, that's it! I'm glad it was found.",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "ありがとうございます。電車を降りる前に確認しておきます。",
+      "english": "Thank you. I'll make sure to check before getting off the train.",
+      "audio": "dialogue/003_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "すみません、電車に傘を忘れてしまったんですが...",
+      "english": "Excuse me, I accidentally left my umbrella on the train...",
+      "audio": "dialogue/004_mary.mp3"
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "どんな傘ですか。",
+      "english": "What kind of umbrella is it?",
+      "audio": "dialogue/005_staff.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "赤い傘です。名前が書いてあります。",
+      "english": "It\\",
+      "audio": "dialogue/006_mary.mp3"
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "この傘ですか。棚に置いてありました。",
+      "english": "Is this the umbrella? It was placed on the shelf.",
+      "audio": "dialogue/007_staff.mp3"
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "お名前とご住所を書いていただけますか。",
+      "english": "Could you please write your name and address?",
+      "audio": "dialogue/008_staff.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "はい。ここに書けばいいですか。",
+      "english": "Yes. Should I write here?",
+      "audio": "dialogue/009_mary.mp3"
+    },
+    {
+      "speaker": "Staff",
+      "japanese": "はい、そこにお願いします。次からは気をつけてくださいね。",
+      "english": "Yes, there please. Please be careful from now on.",
+      "audio": "dialogue/010_staff.mp3"
+    }
+  ]
+}

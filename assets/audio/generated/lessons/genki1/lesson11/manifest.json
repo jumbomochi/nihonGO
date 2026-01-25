@@ -1,0 +1,350 @@
+{
+  "book": "genki1",
+  "lesson": 11,
+  "vocabulary_count": 40,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "仕事",
+      "reading": "しごと",
+      "romaji": "shigoto",
+      "english": "job; work",
+      "audio": "vocabulary/001_shigoto.mp3"
+    },
+    {
+      "japanese": "会社",
+      "reading": "かいしゃ",
+      "romaji": "kaisha",
+      "english": "company",
+      "audio": "vocabulary/002_kaisha.mp3"
+    },
+    {
+      "japanese": "残業",
+      "reading": "ざんぎょう",
+      "romaji": "zangyou",
+      "english": "overtime work",
+      "audio": "vocabulary/003_zangyou.mp3"
+    },
+    {
+      "japanese": "会議",
+      "reading": "かいぎ",
+      "romaji": "kaigi",
+      "english": "meeting",
+      "audio": "vocabulary/004_kaigi.mp3"
+    },
+    {
+      "japanese": "約束",
+      "reading": "やくそく",
+      "romaji": "yakusoku",
+      "english": "promise; appointment",
+      "audio": "vocabulary/005_yakusoku.mp3"
+    },
+    {
+      "japanese": "疲れる",
+      "reading": "つかれる",
+      "romaji": "tsukareru",
+      "english": "to get tired",
+      "audio": "vocabulary/006_tsukareru.mp3"
+    },
+    {
+      "japanese": "休む",
+      "reading": "やすむ",
+      "romaji": "yasumu",
+      "english": "to rest; to take a day off",
+      "audio": "vocabulary/007_yasumu.mp3"
+    },
+    {
+      "japanese": "大変",
+      "reading": "たいへん",
+      "romaji": "taihen",
+      "english": "tough; hard; terrible",
+      "audio": "vocabulary/008_taihen.mp3"
+    },
+    {
+      "japanese": "心配",
+      "reading": "しんぱい",
+      "romaji": "shinpai",
+      "english": "worry",
+      "audio": "vocabulary/009_shinpai.mp3"
+    },
+    {
+      "japanese": "嬉しい",
+      "reading": "うれしい",
+      "romaji": "ureshii",
+      "english": "happy; glad",
+      "audio": "vocabulary/010_ureshii.mp3"
+    },
+    {
+      "japanese": "悲しい",
+      "reading": "かなしい",
+      "romaji": "kanashii",
+      "english": "sad",
+      "audio": "vocabulary/011_kanashii.mp3"
+    },
+    {
+      "japanese": "寂しい",
+      "reading": "さびしい",
+      "romaji": "sabishii",
+      "english": "lonely",
+      "audio": "vocabulary/012_sabishii.mp3"
+    },
+    {
+      "japanese": "怖い",
+      "reading": "こわい",
+      "romaji": "kowai",
+      "english": "scary; frightening",
+      "audio": "vocabulary/013_kowai.mp3"
+    },
+    {
+      "japanese": "入る",
+      "reading": "はいる",
+      "romaji": "hairu",
+      "english": "to enter; to take (a bath)",
+      "audio": "vocabulary/014_hairu.mp3"
+    },
+    {
+      "japanese": "出る",
+      "reading": "でる",
+      "romaji": "deru",
+      "english": "to exit; to leave",
+      "audio": "vocabulary/015_deru.mp3"
+    },
+    {
+      "japanese": "選ぶ",
+      "reading": "えらぶ",
+      "romaji": "erabu",
+      "english": "to choose",
+      "audio": "vocabulary/016_erabu.mp3"
+    },
+    {
+      "japanese": "変える",
+      "reading": "かえる",
+      "romaji": "kaeru",
+      "english": "to change (transitive)",
+      "audio": "vocabulary/017_kaeru.mp3"
+    },
+    {
+      "japanese": "決める",
+      "reading": "きめる",
+      "romaji": "kimeru",
+      "english": "to decide",
+      "audio": "vocabulary/018_kimeru.mp3"
+    },
+    {
+      "japanese": "探す",
+      "reading": "さがす",
+      "romaji": "sagasu",
+      "english": "to look for; to search",
+      "audio": "vocabulary/019_sagasu.mp3"
+    },
+    {
+      "japanese": "見つける",
+      "reading": "みつける",
+      "romaji": "mitsukeru",
+      "english": "to find",
+      "audio": "vocabulary/020_mitsukeru.mp3"
+    },
+    {
+      "japanese": "忘れる",
+      "reading": "わすれる",
+      "romaji": "wasureru",
+      "english": "to forget",
+      "audio": "vocabulary/021_wasureru.mp3"
+    },
+    {
+      "japanese": "覚える",
+      "reading": "おぼえる",
+      "romaji": "oboeru",
+      "english": "to memorize; to remember",
+      "audio": "vocabulary/022_oboeru.mp3"
+    },
+    {
+      "japanese": "～たい",
+      "reading": "～たい",
+      "romaji": "~tai",
+      "english": "want to ~",
+      "audio": "vocabulary/023_tai.mp3"
+    },
+    {
+      "japanese": "～たり～たりする",
+      "reading": "～たり～たりする",
+      "romaji": "~tari~tari suru",
+      "english": "do things like ~ and ~",
+      "audio": "vocabulary/024_taritari_suru.mp3"
+    },
+    {
+      "japanese": "～ことがある",
+      "reading": "～ことがある",
+      "romaji": "~koto ga aru",
+      "english": "sometimes ~",
+      "audio": "vocabulary/025_koto_ga_aru.mp3"
+    },
+    {
+      "japanese": "～ことにする",
+      "reading": "～ことにする",
+      "romaji": "~koto ni suru",
+      "english": "decide to ~",
+      "audio": "vocabulary/026_koto_ni_suru.mp3"
+    },
+    {
+      "japanese": "次",
+      "reading": "つぎ",
+      "romaji": "tsugi",
+      "english": "next",
+      "audio": "vocabulary/027_tsugi.mp3"
+    },
+    {
+      "japanese": "以前",
+      "reading": "いぜん",
+      "romaji": "izen",
+      "english": "before; previously",
+      "audio": "vocabulary/028_izen.mp3"
+    },
+    {
+      "japanese": "将来",
+      "reading": "しょうらい",
+      "romaji": "shourai",
+      "english": "future",
+      "audio": "vocabulary/029_shourai.mp3"
+    },
+    {
+      "japanese": "みたいだ",
+      "reading": "みたいだ",
+      "romaji": "mitai da",
+      "english": "it seems like; looks like",
+      "audio": "vocabulary/030_mitai_da.mp3"
+    },
+    {
+      "japanese": "本当",
+      "reading": "ほんとう",
+      "romaji": "hontou",
+      "english": "really; true",
+      "audio": "vocabulary/031_hontou.mp3"
+    },
+    {
+      "japanese": "僕",
+      "reading": "ぼく",
+      "romaji": "boku",
+      "english": "I (male, casual)",
+      "audio": "vocabulary/032_boku.mp3"
+    },
+    {
+      "japanese": "君",
+      "reading": "きみ",
+      "romaji": "kimi",
+      "english": "you (casual)",
+      "audio": "vocabulary/033_kimi.mp3"
+    },
+    {
+      "japanese": "自分",
+      "reading": "じぶん",
+      "romaji": "jibun",
+      "english": "oneself",
+      "audio": "vocabulary/034_jibun.mp3"
+    },
+    {
+      "japanese": "夢",
+      "reading": "ゆめ",
+      "romaji": "yume",
+      "english": "dream",
+      "audio": "vocabulary/035_yume.mp3"
+    },
+    {
+      "japanese": "趣味",
+      "reading": "しゅみ",
+      "romaji": "shumi",
+      "english": "hobby",
+      "audio": "vocabulary/036_shumi.mp3"
+    },
+    {
+      "japanese": "経験",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "audio": "vocabulary/037_keiken.mp3"
+    },
+    {
+      "japanese": "アルバイト",
+      "reading": "アルバイト",
+      "romaji": "arubaito",
+      "english": "part-time job",
+      "audio": "vocabulary/038_arubaito.mp3"
+    },
+    {
+      "japanese": "もっと",
+      "reading": "もっと",
+      "romaji": "motto",
+      "english": "more",
+      "audio": "vocabulary/039_motto.mp3"
+    },
+    {
+      "japanese": "けど",
+      "reading": "けど",
+      "romaji": "kedo",
+      "english": "but; however",
+      "audio": "vocabulary/040_kedo.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Takeshi",
+      "japanese": "いいな。僕も北海道に行きたかったけど。",
+      "english": "Nice. I wanted to go to Hokkaido too, but...",
+      "audio": "dialogue/001_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "次の休みに一緒に行かない？",
+      "english": "Why don't we go together next vacation?",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "うん、行きたい！でも、仕事が忙しくて...",
+      "english": "Yeah, I want to go! But work is busy...",
+      "audio": "dialogue/003_takeshi.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "うん、時々残業することがあるから。",
+      "english": "Yeah, sometimes I have to work overtime.",
+      "audio": "dialogue/004_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "大変だね。もっと休んだ方がいいよ。",
+      "english": "That's tough. You should rest more.",
+      "audio": "dialogue/005_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "そうだね。来週から毎日早く寝ることにする。",
+      "english": "You're right. I'll decide to sleep early every day starting next week.",
+      "audio": "dialogue/006_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "本当？約束だよ！",
+      "english": "Really? It's a promise!",
+      "audio": "dialogue/007_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "休みはどうだった？",
+      "english": "How was your vacation?",
+      "audio": "dialogue/008_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "とても楽しかった！スキーをしたり、温泉に入ったりした。",
+      "english": "It was great! I did things like skiing and going to hot springs.",
+      "audio": "dialogue/009_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "最近、たけしさんは疲れているみたいだね。",
+      "english": "You seem tired lately, Takeshi.",
+      "audio": "dialogue/010_mary.mp3"
+    }
+  ]
+}

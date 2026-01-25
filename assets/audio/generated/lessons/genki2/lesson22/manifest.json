@@ -1,0 +1,179 @@
+{
+  "book": "genki2",
+  "lesson": 22,
+  "vocabulary_count": 19,
+  "dialogue_count": 6,
+  "vocabulary": [
+    {
+      "japanese": "教育",
+      "reading": "きょういく",
+      "romaji": "kyouiku",
+      "english": "education",
+      "audio": "vocabulary/001_kyouiku.mp3"
+    },
+    {
+      "japanese": "受験",
+      "reading": "じゅけん",
+      "romaji": "juken",
+      "english": "entrance examination",
+      "audio": "vocabulary/002_juken.mp3"
+    },
+    {
+      "japanese": "入学",
+      "reading": "にゅうがく",
+      "romaji": "nyuugaku",
+      "english": "entering school; enrollment",
+      "audio": "vocabulary/003_nyuugaku.mp3"
+    },
+    {
+      "japanese": "卒業",
+      "reading": "そつぎょう",
+      "romaji": "sotsugyou",
+      "english": "graduation",
+      "audio": "vocabulary/004_sotsugyou.mp3"
+    },
+    {
+      "japanese": "塾",
+      "reading": "じゅく",
+      "romaji": "juku",
+      "english": "cram school",
+      "audio": "vocabulary/005_juku.mp3"
+    },
+    {
+      "japanese": "学歴",
+      "reading": "がくれき",
+      "romaji": "gakureki",
+      "english": "educational background",
+      "audio": "vocabulary/006_gakureki.mp3"
+    },
+    {
+      "japanese": "就職",
+      "reading": "しゅうしょく",
+      "romaji": "shuushoku",
+      "english": "finding employment",
+      "audio": "vocabulary/007_shuushoku.mp3"
+    },
+    {
+      "japanese": "奨学金",
+      "reading": "しょうがくきん",
+      "romaji": "shougakukin",
+      "english": "scholarship",
+      "audio": "vocabulary/008_shougakukin.mp3"
+    },
+    {
+      "japanese": "受ける",
+      "reading": "うける",
+      "romaji": "ukeru",
+      "english": "to take (an exam); to receive",
+      "audio": "vocabulary/009_ukeru.mp3"
+    },
+    {
+      "japanese": "受かる",
+      "reading": "うかる",
+      "romaji": "ukaru",
+      "english": "to pass (an exam)",
+      "audio": "vocabulary/010_ukaru.mp3"
+    },
+    {
+      "japanese": "落ちる",
+      "reading": "おちる",
+      "romaji": "ochiru",
+      "english": "to fail (an exam); to fall",
+      "audio": "vocabulary/011_ochiru.mp3"
+    },
+    {
+      "japanese": "暗記する",
+      "reading": "あんきする",
+      "romaji": "anki suru",
+      "english": "to memorize",
+      "audio": "vocabulary/012_anki_suru.mp3"
+    },
+    {
+      "japanese": "復習する",
+      "reading": "ふくしゅうする",
+      "romaji": "fukushuu suru",
+      "english": "to review",
+      "audio": "vocabulary/013_fukushuu_suru.mp3"
+    },
+    {
+      "japanese": "予習する",
+      "reading": "よしゅうする",
+      "romaji": "yoshuu suru",
+      "english": "to prepare for class",
+      "audio": "vocabulary/014_yoshuu_suru.mp3"
+    },
+    {
+      "japanese": "厳しい",
+      "reading": "きびしい",
+      "romaji": "kibishii",
+      "english": "strict; harsh",
+      "audio": "vocabulary/015_kibishii.mp3"
+    },
+    {
+      "japanese": "必要",
+      "reading": "ひつよう",
+      "romaji": "hitsuyou",
+      "english": "necessary; needed",
+      "audio": "vocabulary/016_hitsuyou.mp3"
+    },
+    {
+      "japanese": "確か",
+      "reading": "たしか",
+      "romaji": "tashika",
+      "english": "certain; if I remember correctly",
+      "audio": "vocabulary/017_tashika.mp3"
+    },
+    {
+      "japanese": "結局",
+      "reading": "けっきょく",
+      "romaji": "kekkyoku",
+      "english": "in the end; after all",
+      "audio": "vocabulary/018_kekkyoku.mp3"
+    },
+    {
+      "japanese": "せっかく",
+      "reading": "せっかく",
+      "romaji": "sekkaku",
+      "english": "with much effort; specially",
+      "audio": "vocabulary/019_sekkaku.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Friend",
+      "japanese": "うん、じゅけんがあるからね。いい大学に入らないと、いい会社に就職できないわけ。",
+      "english": "Yeah, because of entrance exams. If you don't get into a good university, you can't get a job at a good company—that's the reasoning.",
+      "audio": "dialogue/001_friend.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "それで、みんなじゅくに行くわけね。",
+      "english": "So that's why everyone goes to cram school.",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "日本の学校はたいへんだって聞いたけど、本当？",
+      "english": "I heard Japanese schools are tough. Is that true?",
+      "audio": "dialogue/003_mary.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "そう。でも、さいきんは変わってきてるはずだよ。",
+      "english": "Right. But recently it should be changing.",
+      "audio": "dialogue/004_friend.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "どういうふうに？",
+      "english": "In what way?",
+      "audio": "dialogue/005_mary.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "学歴だけじゃなくて、けいけんやスキルも大切にされるようになってきた。",
+      "english": "Not just academic background, but experience and skills have come to be valued too.",
+      "audio": "dialogue/006_friend.mp3"
+    }
+  ]
+}

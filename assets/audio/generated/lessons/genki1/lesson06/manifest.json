@@ -1,0 +1,350 @@
+{
+  "book": "genki1",
+  "lesson": 6,
+  "vocabulary_count": 40,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "起きる",
+      "reading": "おきる",
+      "romaji": "okiru",
+      "english": "to wake up; to get up",
+      "audio": "vocabulary/001_okiru.mp3"
+    },
+    {
+      "japanese": "寝る",
+      "reading": "ねる",
+      "romaji": "neru",
+      "english": "to sleep; to go to bed",
+      "audio": "vocabulary/002_neru.mp3"
+    },
+    {
+      "japanese": "浴びる",
+      "reading": "あびる",
+      "romaji": "abiru",
+      "english": "to take (a shower)",
+      "audio": "vocabulary/003_abiru.mp3"
+    },
+    {
+      "japanese": "着る",
+      "reading": "きる",
+      "romaji": "kiru",
+      "english": "to wear (on upper body)",
+      "audio": "vocabulary/004_kiru.mp3"
+    },
+    {
+      "japanese": "脱ぐ",
+      "reading": "ぬぐ",
+      "romaji": "nugu",
+      "english": "to take off (clothes)",
+      "audio": "vocabulary/005_nugu.mp3"
+    },
+    {
+      "japanese": "洗う",
+      "reading": "あらう",
+      "romaji": "arau",
+      "english": "to wash",
+      "audio": "vocabulary/006_arau.mp3"
+    },
+    {
+      "japanese": "歩く",
+      "reading": "あるく",
+      "romaji": "aruku",
+      "english": "to walk",
+      "audio": "vocabulary/007_aruku.mp3"
+    },
+    {
+      "japanese": "走る",
+      "reading": "はしる",
+      "romaji": "hashiru",
+      "english": "to run",
+      "audio": "vocabulary/008_hashiru.mp3"
+    },
+    {
+      "japanese": "乗る",
+      "reading": "のる",
+      "romaji": "noru",
+      "english": "to ride; to board",
+      "audio": "vocabulary/009_noru.mp3"
+    },
+    {
+      "japanese": "降りる",
+      "reading": "おりる",
+      "romaji": "oriru",
+      "english": "to get off; to descend",
+      "audio": "vocabulary/010_oriru.mp3"
+    },
+    {
+      "japanese": "話す",
+      "reading": "はなす",
+      "romaji": "hanasu",
+      "english": "to speak; to talk",
+      "audio": "vocabulary/011_hanasu.mp3"
+    },
+    {
+      "japanese": "聞く",
+      "reading": "きく",
+      "romaji": "kiku",
+      "english": "to listen; to hear; to ask",
+      "audio": "vocabulary/012_kiku.mp3"
+    },
+    {
+      "japanese": "待つ",
+      "reading": "まつ",
+      "romaji": "matsu",
+      "english": "to wait",
+      "audio": "vocabulary/013_matsu.mp3"
+    },
+    {
+      "japanese": "会う",
+      "reading": "あう",
+      "romaji": "au",
+      "english": "to meet",
+      "audio": "vocabulary/014_au.mp3"
+    },
+    {
+      "japanese": "立つ",
+      "reading": "たつ",
+      "romaji": "tatsu",
+      "english": "to stand",
+      "audio": "vocabulary/015_tatsu.mp3"
+    },
+    {
+      "japanese": "座る",
+      "reading": "すわる",
+      "romaji": "suwaru",
+      "english": "to sit",
+      "audio": "vocabulary/016_suwaru.mp3"
+    },
+    {
+      "japanese": "開ける",
+      "reading": "あける",
+      "romaji": "akeru",
+      "english": "to open (transitive)",
+      "audio": "vocabulary/017_akeru.mp3"
+    },
+    {
+      "japanese": "閉める",
+      "reading": "しめる",
+      "romaji": "shimeru",
+      "english": "to close (transitive)",
+      "audio": "vocabulary/018_shimeru.mp3"
+    },
+    {
+      "japanese": "始める",
+      "reading": "はじめる",
+      "romaji": "hajimeru",
+      "english": "to begin (transitive)",
+      "audio": "vocabulary/019_hajimeru.mp3"
+    },
+    {
+      "japanese": "終わる",
+      "reading": "おわる",
+      "romaji": "owaru",
+      "english": "to end; to finish",
+      "audio": "vocabulary/020_owaru.mp3"
+    },
+    {
+      "japanese": "髪",
+      "reading": "かみ",
+      "romaji": "kami",
+      "english": "hair",
+      "audio": "vocabulary/021_kami.mp3"
+    },
+    {
+      "japanese": "目",
+      "reading": "め",
+      "romaji": "me",
+      "english": "eye",
+      "audio": "vocabulary/022_me.mp3"
+    },
+    {
+      "japanese": "顔",
+      "reading": "かお",
+      "romaji": "kao",
+      "english": "face",
+      "audio": "vocabulary/023_kao.mp3"
+    },
+    {
+      "japanese": "背",
+      "reading": "せ",
+      "romaji": "se",
+      "english": "height; back",
+      "audio": "vocabulary/024_se.mp3"
+    },
+    {
+      "japanese": "眼鏡",
+      "reading": "めがね",
+      "romaji": "megane",
+      "english": "glasses",
+      "audio": "vocabulary/025_megane.mp3"
+    },
+    {
+      "japanese": "太る",
+      "reading": "ふとる",
+      "romaji": "futoru",
+      "english": "to gain weight",
+      "audio": "vocabulary/026_futoru.mp3"
+    },
+    {
+      "japanese": "痩せる",
+      "reading": "やせる",
+      "romaji": "yaseru",
+      "english": "to lose weight",
+      "audio": "vocabulary/027_yaseru.mp3"
+    },
+    {
+      "japanese": "朝",
+      "reading": "あさ",
+      "romaji": "asa",
+      "english": "morning",
+      "audio": "vocabulary/028_asa.mp3"
+    },
+    {
+      "japanese": "昼",
+      "reading": "ひる",
+      "romaji": "hiru",
+      "english": "noon; daytime",
+      "audio": "vocabulary/029_hiru.mp3"
+    },
+    {
+      "japanese": "夜",
+      "reading": "よる",
+      "romaji": "yoru",
+      "english": "night; evening",
+      "audio": "vocabulary/030_yoru.mp3"
+    },
+    {
+      "japanese": "毎日",
+      "reading": "まいにち",
+      "romaji": "mainichi",
+      "english": "every day",
+      "audio": "vocabulary/031_mainichi.mp3"
+    },
+    {
+      "japanese": "毎朝",
+      "reading": "まいあさ",
+      "romaji": "maiasa",
+      "english": "every morning",
+      "audio": "vocabulary/032_maiasa.mp3"
+    },
+    {
+      "japanese": "毎晩",
+      "reading": "まいばん",
+      "romaji": "maiban",
+      "english": "every night",
+      "audio": "vocabulary/033_maiban.mp3"
+    },
+    {
+      "japanese": "シャワー",
+      "reading": "シャワー",
+      "romaji": "shawaa",
+      "english": "shower",
+      "audio": "vocabulary/034_shawaa.mp3"
+    },
+    {
+      "japanese": "服",
+      "reading": "ふく",
+      "romaji": "fuku",
+      "english": "clothes",
+      "audio": "vocabulary/035_fuku.mp3"
+    },
+    {
+      "japanese": "宿題",
+      "reading": "しゅくだい",
+      "romaji": "shukudai",
+      "english": "homework",
+      "audio": "vocabulary/036_shukudai.mp3"
+    },
+    {
+      "japanese": "一日",
+      "reading": "いちにち",
+      "romaji": "ichinichi",
+      "english": "one day; all day",
+      "audio": "vocabulary/037_ichinichi.mp3"
+    },
+    {
+      "japanese": "一緒に",
+      "reading": "いっしょに",
+      "romaji": "issho ni",
+      "english": "together",
+      "audio": "vocabulary/038_issho_ni.mp3"
+    },
+    {
+      "japanese": "優しい",
+      "reading": "やさしい",
+      "romaji": "yasashii",
+      "english": "kind; gentle",
+      "audio": "vocabulary/039_yasashii.mp3"
+    },
+    {
+      "japanese": "若い",
+      "reading": "わかい",
+      "romaji": "wakai",
+      "english": "young",
+      "audio": "vocabulary/040_wakai.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Robert",
+      "japanese": "日本語を勉強しています。",
+      "english": "I'm studying Japanese.",
+      "audio": "dialogue/001_robert.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "友達に会って、一緒に映画を見ます。",
+      "english": "I'll meet a friend and watch a movie together.",
+      "audio": "dialogue/002_robert.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "背が高くて、髪が短い人です。とても優しいです。",
+      "english": "He's tall with short hair. He's very kind.",
+      "audio": "dialogue/003_robert.mp3"
+    },
+    {
+      "speaker": "Yuki",
+      "japanese": "ロバートさん、毎日何をしていますか。",
+      "english": "Robert, what do you do every day?",
+      "audio": "dialogue/004_yuki.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "朝六時に起きて、シャワーを浴びます。",
+      "english": "I wake up at 6 a.m. and take a shower.",
+      "audio": "dialogue/005_robert.mp3"
+    },
+    {
+      "speaker": "Yuki",
+      "japanese": "朝ご飯は何を食べますか。",
+      "english": "What do you eat for breakfast?",
+      "audio": "dialogue/006_yuki.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "パンを食べて、コーヒーを飲みます。",
+      "english": "I eat bread and drink coffee.",
+      "audio": "dialogue/007_robert.mp3"
+    },
+    {
+      "speaker": "Yuki",
+      "japanese": "今、何をしていますか。",
+      "english": "What are you doing now?",
+      "audio": "dialogue/008_yuki.mp3"
+    },
+    {
+      "speaker": "Yuki",
+      "japanese": "宿題をしてから、何をしますか。",
+      "english": "What will you do after doing homework?",
+      "audio": "dialogue/009_yuki.mp3"
+    },
+    {
+      "speaker": "Yuki",
+      "japanese": "その友達はどんな人ですか。",
+      "english": "What is that friend like?",
+      "audio": "dialogue/010_yuki.mp3"
+    }
+  ]
+}

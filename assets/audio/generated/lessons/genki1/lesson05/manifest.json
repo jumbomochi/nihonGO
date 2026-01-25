@@ -1,0 +1,350 @@
+{
+  "book": "genki1",
+  "lesson": 5,
+  "vocabulary_count": 40,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "新しい",
+      "reading": "あたらしい",
+      "romaji": "atarashii",
+      "english": "new",
+      "audio": "vocabulary/001_atarashii.mp3"
+    },
+    {
+      "japanese": "古い",
+      "reading": "ふるい",
+      "romaji": "furui",
+      "english": "old (things)",
+      "audio": "vocabulary/002_furui.mp3"
+    },
+    {
+      "japanese": "大きい",
+      "reading": "おおきい",
+      "romaji": "ookii",
+      "english": "big; large",
+      "audio": "vocabulary/003_ookii.mp3"
+    },
+    {
+      "japanese": "小さい",
+      "reading": "ちいさい",
+      "romaji": "chiisai",
+      "english": "small; little",
+      "audio": "vocabulary/004_chiisai.mp3"
+    },
+    {
+      "japanese": "高い",
+      "reading": "たかい",
+      "romaji": "takai",
+      "english": "expensive; tall; high",
+      "audio": "vocabulary/005_takai.mp3"
+    },
+    {
+      "japanese": "安い",
+      "reading": "やすい",
+      "romaji": "yasui",
+      "english": "cheap; inexpensive",
+      "audio": "vocabulary/006_yasui.mp3"
+    },
+    {
+      "japanese": "暑い",
+      "reading": "あつい",
+      "romaji": "atsui",
+      "english": "hot (weather)",
+      "audio": "vocabulary/007_atsui.mp3"
+    },
+    {
+      "japanese": "寒い",
+      "reading": "さむい",
+      "romaji": "samui",
+      "english": "cold (weather)",
+      "audio": "vocabulary/008_samui.mp3"
+    },
+    {
+      "japanese": "難しい",
+      "reading": "むずかしい",
+      "romaji": "muzukashii",
+      "english": "difficult",
+      "audio": "vocabulary/009_muzukashii.mp3"
+    },
+    {
+      "japanese": "易しい",
+      "reading": "やさしい",
+      "romaji": "yasashii",
+      "english": "easy; kind",
+      "audio": "vocabulary/010_yasashii.mp3"
+    },
+    {
+      "japanese": "長い",
+      "reading": "ながい",
+      "romaji": "nagai",
+      "english": "long",
+      "audio": "vocabulary/011_nagai.mp3"
+    },
+    {
+      "japanese": "短い",
+      "reading": "みじかい",
+      "romaji": "mijikai",
+      "english": "short (length)",
+      "audio": "vocabulary/012_mijikai.mp3"
+    },
+    {
+      "japanese": "早い",
+      "reading": "はやい",
+      "romaji": "hayai",
+      "english": "early; fast",
+      "audio": "vocabulary/013_hayai.mp3"
+    },
+    {
+      "japanese": "遅い",
+      "reading": "おそい",
+      "romaji": "osoi",
+      "english": "late; slow",
+      "audio": "vocabulary/014_osoi.mp3"
+    },
+    {
+      "japanese": "おいしい",
+      "reading": "おいしい",
+      "romaji": "oishii",
+      "english": "delicious; tasty",
+      "audio": "vocabulary/015_oishii.mp3"
+    },
+    {
+      "japanese": "まずい",
+      "reading": "まずい",
+      "romaji": "mazui",
+      "english": "bad-tasting",
+      "audio": "vocabulary/016_mazui.mp3"
+    },
+    {
+      "japanese": "忙しい",
+      "reading": "いそがしい",
+      "romaji": "isogashii",
+      "english": "busy",
+      "audio": "vocabulary/017_isogashii.mp3"
+    },
+    {
+      "japanese": "元気",
+      "reading": "げんき",
+      "romaji": "genki",
+      "english": "healthy; energetic",
+      "audio": "vocabulary/018_genki.mp3"
+    },
+    {
+      "japanese": "静か",
+      "reading": "しずか",
+      "romaji": "shizuka",
+      "english": "quiet",
+      "audio": "vocabulary/019_shizuka.mp3"
+    },
+    {
+      "japanese": "にぎやか",
+      "reading": "にぎやか",
+      "romaji": "nigiyaka",
+      "english": "lively; bustling",
+      "audio": "vocabulary/020_nigiyaka.mp3"
+    },
+    {
+      "japanese": "便利",
+      "reading": "べんり",
+      "romaji": "benri",
+      "english": "convenient",
+      "audio": "vocabulary/021_benri.mp3"
+    },
+    {
+      "japanese": "不便",
+      "reading": "ふべん",
+      "romaji": "fuben",
+      "english": "inconvenient",
+      "audio": "vocabulary/022_fuben.mp3"
+    },
+    {
+      "japanese": "有名",
+      "reading": "ゆうめい",
+      "romaji": "yuumei",
+      "english": "famous",
+      "audio": "vocabulary/023_yuumei.mp3"
+    },
+    {
+      "japanese": "親切",
+      "reading": "しんせつ",
+      "romaji": "shinsetsu",
+      "english": "kind; helpful",
+      "audio": "vocabulary/024_shinsetsu.mp3"
+    },
+    {
+      "japanese": "好き",
+      "reading": "すき",
+      "romaji": "suki",
+      "english": "to like; fond of",
+      "audio": "vocabulary/025_suki.mp3"
+    },
+    {
+      "japanese": "嫌い",
+      "reading": "きらい",
+      "romaji": "kirai",
+      "english": "to dislike; to hate",
+      "audio": "vocabulary/026_kirai.mp3"
+    },
+    {
+      "japanese": "上手",
+      "reading": "じょうず",
+      "romaji": "jouzu",
+      "english": "good at; skillful",
+      "audio": "vocabulary/027_jouzu.mp3"
+    },
+    {
+      "japanese": "下手",
+      "reading": "へた",
+      "romaji": "heta",
+      "english": "bad at; unskillful",
+      "audio": "vocabulary/028_heta.mp3"
+    },
+    {
+      "japanese": "旅行",
+      "reading": "りょこう",
+      "romaji": "ryokou",
+      "english": "trip; travel",
+      "audio": "vocabulary/029_ryokou.mp3"
+    },
+    {
+      "japanese": "海",
+      "reading": "うみ",
+      "romaji": "umi",
+      "english": "sea; ocean",
+      "audio": "vocabulary/030_umi.mp3"
+    },
+    {
+      "japanese": "山",
+      "reading": "やま",
+      "romaji": "yama",
+      "english": "mountain",
+      "audio": "vocabulary/031_yama.mp3"
+    },
+    {
+      "japanese": "天気",
+      "reading": "てんき",
+      "romaji": "tenki",
+      "english": "weather",
+      "audio": "vocabulary/032_tenki.mp3"
+    },
+    {
+      "japanese": "料理",
+      "reading": "りょうり",
+      "romaji": "ryouri",
+      "english": "cooking; cuisine",
+      "audio": "vocabulary/033_ryouri.mp3"
+    },
+    {
+      "japanese": "食べ物",
+      "reading": "たべもの",
+      "romaji": "tabemono",
+      "english": "food",
+      "audio": "vocabulary/034_tabemono.mp3"
+    },
+    {
+      "japanese": "飲み物",
+      "reading": "のみもの",
+      "romaji": "nomimono",
+      "english": "drink; beverage",
+      "audio": "vocabulary/035_nomimono.mp3"
+    },
+    {
+      "japanese": "泳ぐ",
+      "reading": "およぐ",
+      "romaji": "oyogu",
+      "english": "to swim",
+      "audio": "vocabulary/036_oyogu.mp3"
+    },
+    {
+      "japanese": "どう",
+      "reading": "どう",
+      "romaji": "dou",
+      "english": "how",
+      "audio": "vocabulary/037_dou.mp3"
+    },
+    {
+      "japanese": "どんな",
+      "reading": "どんな",
+      "romaji": "donna",
+      "english": "what kind of",
+      "audio": "vocabulary/038_donna.mp3"
+    },
+    {
+      "japanese": "～や～など",
+      "reading": "～や～など",
+      "romaji": "~ya~nado",
+      "english": "~ and ~ etc.",
+      "audio": "vocabulary/039_yanado.mp3"
+    },
+    {
+      "japanese": "気持ちいい",
+      "reading": "きもちいい",
+      "romaji": "kimochi ii",
+      "english": "feels good; pleasant",
+      "audio": "vocabulary/040_kimochi_ii.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Yamada",
+      "japanese": "いいですね。沖縄はどうでしたか。",
+      "english": "That's nice. How was Okinawa?",
+      "audio": "dialogue/001_yamada.mp3"
+    },
+    {
+      "speaker": "Yamada",
+      "japanese": "先週、どこに行きましたか。",
+      "english": "Where did you go last week?",
+      "audio": "dialogue/002_yamada.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "沖縄に行きました。",
+      "english": "I went to Okinawa.",
+      "audio": "dialogue/003_robert.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "とても楽しかったです。海がきれいでした。",
+      "english": "It was very fun. The sea was beautiful.",
+      "audio": "dialogue/004_robert.mp3"
+    },
+    {
+      "speaker": "Yamada",
+      "japanese": "天気はよかったですか。",
+      "english": "Was the weather good?",
+      "audio": "dialogue/005_yamada.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "はい、毎日暑かったですが、気持ちよかったです。",
+      "english": "Yes, it was hot every day, but it felt nice.",
+      "audio": "dialogue/006_robert.mp3"
+    },
+    {
+      "speaker": "Yamada",
+      "japanese": "何をしましたか。",
+      "english": "What did you do?",
+      "audio": "dialogue/007_yamada.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "泳いだり、おいしい料理を食べたりしました。",
+      "english": "I swam, ate delicious food, and so on.",
+      "audio": "dialogue/008_robert.mp3"
+    },
+    {
+      "speaker": "Yamada",
+      "japanese": "沖縄の食べ物で何が好きでしたか。",
+      "english": "What food from Okinawa did you like?",
+      "audio": "dialogue/009_yamada.mp3"
+    },
+    {
+      "speaker": "Robert",
+      "japanese": "ゴーヤチャンプルーや沖縄そばなどが好きでした。",
+      "english": "I liked goya champuru, Okinawa soba, and such.",
+      "audio": "dialogue/010_robert.mp3"
+    }
+  ]
+}

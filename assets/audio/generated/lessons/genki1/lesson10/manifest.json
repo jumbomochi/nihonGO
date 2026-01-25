@@ -1,0 +1,343 @@
+{
+  "book": "genki1",
+  "lesson": 10,
+  "vocabulary_count": 39,
+  "dialogue_count": 10,
+  "vocabulary": [
+    {
+      "japanese": "冬",
+      "reading": "ふゆ",
+      "romaji": "fuyu",
+      "english": "winter",
+      "audio": "vocabulary/001_fuyu.mp3"
+    },
+    {
+      "japanese": "春",
+      "reading": "はる",
+      "romaji": "haru",
+      "english": "spring",
+      "audio": "vocabulary/002_haru.mp3"
+    },
+    {
+      "japanese": "夏",
+      "reading": "なつ",
+      "romaji": "natsu",
+      "english": "summer",
+      "audio": "vocabulary/003_natsu.mp3"
+    },
+    {
+      "japanese": "秋",
+      "reading": "あき",
+      "romaji": "aki",
+      "english": "autumn; fall",
+      "audio": "vocabulary/004_aki.mp3"
+    },
+    {
+      "japanese": "冬休み",
+      "reading": "ふゆやすみ",
+      "romaji": "fuyuyasumi",
+      "english": "winter vacation",
+      "audio": "vocabulary/005_fuyuyasumi.mp3"
+    },
+    {
+      "japanese": "夏休み",
+      "reading": "なつやすみ",
+      "romaji": "natsuyasumi",
+      "english": "summer vacation",
+      "audio": "vocabulary/006_natsuyasumi.mp3"
+    },
+    {
+      "japanese": "スキー",
+      "reading": "スキー",
+      "romaji": "sukii",
+      "english": "skiing",
+      "audio": "vocabulary/007_sukii.mp3"
+    },
+    {
+      "japanese": "スキー場",
+      "reading": "スキーじょう",
+      "romaji": "sukii jou",
+      "english": "ski resort",
+      "audio": "vocabulary/008_sukii_jou.mp3"
+    },
+    {
+      "japanese": "スノーボード",
+      "reading": "スノーボード",
+      "romaji": "sunooboodо",
+      "english": "snowboarding",
+      "audio": "vocabulary/009_sunooboodо.mp3"
+    },
+    {
+      "japanese": "温泉",
+      "reading": "おんせん",
+      "romaji": "onsen",
+      "english": "hot spring",
+      "audio": "vocabulary/010_onsen.mp3"
+    },
+    {
+      "japanese": "コート",
+      "reading": "コート",
+      "romaji": "kooto",
+      "english": "coat",
+      "audio": "vocabulary/011_kooto.mp3"
+    },
+    {
+      "japanese": "セーター",
+      "reading": "セーター",
+      "romaji": "seetaa",
+      "english": "sweater",
+      "audio": "vocabulary/012_seetaa.mp3"
+    },
+    {
+      "japanese": "手袋",
+      "reading": "てぶくろ",
+      "romaji": "tebukuro",
+      "english": "gloves",
+      "audio": "vocabulary/013_tebukuro.mp3"
+    },
+    {
+      "japanese": "帽子",
+      "reading": "ぼうし",
+      "romaji": "boushi",
+      "english": "hat; cap",
+      "audio": "vocabulary/014_boushi.mp3"
+    },
+    {
+      "japanese": "暖かい",
+      "reading": "あたたかい",
+      "romaji": "atatakai",
+      "english": "warm",
+      "audio": "vocabulary/015_atatakai.mp3"
+    },
+    {
+      "japanese": "涼しい",
+      "reading": "すずしい",
+      "romaji": "suzushii",
+      "english": "cool",
+      "audio": "vocabulary/016_suzushii.mp3"
+    },
+    {
+      "japanese": "多い",
+      "reading": "おおい",
+      "romaji": "ooi",
+      "english": "many; much",
+      "audio": "vocabulary/017_ooi.mp3"
+    },
+    {
+      "japanese": "少ない",
+      "reading": "すくない",
+      "romaji": "sukunai",
+      "english": "few; little",
+      "audio": "vocabulary/018_sukunai.mp3"
+    },
+    {
+      "japanese": "北海道",
+      "reading": "ほっかいどう",
+      "romaji": "hokkaidou",
+      "english": "Hokkaido",
+      "audio": "vocabulary/019_hokkaidou.mp3"
+    },
+    {
+      "japanese": "外国",
+      "reading": "がいこく",
+      "romaji": "gaikoku",
+      "english": "foreign country",
+      "audio": "vocabulary/020_gaikoku.mp3"
+    },
+    {
+      "japanese": "外国人",
+      "reading": "がいこくじん",
+      "romaji": "gaikokujin",
+      "english": "foreigner",
+      "audio": "vocabulary/021_gaikokujin.mp3"
+    },
+    {
+      "japanese": "帰る",
+      "reading": "かえる",
+      "romaji": "kaeru",
+      "english": "to return; to go home",
+      "audio": "vocabulary/022_kaeru.mp3"
+    },
+    {
+      "japanese": "比べる",
+      "reading": "くらべる",
+      "romaji": "kuraberu",
+      "english": "to compare",
+      "audio": "vocabulary/023_kuraberu.mp3"
+    },
+    {
+      "japanese": "変わる",
+      "reading": "かわる",
+      "romaji": "kawaru",
+      "english": "to change (intransitive)",
+      "audio": "vocabulary/024_kawaru.mp3"
+    },
+    {
+      "japanese": "なる",
+      "reading": "なる",
+      "romaji": "naru",
+      "english": "to become",
+      "audio": "vocabulary/025_naru.mp3"
+    },
+    {
+      "japanese": "風邪をひく",
+      "reading": "かぜをひく",
+      "romaji": "kaze wo hiku",
+      "english": "to catch a cold",
+      "audio": "vocabulary/026_kaze_wo_hiku.mp3"
+    },
+    {
+      "japanese": "より",
+      "reading": "より",
+      "romaji": "yori",
+      "english": "than; compared to",
+      "audio": "vocabulary/027_yori.mp3"
+    },
+    {
+      "japanese": "～の方が",
+      "reading": "～のほうが",
+      "romaji": "~no hou ga",
+      "english": "~ is more",
+      "audio": "vocabulary/028_no_hou_ga.mp3"
+    },
+    {
+      "japanese": "一番",
+      "reading": "いちばん",
+      "romaji": "ichiban",
+      "english": "most; best; number one",
+      "audio": "vocabulary/029_ichiban.mp3"
+    },
+    {
+      "japanese": "どちら",
+      "reading": "どちら",
+      "romaji": "dochira",
+      "english": "which (of two)",
+      "audio": "vocabulary/030_dochira.mp3"
+    },
+    {
+      "japanese": "同じ",
+      "reading": "おなじ",
+      "romaji": "onaji",
+      "english": "same",
+      "audio": "vocabulary/031_onaji.mp3"
+    },
+    {
+      "japanese": "つもり",
+      "reading": "つもり",
+      "romaji": "tsumori",
+      "english": "intention; plan",
+      "audio": "vocabulary/032_tsumori.mp3"
+    },
+    {
+      "japanese": "予定",
+      "reading": "よてい",
+      "romaji": "yotei",
+      "english": "plan; schedule",
+      "audio": "vocabulary/033_yotei.mp3"
+    },
+    {
+      "japanese": "人気",
+      "reading": "にんき",
+      "romaji": "ninki",
+      "english": "popularity",
+      "audio": "vocabulary/034_ninki.mp3"
+    },
+    {
+      "japanese": "最近",
+      "reading": "さいきん",
+      "romaji": "saikin",
+      "english": "recently; lately",
+      "audio": "vocabulary/035_saikin.mp3"
+    },
+    {
+      "japanese": "久しぶり",
+      "reading": "ひさしぶり",
+      "romaji": "hisashiburi",
+      "english": "after a long time",
+      "audio": "vocabulary/036_hisashiburi.mp3"
+    },
+    {
+      "japanese": "たくさん",
+      "reading": "たくさん",
+      "romaji": "takusan",
+      "english": "many; a lot",
+      "audio": "vocabulary/037_takusan.mp3"
+    },
+    {
+      "japanese": "そうなんだ",
+      "reading": "そうなんだ",
+      "romaji": "sou nan da",
+      "english": "I see; is that so",
+      "audio": "vocabulary/038_sou_nan_da.mp3"
+    },
+    {
+      "japanese": "大丈夫",
+      "reading": "だいじょうぶ",
+      "romaji": "daijoubu",
+      "english": "okay; all right",
+      "audio": "vocabulary/039_daijoubu.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "Mary",
+      "japanese": "うん、暖かいコートを買ったから。北海道と長野とどちらの方がいいと思う？",
+      "english": "Yeah, I bought a warm coat. Which do you think is better, Hokkaido or Nagano?",
+      "audio": "dialogue/001_mary.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "そうなんだ。最近、寒くなったね。風邪をひかないでね。",
+      "english": "I see. It's gotten cold recently. Don't catch a cold!",
+      "audio": "dialogue/002_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "メアリーさん、冬休みはどうするつもり？",
+      "english": "Mary, what are you planning to do for winter vacation?",
+      "audio": "dialogue/003_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "北海道に行くつもりです。スキーをしたいから。",
+      "english": "I\\",
+      "audio": "dialogue/004_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "北海道は東京より寒いですよ。大丈夫？",
+      "english": "Hokkaido is colder than Tokyo. Will you be okay?",
+      "audio": "dialogue/005_takeshi.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "北海道の方がいいと思う。雪がたくさんあるから。",
+      "english": "I think Hokkaido is better because there\\",
+      "audio": "dialogue/006_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "日本で一番有名なスキー場はどこ？",
+      "english": "Where is the most famous ski resort in Japan?",
+      "audio": "dialogue/007_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "ニセコかな。外国人に一番人気がある。",
+      "english": "Maybe Niseko. It\\",
+      "audio": "dialogue/008_takeshi.mp3"
+    },
+    {
+      "speaker": "Mary",
+      "japanese": "たけしさんは冬休みに何をするの？",
+      "english": "What are you going to do for winter vacation, Takeshi?",
+      "audio": "dialogue/009_mary.mp3"
+    },
+    {
+      "speaker": "Takeshi",
+      "japanese": "実家に帰るつもり。久しぶりに家族に会いたいから。",
+      "english": "I\\",
+      "audio": "dialogue/010_takeshi.mp3"
+    }
+  ]
+}

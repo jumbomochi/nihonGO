@@ -1,0 +1,207 @@
+{
+  "book": "genki2",
+  "lesson": 18,
+  "vocabulary_count": 23,
+  "dialogue_count": 6,
+  "vocabulary": [
+    {
+      "japanese": "アルバイト",
+      "reading": "あるばいと",
+      "romaji": "arubaito",
+      "english": "part-time job",
+      "audio": "vocabulary/001_arubaito.mp3"
+    },
+    {
+      "japanese": "きゅうりょう",
+      "reading": "きゅうりょう",
+      "romaji": "kyuuryou",
+      "english": "salary; pay",
+      "audio": "vocabulary/002_kyuuryou.mp3"
+    },
+    {
+      "japanese": "じきゅう",
+      "reading": "じきゅう",
+      "romaji": "jikyuu",
+      "english": "hourly wage",
+      "audio": "vocabulary/003_jikyuu.mp3"
+    },
+    {
+      "japanese": "レジ",
+      "reading": "れじ",
+      "romaji": "reji",
+      "english": "cash register",
+      "audio": "vocabulary/004_reji.mp3"
+    },
+    {
+      "japanese": "コンビニ",
+      "reading": "こんびに",
+      "romaji": "konbini",
+      "english": "convenience store",
+      "audio": "vocabulary/005_konbini.mp3"
+    },
+    {
+      "japanese": "しなもの",
+      "reading": "しなもの",
+      "romaji": "shinamono",
+      "english": "goods; products",
+      "audio": "vocabulary/006_shinamono.mp3"
+    },
+    {
+      "japanese": "おきゃくさん",
+      "reading": "おきゃくさん",
+      "romaji": "okyakusan",
+      "english": "customer",
+      "audio": "vocabulary/007_okyakusan.mp3"
+    },
+    {
+      "japanese": "けいけん",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "audio": "vocabulary/008_keiken.mp3"
+    },
+    {
+      "japanese": "あける",
+      "reading": "あける",
+      "romaji": "akeru",
+      "english": "to open (transitive)",
+      "audio": "vocabulary/009_akeru.mp3"
+    },
+    {
+      "japanese": "あく",
+      "reading": "あく",
+      "romaji": "aku",
+      "english": "to open (intransitive)",
+      "audio": "vocabulary/010_aku.mp3"
+    },
+    {
+      "japanese": "しめる",
+      "reading": "しめる",
+      "romaji": "shimeru",
+      "english": "to close (transitive)",
+      "audio": "vocabulary/011_shimeru.mp3"
+    },
+    {
+      "japanese": "しまる",
+      "reading": "しまる",
+      "romaji": "shimaru",
+      "english": "to close (intransitive)",
+      "audio": "vocabulary/012_shimaru.mp3"
+    },
+    {
+      "japanese": "つける",
+      "reading": "つける",
+      "romaji": "tsukeru",
+      "english": "to turn on (transitive)",
+      "audio": "vocabulary/013_tsukeru.mp3"
+    },
+    {
+      "japanese": "つく",
+      "reading": "つく",
+      "romaji": "tsuku",
+      "english": "to turn on (intransitive)",
+      "audio": "vocabulary/014_tsuku.mp3"
+    },
+    {
+      "japanese": "けす",
+      "reading": "けす",
+      "romaji": "kesu",
+      "english": "to turn off (transitive)",
+      "audio": "vocabulary/015_kesu.mp3"
+    },
+    {
+      "japanese": "きえる",
+      "reading": "きえる",
+      "romaji": "kieru",
+      "english": "to go out (intransitive)",
+      "audio": "vocabulary/016_kieru.mp3"
+    },
+    {
+      "japanese": "ならべる",
+      "reading": "ならべる",
+      "romaji": "naraberu",
+      "english": "to line up (transitive)",
+      "audio": "vocabulary/017_naraberu.mp3"
+    },
+    {
+      "japanese": "ならぶ",
+      "reading": "ならぶ",
+      "romaji": "narabu",
+      "english": "to stand in line (intransitive)",
+      "audio": "vocabulary/018_narabu.mp3"
+    },
+    {
+      "japanese": "なれる",
+      "reading": "なれる",
+      "romaji": "nareru",
+      "english": "to get used to",
+      "audio": "vocabulary/019_nareru.mp3"
+    },
+    {
+      "japanese": "やめる",
+      "reading": "やめる",
+      "romaji": "yameru",
+      "english": "to quit; to stop",
+      "audio": "vocabulary/020_yameru.mp3"
+    },
+    {
+      "japanese": "だんだん",
+      "reading": "だんだん",
+      "romaji": "dandan",
+      "english": "gradually",
+      "audio": "vocabulary/021_dandan.mp3"
+    },
+    {
+      "japanese": "ますます",
+      "reading": "ますます",
+      "romaji": "masumasu",
+      "english": "more and more",
+      "audio": "vocabulary/022_masumasu.mp3"
+    },
+    {
+      "japanese": "とうとう",
+      "reading": "とうとう",
+      "romaji": "toutou",
+      "english": "finally; at last",
+      "audio": "vocabulary/023_toutou.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "speaker": "John",
+      "japanese": "はじめはたいへんだったけど、だんだんなれてきたよ。",
+      "english": "It was tough at first, but I've gradually gotten used to it.",
+      "audio": "dialogue/001_john.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "よかったね。しごとは何をするの？",
+      "english": "That's good. What do you do at work?",
+      "audio": "dialogue/002_friend.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "ジョン、さいきんいそがしそうだね。",
+      "english": "John, you seem busy lately.",
+      "audio": "dialogue/003_friend.mp3"
+    },
+    {
+      "speaker": "John",
+      "japanese": "うん、コンビニでアルバイトをはじめたんだ。",
+      "english": "Yeah, I started a part-time job at a convenience store.",
+      "audio": "dialogue/004_john.mp3"
+    },
+    {
+      "speaker": "Friend",
+      "japanese": "へえ、どう？たいへん？",
+      "english": "Oh, really? How is it? Is it tough?",
+      "audio": "dialogue/005_friend.mp3"
+    },
+    {
+      "speaker": "John",
+      "japanese": "レジをしながら、しなものをならべたりするんだ。",
+      "english": "I arrange products while working the register.",
+      "audio": "dialogue/006_john.mp3"
+    }
+  ]
+}
