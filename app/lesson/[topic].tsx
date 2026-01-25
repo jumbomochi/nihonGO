@@ -71,23 +71,29 @@ const TOPIC_INFO: Record<string, { title: string; description: string }> = {
 
 export default function LessonScreen() {
   const { topic } = useLocalSearchParams<{ topic: string }>();
-  const { apiKey, loadApiKey } = useSettingsStore();
+  const { apiKey, aiProvider, loadApiKey, loadAISettings } = useSettingsStore();
   const isOnline = useSettingsStore(selectIsOnline);
   const isGenki = topic ? isGenkiLessonId(topic) : false;
 
   useEffect(() => {
     loadApiKey();
+    loadAISettings();
   }, []);
 
-  if (!apiKey) {
+  // Check if AI provider is properly configured
+  const isAIConfigured = aiProvider === 'ollama' || (aiProvider === 'claude' && apiKey);
+
+  if (!isAIConfigured) {
     return (
       <SafeAreaView className="flex-1 bg-white dark:bg-gray-900 items-center justify-center px-6">
         <FontAwesome name="key" size={48} color="#d1d5db" />
         <Text className="text-lg font-semibold text-gray-900 dark:text-white mt-4 text-center">
-          API Key Required
+          {aiProvider === 'claude' ? 'API Key Required' : 'AI Provider Not Configured'}
         </Text>
         <Text className="text-gray-500 dark:text-gray-400 mt-2 text-center">
-          Please add your Claude API key to access lessons
+          {aiProvider === 'claude'
+            ? 'Please add your Claude API key in Settings'
+            : 'Please configure your AI provider in Settings'}
         </Text>
         <View className="mt-6">
           <Button
@@ -101,7 +107,7 @@ export default function LessonScreen() {
   }
 
   if (isGenki) {
-    return <GenkiLessonScreen lessonId={topic!} apiKey={apiKey} />;
+    return <GenkiLessonScreen lessonId={topic!} />;
   }
 
   // Show offline message for AI lessons when not connected
@@ -130,16 +136,14 @@ export default function LessonScreen() {
     );
   }
 
-  return <AILessonScreen topic={topic!} apiKey={apiKey} />;
+  return <AILessonScreen topic={topic!} />;
 }
 
 // Genki structured lesson screen
 function GenkiLessonScreen({
   lessonId,
-  apiKey,
 }: {
   lessonId: string;
-  apiKey: string;
 }) {
   const [activeSection, setActiveSection] = useState<string>('');
   const [currentAudioUri, setCurrentAudioUri] = useState<string | null>(null);
@@ -380,7 +384,7 @@ function SectionRenderer({
 }
 
 // Original AI-generated lesson screen
-function AILessonScreen({ topic, apiKey }: { topic: string; apiKey: string }) {
+function AILessonScreen({ topic }: { topic: string }) {
   const { lesson, isLoading, error, generateLesson } = useLesson();
   const { completeLesson, isLessonCompleted } = useProgressStore();
   const [followUpQuestion, setFollowUpQuestion] = useState('');
@@ -397,10 +401,10 @@ function AILessonScreen({ topic, apiKey }: { topic: string; apiKey: string }) {
   }, []);
 
   useEffect(() => {
-    if (apiKey && topic && !lesson && !isLoading) {
-      generateLesson(topic, topicInfo.title, apiKey);
+    if (topic && !lesson && !isLoading) {
+      generateLesson(topic, topicInfo.title);
     }
-  }, [apiKey, topic]);
+  }, [topic]);
 
   const handleMarkComplete = () => {
     const timeSpent = Math.floor((Date.now() - startTimeRef.current) / 1000);
@@ -409,13 +413,14 @@ function AILessonScreen({ topic, apiKey }: { topic: string; apiKey: string }) {
   };
 
   const handleAskFollowUp = async () => {
-    if (!followUpQuestion.trim() || !apiKey || !lesson) return;
+    if (!followUpQuestion.trim() || !lesson) return;
 
     setIsAskingFollowUp(true);
     try {
-      const { sendMessage } = await import('@/lib/claude');
+      const aiProvider = await import('@/lib/aiProvider');
       const { useUserStore } = await import('@/stores/userStore');
       const profile = useUserStore.getState().profile;
+      const settings = useSettingsStore.getState();
 
       const messages = [
         {
@@ -424,7 +429,14 @@ function AILessonScreen({ topic, apiKey }: { topic: string; apiKey: string }) {
         },
       ];
 
-      const response = await sendMessage(messages, profile, apiKey);
+      const config = {
+        provider: settings.aiProvider,
+        claudeApiKey: settings.apiKey || undefined,
+        ollamaUrl: settings.ollamaUrl,
+        ollamaModel: settings.ollamaModel,
+      };
+
+      const response = await aiProvider.sendMessage(messages, profile, config);
       setFollowUpAnswer(response);
       setFollowUpQuestion('');
     } catch (err) {
@@ -470,7 +482,7 @@ function AILessonScreen({ topic, apiKey }: { topic: string; apiKey: string }) {
             <View className="mt-6">
               <Button
                 title="Try Again"
-                onPress={() => generateLesson(topic, topicInfo.title, apiKey)}
+                onPress={() => generateLesson(topic, topicInfo.title)}
               />
             </View>
           </View>

@@ -1,20 +1,43 @@
 import { create } from 'zustand';
 import * as SecureStore from 'expo-secure-store';
 import { Platform } from 'react-native';
+import { AIProvider } from '@/lib/aiProvider';
+import { DEFAULT_OLLAMA_URL, DEFAULT_OLLAMA_MODEL } from '@/lib/ollama';
 
 const API_KEY_STORAGE_KEY = 'nihongo-claude-api-key';
+const AI_PROVIDER_STORAGE_KEY = 'nihongo-ai-provider';
+const OLLAMA_URL_STORAGE_KEY = 'nihongo-ollama-url';
+const OLLAMA_MODEL_STORAGE_KEY = 'nihongo-ollama-model';
 
 // Get API key from environment variable (Expo requires EXPO_PUBLIC_ prefix)
 const ENV_API_KEY = process.env.EXPO_PUBLIC_CLAUDE_API_KEY || null;
 
 interface SettingsState {
+  // Claude settings
   apiKey: string | null;
-  isLoading: boolean;
   isEnvKey: boolean; // Track if key is from environment
+
+  // AI Provider settings
+  aiProvider: AIProvider;
+  ollamaUrl: string;
+  ollamaModel: string;
+
+  // Status
+  isLoading: boolean;
   isOnline: boolean;
+
+  // Claude actions
   setApiKey: (key: string) => Promise<void>;
   clearApiKey: () => Promise<void>;
   loadApiKey: () => Promise<void>;
+
+  // AI Provider actions
+  setAIProvider: (provider: AIProvider) => Promise<void>;
+  setOllamaUrl: (url: string) => Promise<void>;
+  setOllamaModel: (model: string) => Promise<void>;
+  loadAISettings: () => Promise<void>;
+
+  // Status actions
   setOnline: (status: boolean) => void;
 }
 
@@ -59,11 +82,20 @@ async function deleteSecurely(key: string): Promise<void> {
 }
 
 export const useSettingsStore = create<SettingsState>((set) => ({
+  // Claude settings
   apiKey: null,
-  isLoading: true,
   isEnvKey: false,
+
+  // AI Provider settings
+  aiProvider: 'claude' as AIProvider,
+  ollamaUrl: DEFAULT_OLLAMA_URL,
+  ollamaModel: DEFAULT_OLLAMA_MODEL,
+
+  // Status
+  isLoading: true,
   isOnline: true, // Assume online initially
 
+  // Claude actions
   setApiKey: async (key: string) => {
     await saveSecurely(API_KEY_STORAGE_KEY, key);
     set({ apiKey: key, isEnvKey: false });
@@ -97,6 +129,41 @@ export const useSettingsStore = create<SettingsState>((set) => ({
     }
   },
 
+  // AI Provider actions
+  setAIProvider: async (provider: AIProvider) => {
+    await saveSecurely(AI_PROVIDER_STORAGE_KEY, provider);
+    set({ aiProvider: provider });
+  },
+
+  setOllamaUrl: async (url: string) => {
+    await saveSecurely(OLLAMA_URL_STORAGE_KEY, url);
+    set({ ollamaUrl: url });
+  },
+
+  setOllamaModel: async (model: string) => {
+    await saveSecurely(OLLAMA_MODEL_STORAGE_KEY, model);
+    set({ ollamaModel: model });
+  },
+
+  loadAISettings: async () => {
+    try {
+      const [provider, url, model] = await Promise.all([
+        getSecurely(AI_PROVIDER_STORAGE_KEY),
+        getSecurely(OLLAMA_URL_STORAGE_KEY),
+        getSecurely(OLLAMA_MODEL_STORAGE_KEY),
+      ]);
+
+      set({
+        aiProvider: (provider as AIProvider) || 'claude',
+        ollamaUrl: url || DEFAULT_OLLAMA_URL,
+        ollamaModel: model || DEFAULT_OLLAMA_MODEL,
+      });
+    } catch (error) {
+      console.warn('Failed to load AI settings:', error);
+    }
+  },
+
+  // Status actions
   setOnline: (status: boolean) => {
     set({ isOnline: status });
   },

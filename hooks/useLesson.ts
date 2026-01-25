@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef } from 'react';
-import { sendMessage, createLessonPrompt } from '@/lib/claude';
+import { sendMessage, createLessonPrompt, AIProviderConfig } from '@/lib/aiProvider';
 import { useUserStore } from '@/stores/userStore';
+import { useSettingsStore } from '@/stores/settingsStore';
 
 interface LessonContent {
   topic: string;
@@ -14,11 +15,17 @@ export function useLesson() {
   const [error, setError] = useState<string | null>(null);
   const profile = useUserStore((state) => state.profile);
 
+  // Get AI settings from store
+  const aiProvider = useSettingsStore((state) => state.aiProvider);
+  const apiKey = useSettingsStore((state) => state.apiKey);
+  const ollamaUrl = useSettingsStore((state) => state.ollamaUrl);
+  const ollamaModel = useSettingsStore((state) => state.ollamaModel);
+
   // Track current request for cancellation
   const abortControllerRef = useRef<AbortController | null>(null);
 
   const generateLesson = useCallback(
-    async (topic: string, topicTitle: string, apiKey: string) => {
+    async (topic: string, topicTitle: string) => {
       // Cancel any in-flight request
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
@@ -31,10 +38,19 @@ export function useLesson() {
 
       try {
         const prompt = createLessonPrompt(topicTitle, profile);
+
+        // Build AI provider config
+        const config: AIProviderConfig = {
+          provider: aiProvider,
+          claudeApiKey: apiKey || undefined,
+          ollamaUrl,
+          ollamaModel,
+        };
+
         const response = await sendMessage(
           [{ role: 'user', content: prompt }],
           profile,
-          apiKey,
+          config,
           abortControllerRef.current.signal
         );
 
@@ -53,11 +69,11 @@ export function useLesson() {
         setIsLoading(false);
       }
     },
-    [profile]
+    [profile, aiProvider, apiKey, ollamaUrl, ollamaModel]
   );
 
   const askFollowUp = useCallback(
-    async (question: string, apiKey: string): Promise<string> => {
+    async (question: string): Promise<string> => {
       if (!lesson) {
         throw new Error('No lesson loaded');
       }
@@ -70,9 +86,17 @@ export function useLesson() {
         { role: 'user' as const, content: question },
       ];
 
-      return sendMessage(messages, profile, apiKey, abortController.signal);
+      // Build AI provider config
+      const config: AIProviderConfig = {
+        provider: aiProvider,
+        claudeApiKey: apiKey || undefined,
+        ollamaUrl,
+        ollamaModel,
+      };
+
+      return sendMessage(messages, profile, config, abortController.signal);
     },
-    [lesson, profile]
+    [lesson, profile, aiProvider, apiKey, ollamaUrl, ollamaModel]
   );
 
   const clearLesson = useCallback(() => {

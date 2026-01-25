@@ -1,4 +1,8 @@
+// lib/aiProvider.ts
+// Unified AI provider that supports both Claude API and local Ollama
+
 import { LearningStyle, ProficiencyLevel } from '@/stores/userStore';
+import { sendOllamaMessage, DEFAULT_OLLAMA_URL, DEFAULT_OLLAMA_MODEL } from './ollama';
 import {
   AuthError,
   RateLimitError,
@@ -7,9 +11,18 @@ import {
   ValidationError,
 } from './errors';
 
-const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
+export type AIProvider = 'claude' | 'ollama';
 
-interface UserContext {
+export interface AIProviderConfig {
+  provider: AIProvider;
+  // Claude settings
+  claudeApiKey?: string;
+  // Ollama settings
+  ollamaUrl?: string;
+  ollamaModel?: string;
+}
+
+export interface UserContext {
   nativeLanguage: string;
   priorLanguages: string[];
   knowsChinese: boolean;
@@ -22,6 +35,8 @@ interface Message {
   role: 'user' | 'assistant';
   content: string;
 }
+
+const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
 
 function buildSystemPrompt(userContext: UserContext): string {
   const styleInstructions = userContext.learningStyle === 'detailed'
@@ -59,19 +74,17 @@ ${chineseContext}
 - Use bullet points for clarity when appropriate`;
 }
 
-export async function sendMessage(
+/**
+ * Send message using Claude API
+ */
+async function sendClaudeMessage(
   messages: Message[],
-  userContext: UserContext,
+  systemPrompt: string,
   apiKey: string,
   signal?: AbortSignal
 ): Promise<string> {
-  // Validate inputs
   if (!apiKey || apiKey.trim().length === 0) {
     throw new ValidationError('API key is required', 'Please enter your API key in Settings.');
-  }
-
-  if (messages.length === 0) {
-    throw new ValidationError('At least one message is required');
   }
 
   let response: Response;
@@ -87,7 +100,7 @@ export async function sendMessage(
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 2048,
-        system: buildSystemPrompt(userContext),
+        system: systemPrompt,
         messages: messages.map((m) => ({
           role: m.role,
           content: m.content,
@@ -96,21 +109,17 @@ export async function sendMessage(
       signal,
     });
   } catch (error) {
-    // Re-throw abort errors as-is for proper handling
     if (error instanceof Error && error.name === 'AbortError') {
       throw error;
     }
-    // Network errors (no internet, DNS failure, etc.)
     if (error instanceof TypeError) {
       throw new NetworkError('Failed to connect to API');
     }
     throw error;
   }
 
-  // Handle HTTP error responses
   if (!response.ok) {
     let errorDetails = '';
-
     try {
       const contentType = response.headers.get('content-type');
       if (contentType?.includes('application/json')) {
@@ -123,7 +132,6 @@ export async function sendMessage(
       errorDetails = 'Unknown error';
     }
 
-    // Handle specific error codes
     switch (response.status) {
       case 401:
         throw new AuthError('Invalid API key');
@@ -140,7 +148,6 @@ export async function sendMessage(
     }
   }
 
-  // Parse and validate response
   let data;
   try {
     data = await response.json();
@@ -148,7 +155,6 @@ export async function sendMessage(
     throw new ApiError('Invalid response from API', 500);
   }
 
-  // Validate response structure
   if (!data.content?.[0]?.text) {
     throw new ApiError('Unexpected response format from API', 500);
   }
@@ -156,6 +162,40 @@ export async function sendMessage(
   return data.content[0].text;
 }
 
+/**
+ * Unified send message function that routes to the appropriate provider
+ */
+export async function sendMessage(
+  messages: Message[],
+  userContext: UserContext,
+  config: AIProviderConfig,
+  signal?: AbortSignal
+): Promise<string> {
+  if (messages.length === 0) {
+    throw new ValidationError('At least one message is required');
+  }
+
+  const systemPrompt = buildSystemPrompt(userContext);
+
+  if (config.provider === 'ollama') {
+    return sendOllamaMessage(messages, systemPrompt, {
+      model: config.ollamaModel || DEFAULT_OLLAMA_MODEL,
+      baseUrl: config.ollamaUrl || DEFAULT_OLLAMA_URL,
+      signal,
+    });
+  }
+
+  // Default to Claude
+  if (!config.claudeApiKey) {
+    throw new ValidationError('API key is required', 'Please enter your API key in Settings.');
+  }
+
+  return sendClaudeMessage(messages, systemPrompt, config.claudeApiKey, signal);
+}
+
+/**
+ * Create a lesson prompt for AI-generated lessons
+ */
 export function createLessonPrompt(topic: string, userContext: UserContext): string {
   const levelContext = {
     complete_beginner: 'This is their very first exposure to Japanese.',
@@ -173,4 +213,18 @@ Provide a structured mini-lesson that includes:
 2. Key vocabulary or grammar points
 3. Practical examples with cultural context
 4. A simple practice exercise`;
+}
+
+/**
+ * Get provider display name
+ */
+export function getProviderName(provider: AIProvider): string {
+  switch (provider) {
+    case 'claude':
+      return 'Claude (Cloud)';
+    case 'ollama':
+      return 'Ollama (Local)';
+    default:
+      return 'Unknown';
+  }
 }

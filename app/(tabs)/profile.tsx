@@ -13,6 +13,7 @@ import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
 import { Button } from '@/components/common/Button';
 import { AchievementsList } from '@/components/common/AchievementsList';
+import { AISettingsSection } from '@/components/settings/AISettingsSection';
 
 const PROFICIENCY_LABELS: Record<string, string> = {
   complete_beginner: 'Complete Beginner',
@@ -37,7 +38,7 @@ const GOAL_LABELS: Record<string, string> = {
 
 export default function ProfileScreen() {
   const { profile, resetProfile } = useUserStore();
-  const { apiKey, isEnvKey, clearApiKey } = useSettingsStore();
+  const { clearApiKey } = useSettingsStore();
   const { completedLessons, currentStreak, totalWordsLearned, resetProgress } = useProgressStore();
 
   const handleResetProfile = async () => {
@@ -124,26 +125,8 @@ export default function ProfileScreen() {
           </View>
         )}
 
-        {/* API Status */}
-        <View className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 mb-6">
-          <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-            AI Tutor
-          </Text>
-          <View className="flex-row items-center">
-            <FontAwesome
-              name={apiKey ? 'check-circle' : 'times-circle'}
-              size={20}
-              color={apiKey ? '#22c55e' : '#ef4444'}
-            />
-            <Text className="text-gray-600 dark:text-gray-400 ml-3">
-              {apiKey
-                ? isEnvKey
-                  ? 'Claude API connected (from .env)'
-                  : 'Claude API connected'
-                : 'API key not configured'}
-            </Text>
-          </View>
-        </View>
+        {/* AI Settings */}
+        <AISettingsSection />
 
         {/* Learning Stats */}
         <View className="bg-sakura-50 dark:bg-sakura-900/20 rounded-2xl p-5 mb-6">

@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef } from 'react';
-import { sendMessage } from '@/lib/claude';
+import { sendMessage, AIProviderConfig } from '@/lib/aiProvider';
 import { useUserStore } from '@/stores/userStore';
+import { useSettingsStore } from '@/stores/settingsStore';
 
 interface Message {
   id: string;
@@ -20,13 +21,19 @@ export function useChat() {
   const [error, setError] = useState<string | null>(null);
   const profile = useUserStore((state) => state.profile);
 
+  // Get AI settings from store
+  const aiProvider = useSettingsStore((state) => state.aiProvider);
+  const apiKey = useSettingsStore((state) => state.apiKey);
+  const ollamaUrl = useSettingsStore((state) => state.ollamaUrl);
+  const ollamaModel = useSettingsStore((state) => state.ollamaModel);
+
   // Use ref to track messages for building chat history without causing re-renders
   const messagesRef = useRef<Message[]>([]);
   // Track current request for cancellation
   const abortControllerRef = useRef<AbortController | null>(null);
 
   const sendUserMessage = useCallback(
-    async (content: string, apiKey: string) => {
+    async (content: string) => {
       // Cancel any in-flight request
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
@@ -53,10 +60,18 @@ export function useChat() {
           content: m.content,
         }));
 
+        // Build AI provider config
+        const config: AIProviderConfig = {
+          provider: aiProvider,
+          claudeApiKey: apiKey || undefined,
+          ollamaUrl,
+          ollamaModel,
+        };
+
         const response = await sendMessage(
           chatHistory,
           profile,
-          apiKey,
+          config,
           abortControllerRef.current.signal
         );
 
@@ -80,7 +95,7 @@ export function useChat() {
         setIsLoading(false);
       }
     },
-    [profile]
+    [profile, aiProvider, apiKey, ollamaUrl, ollamaModel]
   );
 
   const clearChat = useCallback(() => {

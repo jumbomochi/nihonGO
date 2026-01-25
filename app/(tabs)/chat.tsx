@@ -35,13 +35,13 @@ export default function ChatScreen() {
   }, []);
 
   const handleSend = useCallback(async () => {
-    if (inputValue.trim() && apiKey && isOnline) {
+    if (inputValue.trim() && isOnline) {
       triggerImpact();
       const message = inputValue.trim();
       setInputValue('');
-      await sendUserMessage(message, apiKey);
+      await sendUserMessage(message);
     }
-  }, [inputValue, apiKey, isOnline, sendUserMessage]);
+  }, [inputValue, isOnline, sendUserMessage]);
 
   const handleSuggestionPress = useCallback((text: string) => {
     triggerImpact();

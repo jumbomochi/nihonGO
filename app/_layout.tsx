@@ -80,10 +80,16 @@ function RootLayoutNav() {
   const segments = useSegments();
   const { profile } = useUserStore();
   const isOnline = useSettingsStore((state) => state.isOnline);
+  const loadAISettings = useSettingsStore((state) => state.loadAISettings);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
 
   // Initialize network status monitoring
   useNetworkStatus();
+
+  // Load AI settings on app startup
+  useEffect(() => {
+    loadAISettings();
+  }, []);
 
   useEffect(() => {
     // Small delay to ensure navigation is ready
