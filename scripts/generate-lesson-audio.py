@@ -35,17 +35,16 @@ AUDIO_OUTPUT_DIR = PROJECT_DIR / "assets" / "audio" / "generated" / "lessons"
 
 
 def parse_lesson_file(filepath: Path) -> Dict[str, Any]:
-    """Parse a TypeScript lesson file and extract vocabulary and dialogue."""
+    """Parse a TypeScript lesson file and extract vocabulary and dialogues."""
     content = filepath.read_text(encoding='utf-8')
 
     result = {
         'vocabulary': [],
-        'dialogues': []
+        'dialogues': [],  # List of dialogues, each with id, title, lines
+        'has_multiple_dialogues': False
     }
 
     # Extract vocabulary items
-    # Pattern: { id: '...', japanese: '...', reading: '...', romaji: '...', english: '...' }
-    # Using DOTALL to handle multi-line objects
     vocab_pattern = r"\{\s*id:\s*'[^']+',\s*japanese:\s*'([^']+)',\s*reading:\s*'([^']+)',\s*romaji:\s*'([^']+)',\s*english:\s*'([^']+)'"
     for match in re.finditer(vocab_pattern, content, re.DOTALL):
         result['vocabulary'].append({
@@ -55,41 +54,84 @@ def parse_lesson_file(filepath: Path) -> Dict[str, Any]:
             'english': match.group(4)
         })
 
-    # Extract dialogue lines
-    # Pattern handles multi-line format with both single and double quotes:
-    # {
-    #   speaker: '...',
-    #   japanese: '...',
-    #   reading: '...',
-    #   english: '...' or "...",  (double quotes when english contains apostrophes)
-    # }
-    # Match both quote styles in a single pass to preserve order
-    dialogue_pattern_dq = r'\{\s*speaker:\s*\'([^\']+)\',\s*japanese:\s*\'([^\']+)\',\s*reading:\s*\'([^\']+)\',\s*english:\s*"([^"]+)"'
-    dialogue_pattern_sq = r"\{\s*speaker:\s*'([^']+)',\s*japanese:\s*'([^']+)',\s*reading:\s*'([^']+)',\s*english:\s*'([^']+)'"
+    # Check if this lesson has multiple dialogues (dialogues: [...])
+    has_dialogues_array = 'dialogues: [' in content or 'dialogues:[' in content
 
-    # Find all matches with their positions to preserve original order
-    all_matches = []
-    for match in re.finditer(dialogue_pattern_dq, content, re.DOTALL):
-        all_matches.append((match.start(), {
-            'speaker': match.group(1),
-            'japanese': match.group(2),
-            'reading': match.group(3),
-            'english': match.group(4)
-        }))
-    for match in re.finditer(dialogue_pattern_sq, content, re.DOTALL):
-        japanese_text = match.group(2)
-        # Avoid duplicates
-        if not any(m[1]['japanese'] == japanese_text for m in all_matches):
+    if has_dialogues_array:
+        result['has_multiple_dialogues'] = True
+        # Parse multiple dialogues
+        # Find each dialogue block: { id: 'l01-d01', title: '...', ... lines: [...] }
+        dialogue_block_pattern = r"\{\s*id:\s*'([^']+)',\s*title:\s*'([^']+)'[^}]*?lines:\s*\[(.*?)\]"
+
+        for dlg_match in re.finditer(dialogue_block_pattern, content, re.DOTALL):
+            dialogue_id = dlg_match.group(1)
+            dialogue_title = dlg_match.group(2)
+            lines_content = dlg_match.group(3)
+
+            # Parse lines within this dialogue
+            lines = []
+            line_pattern_dq = r'\{\s*speaker:\s*\'([^\']+)\',\s*japanese:\s*\'([^\']+)\',\s*reading:\s*\'([^\']+)\',\s*english:\s*"([^"]+)"'
+            line_pattern_sq = r"\{\s*speaker:\s*'([^']+)',\s*japanese:\s*'([^']+)',\s*reading:\s*'([^']+)',\s*english:\s*'([^']+)'"
+
+            all_line_matches = []
+            for match in re.finditer(line_pattern_dq, lines_content, re.DOTALL):
+                all_line_matches.append((match.start(), {
+                    'speaker': match.group(1),
+                    'japanese': match.group(2),
+                    'reading': match.group(3),
+                    'english': match.group(4)
+                }))
+            for match in re.finditer(line_pattern_sq, lines_content, re.DOTALL):
+                japanese_text = match.group(2)
+                if not any(m[1]['japanese'] == japanese_text for m in all_line_matches):
+                    all_line_matches.append((match.start(), {
+                        'speaker': match.group(1),
+                        'japanese': match.group(2),
+                        'reading': match.group(3),
+                        'english': match.group(4)
+                    }))
+
+            all_line_matches.sort(key=lambda x: x[0])
+            lines = [m[1] for m in all_line_matches]
+
+            if lines:
+                result['dialogues'].append({
+                    'id': dialogue_id,
+                    'title': dialogue_title,
+                    'lines': lines
+                })
+    else:
+        # Single dialogue (legacy format)
+        dialogue_pattern_dq = r'\{\s*speaker:\s*\'([^\']+)\',\s*japanese:\s*\'([^\']+)\',\s*reading:\s*\'([^\']+)\',\s*english:\s*"([^"]+)"'
+        dialogue_pattern_sq = r"\{\s*speaker:\s*'([^']+)',\s*japanese:\s*'([^']+)',\s*reading:\s*'([^']+)',\s*english:\s*'([^']+)'"
+
+        all_matches = []
+        for match in re.finditer(dialogue_pattern_dq, content, re.DOTALL):
             all_matches.append((match.start(), {
                 'speaker': match.group(1),
                 'japanese': match.group(2),
                 'reading': match.group(3),
                 'english': match.group(4)
             }))
+        for match in re.finditer(dialogue_pattern_sq, content, re.DOTALL):
+            japanese_text = match.group(2)
+            if not any(m[1]['japanese'] == japanese_text for m in all_matches):
+                all_matches.append((match.start(), {
+                    'speaker': match.group(1),
+                    'japanese': match.group(2),
+                    'reading': match.group(3),
+                    'english': match.group(4)
+                }))
 
-    # Sort by position in file to preserve original order
-    all_matches.sort(key=lambda x: x[0])
-    result['dialogues'] = [m[1] for m in all_matches]
+        all_matches.sort(key=lambda x: x[0])
+        lines = [m[1] for m in all_matches]
+
+        if lines:
+            result['dialogues'].append({
+                'id': 'default',
+                'title': 'Dialogue',
+                'lines': lines
+            })
 
     return result
 
@@ -108,7 +150,7 @@ async def generate_audio(text: str, output_path: Path, voice: str = VOICE_FEMALE
 def get_voice_for_speaker(speaker: str) -> str:
     """Determine voice based on speaker name."""
     # Common male names in Genki
-    male_speakers = ['Takeshi', 'Robert', 'Ken', 'Yamashita', 'Professor', 'Father', 'Grandfather']
+    male_speakers = ['Takeshi', 'Robert', 'Ken', 'Kenji', 'Tom', 'Tanaka', 'Yamashita', 'Yamada', 'Professor', 'Father', 'Grandfather']
 
     for name in male_speakers:
         if name.lower() in speaker.lower():
@@ -119,10 +161,9 @@ def get_voice_for_speaker(speaker: str) -> str:
 
 def sanitize_filename(text: str) -> str:
     """Create a safe filename from text."""
-    # Remove special characters, keep only alphanumeric and basic punctuation
     safe = re.sub(r'[^\w\s\-]', '', text)
     safe = re.sub(r'\s+', '_', safe)
-    return safe[:50]  # Limit length
+    return safe[:50]
 
 
 async def generate_lesson_audio(book: str, lesson_num: int):
@@ -153,31 +194,67 @@ async def generate_lesson_audio(book: str, lesson_num: int):
             if output_path.exists():
                 continue
 
-            # Use reading for pronunciation (hiragana)
             text = vocab['reading'] if vocab['reading'] else vocab['japanese']
             await generate_audio(text, output_path, VOICE_FEMALE)
             print(f"    Generated: {vocab['japanese']} ({vocab['reading']})")
 
     # Generate dialogue audio
-    if lesson_data['dialogues']:
-        print(f"  Generating {len(lesson_data['dialogues'])} dialogue lines...")
-        for i, line in enumerate(lesson_data['dialogues']):
-            filename = f"{i+1:03d}_{line['speaker'].lower()}.mp3"
-            output_path = dialogue_dir / filename
+    total_lines = sum(len(d['lines']) for d in lesson_data['dialogues'])
+    if total_lines > 0:
+        print(f"  Generating {total_lines} dialogue lines across {len(lesson_data['dialogues'])} dialogue(s)...")
 
-            if output_path.exists():
-                continue
+        has_multiple = lesson_data['has_multiple_dialogues']
 
-            voice = get_voice_for_speaker(line['speaker'])
-            await generate_audio(line['japanese'], output_path, voice)
-            print(f"    Generated: [{line['speaker']}] {line['japanese'][:30]}...")
+        for dlg_idx, dialogue in enumerate(lesson_data['dialogues']):
+            if has_multiple:
+                print(f"    Dialogue {dlg_idx + 1}: {dialogue['title']}")
+
+            for line_idx, line in enumerate(dialogue['lines']):
+                if has_multiple:
+                    # Multiple dialogues: d01_001_mary.mp3
+                    filename = f"d{dlg_idx+1:02d}_{line_idx+1:03d}_{line['speaker'].lower()}.mp3"
+                else:
+                    # Single dialogue: 001_mary.mp3
+                    filename = f"{line_idx+1:03d}_{line['speaker'].lower()}.mp3"
+
+                output_path = dialogue_dir / filename
+
+                if output_path.exists():
+                    continue
+
+                voice = get_voice_for_speaker(line['speaker'])
+                await generate_audio(line['japanese'], output_path, voice)
+                print(f"      Generated: [{line['speaker']}] {line['japanese'][:30]}...")
 
     # Save manifest
+    manifest_dialogues = []
+    for dlg_idx, dialogue in enumerate(lesson_data['dialogues']):
+        dlg_manifest = {
+            'id': dialogue['id'],
+            'title': dialogue['title'],
+            'lines': []
+        }
+        for line_idx, line in enumerate(dialogue['lines']):
+            if lesson_data['has_multiple_dialogues']:
+                audio_path = f"dialogue/d{dlg_idx+1:02d}_{line_idx+1:03d}_{line['speaker'].lower()}.mp3"
+            else:
+                audio_path = f"dialogue/{line_idx+1:03d}_{line['speaker'].lower()}.mp3"
+
+            dlg_manifest['lines'].append({
+                'speaker': line['speaker'],
+                'japanese': line['japanese'],
+                'english': line['english'],
+                'audio': audio_path
+            })
+        manifest_dialogues.append(dlg_manifest)
+
     manifest = {
         'book': book,
         'lesson': lesson_num,
         'vocabulary_count': len(lesson_data['vocabulary']),
         'dialogue_count': len(lesson_data['dialogues']),
+        'total_dialogue_lines': total_lines,
+        'has_multiple_dialogues': lesson_data['has_multiple_dialogues'],
         'vocabulary': [
             {
                 'japanese': v['japanese'],
@@ -188,15 +265,7 @@ async def generate_lesson_audio(book: str, lesson_num: int):
             }
             for i, v in enumerate(lesson_data['vocabulary'])
         ],
-        'dialogues': [
-            {
-                'speaker': d['speaker'],
-                'japanese': d['japanese'],
-                'english': d['english'],
-                'audio': f"dialogue/{i+1:03d}_{d['speaker'].lower()}.mp3"
-            }
-            for i, d in enumerate(lesson_data['dialogues'])
-        ]
+        'dialogues': manifest_dialogues
     }
 
     manifest_path = lesson_audio_dir / "manifest.json"
@@ -226,18 +295,15 @@ async def main():
         if not book_dir.exists():
             continue
 
-        # Find lesson files
         lesson_files = sorted(book_dir.glob("lesson*.ts"))
 
         for lesson_file in lesson_files:
-            # Extract lesson number from filename
             match = re.search(r'lesson(\d+)', lesson_file.name)
             if not match:
                 continue
 
             lesson_num = int(match.group(1))
 
-            # Skip if specific lesson requested
             if args.lesson and lesson_num != args.lesson:
                 continue
 
