@@ -192,10 +192,21 @@ function GenkiLessonScreen({
   };
 
   // Get audio path for a dialogue line (using generated TTS audio)
-  const getLineAudioPath = useCallback((lineIndex: number, speaker: string) => {
+  // For multiple dialogues, we need dialogueIndex to build unique filenames
+  const getLineAudioPath = useCallback((dialogueIndex: number, lineIndex: number, speaker: string) => {
     if (!lesson) return '';
-    // Use generated TTS audio: dialogue/001_mary.mp3, dialogue/002_takeshi.mp3, etc.
-    const filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
+    // Use generated TTS audio: dialogue/d01_001_mary.mp3 for multiple, or dialogue/001_mary.mp3 for single
+    const dialogueSection = lesson.sections.find(s => s.type === 'dialogue');
+    const hasMultipleDialogues = dialogueSection?.content.dialogues && dialogueSection.content.dialogues.length > 1;
+
+    let filename: string;
+    if (hasMultipleDialogues) {
+      // Multiple dialogues: d01_001_mary.mp3
+      filename = `d${(dialogueIndex + 1).toString().padStart(2, '0')}_${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
+    } else {
+      // Single dialogue (backward compat): 001_mary.mp3
+      filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
+    }
     return getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
   }, [lesson]);
 
@@ -335,21 +346,27 @@ function SectionRenderer({
   lessonId: string;
   lessonAudioTracks?: AudioTrack[];
   onPlayAudio: () => void;
-  getLineAudioPath?: (lineIndex: number, speaker: string) => string;
+  getLineAudioPath?: (dialogueIndex: number, lineIndex: number, speaker: string) => string;
   onStartQuiz?: (vocabulary: VocabularyItem[], sectionId: string) => void;
 }) {
   switch (section.type) {
     case 'dialogue':
       // Use section-level audio tracks if available, otherwise use lesson-level tracks
       const dialogueAudio = section.audioTracks || lessonAudioTracks;
-      return section.content.dialogue ? (
+      // Support both single dialogue and multiple dialogues
+      const hasDialogues = section.content.dialogues && section.content.dialogues.length > 0;
+      const hasDialogue = section.content.dialogue;
+      if (!hasDialogues && !hasDialogue) return null;
+
+      return (
         <DialogueSection
           dialogue={section.content.dialogue}
+          dialogues={section.content.dialogues}
           audioTracks={dialogueAudio}
           onPlayAudio={onPlayAudio}
           getLineAudioPath={getLineAudioPath}
         />
-      ) : null;
+      );
 
     case 'vocabulary':
       return section.content.vocabulary ? (

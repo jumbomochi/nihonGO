@@ -5,20 +5,26 @@ import { Audio } from 'expo-av';
 import { Dialogue, AudioTrack } from '@/types/genki';
 
 interface DialogueSectionProps {
-  dialogue: Dialogue;
+  dialogue?: Dialogue; // Single dialogue (backward compatible)
+  dialogues?: Dialogue[]; // Multiple dialogues
   audioTracks?: AudioTrack[];
   onPlayAudio?: (track: AudioTrack) => void;
-  getLineAudioPath?: (lineIndex: number, speaker: string) => string;
+  getLineAudioPath?: (dialogueIndex: number, lineIndex: number, speaker: string) => string;
 }
 
 export function DialogueSection({
   dialogue,
+  dialogues,
   audioTracks,
   onPlayAudio,
   getLineAudioPath,
 }: DialogueSectionProps) {
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
-  const [loadingIndex, setLoadingIndex] = useState<number | null>(null);
+  // Combine single dialogue into array for unified handling
+  const allDialogues = dialogues || (dialogue ? [dialogue] : []);
+
+  // Track playing state as "dialogueIndex-lineIndex"
+  const [playingKey, setPlayingKey] = useState<string | null>(null);
+  const [loadingKey, setLoadingKey] = useState<string | null>(null);
   const soundRef = useRef<Audio.Sound | null>(null);
   const webAudioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -32,14 +38,16 @@ export function DialogueSection({
       await soundRef.current.unloadAsync();
       soundRef.current = null;
     }
-    setPlayingIndex(null);
+    setPlayingKey(null);
   }, []);
 
-  const playLineAudio = useCallback(async (lineIndex: number, speaker: string) => {
+  const playLineAudio = useCallback(async (dialogueIndex: number, lineIndex: number, speaker: string) => {
     if (!getLineAudioPath) return;
 
+    const key = `${dialogueIndex}-${lineIndex}`;
+
     // If same line is playing, stop it
-    if (playingIndex === lineIndex) {
+    if (playingKey === key) {
       await stopCurrentAudio();
       return;
     }
@@ -47,28 +55,28 @@ export function DialogueSection({
     // Stop any current audio first
     await stopCurrentAudio();
 
-    const audioPath = getLineAudioPath(lineIndex, speaker);
+    const audioPath = getLineAudioPath(dialogueIndex, lineIndex, speaker);
     const fullUrl = Platform.OS === 'web' && typeof window !== 'undefined'
       ? `${window.location.origin}${audioPath}`
       : audioPath;
 
-    setLoadingIndex(lineIndex);
+    setLoadingKey(key);
 
     try {
       if (Platform.OS === 'web' && typeof window !== 'undefined') {
         const audio = new window.Audio(fullUrl);
         webAudioRef.current = audio;
         audio.onended = () => {
-          setPlayingIndex(null);
+          setPlayingKey(null);
           webAudioRef.current = null;
         };
         audio.onerror = () => {
           console.error('Web audio error for:', fullUrl);
-          setPlayingIndex(null);
-          setLoadingIndex(null);
+          setPlayingKey(null);
+          setLoadingKey(null);
         };
         await audio.play();
-        setPlayingIndex(lineIndex);
+        setPlayingKey(key);
       } else {
         await Audio.setAudioModeAsync({
           playsInSilentModeIOS: true,
@@ -79,10 +87,10 @@ export function DialogueSection({
           { shouldPlay: true }
         );
         soundRef.current = sound;
-        setPlayingIndex(lineIndex);
+        setPlayingKey(key);
         sound.setOnPlaybackStatusUpdate((status) => {
           if (status.isLoaded && status.didJustFinish) {
-            setPlayingIndex(null);
+            setPlayingKey(null);
             sound.unloadAsync();
             soundRef.current = null;
           }
@@ -90,11 +98,12 @@ export function DialogueSection({
       }
     } catch (error) {
       console.error('Error playing audio:', error);
-      setPlayingIndex(null);
+      setPlayingKey(null);
     } finally {
-      setLoadingIndex(null);
+      setLoadingKey(null);
     }
-  }, [getLineAudioPath, playingIndex, stopCurrentAudio]);
+  }, [getLineAudioPath, playingKey, stopCurrentAudio]);
+
   // Generate avatar colors based on character name
   const getAvatarColor = (name: string): string => {
     const colors = [
@@ -108,96 +117,136 @@ export function DialogueSection({
     return colors[index];
   };
 
+  if (allDialogues.length === 0) {
+    return null;
+  }
+
   return (
-    <View>
-      {/* Title */}
-      {dialogue.titleJapanese && (
-        <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          {dialogue.title}
-          <Text className="text-sakura-600 font-japanese"> ({dialogue.titleJapanese})</Text>
-        </Text>
-      )}
+    <View className="gap-8">
+      {allDialogues.map((dlg, dialogueIndex) => {
+        const isMultiple = allDialogues.length > 1;
 
-      {/* Context */}
-      <View className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 mb-4">
-        <Text className="text-sm font-medium text-blue-700 dark:text-blue-400 mb-1">
-          Situation
-        </Text>
-        <Text className="text-base text-blue-800 dark:text-blue-300">
-          {dialogue.context}
-        </Text>
-      </View>
+        return (
+          <View key={dlg.id || dialogueIndex}>
+            {/* Dialogue Header */}
+            <View className={isMultiple ? 'mb-4' : ''}>
+              {isMultiple && (
+                <View className="flex-row items-center mb-3">
+                  <View className="w-8 h-8 rounded-full bg-sakura-100 dark:bg-sakura-900/30 items-center justify-center mr-3">
+                    <Text className="text-sakura-600 font-bold">{dialogueIndex + 1}</Text>
+                  </View>
+                  <View className="flex-1">
+                    <Text className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {dlg.title}
+                    </Text>
+                    {dlg.titleJapanese && (
+                      <Text className="text-sm text-sakura-600 font-japanese">
+                        {dlg.titleJapanese}
+                      </Text>
+                    )}
+                  </View>
+                </View>
+              )}
 
-      {/* Play audio button */}
-      {audioTracks && audioTracks.length > 0 && onPlayAudio && (
-        <Pressable
-          onPress={() => onPlayAudio(audioTracks[0])}
-          className="flex-row items-center bg-sakura-500 rounded-xl p-4 mb-4"
-        >
-          <FontAwesome name="play-circle" size={24} color="#fff" />
-          <Text className="text-white font-semibold ml-3">
-            Play Dialogue Audio
-          </Text>
-        </Pressable>
-      )}
-
-      {/* Dialogue lines */}
-      <View className="gap-4">
-        {dialogue.lines.map((line, index) => {
-          const isEven = index % 2 === 0;
-          const isPlaying = playingIndex === index;
-          const isLoading = loadingIndex === index;
-          return (
-            <View
-              key={index}
-              className={`flex-row ${isEven ? '' : 'flex-row-reverse'}`}
-            >
-              {/* Speaker avatar with play button */}
-              <Pressable
-                onPress={() => playLineAudio(index, line.speaker)}
-                disabled={!getLineAudioPath || isLoading}
-                className={`w-10 h-10 rounded-full items-center justify-center ${
-                  isEven ? 'mr-3' : 'ml-3'
-                } ${isPlaying ? 'bg-sakura-500' : getAvatarColor(line.speaker)}`}
-              >
-                {isLoading ? (
-                  <ActivityIndicator size="small" color="#374151" />
-                ) : getLineAudioPath ? (
-                  <FontAwesome
-                    name={isPlaying ? 'pause' : 'play'}
-                    size={14}
-                    color={isPlaying ? '#fff' : '#374151'}
-                  />
-                ) : (
-                  <Text className="text-sm font-bold text-gray-700 dark:text-gray-200">
-                    {line.speaker.charAt(0)}
-                  </Text>
-                )}
-              </Pressable>
-
-              {/* Speech bubble */}
-              <View
-                className={`flex-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-3 ${
-                  isEven
-                    ? 'rounded-tl-none'
-                    : 'rounded-tr-none'
-                }`}
-              >
-                <Text className="text-xs text-gray-400 mb-1">{line.speaker}</Text>
-                <Text className="text-lg text-gray-900 dark:text-white font-japanese leading-8">
-                  {line.japanese}
+              {/* Single dialogue title (when not multiple) */}
+              {!isMultiple && dlg.titleJapanese && (
+                <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {dlg.title}
+                  <Text className="text-sakura-600 font-japanese"> ({dlg.titleJapanese})</Text>
                 </Text>
-                <Text className="text-base text-sakura-600 mt-1 font-japanese">
-                  {line.reading}
+              )}
+
+              {/* Context */}
+              <View className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 mb-4">
+                <Text className="text-sm font-medium text-blue-700 dark:text-blue-400 mb-1">
+                  Situation
                 </Text>
-                <Text className="text-sm text-gray-600 dark:text-gray-400 mt-2 italic">
-                  {line.english}
+                <Text className="text-base text-blue-800 dark:text-blue-300">
+                  {dlg.context}
                 </Text>
               </View>
             </View>
-          );
-        })}
-      </View>
+
+            {/* Play full audio button (only for first dialogue if audioTracks provided) */}
+            {dialogueIndex === 0 && audioTracks && audioTracks.length > 0 && onPlayAudio && (
+              <Pressable
+                onPress={() => onPlayAudio(audioTracks[0])}
+                className="flex-row items-center bg-sakura-500 rounded-xl p-4 mb-4"
+              >
+                <FontAwesome name="play-circle" size={24} color="#fff" />
+                <Text className="text-white font-semibold ml-3">
+                  Play Dialogue Audio
+                </Text>
+              </Pressable>
+            )}
+
+            {/* Dialogue lines */}
+            <View className="gap-4">
+              {dlg.lines.map((line, lineIndex) => {
+                const isEven = lineIndex % 2 === 0;
+                const key = `${dialogueIndex}-${lineIndex}`;
+                const isPlaying = playingKey === key;
+                const isLoading = loadingKey === key;
+
+                return (
+                  <View
+                    key={lineIndex}
+                    className={`flex-row ${isEven ? '' : 'flex-row-reverse'}`}
+                  >
+                    {/* Speaker avatar with play button */}
+                    <Pressable
+                      onPress={() => playLineAudio(dialogueIndex, lineIndex, line.speaker)}
+                      disabled={!getLineAudioPath || isLoading}
+                      className={`w-10 h-10 rounded-full items-center justify-center ${
+                        isEven ? 'mr-3' : 'ml-3'
+                      } ${isPlaying ? 'bg-sakura-500' : getAvatarColor(line.speaker)}`}
+                    >
+                      {isLoading ? (
+                        <ActivityIndicator size="small" color="#374151" />
+                      ) : getLineAudioPath ? (
+                        <FontAwesome
+                          name={isPlaying ? 'pause' : 'play'}
+                          size={14}
+                          color={isPlaying ? '#fff' : '#374151'}
+                        />
+                      ) : (
+                        <Text className="text-sm font-bold text-gray-700 dark:text-gray-200">
+                          {line.speaker.charAt(0)}
+                        </Text>
+                      )}
+                    </Pressable>
+
+                    {/* Speech bubble */}
+                    <View
+                      className={`flex-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-3 ${
+                        isEven
+                          ? 'rounded-tl-none'
+                          : 'rounded-tr-none'
+                      }`}
+                    >
+                      <Text className="text-xs text-gray-400 mb-1">{line.speaker}</Text>
+                      <Text className="text-lg text-gray-900 dark:text-white font-japanese leading-8">
+                        {line.japanese}
+                      </Text>
+                      <Text className="text-base text-sakura-600 mt-1 font-japanese">
+                        {line.reading}
+                      </Text>
+                      <Text className="text-sm text-gray-600 dark:text-gray-400 mt-2 italic">
+                        {line.english}
+                      </Text>
+                    </View>
+                  </View>
+                );
+              })}
+            </View>
+
+            {/* Divider between dialogues */}
+            {isMultiple && dialogueIndex < allDialogues.length - 1 && (
+              <View className="h-px bg-gray-200 dark:bg-gray-700 mt-8" />
+            )}
+          </View>
+        );
+      })}
     </View>
   );
 }

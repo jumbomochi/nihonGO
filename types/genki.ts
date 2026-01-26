@@ -138,7 +138,8 @@ export interface AudioTrack {
 export interface LessonSectionContent {
   vocabulary?: VocabularyItem[];
   grammar?: GrammarPoint[];
-  dialogue?: Dialogue;
+  dialogue?: Dialogue; // Single dialogue (backward compatible)
+  dialogues?: Dialogue[]; // Multiple dialogues
   culturalNote?: CulturalNote;
   exercises?: Exercise[];
   text?: string; // For reading/writing sections
