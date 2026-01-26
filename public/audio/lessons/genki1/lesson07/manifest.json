@@ -1,8 +1,10 @@
 {
   "book": "genki1",
   "lesson": 7,
-  "vocabulary_count": 40,
-  "dialogue_count": 10,
+  "vocabulary_count": 78,
+  "dialogue_count": 4,
+  "total_dialogue_lines": 31,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "家族",
@@ -54,297 +56,713 @@
       "audio": "vocabulary/007_imouto.mp3"
     },
     {
+      "japanese": "両親",
+      "reading": "りょうしん",
+      "romaji": "ryoushin",
+      "english": "parents",
+      "audio": "vocabulary/008_ryoushin.mp3"
+    },
+    {
       "japanese": "お父さん",
       "reading": "おとうさん",
       "romaji": "otousan",
       "english": "father (honorific)",
-      "audio": "vocabulary/008_otousan.mp3"
+      "audio": "vocabulary/009_otousan.mp3"
     },
     {
       "japanese": "お母さん",
       "reading": "おかあさん",
       "romaji": "okaasan",
       "english": "mother (honorific)",
-      "audio": "vocabulary/009_okaasan.mp3"
+      "audio": "vocabulary/010_okaasan.mp3"
     },
     {
       "japanese": "お兄さん",
       "reading": "おにいさん",
       "romaji": "oniisan",
       "english": "older brother (honorific)",
-      "audio": "vocabulary/010_oniisan.mp3"
+      "audio": "vocabulary/011_oniisan.mp3"
     },
     {
       "japanese": "お姉さん",
       "reading": "おねえさん",
       "romaji": "oneesan",
       "english": "older sister (honorific)",
-      "audio": "vocabulary/011_oneesan.mp3"
+      "audio": "vocabulary/012_oneesan.mp3"
     },
     {
       "japanese": "弟さん",
       "reading": "おとうとさん",
       "romaji": "otoutosan",
       "english": "younger brother (honorific)",
-      "audio": "vocabulary/012_otoutosan.mp3"
+      "audio": "vocabulary/013_otoutosan.mp3"
     },
     {
       "japanese": "妹さん",
       "reading": "いもうとさん",
       "romaji": "imoutosan",
       "english": "younger sister (honorific)",
-      "audio": "vocabulary/013_imoutosan.mp3"
+      "audio": "vocabulary/014_imoutosan.mp3"
     },
     {
-      "japanese": "両親",
-      "reading": "りょうしん",
-      "romaji": "ryoushin",
-      "english": "parents",
-      "audio": "vocabulary/014_ryoushin.mp3"
+      "japanese": "ご家族",
+      "reading": "ごかぞく",
+      "romaji": "gokazoku",
+      "english": "family (honorific)",
+      "audio": "vocabulary/015_gokazoku.mp3"
     },
     {
       "japanese": "祖父",
       "reading": "そふ",
       "romaji": "sofu",
       "english": "grandfather (humble)",
-      "audio": "vocabulary/015_sofu.mp3"
+      "audio": "vocabulary/016_sofu.mp3"
     },
     {
       "japanese": "祖母",
       "reading": "そぼ",
       "romaji": "sobo",
       "english": "grandmother (humble)",
-      "audio": "vocabulary/016_sobo.mp3"
+      "audio": "vocabulary/017_sobo.mp3"
     },
     {
       "japanese": "おじいさん",
       "reading": "おじいさん",
       "romaji": "ojiisan",
-      "english": "grandfather (honorific)",
-      "audio": "vocabulary/017_ojiisan.mp3"
+      "english": "grandfather (honorific); old man",
+      "audio": "vocabulary/018_ojiisan.mp3"
     },
     {
       "japanese": "おばあさん",
       "reading": "おばあさん",
       "romaji": "obaasan",
-      "english": "grandmother (honorific)",
-      "audio": "vocabulary/018_obaasan.mp3"
+      "english": "grandmother (honorific); old woman",
+      "audio": "vocabulary/019_obaasan.mp3"
     },
     {
-      "japanese": "会社員",
-      "reading": "かいしゃいん",
-      "romaji": "kaishain",
-      "english": "office worker; company employee",
-      "audio": "vocabulary/019_kaishain.mp3"
+      "japanese": "おじ",
+      "reading": "おじ",
+      "romaji": "oji",
+      "english": "uncle (humble)",
+      "audio": "vocabulary/020_oji.mp3"
     },
     {
-      "japanese": "医者",
-      "reading": "いしゃ",
-      "romaji": "isha",
-      "english": "doctor",
-      "audio": "vocabulary/020_isha.mp3"
+      "japanese": "おじさん",
+      "reading": "おじさん",
+      "romaji": "ojisan",
+      "english": "uncle (honorific); middle-aged man",
+      "audio": "vocabulary/021_ojisan.mp3"
     },
     {
-      "japanese": "弁護士",
-      "reading": "べんごし",
-      "romaji": "bengoshi",
-      "english": "lawyer",
-      "audio": "vocabulary/021_bengoshi.mp3"
+      "japanese": "おば",
+      "reading": "おば",
+      "romaji": "oba",
+      "english": "aunt (humble)",
+      "audio": "vocabulary/022_oba.mp3"
     },
     {
-      "japanese": "主婦",
-      "reading": "しゅふ",
-      "romaji": "shufu",
-      "english": "housewife",
-      "audio": "vocabulary/022_shufu.mp3"
+      "japanese": "おばさん",
+      "reading": "おばさん",
+      "romaji": "obasan",
+      "english": "aunt (honorific); middle-aged woman",
+      "audio": "vocabulary/023_obasan.mp3"
+    },
+    {
+      "japanese": "いとこ",
+      "reading": "いとこ",
+      "romaji": "itoko",
+      "english": "cousin",
+      "audio": "vocabulary/024_itoko.mp3"
+    },
+    {
+      "japanese": "親戚",
+      "reading": "しんせき",
+      "romaji": "shinseki",
+      "english": "relative",
+      "audio": "vocabulary/025_shinseki.mp3"
+    },
+    {
+      "japanese": "主人",
+      "reading": "しゅじん",
+      "romaji": "shujin",
+      "english": "husband (humble)",
+      "audio": "vocabulary/026_shujin.mp3"
+    },
+    {
+      "japanese": "ご主人",
+      "reading": "ごしゅじん",
+      "romaji": "goshujin",
+      "english": "husband (honorific)",
+      "audio": "vocabulary/027_goshujin.mp3"
+    },
+    {
+      "japanese": "妻",
+      "reading": "つま",
+      "romaji": "tsuma",
+      "english": "wife (humble)",
+      "audio": "vocabulary/028_tsuma.mp3"
+    },
+    {
+      "japanese": "奥さん",
+      "reading": "おくさん",
+      "romaji": "okusan",
+      "english": "wife (honorific)",
+      "audio": "vocabulary/029_okusan.mp3"
+    },
+    {
+      "japanese": "息子",
+      "reading": "むすこ",
+      "romaji": "musuko",
+      "english": "son (humble)",
+      "audio": "vocabulary/030_musuko.mp3"
+    },
+    {
+      "japanese": "娘",
+      "reading": "むすめ",
+      "romaji": "musume",
+      "english": "daughter (humble)",
+      "audio": "vocabulary/031_musume.mp3"
+    },
+    {
+      "japanese": "お子さん",
+      "reading": "おこさん",
+      "romaji": "okosan",
+      "english": "child (honorific)",
+      "audio": "vocabulary/032_okosan.mp3"
+    },
+    {
+      "japanese": "お嬢さん",
+      "reading": "おじょうさん",
+      "romaji": "ojousan",
+      "english": "daughter (honorific); young lady",
+      "audio": "vocabulary/033_ojousan.mp3"
+    },
+    {
+      "japanese": "背が高い",
+      "reading": "せがたかい",
+      "romaji": "se ga takai",
+      "english": "tall (person)",
+      "audio": "vocabulary/034_se_ga_takai.mp3"
+    },
+    {
+      "japanese": "背が低い",
+      "reading": "せがひくい",
+      "romaji": "se ga hikui",
+      "english": "short (person)",
+      "audio": "vocabulary/035_se_ga_hikui.mp3"
+    },
+    {
+      "japanese": "太っている",
+      "reading": "ふとっている",
+      "romaji": "futotte iru",
+      "english": "to be overweight; fat",
+      "audio": "vocabulary/036_futotte_iru.mp3"
+    },
+    {
+      "japanese": "痩せている",
+      "reading": "やせている",
+      "romaji": "yasete iru",
+      "english": "to be thin; slim",
+      "audio": "vocabulary/037_yasete_iru.mp3"
+    },
+    {
+      "japanese": "髪",
+      "reading": "かみ",
+      "romaji": "kami",
+      "english": "hair",
+      "audio": "vocabulary/038_kami.mp3"
+    },
+    {
+      "japanese": "髪が長い",
+      "reading": "かみがながい",
+      "romaji": "kami ga nagai",
+      "english": "to have long hair",
+      "audio": "vocabulary/039_kami_ga_nagai.mp3"
+    },
+    {
+      "japanese": "髪が短い",
+      "reading": "かみがみじかい",
+      "romaji": "kami ga mijikai",
+      "english": "to have short hair",
+      "audio": "vocabulary/040_kami_ga_mijikai.mp3"
+    },
+    {
+      "japanese": "眼鏡をかけている",
+      "reading": "めがねをかけている",
+      "romaji": "megane wo kakete iru",
+      "english": "to wear glasses",
+      "audio": "vocabulary/041_megane_wo_kakete_iru.mp3"
+    },
+    {
+      "japanese": "目",
+      "reading": "め",
+      "romaji": "me",
+      "english": "eye",
+      "audio": "vocabulary/042_me.mp3"
+    },
+    {
+      "japanese": "顔",
+      "reading": "かお",
+      "romaji": "kao",
+      "english": "face",
+      "audio": "vocabulary/043_kao.mp3"
+    },
+    {
+      "japanese": "優しい",
+      "reading": "やさしい",
+      "romaji": "yasashii",
+      "english": "kind; gentle",
+      "audio": "vocabulary/044_yasashii.mp3"
+    },
+    {
+      "japanese": "厳しい",
+      "reading": "きびしい",
+      "romaji": "kibishii",
+      "english": "strict; harsh",
+      "audio": "vocabulary/045_kibishii.mp3"
+    },
+    {
+      "japanese": "真面目",
+      "reading": "まじめ",
+      "romaji": "majime",
+      "english": "serious; diligent",
+      "audio": "vocabulary/046_majime.mp3"
+    },
+    {
+      "japanese": "親切",
+      "reading": "しんせつ",
+      "romaji": "shinsetsu",
+      "english": "kind; helpful",
+      "audio": "vocabulary/047_shinsetsu.mp3"
+    },
+    {
+      "japanese": "明るい",
+      "reading": "あかるい",
+      "romaji": "akarui",
+      "english": "cheerful; bright",
+      "audio": "vocabulary/048_akarui.mp3"
+    },
+    {
+      "japanese": "静か",
+      "reading": "しずか",
+      "romaji": "shizuka",
+      "english": "quiet; calm",
+      "audio": "vocabulary/049_shizuka.mp3"
+    },
+    {
+      "japanese": "面白い",
+      "reading": "おもしろい",
+      "romaji": "omoshiroi",
+      "english": "interesting; funny",
+      "audio": "vocabulary/050_omoshiroi.mp3"
+    },
+    {
+      "japanese": "性格",
+      "reading": "せいかく",
+      "romaji": "seikaku",
+      "english": "personality; character",
+      "audio": "vocabulary/051_seikaku.mp3"
+    },
+    {
+      "japanese": "若い",
+      "reading": "わかい",
+      "romaji": "wakai",
+      "english": "young",
+      "audio": "vocabulary/052_wakai.mp3"
+    },
+    {
+      "japanese": "年を取っている",
+      "reading": "としをとっている",
+      "romaji": "toshi wo totte iru",
+      "english": "to be old (person)",
+      "audio": "vocabulary/053_toshi_wo_totte_iru.mp3"
+    },
+    {
+      "japanese": "一人っ子",
+      "reading": "ひとりっこ",
+      "romaji": "hitorikko",
+      "english": "only child",
+      "audio": "vocabulary/054_hitorikko.mp3"
+    },
+    {
+      "japanese": "長男",
+      "reading": "ちょうなん",
+      "romaji": "chounan",
+      "english": "eldest son",
+      "audio": "vocabulary/055_chounan.mp3"
+    },
+    {
+      "japanese": "長女",
+      "reading": "ちょうじょ",
+      "romaji": "choujo",
+      "english": "eldest daughter",
+      "audio": "vocabulary/056_choujo.mp3"
+    },
+    {
+      "japanese": "末っ子",
+      "reading": "すえっこ",
+      "romaji": "suekko",
+      "english": "youngest child",
+      "audio": "vocabulary/057_suekko.mp3"
     },
     {
       "japanese": "～人",
       "reading": "～にん",
       "romaji": "~nin",
       "english": "counter for people",
-      "audio": "vocabulary/023_nin.mp3"
+      "audio": "vocabulary/058_nin.mp3"
     },
     {
       "japanese": "～歳",
       "reading": "～さい",
       "romaji": "~sai",
       "english": "counter for age",
-      "audio": "vocabulary/024_sai.mp3"
+      "audio": "vocabulary/059_sai.mp3"
     },
     {
       "japanese": "～枚",
       "reading": "～まい",
       "romaji": "~mai",
       "english": "counter for flat things",
-      "audio": "vocabulary/025_mai.mp3"
+      "audio": "vocabulary/060_mai.mp3"
     },
     {
       "japanese": "～冊",
       "reading": "～さつ",
       "romaji": "~satsu",
       "english": "counter for bound objects",
-      "audio": "vocabulary/026_satsu.mp3"
+      "audio": "vocabulary/061_satsu.mp3"
     },
     {
       "japanese": "～台",
       "reading": "～だい",
       "romaji": "~dai",
       "english": "counter for machines/vehicles",
-      "audio": "vocabulary/027_dai.mp3"
+      "audio": "vocabulary/062_dai.mp3"
+    },
+    {
+      "japanese": "住んでいる",
+      "reading": "すんでいる",
+      "romaji": "sunde iru",
+      "english": "to live; to reside",
+      "audio": "vocabulary/063_sunde_iru.mp3"
+    },
+    {
+      "japanese": "結婚している",
+      "reading": "けっこんしている",
+      "romaji": "kekkon shite iru",
+      "english": "to be married",
+      "audio": "vocabulary/064_kekkon_shite_iru.mp3"
+    },
+    {
+      "japanese": "働いている",
+      "reading": "はたらいている",
+      "romaji": "hataraite iru",
+      "english": "to be working",
+      "audio": "vocabulary/065_hataraite_iru.mp3"
+    },
+    {
+      "japanese": "亡くなる",
+      "reading": "なくなる",
+      "romaji": "nakunaru",
+      "english": "to pass away (polite)",
+      "audio": "vocabulary/066_nakunaru.mp3"
+    },
+    {
+      "japanese": "似ている",
+      "reading": "にている",
+      "romaji": "nite iru",
+      "english": "to resemble; to look like",
+      "audio": "vocabulary/067_nite_iru.mp3"
     },
     {
       "japanese": "高校生",
       "reading": "こうこうせい",
       "romaji": "koukousei",
       "english": "high school student",
-      "audio": "vocabulary/028_koukousei.mp3"
+      "audio": "vocabulary/068_koukousei.mp3"
     },
     {
       "japanese": "中学生",
       "reading": "ちゅうがくせい",
       "romaji": "chuugakusei",
       "english": "middle school student",
-      "audio": "vocabulary/029_chuugakusei.mp3"
+      "audio": "vocabulary/069_chuugakusei.mp3"
     },
     {
       "japanese": "小学生",
       "reading": "しょうがくせい",
       "romaji": "shougakusei",
       "english": "elementary school student",
-      "audio": "vocabulary/030_shougakusei.mp3"
+      "audio": "vocabulary/070_shougakusei.mp3"
     },
     {
-      "japanese": "サッカー",
-      "reading": "サッカー",
-      "romaji": "sakkaa",
-      "english": "soccer",
-      "audio": "vocabulary/031_sakkaa.mp3"
-    },
-    {
-      "japanese": "野球",
-      "reading": "やきゅう",
-      "romaji": "yakyuu",
-      "english": "baseball",
-      "audio": "vocabulary/032_yakyuu.mp3"
-    },
-    {
-      "japanese": "テニス",
-      "reading": "テニス",
-      "romaji": "tenisu",
-      "english": "tennis",
-      "audio": "vocabulary/033_tenisu.mp3"
-    },
-    {
-      "japanese": "写真",
-      "reading": "しゃしん",
-      "romaji": "shashin",
-      "english": "photo; photograph",
-      "audio": "vocabulary/034_shashin.mp3"
-    },
-    {
-      "japanese": "送る",
-      "reading": "おくる",
-      "romaji": "okuru",
-      "english": "to send",
-      "audio": "vocabulary/035_okuru.mp3"
-    },
-    {
-      "japanese": "見せる",
-      "reading": "みせる",
-      "romaji": "miseru",
-      "english": "to show",
-      "audio": "vocabulary/036_miseru.mp3"
-    },
-    {
-      "japanese": "教える",
-      "reading": "おしえる",
-      "romaji": "oshieru",
-      "english": "to teach; to tell",
-      "audio": "vocabulary/037_oshieru.mp3"
+      "japanese": "社会人",
+      "reading": "しゃかいじん",
+      "romaji": "shakaijin",
+      "english": "working adult; member of society",
+      "audio": "vocabulary/071_shakaijin.mp3"
     },
     {
       "japanese": "何人",
       "reading": "なんにん",
       "romaji": "nannin",
       "english": "how many people",
-      "audio": "vocabulary/038_nannin.mp3"
+      "audio": "vocabulary/072_nannin.mp3"
     },
     {
       "japanese": "まだ",
       "reading": "まだ",
       "romaji": "mada",
       "english": "still; not yet",
-      "audio": "vocabulary/039_mada.mp3"
+      "audio": "vocabulary/073_mada.mp3"
     },
     {
       "japanese": "もう",
       "reading": "もう",
       "romaji": "mou",
       "english": "already; anymore",
-      "audio": "vocabulary/040_mou.mp3"
+      "audio": "vocabulary/074_mou.mp3"
+    },
+    {
+      "japanese": "兄弟",
+      "reading": "きょうだい",
+      "romaji": "kyoudai",
+      "english": "siblings; brothers",
+      "audio": "vocabulary/075_kyoudai.mp3"
+    },
+    {
+      "japanese": "姉妹",
+      "reading": "しまい",
+      "romaji": "shimai",
+      "english": "sisters",
+      "audio": "vocabulary/076_shimai.mp3"
+    },
+    {
+      "japanese": "どんな",
+      "reading": "どんな",
+      "romaji": "donna",
+      "english": "what kind of",
+      "audio": "vocabulary/077_donna.mp3"
+    },
+    {
+      "japanese": "同僚",
+      "reading": "どうりょう",
+      "romaji": "douryou",
+      "english": "colleague; coworker",
+      "audio": "vocabulary/078_douryou.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Takeshi",
-      "japanese": "メアリーさんの家族は何人ですか。",
-      "english": "How many people are in your family, Mary?",
-      "audio": "dialogue/001_takeshi.mp3"
+      "id": "l07-d01",
+      "title": "Showing Family Photos",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "メアリーさんの家族は何人ですか。",
+          "english": "How many people are in your family, Mary?",
+          "audio": "dialogue/d01_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "五人です。父と母と姉と弟がいます。",
+          "english": "Five people. I have a father, mother, older sister, and younger brother.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "お姉さんは何をしていますか。",
+          "english": "What does your older sister do?",
+          "audio": "dialogue/d01_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "姉は会社員で、東京に住んでいます。",
+          "english": "My older sister is an office worker and lives in Tokyo.",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "お姉さんはどんな人ですか。",
+          "english": "What kind of person is your older sister?",
+          "audio": "dialogue/d01_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "背が高くて、きれいな人です。とても優しいです。",
+          "english": "She's tall and beautiful. She's very kind.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "弟さんは学生ですか。",
+          "english": "Is your younger brother a student?",
+          "audio": "dialogue/d01_007_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、高校生です。サッカーが上手です。",
+          "english": "Yes, he's a high school student. He's good at soccer.",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "五人です。父と母と姉と弟がいます。",
-      "english": "Five people. I have a father, mother, older sister, and younger brother.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l07-d02",
+      "title": "Describing Someone",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "新しい同僚はどんな人ですか。",
+          "english": "What is your new colleague like?",
+          "audio": "dialogue/d02_001_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "田中さんですか。背が低くて、ちょっと太っています。",
+          "english": "Tanaka-san? He is short and a little overweight.",
+          "audio": "dialogue/d02_002_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "髪は長いですか。",
+          "english": "Does he have long hair?",
+          "audio": "dialogue/d02_003_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "いいえ、髪が短くて、黒いです。眼鏡をかけています。",
+          "english": "No, he has short, black hair. He wears glasses.",
+          "audio": "dialogue/d02_004_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "何歳ぐらいですか。",
+          "english": "About how old is he?",
+          "audio": "dialogue/d02_005_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "三十歳ぐらいだと思います。若くて、元気な人です。",
+          "english": "I think he is about 30. He is young and energetic.",
+          "audio": "dialogue/d02_006_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "性格はどうですか。",
+          "english": "What is his personality like?",
+          "audio": "dialogue/d02_007_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "とても真面目で、親切です。いい人ですよ。",
+          "english": "He is very serious and kind. He is a good person.",
+          "audio": "dialogue/d02_008_ken.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "お姉さんは何をしていますか。",
-      "english": "What does your older sister do?",
-      "audio": "dialogue/003_takeshi.mp3"
+      "id": "l07-d03",
+      "title": "Talking About Siblings",
+      "lines": [
+        {
+          "speaker": "Kenji",
+          "japanese": "リサは兄弟がいる？",
+          "english": "Lisa, do you have any siblings?",
+          "audio": "dialogue/d03_001_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "うん、妹が二人いるよ。",
+          "english": "Yeah, I have two younger sisters.",
+          "audio": "dialogue/d03_002_lisa.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "へえ、三人姉妹なんだ。妹さんたちは何歳？",
+          "english": "Wow, three sisters. How old are your sisters?",
+          "audio": "dialogue/d03_003_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "一番下の妹は十五歳で、もう一人は十八歳。",
+          "english": "The youngest is 15, and the other one is 18.",
+          "audio": "dialogue/d03_004_lisa.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "二人とも学生？",
+          "english": "Are they both students?",
+          "audio": "dialogue/d03_005_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "そう。下の子は中学生で、上の子は大学一年生。けんじは？",
+          "english": "Yes. The younger one is in middle school, and the older one is a college freshman. How about you, Kenji?",
+          "audio": "dialogue/d03_006_lisa.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "僕は兄が一人。社会人でもう結婚してる。",
+          "english": "I have one older brother. He works and is already married.",
+          "audio": "dialogue/d03_007_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "お兄さんに会ったことある？",
+          "english": "Have you met him?",
+          "audio": "dialogue/d03_008_lisa.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "姉は会社員で、東京に住んでいます。",
-      "english": "My older sister is an office worker and lives in Tokyo.",
-      "audio": "dialogue/004_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "お姉さんはどんな人ですか。",
-      "english": "What kind of person is your older sister?",
-      "audio": "dialogue/005_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "背が高くて、きれいな人です。とても優しいです。",
-      "english": "She's tall and beautiful. She's very kind.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "弟さんは学生ですか。",
-      "english": "Is your younger brother a student?",
-      "audio": "dialogue/007_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "はい、高校生です。サッカーが上手です。",
-      "english": "Yes, he's a high school student. He's good at soccer.",
-      "audio": "dialogue/008_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "いい家族ですね。日本に来たことがありますか。",
-      "english": "What a nice family. Have they ever come to Japan?",
-      "audio": "dialogue/009_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "姉は去年来ました。弟はまだ来たことがありません。",
-      "english": "My sister came last year. My brother hasn\\",
-      "audio": "dialogue/010_mary.mp3"
+      "id": "l07-d04",
+      "title": "Introducing Family",
+      "lines": [
+        {
+          "speaker": "Yamamoto",
+          "japanese": "鈴木さん、こちらは主人です。",
+          "english": "Mr. Suzuki, this is my husband.",
+          "audio": "dialogue/d04_001_yamamoto.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "はじめまして。お会いできてうれしいです。",
+          "english": "Nice to meet you. I am happy to meet you.",
+          "audio": "dialogue/d04_002_suzuki.mp3"
+        },
+        {
+          "speaker": "Yamamoto",
+          "japanese": "そして、こちらは息子の健太です。今年、小学生になりました。",
+          "english": "And this is my son Kenta. He started elementary school this year.",
+          "audio": "dialogue/d04_003_yamamoto.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "お子さんは一人ですか。",
+          "english": "Do you have only one child?",
+          "audio": "dialogue/d04_004_suzuki.mp3"
+        },
+        {
+          "speaker": "Yamamoto",
+          "japanese": "いいえ、娘も一人います。今日は来ていませんが。",
+          "english": "No, I also have a daughter. She is not here today, though.",
+          "audio": "dialogue/d04_005_yamamoto.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "お嬢さんはおいくつですか。",
+          "english": "How old is your daughter?",
+          "audio": "dialogue/d04_006_suzuki.mp3"
+        },
+        {
+          "speaker": "Yamamoto",
+          "japanese": "十四歳です。背が高くて、スポーツが得意です。",
+          "english": "She is 14. She is tall and good at sports.",
+          "audio": "dialogue/d04_007_yamamoto.mp3"
+        }
+      ]
     }
   ]
 }

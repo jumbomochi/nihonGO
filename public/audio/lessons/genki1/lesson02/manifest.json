@@ -1,8 +1,10 @@
 {
   "book": "genki1",
   "lesson": 2,
-  "vocabulary_count": 18,
-  "dialogue_count": 4,
+  "vocabulary_count": 65,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 37,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "これ",
@@ -33,128 +35,685 @@
       "audio": "vocabulary/004_dore.mp3"
     },
     {
-      "japanese": "いくら",
-      "reading": "いくら",
-      "romaji": "ikura",
-      "english": "how much",
-      "audio": "vocabulary/005_ikura.mp3"
+      "japanese": "この",
+      "reading": "この",
+      "romaji": "kono",
+      "english": "this (+ noun)",
+      "audio": "vocabulary/005_kono.mp3"
     },
     {
-      "japanese": "円",
-      "reading": "えん",
-      "romaji": "en",
-      "english": "yen (Japanese currency)",
-      "audio": "vocabulary/006_en.mp3"
+      "japanese": "その",
+      "reading": "その",
+      "romaji": "sono",
+      "english": "that (+ noun)",
+      "audio": "vocabulary/006_sono.mp3"
     },
     {
-      "japanese": "ください",
-      "reading": "ください",
-      "romaji": "kudasai",
-      "english": "please give me",
-      "audio": "vocabulary/007_kudasai.mp3"
+      "japanese": "あの",
+      "reading": "あの",
+      "romaji": "ano",
+      "english": "that over there (+ noun)",
+      "audio": "vocabulary/007_ano.mp3"
+    },
+    {
+      "japanese": "どの",
+      "reading": "どの",
+      "romaji": "dono",
+      "english": "which (+ noun)",
+      "audio": "vocabulary/008_dono.mp3"
     },
     {
       "japanese": "本",
       "reading": "ほん",
       "romaji": "hon",
       "english": "book",
-      "audio": "vocabulary/008_hon.mp3"
+      "audio": "vocabulary/009_hon.mp3"
     },
     {
       "japanese": "辞書",
       "reading": "じしょ",
       "romaji": "jisho",
       "english": "dictionary",
-      "audio": "vocabulary/009_jisho.mp3"
+      "audio": "vocabulary/010_jisho.mp3"
     },
     {
       "japanese": "雑誌",
       "reading": "ざっし",
       "romaji": "zasshi",
       "english": "magazine",
-      "audio": "vocabulary/010_zasshi.mp3"
+      "audio": "vocabulary/011_zasshi.mp3"
     },
     {
       "japanese": "新聞",
       "reading": "しんぶん",
       "romaji": "shinbun",
       "english": "newspaper",
-      "audio": "vocabulary/011_shinbun.mp3"
+      "audio": "vocabulary/012_shinbun.mp3"
     },
     {
       "japanese": "ノート",
       "reading": "ノート",
       "romaji": "nooto",
       "english": "notebook",
-      "audio": "vocabulary/012_nooto.mp3"
+      "audio": "vocabulary/013_nooto.mp3"
     },
     {
       "japanese": "ペン",
       "reading": "ペン",
       "romaji": "pen",
       "english": "pen",
-      "audio": "vocabulary/013_pen.mp3"
+      "audio": "vocabulary/014_pen.mp3"
     },
     {
       "japanese": "鉛筆",
       "reading": "えんぴつ",
       "romaji": "enpitsu",
       "english": "pencil",
-      "audio": "vocabulary/014_enpitsu.mp3"
+      "audio": "vocabulary/015_enpitsu.mp3"
     },
     {
       "japanese": "傘",
       "reading": "かさ",
       "romaji": "kasa",
       "english": "umbrella",
-      "audio": "vocabulary/015_kasa.mp3"
+      "audio": "vocabulary/016_kasa.mp3"
     },
     {
       "japanese": "鞄",
       "reading": "かばん",
       "romaji": "kaban",
       "english": "bag",
-      "audio": "vocabulary/016_kaban.mp3"
+      "audio": "vocabulary/017_kaban.mp3"
     },
     {
       "japanese": "財布",
       "reading": "さいふ",
       "romaji": "saifu",
       "english": "wallet",
-      "audio": "vocabulary/017_saifu.mp3"
+      "audio": "vocabulary/018_saifu.mp3"
     },
     {
       "japanese": "時計",
       "reading": "とけい",
       "romaji": "tokei",
       "english": "watch; clock",
-      "audio": "vocabulary/018_tokei.mp3"
+      "audio": "vocabulary/019_tokei.mp3"
+    },
+    {
+      "japanese": "携帯電話",
+      "reading": "けいたいでんわ",
+      "romaji": "keitaidenwa",
+      "english": "cell phone",
+      "audio": "vocabulary/020_keitaidenwa.mp3"
+    },
+    {
+      "japanese": "おにぎり",
+      "reading": "おにぎり",
+      "romaji": "onigiri",
+      "english": "rice ball",
+      "audio": "vocabulary/021_onigiri.mp3"
+    },
+    {
+      "japanese": "お弁当",
+      "reading": "おべんとう",
+      "romaji": "obentou",
+      "english": "boxed lunch",
+      "audio": "vocabulary/022_obentou.mp3"
+    },
+    {
+      "japanese": "パン",
+      "reading": "パン",
+      "romaji": "pan",
+      "english": "bread",
+      "audio": "vocabulary/023_pan.mp3"
+    },
+    {
+      "japanese": "お菓子",
+      "reading": "おかし",
+      "romaji": "okashi",
+      "english": "snacks; sweets",
+      "audio": "vocabulary/024_okashi.mp3"
+    },
+    {
+      "japanese": "水",
+      "reading": "みず",
+      "romaji": "mizu",
+      "english": "water",
+      "audio": "vocabulary/025_mizu.mp3"
+    },
+    {
+      "japanese": "お茶",
+      "reading": "おちゃ",
+      "romaji": "ocha",
+      "english": "tea; green tea",
+      "audio": "vocabulary/026_ocha.mp3"
+    },
+    {
+      "japanese": "コーヒー",
+      "reading": "コーヒー",
+      "romaji": "koohii",
+      "english": "coffee",
+      "audio": "vocabulary/027_koohii.mp3"
+    },
+    {
+      "japanese": "ジュース",
+      "reading": "ジュース",
+      "romaji": "juusu",
+      "english": "juice",
+      "audio": "vocabulary/028_juusu.mp3"
+    },
+    {
+      "japanese": "Tシャツ",
+      "reading": "Tシャツ",
+      "romaji": "tiishatsu",
+      "english": "T-shirt",
+      "audio": "vocabulary/029_tiishatsu.mp3"
+    },
+    {
+      "japanese": "シャツ",
+      "reading": "シャツ",
+      "romaji": "shatsu",
+      "english": "shirt",
+      "audio": "vocabulary/030_shatsu.mp3"
+    },
+    {
+      "japanese": "ズボン",
+      "reading": "ズボン",
+      "romaji": "zubon",
+      "english": "pants; trousers",
+      "audio": "vocabulary/031_zubon.mp3"
+    },
+    {
+      "japanese": "靴",
+      "reading": "くつ",
+      "romaji": "kutsu",
+      "english": "shoes",
+      "audio": "vocabulary/032_kutsu.mp3"
+    },
+    {
+      "japanese": "帽子",
+      "reading": "ぼうし",
+      "romaji": "boushi",
+      "english": "hat; cap",
+      "audio": "vocabulary/033_boushi.mp3"
+    },
+    {
+      "japanese": "セーター",
+      "reading": "セーター",
+      "romaji": "seetaa",
+      "english": "sweater",
+      "audio": "vocabulary/034_seetaa.mp3"
+    },
+    {
+      "japanese": "百",
+      "reading": "ひゃく",
+      "romaji": "hyaku",
+      "english": "hundred",
+      "audio": "vocabulary/035_hyaku.mp3"
+    },
+    {
+      "japanese": "三百",
+      "reading": "さんびゃく",
+      "romaji": "sanbyaku",
+      "english": "three hundred",
+      "audio": "vocabulary/036_sanbyaku.mp3"
+    },
+    {
+      "japanese": "六百",
+      "reading": "ろっぴゃく",
+      "romaji": "roppyaku",
+      "english": "six hundred",
+      "audio": "vocabulary/037_roppyaku.mp3"
+    },
+    {
+      "japanese": "八百",
+      "reading": "はっぴゃく",
+      "romaji": "happyaku",
+      "english": "eight hundred",
+      "audio": "vocabulary/038_happyaku.mp3"
+    },
+    {
+      "japanese": "千",
+      "reading": "せん",
+      "romaji": "sen",
+      "english": "thousand",
+      "audio": "vocabulary/039_sen.mp3"
+    },
+    {
+      "japanese": "三千",
+      "reading": "さんぜん",
+      "romaji": "sanzen",
+      "english": "three thousand",
+      "audio": "vocabulary/040_sanzen.mp3"
+    },
+    {
+      "japanese": "八千",
+      "reading": "はっせん",
+      "romaji": "hassen",
+      "english": "eight thousand",
+      "audio": "vocabulary/041_hassen.mp3"
+    },
+    {
+      "japanese": "万",
+      "reading": "まん",
+      "romaji": "man",
+      "english": "ten thousand",
+      "audio": "vocabulary/042_man.mp3"
+    },
+    {
+      "japanese": "円",
+      "reading": "えん",
+      "romaji": "en",
+      "english": "yen (Japanese currency)",
+      "audio": "vocabulary/043_en.mp3"
+    },
+    {
+      "japanese": "いくつ",
+      "reading": "いくつ",
+      "romaji": "ikutsu",
+      "english": "how many",
+      "audio": "vocabulary/044_ikutsu.mp3"
+    },
+    {
+      "japanese": "赤い",
+      "reading": "あかい",
+      "romaji": "akai",
+      "english": "red",
+      "audio": "vocabulary/045_akai.mp3"
+    },
+    {
+      "japanese": "青い",
+      "reading": "あおい",
+      "romaji": "aoi",
+      "english": "blue",
+      "audio": "vocabulary/046_aoi.mp3"
+    },
+    {
+      "japanese": "白い",
+      "reading": "しろい",
+      "romaji": "shiroi",
+      "english": "white",
+      "audio": "vocabulary/047_shiroi.mp3"
+    },
+    {
+      "japanese": "黒い",
+      "reading": "くろい",
+      "romaji": "kuroi",
+      "english": "black",
+      "audio": "vocabulary/048_kuroi.mp3"
+    },
+    {
+      "japanese": "黄色い",
+      "reading": "きいろい",
+      "romaji": "kiiroi",
+      "english": "yellow",
+      "audio": "vocabulary/049_kiiroi.mp3"
+    },
+    {
+      "japanese": "緑",
+      "reading": "みどり",
+      "romaji": "midori",
+      "english": "green",
+      "audio": "vocabulary/050_midori.mp3"
+    },
+    {
+      "japanese": "何",
+      "reading": "なに/なん",
+      "romaji": "nani/nan",
+      "english": "what",
+      "audio": "vocabulary/051_naninan.mp3"
+    },
+    {
+      "japanese": "いくら",
+      "reading": "いくら",
+      "romaji": "ikura",
+      "english": "how much (price)",
+      "audio": "vocabulary/052_ikura.mp3"
+    },
+    {
+      "japanese": "誰",
+      "reading": "だれ",
+      "romaji": "dare",
+      "english": "who",
+      "audio": "vocabulary/053_dare.mp3"
+    },
+    {
+      "japanese": "誰の",
+      "reading": "だれの",
+      "romaji": "dare no",
+      "english": "whose",
+      "audio": "vocabulary/054_dare_no.mp3"
+    },
+    {
+      "japanese": "ください",
+      "reading": "ください",
+      "romaji": "kudasai",
+      "english": "please give me",
+      "audio": "vocabulary/055_kudasai.mp3"
+    },
+    {
+      "japanese": "いらっしゃいませ",
+      "reading": "いらっしゃいませ",
+      "romaji": "irasshaimase",
+      "english": "welcome (to a store)",
+      "audio": "vocabulary/056_irasshaimase.mp3"
+    },
+    {
+      "japanese": "おねがいします",
+      "reading": "おねがいします",
+      "romaji": "onegaishimasu",
+      "english": "please (request)",
+      "audio": "vocabulary/057_onegaishimasu.mp3"
+    },
+    {
+      "japanese": "ぜんぶで",
+      "reading": "ぜんぶで",
+      "romaji": "zenbu de",
+      "english": "in total; altogether",
+      "audio": "vocabulary/058_zenbu_de.mp3"
+    },
+    {
+      "japanese": "おつり",
+      "reading": "おつり",
+      "romaji": "otsuri",
+      "english": "change (money)",
+      "audio": "vocabulary/059_otsuri.mp3"
+    },
+    {
+      "japanese": "レシート",
+      "reading": "レシート",
+      "romaji": "reshiito",
+      "english": "receipt",
+      "audio": "vocabulary/060_reshiito.mp3"
+    },
+    {
+      "japanese": "高い",
+      "reading": "たかい",
+      "romaji": "takai",
+      "english": "expensive; tall",
+      "audio": "vocabulary/061_takai.mp3"
+    },
+    {
+      "japanese": "安い",
+      "reading": "やすい",
+      "romaji": "yasui",
+      "english": "cheap; inexpensive",
+      "audio": "vocabulary/062_yasui.mp3"
+    },
+    {
+      "japanese": "大きい",
+      "reading": "おおきい",
+      "romaji": "ookii",
+      "english": "big; large",
+      "audio": "vocabulary/063_ookii.mp3"
+    },
+    {
+      "japanese": "小さい",
+      "reading": "ちいさい",
+      "romaji": "chiisai",
+      "english": "small; little",
+      "audio": "vocabulary/064_chiisai.mp3"
+    },
+    {
+      "japanese": "プレゼント",
+      "reading": "プレゼント",
+      "romaji": "purezento",
+      "english": "present; gift",
+      "audio": "vocabulary/065_purezento.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "すみません。これは いくらですか。",
-      "english": "Excuse me. How much is this?",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l02-d01",
+      "title": "At a Convenience Store",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "すみません。これは いくらですか。",
+          "english": "Excuse me. How much is this?",
+          "audio": "dialogue/d01_001_mary.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "それは さんびゃくえんです。",
+          "english": "That's 300 yen.",
+          "audio": "dialogue/d01_002_clerk.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "じゃあ、これと この おにぎりを ください。",
+          "english": "Then, I'll take this and this rice ball please.",
+          "audio": "dialogue/d01_003_mary.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "はい、ぜんぶで よんひゃくごじゅうえんです。",
+          "english": "Yes, that's 450 yen in total.",
+          "audio": "dialogue/d01_004_clerk.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "これで おねがいします。",
+          "english": "With this please. (handing money)",
+          "audio": "dialogue/d01_005_mary.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "ごひゃくえんから おあずかりします。ごじゅうえんの おかえしです。",
+          "english": "I'll take 500 yen. Here's 50 yen change.",
+          "audio": "dialogue/d01_006_clerk.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "ありがとうございました。またどうぞ。",
+          "english": "Thank you very much. Please come again.",
+          "audio": "dialogue/d01_007_clerk.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Store Clerk",
-      "japanese": "それは さんびゃくえんです。",
-      "english": "That's 300 yen.",
-      "audio": "dialogue/002_store clerk.mp3"
+      "id": "l02-d02",
+      "title": "At a Department Store",
+      "lines": [
+        {
+          "speaker": "Sales Associate",
+          "japanese": "いらっしゃいませ。なにを おさがしですか。",
+          "english": "Welcome. What are you looking for?",
+          "audio": "dialogue/d02_001_sales associate.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "あのう、プレゼントを さがしています。",
+          "english": "Um, I'm looking for a present.",
+          "audio": "dialogue/d02_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Sales Associate",
+          "japanese": "どなたへの プレゼントですか。",
+          "english": "Who is the present for?",
+          "audio": "dialogue/d02_003_sales associate.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ははの たんじょうびです。あの とけいは いくらですか。",
+          "english": "It's for my mother's birthday. How much is that watch over there?",
+          "audio": "dialogue/d02_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Sales Associate",
+          "japanese": "あちらは はっせんえんで ございます。",
+          "english": "That one is 8,000 yen.",
+          "audio": "dialogue/d02_005_sales associate.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "そうですか。その しろい とけいは？",
+          "english": "I see. How about that white watch?",
+          "audio": "dialogue/d02_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Sales Associate",
+          "japanese": "こちらは ろくせんえんです。とても にんきが ございます。",
+          "english": "This one is 6,000 yen. It is very popular.",
+          "audio": "dialogue/d02_007_sales associate.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "じゃあ、それを ください。",
+          "english": "Then, I'll take that one please.",
+          "audio": "dialogue/d02_008_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "じゃあ、これをください。",
-      "english": "Then, I'll take this please.",
-      "audio": "dialogue/003_mary.mp3"
+      "id": "l02-d03",
+      "title": "Shopping with a Friend",
+      "lines": [
+        {
+          "speaker": "Lisa",
+          "japanese": "ねえ、この Tシャツ かわいいね。",
+          "english": "Hey, this T-shirt is cute, isnt it?",
+          "audio": "dialogue/d03_001_lisa.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "ほんと！その あかいの いいね。",
+          "english": "Really! That red one is nice.",
+          "audio": "dialogue/d03_002_yuki.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "いくらかな... にせんえんだって。たかくない？",
+          "english": "I wonder how much... It says 2,000 yen. Isn't it expensive?",
+          "audio": "dialogue/d03_003_lisa.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "うーん、ちょっと たかいかな。あれは？",
+          "english": "Hmm, maybe a bit expensive. How about that one over there?",
+          "audio": "dialogue/d03_004_yuki.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "どれ？あの あおいの？",
+          "english": "Which one? That blue one?",
+          "audio": "dialogue/d03_005_lisa.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "うん。せんごひゃくえんだよ。やすい！",
+          "english": "Yeah. It's 1,500 yen. Cheap!",
+          "audio": "dialogue/d03_006_yuki.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "じゃあ、あれに する。",
+          "english": "Then, I'll go with that one.",
+          "audio": "dialogue/d03_007_lisa.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Store Clerk",
-      "japanese": "はい、さんびゃくえんです。ありがとうございます。",
-      "english": "Yes, that's 300 yen. Thank you.",
-      "audio": "dialogue/004_store clerk.mp3"
+      "id": "l02-d04",
+      "title": "Asking About Items",
+      "lines": [
+        {
+          "speaker": "Ken",
+          "japanese": "すみません、これは なんですか。",
+          "english": "Excuse me, what is this?",
+          "audio": "dialogue/d04_001_ken.mp3"
+        },
+        {
+          "speaker": "Shop Owner",
+          "japanese": "ああ、それは ふうりんです。にほんの でんとうてきな ものです。",
+          "english": "Ah, that's a wind chime. It's a traditional Japanese item.",
+          "audio": "dialogue/d04_002_shop owner.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "へえ、きれいですね。いくらですか。",
+          "english": "Oh, it's beautiful. How much is it?",
+          "audio": "dialogue/d04_003_ken.mp3"
+        },
+        {
+          "speaker": "Shop Owner",
+          "japanese": "これは せんにひゃくえんです。あれは にせんえんです。",
+          "english": "This one is 1,200 yen. That one over there is 2,000 yen.",
+          "audio": "dialogue/d04_004_shop owner.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "あれは だれの さくひんですか。",
+          "english": "Whose work is that one over there?",
+          "audio": "dialogue/d04_005_ken.mp3"
+        },
+        {
+          "speaker": "Shop Owner",
+          "japanese": "やまもとさんの さくひんです。ゆうめいな しょくにんですよ。",
+          "english": "It's Yamamoto-san's work. He's a famous craftsman.",
+          "audio": "dialogue/d04_006_shop owner.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "そうですか。じゃあ、この ちいさいのを ふたつ ください。",
+          "english": "I see. Then, I will take two of these small ones please.",
+          "audio": "dialogue/d04_007_ken.mp3"
+        }
+      ]
+    },
+    {
+      "id": "l02-d05",
+      "title": "At a Bookstore",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "あのう、すみません。えいわじしょは ありますか。",
+          "english": "Um, excuse me. Do you have English-Japanese dictionaries?",
+          "audio": "dialogue/d05_001_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "はい、ございます。こちらへ どうぞ。",
+          "english": "Yes, we do. This way please.",
+          "audio": "dialogue/d05_002_staff.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "この たなに ございます。",
+          "english": "They are on this shelf.",
+          "audio": "dialogue/d05_003_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとうございます。この じしょと その じしょは なにが ちがいますか。",
+          "english": "Thank you. What is the difference between this dictionary and that one?",
+          "audio": "dialogue/d05_004_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "こちらは がくせいようです。それは でんしじしょです。",
+          "english": "This one is for students. That one is an electronic dictionary.",
+          "audio": "dialogue/d05_005_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "がくせいようは いくらですか。",
+          "english": "How much is the student one?",
+          "audio": "dialogue/d05_006_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "さんぜんはっぴゃくえんです。",
+          "english": "It's 3,800 yen.",
+          "audio": "dialogue/d05_007_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "じゃあ、これを ください。",
+          "english": "Then, I'll take this one please.",
+          "audio": "dialogue/d05_008_mary.mp3"
+        }
+      ]
     }
   ]
 }

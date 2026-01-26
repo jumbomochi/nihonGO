@@ -1,350 +1,725 @@
 {
   "book": "genki2",
   "lesson": 13,
-  "vocabulary_count": 40,
-  "dialogue_count": 10,
+  "vocabulary_count": 65,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 38,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
-      "japanese": "あげる",
-      "reading": "あげる",
-      "romaji": "ageru",
-      "english": "to give (from me/us)",
-      "audio": "vocabulary/001_ageru.mp3"
+      "japanese": "アルバイト",
+      "reading": "アルバイト",
+      "romaji": "arubaito",
+      "english": "part-time job",
+      "audio": "vocabulary/001_arubaito.mp3"
     },
     {
-      "japanese": "くれる",
-      "reading": "くれる",
-      "romaji": "kureru",
-      "english": "to give (to me/us)",
-      "audio": "vocabulary/002_kureru.mp3"
+      "japanese": "仕事",
+      "reading": "しごと",
+      "romaji": "shigoto",
+      "english": "job; work",
+      "audio": "vocabulary/002_shigoto.mp3"
     },
     {
-      "japanese": "もらう",
-      "reading": "もらう",
-      "romaji": "morau",
-      "english": "to receive",
-      "audio": "vocabulary/003_morau.mp3"
+      "japanese": "面接",
+      "reading": "めんせつ",
+      "romaji": "mensetsu",
+      "english": "interview",
+      "audio": "vocabulary/003_mensetsu.mp3"
     },
     {
-      "japanese": "さしあげる",
-      "reading": "さしあげる",
-      "romaji": "sashiageru",
-      "english": "to give (humble)",
-      "audio": "vocabulary/004_sashiageru.mp3"
+      "japanese": "求人",
+      "reading": "きゅうじん",
+      "romaji": "kyuujin",
+      "english": "job opening; help wanted",
+      "audio": "vocabulary/004_kyuujin.mp3"
     },
     {
-      "japanese": "くださる",
-      "reading": "くださる",
-      "romaji": "kudasaru",
-      "english": "to give (honorific)",
-      "audio": "vocabulary/005_kudasaru.mp3"
+      "japanese": "募集",
+      "reading": "ぼしゅう",
+      "romaji": "boshuu",
+      "english": "recruitment; hiring",
+      "audio": "vocabulary/005_boshuu.mp3"
     },
     {
-      "japanese": "いただく",
-      "reading": "いただく",
-      "romaji": "itadaku",
-      "english": "to receive (humble)",
-      "audio": "vocabulary/006_itadaku.mp3"
+      "japanese": "履歴書",
+      "reading": "りれきしょ",
+      "romaji": "rirekisho",
+      "english": "resume; CV",
+      "audio": "vocabulary/006_rirekisho.mp3"
     },
     {
-      "japanese": "プレゼント",
-      "reading": "プレゼント",
-      "romaji": "purezento",
-      "english": "present; gift",
-      "audio": "vocabulary/007_purezento.mp3"
+      "japanese": "応募する",
+      "reading": "おうぼする",
+      "romaji": "oubo suru",
+      "english": "to apply (for a job)",
+      "audio": "vocabulary/007_oubo_suru.mp3"
     },
     {
-      "japanese": "お土産",
-      "reading": "おみやげ",
-      "romaji": "omiyage",
-      "english": "souvenir",
-      "audio": "vocabulary/008_omiyage.mp3"
+      "japanese": "採用する",
+      "reading": "さいようする",
+      "romaji": "saiyou suru",
+      "english": "to hire; to employ",
+      "audio": "vocabulary/008_saiyou_suru.mp3"
     },
     {
-      "japanese": "花",
-      "reading": "はな",
-      "romaji": "hana",
-      "english": "flower",
-      "audio": "vocabulary/009_hana.mp3"
+      "japanese": "不採用",
+      "reading": "ふさいよう",
+      "romaji": "fusaiyou",
+      "english": "rejection (job application)",
+      "audio": "vocabulary/009_fusaiyou.mp3"
     },
     {
-      "japanese": "お菓子",
-      "reading": "おかし",
-      "romaji": "okashi",
-      "english": "sweets; snacks",
-      "audio": "vocabulary/010_okashi.mp3"
+      "japanese": "合格する",
+      "reading": "ごうかくする",
+      "romaji": "goukaku suru",
+      "english": "to pass (an exam/interview)",
+      "audio": "vocabulary/010_goukaku_suru.mp3"
     },
     {
-      "japanese": "ホストファミリー",
-      "reading": "ホストファミリー",
-      "romaji": "hosuto famirii",
-      "english": "host family",
-      "audio": "vocabulary/011_hosuto_famirii.mp3"
+      "japanese": "紹介する",
+      "reading": "しょうかいする",
+      "romaji": "shoukai suru",
+      "english": "to introduce; to refer",
+      "audio": "vocabulary/011_shoukai_suru.mp3"
     },
     {
-      "japanese": "彼氏",
-      "reading": "かれし",
-      "romaji": "kareshi",
-      "english": "boyfriend",
-      "audio": "vocabulary/012_kareshi.mp3"
+      "japanese": "経験",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "audio": "vocabulary/012_keiken.mp3"
     },
     {
-      "japanese": "彼女",
-      "reading": "かのじょ",
-      "romaji": "kanojo",
-      "english": "girlfriend; she",
-      "audio": "vocabulary/013_kanojo.mp3"
+      "japanese": "店長",
+      "reading": "てんちょう",
+      "romaji": "tenchou",
+      "english": "store manager",
+      "audio": "vocabulary/013_tenchou.mp3"
     },
     {
-      "japanese": "～れる/られる",
-      "reading": "～れる/られる",
-      "romaji": "~reru/rareru",
-      "english": "potential form (can do)",
-      "audio": "vocabulary/014_rerurareru.mp3"
+      "japanese": "先輩",
+      "reading": "せんぱい",
+      "romaji": "senpai",
+      "english": "senior coworker",
+      "audio": "vocabulary/014_senpai.mp3"
+    },
+    {
+      "japanese": "後輩",
+      "reading": "こうはい",
+      "romaji": "kouhai",
+      "english": "junior coworker",
+      "audio": "vocabulary/015_kouhai.mp3"
+    },
+    {
+      "japanese": "同僚",
+      "reading": "どうりょう",
+      "romaji": "douryou",
+      "english": "colleague",
+      "audio": "vocabulary/016_douryou.mp3"
+    },
+    {
+      "japanese": "スタッフ",
+      "reading": "スタッフ",
+      "romaji": "sutaffu",
+      "english": "staff",
+      "audio": "vocabulary/017_sutaffu.mp3"
+    },
+    {
+      "japanese": "制服",
+      "reading": "せいふく",
+      "romaji": "seifuku",
+      "english": "uniform",
+      "audio": "vocabulary/018_seifuku.mp3"
+    },
+    {
+      "japanese": "ロッカー",
+      "reading": "ロッカー",
+      "romaji": "rokkaa",
+      "english": "locker",
+      "audio": "vocabulary/019_rokkaa.mp3"
+    },
+    {
+      "japanese": "休憩室",
+      "reading": "きゅうけいしつ",
+      "romaji": "kyuukeishitsu",
+      "english": "break room",
+      "audio": "vocabulary/020_kyuukeishitsu.mp3"
+    },
+    {
+      "japanese": "接客",
+      "reading": "せっきゃく",
+      "romaji": "sekkyaku",
+      "english": "customer service",
+      "audio": "vocabulary/021_sekkyaku.mp3"
+    },
+    {
+      "japanese": "レジ",
+      "reading": "レジ",
+      "romaji": "reji",
+      "english": "cash register",
+      "audio": "vocabulary/022_reji.mp3"
     },
     {
       "japanese": "話せる",
       "reading": "はなせる",
       "romaji": "hanaseru",
       "english": "can speak",
-      "audio": "vocabulary/015_hanaseru.mp3"
+      "audio": "vocabulary/023_hanaseru.mp3"
     },
     {
-      "japanese": "食べられる",
-      "reading": "たべられる",
-      "romaji": "taberareru",
-      "english": "can eat",
-      "audio": "vocabulary/016_taberareru.mp3"
+      "japanese": "働ける",
+      "reading": "はたらける",
+      "romaji": "hatarakeru",
+      "english": "can work",
+      "audio": "vocabulary/024_hatarakeru.mp3"
     },
     {
       "japanese": "来られる",
       "reading": "こられる",
       "romaji": "korareru",
       "english": "can come",
-      "audio": "vocabulary/017_korareru.mp3"
+      "audio": "vocabulary/025_korareru.mp3"
     },
     {
       "japanese": "できる",
       "reading": "できる",
       "romaji": "dekiru",
       "english": "can do; to be able to",
-      "audio": "vocabulary/018_dekiru.mp3"
+      "audio": "vocabulary/026_dekiru.mp3"
     },
     {
-      "japanese": "喜ぶ",
-      "reading": "よろこぶ",
-      "romaji": "yorokobu",
-      "english": "to be pleased; to rejoice",
-      "audio": "vocabulary/019_yorokobu.mp3"
+      "japanese": "打てる",
+      "reading": "うてる",
+      "romaji": "uteru",
+      "english": "can type/hit/operate",
+      "audio": "vocabulary/027_uteru.mp3"
     },
     {
-      "japanese": "届ける",
-      "reading": "とどける",
-      "romaji": "todokeru",
-      "english": "to deliver",
-      "audio": "vocabulary/020_todokeru.mp3"
+      "japanese": "入れる",
+      "reading": "はいれる",
+      "romaji": "haireru",
+      "english": "can enter; can fit into (schedule)",
+      "audio": "vocabulary/028_haireru.mp3"
     },
     {
-      "japanese": "貸す",
-      "reading": "かす",
-      "romaji": "kasu",
-      "english": "to lend",
-      "audio": "vocabulary/021_kasu.mp3"
+      "japanese": "得意",
+      "reading": "とくい",
+      "romaji": "tokui",
+      "english": "good at; strong point",
+      "audio": "vocabulary/029_tokui.mp3"
     },
     {
-      "japanese": "借りる",
-      "reading": "かりる",
-      "romaji": "kariru",
-      "english": "to borrow",
-      "audio": "vocabulary/022_kariru.mp3"
+      "japanese": "苦手",
+      "reading": "にがて",
+      "romaji": "nigate",
+      "english": "not good at; weak point",
+      "audio": "vocabulary/030_nigate.mp3"
     },
     {
-      "japanese": "案内する",
-      "reading": "あんないする",
-      "romaji": "annai suru",
-      "english": "to guide; to show around",
-      "audio": "vocabulary/023_annai_suru.mp3"
+      "japanese": "資格",
+      "reading": "しかく",
+      "romaji": "shikaku",
+      "english": "qualification; license",
+      "audio": "vocabulary/031_shikaku.mp3"
     },
     {
-      "japanese": "招待する",
-      "reading": "しょうたいする",
-      "romaji": "shoutai suru",
-      "english": "to invite",
-      "audio": "vocabulary/024_shoutai_suru.mp3"
+      "japanese": "能力",
+      "reading": "のうりょく",
+      "romaji": "nouryoku",
+      "english": "ability; skill",
+      "audio": "vocabulary/032_nouryoku.mp3"
+    },
+    {
+      "japanese": "シフト",
+      "reading": "シフト",
+      "romaji": "shifuto",
+      "english": "shift (work schedule)",
+      "audio": "vocabulary/033_shifuto.mp3"
+    },
+    {
+      "japanese": "平日",
+      "reading": "へいじつ",
+      "romaji": "heijitsu",
+      "english": "weekday",
+      "audio": "vocabulary/034_heijitsu.mp3"
+    },
+    {
+      "japanese": "週末",
+      "reading": "しゅうまつ",
+      "romaji": "shuumatsu",
+      "english": "weekend",
+      "audio": "vocabulary/035_shuumatsu.mp3"
+    },
+    {
+      "japanese": "夕方",
+      "reading": "ゆうがた",
+      "romaji": "yuugata",
+      "english": "evening",
+      "audio": "vocabulary/036_yuugata.mp3"
+    },
+    {
+      "japanese": "休憩",
+      "reading": "きゅうけい",
+      "romaji": "kyuukei",
+      "english": "break; rest",
+      "audio": "vocabulary/037_kyuukei.mp3"
+    },
+    {
+      "japanese": "研修",
+      "reading": "けんしゅう",
+      "romaji": "kenshuu",
+      "english": "training",
+      "audio": "vocabulary/038_kenshuu.mp3"
+    },
+    {
+      "japanese": "残業",
+      "reading": "ざんぎょう",
+      "romaji": "zangyou",
+      "english": "overtime work",
+      "audio": "vocabulary/039_zangyou.mp3"
+    },
+    {
+      "japanese": "出勤する",
+      "reading": "しゅっきんする",
+      "romaji": "shukkin suru",
+      "english": "to go to work",
+      "audio": "vocabulary/040_shukkin_suru.mp3"
+    },
+    {
+      "japanese": "退勤する",
+      "reading": "たいきんする",
+      "romaji": "taikin suru",
+      "english": "to leave work",
+      "audio": "vocabulary/041_taikin_suru.mp3"
+    },
+    {
+      "japanese": "勤務時間",
+      "reading": "きんむじかん",
+      "romaji": "kinmu jikan",
+      "english": "working hours",
+      "audio": "vocabulary/042_kinmu_jikan.mp3"
+    },
+    {
+      "japanese": "時給",
+      "reading": "じきゅう",
+      "romaji": "jikyuu",
+      "english": "hourly wage",
+      "audio": "vocabulary/043_jikyuu.mp3"
+    },
+    {
+      "japanese": "給料",
+      "reading": "きゅうりょう",
+      "romaji": "kyuuryou",
+      "english": "salary; pay",
+      "audio": "vocabulary/044_kyuuryou.mp3"
+    },
+    {
+      "japanese": "日給",
+      "reading": "にっきゅう",
+      "romaji": "nikkyuu",
+      "english": "daily wage",
+      "audio": "vocabulary/045_nikkyuu.mp3"
+    },
+    {
+      "japanese": "月給",
+      "reading": "げっきゅう",
+      "romaji": "gekkyuu",
+      "english": "monthly salary",
+      "audio": "vocabulary/046_gekkyuu.mp3"
+    },
+    {
+      "japanese": "交通費",
+      "reading": "こうつうひ",
+      "romaji": "koutsuuhi",
+      "english": "transportation expenses",
+      "audio": "vocabulary/047_koutsuuhi.mp3"
+    },
+    {
+      "japanese": "昇給",
+      "reading": "しょうきゅう",
+      "romaji": "shoukyuu",
+      "english": "pay raise",
+      "audio": "vocabulary/048_shoukyuu.mp3"
+    },
+    {
+      "japanese": "振り込む",
+      "reading": "ふりこむ",
+      "romaji": "furikomu",
+      "english": "to transfer (money)",
+      "audio": "vocabulary/049_furikomu.mp3"
+    },
+    {
+      "japanese": "給料日",
+      "reading": "きゅうりょうび",
+      "romaji": "kyuuryoubi",
+      "english": "payday",
+      "audio": "vocabulary/050_kyuuryoubi.mp3"
+    },
+    {
+      "japanese": "あげる",
+      "reading": "あげる",
+      "romaji": "ageru",
+      "english": "to give (from me/us)",
+      "audio": "vocabulary/051_ageru.mp3"
+    },
+    {
+      "japanese": "くれる",
+      "reading": "くれる",
+      "romaji": "kureru",
+      "english": "to give (to me/us)",
+      "audio": "vocabulary/052_kureru.mp3"
+    },
+    {
+      "japanese": "もらう",
+      "reading": "もらう",
+      "romaji": "morau",
+      "english": "to receive",
+      "audio": "vocabulary/053_morau.mp3"
     },
     {
       "japanese": "～てあげる",
       "reading": "～てあげる",
       "romaji": "~te ageru",
-      "english": "to do ~ for someone",
-      "audio": "vocabulary/025_te_ageru.mp3"
+      "english": "to do something for someone",
+      "audio": "vocabulary/054_te_ageru.mp3"
     },
     {
       "japanese": "～てくれる",
       "reading": "～てくれる",
       "romaji": "~te kureru",
-      "english": "someone does ~ for me",
-      "audio": "vocabulary/026_te_kureru.mp3"
+      "english": "someone does something for me",
+      "audio": "vocabulary/055_te_kureru.mp3"
     },
     {
       "japanese": "～てもらう",
       "reading": "～てもらう",
       "romaji": "~te morau",
-      "english": "to have someone do ~",
-      "audio": "vocabulary/027_te_morau.mp3"
+      "english": "to have someone do something",
+      "audio": "vocabulary/056_te_morau.mp3"
     },
     {
-      "japanese": "ほしい",
-      "reading": "ほしい",
-      "romaji": "hoshii",
-      "english": "to want (thing)",
-      "audio": "vocabulary/028_hoshii.mp3"
+      "japanese": "コンビニ",
+      "reading": "コンビニ",
+      "romaji": "konbini",
+      "english": "convenience store",
+      "audio": "vocabulary/057_konbini.mp3"
     },
     {
-      "japanese": "～てほしい",
-      "reading": "～てほしい",
-      "romaji": "~te hoshii",
-      "english": "want someone to do ~",
-      "audio": "vocabulary/029_te_hoshii.mp3"
+      "japanese": "本屋",
+      "reading": "ほんや",
+      "romaji": "honya",
+      "english": "bookstore",
+      "audio": "vocabulary/058_honya.mp3"
     },
     {
-      "japanese": "誕生日",
-      "reading": "たんじょうび",
-      "romaji": "tanjoubi",
-      "english": "birthday",
-      "audio": "vocabulary/030_tanjoubi.mp3"
+      "japanese": "レストラン",
+      "reading": "レストラン",
+      "romaji": "resutoran",
+      "english": "restaurant",
+      "audio": "vocabulary/059_resutoran.mp3"
     },
     {
-      "japanese": "記念日",
-      "reading": "きねんび",
-      "romaji": "kinenbi",
-      "english": "anniversary",
-      "audio": "vocabulary/031_kinenbi.mp3"
+      "japanese": "居酒屋",
+      "reading": "いざかや",
+      "romaji": "izakaya",
+      "english": "Japanese-style pub",
+      "audio": "vocabulary/060_izakaya.mp3"
     },
     {
-      "japanese": "スカーフ",
-      "reading": "スカーフ",
-      "romaji": "sukaafu",
-      "english": "scarf",
-      "audio": "vocabulary/032_sukaafu.mp3"
+      "japanese": "カフェ",
+      "reading": "カフェ",
+      "romaji": "kafe",
+      "english": "cafe",
+      "audio": "vocabulary/061_kafe.mp3"
     },
     {
-      "japanese": "アクセサリー",
-      "reading": "アクセサリー",
-      "romaji": "akusesarii",
-      "english": "accessory; jewelry",
-      "audio": "vocabulary/033_akusesarii.mp3"
+      "japanese": "塾",
+      "reading": "じゅく",
+      "romaji": "juku",
+      "english": "cram school",
+      "audio": "vocabulary/062_juku.mp3"
     },
     {
-      "japanese": "財布",
-      "reading": "さいふ",
-      "romaji": "saifu",
-      "english": "wallet",
-      "audio": "vocabulary/034_saifu.mp3"
+      "japanese": "助かる",
+      "reading": "たすかる",
+      "romaji": "tasukaru",
+      "english": "to be helped; what a help",
+      "audio": "vocabulary/063_tasukaru.mp3"
     },
     {
-      "japanese": "時計",
-      "reading": "とけい",
-      "romaji": "tokei",
-      "english": "watch; clock",
-      "audio": "vocabulary/035_tokei.mp3"
+      "japanese": "頑張る",
+      "reading": "がんばる",
+      "romaji": "ganbaru",
+      "english": "to do one\\",
+      "audio": "vocabulary/064_ganbaru.mp3"
     },
     {
-      "japanese": "喜んで",
-      "reading": "よろこんで",
-      "romaji": "yorokonde",
-      "english": "gladly; with pleasure",
-      "audio": "vocabulary/036_yorokonde.mp3"
-    },
-    {
-      "japanese": "もちろん",
-      "reading": "もちろん",
-      "romaji": "mochiron",
-      "english": "of course",
-      "audio": "vocabulary/037_mochiron.mp3"
-    },
-    {
-      "japanese": "～に",
-      "reading": "～に",
-      "romaji": "~ni",
-      "english": "to (recipient); from (giver with もらう)",
-      "audio": "vocabulary/038_ni.mp3"
-    },
-    {
-      "japanese": "わあ",
-      "reading": "わあ",
-      "romaji": "waa",
-      "english": "wow",
-      "audio": "vocabulary/039_waa.mp3"
-    },
-    {
-      "japanese": "何か",
-      "reading": "なにか",
-      "romaji": "nanika",
-      "english": "something",
-      "audio": "vocabulary/040_nanika.mp3"
+      "japanese": "希望する",
+      "reading": "きぼうする",
+      "romaji": "kibou suru",
+      "english": "to hope; to wish; to desire",
+      "audio": "vocabulary/065_kibou_suru.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Takeshi",
-      "japanese": "わあ、きれいなスカーフだね。誰にもらったの？",
-      "english": "Wow, that's a beautiful scarf. Who did you get it from?",
-      "audio": "dialogue/001_takeshi.mp3"
+      "id": "l13-d01",
+      "title": "Job Interview",
+      "lines": [
+        {
+          "speaker": "Interviewer",
+          "japanese": "本日はお越しいただきありがとうございます。まず、自己紹介をお願いいたします。",
+          "english": "Thank you for coming today. First, please introduce yourself.",
+          "audio": "dialogue/d01_001_interviewer.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "メアリー・ハートと申します。アリゾナ大学の留学生で、日本語を専攻しております。",
+          "english": "My name is Mary Hart. I am an exchange student from the University of Arizona, majoring in Japanese.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Interviewer",
+          "japanese": "日本語がお上手ですね。どのぐらい勉強されましたか。",
+          "english": "Your Japanese is excellent. How long have you studied?",
+          "audio": "dialogue/d01_003_interviewer.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "三年間勉強しました。日本語能力試験のN3に合格しています。",
+          "english": "I have studied for three years. I have passed the JLPT N3.",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Interviewer",
+          "japanese": "土曜日と日曜日に働けますか。",
+          "english": "Can you work on Saturdays and Sundays?",
+          "audio": "dialogue/d01_005_interviewer.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、週末は大丈夫です。平日は授業があるので、夕方からしか働けませんが。",
+          "english": "Yes, weekends are fine. On weekdays, I have classes, so I can only work from evening.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Interviewer",
+          "japanese": "分かりました。結果は来週の月曜日までにお知らせいたします。",
+          "english": "I understand. We will notify you of the result by next Monday.",
+          "audio": "dialogue/d01_007_interviewer.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとうございます。よろしくお願いいたします。",
+          "english": "Thank you very much. I look forward to hearing from you.",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ホストファミリーのお母さんがくれたの。誕生日プレゼントに。",
-      "english": "My host family's mother gave it to me. As a birthday present.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l13-d02",
+      "title": "Asking About Job Openings",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "すみません。店の外にアルバイト募集の張り紙がありましたが、まだ募集していますか。",
+          "english": "Excuse me. I saw the help wanted sign outside. Are you still hiring?",
+          "audio": "dialogue/d02_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "はい、まだ募集しています。接客の経験はありますか。",
+          "english": "Yes, we are still hiring. Do you have any customer service experience?",
+          "audio": "dialogue/d02_002_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、去年コンビニでアルバイトをしていました。レジも打てます。",
+          "english": "Yes, I worked part-time at a convenience store last year. I can also operate the register.",
+          "audio": "dialogue/d02_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "時給は千円からです。シフトは週に何回入れますか。",
+          "english": "The hourly wage starts at 1000 yen. How many shifts can you work per week?",
+          "audio": "dialogue/d02_004_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "週に三、四回は入れます。土日も大丈夫です。",
+          "english": "I can work three or four times a week. Weekends are also fine.",
+          "audio": "dialogue/d02_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "では、履歴書を持ってきてください。店長に渡しておきますから。",
+          "english": "Then, please bring your resume. I will pass it to the manager.",
+          "audio": "dialogue/d02_006_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ありがとうございます。明日また来ます。",
+          "english": "Thank you. I will come again tomorrow.",
+          "audio": "dialogue/d02_007_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "よかったね。メアリーさんは何かあげた？",
-      "english": "How nice. Did you give her something?",
-      "audio": "dialogue/003_takeshi.mp3"
+      "id": "l13-d03",
+      "title": "Talking About Part-time Jobs",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "メアリー、最近アルバイト始めたんだって？どんな仕事？",
+          "english": "Mary, I heard you started a part-time job recently. What kind of work is it?",
+          "audio": "dialogue/d03_001_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、駅前の本屋で働いてるの。お客さんに本を探してあげたり、レジをやったり。",
+          "english": "Yeah, I work at the bookstore in front of the station. I help customers find books and work the register.",
+          "audio": "dialogue/d03_002_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "へえ、楽しそう！時給はどのくらい？",
+          "english": "Oh, that sounds fun! How much is the hourly wage?",
+          "audio": "dialogue/d03_003_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "950円。研修中だから、まだ安いんだけど、来月から上がるって店長が言ってくれた。",
+          "english": "950 yen. Since I am still in training, it is still low, but the manager said it will go up next month.",
+          "audio": "dialogue/d03_004_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "いいね。私もバイト探してるんだけど、なかなか見つからなくて。",
+          "english": "That is nice. I am also looking for a part-time job, but I cannot seem to find one.",
+          "audio": "dialogue/d03_005_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "私の店、まだ人を募集してるよ。紹介してあげようか？",
+          "english": "My store is still hiring. Shall I introduce you?",
+          "audio": "dialogue/d03_006_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "本当？ありがとう！助かる！",
+          "english": "Really? Thank you! That would be a big help!",
+          "audio": "dialogue/d03_007_yuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "うん、アメリカのチョコレートをあげた。喜んでもらえて嬉しかった。",
-      "english": "Yes, I gave her American chocolate. I was happy she was pleased.",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l13-d04",
+      "title": "Phone Inquiry About a Job",
+      "lines": [
+        {
+          "speaker": "Staff",
+          "japanese": "はい、さくらレストランでございます。",
+          "english": "Hello, this is Sakura Restaurant.",
+          "audio": "dialogue/d04_001_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "あのう、インターネットでアルバイトの求人を見てお電話したんですが。",
+          "english": "Um, I am calling because I saw your job posting online.",
+          "audio": "dialogue/d04_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "ありがとうございます。ホールとキッチン、どちらをご希望ですか。",
+          "english": "Thank you. Which position would you prefer, floor service or kitchen?",
+          "audio": "dialogue/d04_003_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ホールスタッフを希望しています。接客が得意なので。",
+          "english": "I would like to apply for the floor service position. I am good at customer service.",
+          "audio": "dialogue/d04_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "週に何日働けますか。夜のシフトに入れる方を探しているんですが。",
+          "english": "How many days a week can you work? We are looking for someone who can work evening shifts.",
+          "audio": "dialogue/d04_005_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "週三日は入れます。夜も大丈夫です。十時まで働けます。",
+          "english": "I can work three days a week. Evenings are fine. I can work until 10 PM.",
+          "audio": "dialogue/d04_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "分かりました。では、来週の火曜日に面接に来ていただけますか。",
+          "english": "I understand. Then, could you come for an interview next Tuesday?",
+          "audio": "dialogue/d04_007_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、大丈夫です。何時に伺えばよろしいですか。",
+          "english": "Yes, that is fine. What time should I come?",
+          "audio": "dialogue/d04_008_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "いいな。僕も何かもらいたいな。",
-      "english": "Nice. I want to receive something too.",
-      "audio": "dialogue/005_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "じゃあ、今度お菓子を作ってあげるよ。",
-      "english": "Then I'll make you some sweets next time.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "本当？メアリーさん、お菓子が作れるの？",
-      "english": "Really? Mary, you can make sweets?",
-      "audio": "dialogue/007_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "うん、アメリカでよく作っていたから。",
-      "english": "Yeah, I used to make them often in America.",
-      "audio": "dialogue/008_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "楽しみ！日本語も教えてもらえる？",
-      "english": "I'm looking forward to it! Can I also get you to teach me Japanese?",
-      "audio": "dialogue/009_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "もちろん！私も日本語を教えてほしいけど。",
-      "english": "Of course! Though I also want you to teach me Japanese.",
-      "audio": "dialogue/010_mary.mp3"
+      "id": "l13-d05",
+      "title": "First Day at Work",
+      "lines": [
+        {
+          "speaker": "Senpai",
+          "japanese": "メアリーさん、今日からよろしくね。分からないことがあったら何でも聞いて。",
+          "english": "Mary, nice to work with you starting today. If there is anything you do not understand, feel free to ask.",
+          "audio": "dialogue/d05_001_senpai.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、よろしくお願いします。色々教えてください。",
+          "english": "Yes, nice to work with you too. Please teach me various things.",
+          "audio": "dialogue/d05_002_mary.mp3"
+        },
+        {
+          "speaker": "Senpai",
+          "japanese": "まず、制服に着替えてきて。ロッカーはあっちにあるから。",
+          "english": "First, go change into your uniform. The lockers are over there.",
+          "audio": "dialogue/d05_003_senpai.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "分かりました。あの、レジの使い方も教えてもらえますか。",
+          "english": "I understand. Um, could you also teach me how to use the register?",
+          "audio": "dialogue/d05_004_mary.mp3"
+        },
+        {
+          "speaker": "Senpai",
+          "japanese": "もちろん。でも最初の一週間はレジをやらなくていいよ。まずは本の場所を覚えて。",
+          "english": "Of course. But you do not have to work the register for the first week. First, learn where the books are.",
+          "audio": "dialogue/d05_005_senpai.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい。あと、休憩時間はいつですか。",
+          "english": "Yes. Also, when is break time?",
+          "audio": "dialogue/d05_006_mary.mp3"
+        },
+        {
+          "speaker": "Senpai",
+          "japanese": "四時間働いたら三十分休憩がもらえるよ。休憩室は二階にあるから。",
+          "english": "If you work four hours, you get a 30-minute break. The break room is on the second floor.",
+          "audio": "dialogue/d05_007_senpai.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとうございます。頑張ります！",
+          "english": "Thank you. I will do my best!",
+          "audio": "dialogue/d05_008_mary.mp3"
+        }
+      ]
     }
   ]
 }

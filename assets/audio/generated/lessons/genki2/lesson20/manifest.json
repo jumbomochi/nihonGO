@@ -1,179 +1,713 @@
 {
   "book": "genki2",
   "lesson": 20,
-  "vocabulary_count": 19,
-  "dialogue_count": 6,
+  "vocabulary_count": 65,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 36,
+  "has_multiple_dialogues": true,
   "vocabulary": [
-    {
-      "japanese": "デパート",
-      "reading": "でぱーと",
-      "romaji": "depaato",
-      "english": "department store",
-      "audio": "vocabulary/001_depaato.mp3"
-    },
-    {
-      "japanese": "店員",
-      "reading": "てんいん",
-      "romaji": "tenin",
-      "english": "store clerk",
-      "audio": "vocabulary/002_tenin.mp3"
-    },
-    {
-      "japanese": "売り場",
-      "reading": "うりば",
-      "romaji": "uriba",
-      "english": "sales floor; department",
-      "audio": "vocabulary/003_uriba.mp3"
-    },
-    {
-      "japanese": "プレゼント",
-      "reading": "ぷれぜんと",
-      "romaji": "purezento",
-      "english": "present; gift",
-      "audio": "vocabulary/004_purezento.mp3"
-    },
-    {
-      "japanese": "スカーフ",
-      "reading": "すかーふ",
-      "romaji": "sukaafu",
-      "english": "scarf",
-      "audio": "vocabulary/005_sukaafu.mp3"
-    },
-    {
-      "japanese": "財布",
-      "reading": "さいふ",
-      "romaji": "saifu",
-      "english": "wallet",
-      "audio": "vocabulary/006_saifu.mp3"
-    },
-    {
-      "japanese": "レシート",
-      "reading": "れしーと",
-      "romaji": "reshiito",
-      "english": "receipt",
-      "audio": "vocabulary/007_reshiito.mp3"
-    },
     {
       "japanese": "いただく",
       "reading": "いただく",
       "romaji": "itadaku",
       "english": "to receive; to eat/drink (humble)",
-      "audio": "vocabulary/008_itadaku.mp3"
+      "audio": "vocabulary/001_itadaku.mp3"
     },
     {
       "japanese": "さしあげる",
       "reading": "さしあげる",
       "romaji": "sashiageru",
       "english": "to give (humble)",
-      "audio": "vocabulary/009_sashiageru.mp3"
+      "audio": "vocabulary/002_sashiageru.mp3"
     },
     {
       "japanese": "もうす",
       "reading": "もうす",
       "romaji": "mousu",
       "english": "to say; to be called (humble)",
-      "audio": "vocabulary/010_mousu.mp3"
+      "audio": "vocabulary/003_mousu.mp3"
     },
     {
       "japanese": "いたす",
       "reading": "いたす",
       "romaji": "itasu",
       "english": "to do (humble)",
-      "audio": "vocabulary/011_itasu.mp3"
+      "audio": "vocabulary/004_itasu.mp3"
     },
     {
       "japanese": "まいる",
       "reading": "まいる",
       "romaji": "mairu",
       "english": "to go; to come (humble)",
-      "audio": "vocabulary/012_mairu.mp3"
+      "audio": "vocabulary/005_mairu.mp3"
     },
     {
       "japanese": "おる",
       "reading": "おる",
       "romaji": "oru",
-      "english": "to be (humble)",
-      "audio": "vocabulary/013_oru.mp3"
+      "english": "to be; to exist (humble)",
+      "audio": "vocabulary/006_oru.mp3"
     },
     {
       "japanese": "うかがう",
       "reading": "うかがう",
       "romaji": "ukagau",
       "english": "to ask; to visit; to hear (humble)",
-      "audio": "vocabulary/014_ukagau.mp3"
+      "audio": "vocabulary/007_ukagau.mp3"
     },
     {
       "japanese": "はいけんする",
       "reading": "はいけんする",
       "romaji": "haiken suru",
       "english": "to look at; to see (humble)",
-      "audio": "vocabulary/015_haiken_suru.mp3"
+      "audio": "vocabulary/008_haiken_suru.mp3"
+    },
+    {
+      "japanese": "ぞんじる",
+      "reading": "ぞんじる",
+      "romaji": "zonjiru",
+      "english": "to know (humble)",
+      "audio": "vocabulary/009_zonjiru.mp3"
+    },
+    {
+      "japanese": "おめにかかる",
+      "reading": "おめにかかる",
+      "romaji": "o-me ni kakaru",
+      "english": "to meet (humble)",
+      "audio": "vocabulary/010_o-me_ni_kakaru.mp3"
+    },
+    {
+      "japanese": "おじゃまする",
+      "reading": "おじゃまする",
+      "romaji": "o-jama suru",
+      "english": "to visit; to intrude (humble)",
+      "audio": "vocabulary/011_o-jama_suru.mp3"
+    },
+    {
+      "japanese": "ごらんになる",
+      "reading": "ごらんになる",
+      "romaji": "goran ni naru",
+      "english": "to see; to look (respectful)",
+      "audio": "vocabulary/012_goran_ni_naru.mp3"
+    },
+    {
+      "japanese": "デパート",
+      "reading": "でぱーと",
+      "romaji": "depaato",
+      "english": "department store",
+      "audio": "vocabulary/013_depaato.mp3"
+    },
+    {
+      "japanese": "売り場",
+      "reading": "うりば",
+      "romaji": "uriba",
+      "english": "sales floor; department",
+      "audio": "vocabulary/014_uriba.mp3"
+    },
+    {
+      "japanese": "紳士服",
+      "reading": "しんしふく",
+      "romaji": "shinshifuku",
+      "english": "menswear",
+      "audio": "vocabulary/015_shinshifuku.mp3"
+    },
+    {
+      "japanese": "婦人服",
+      "reading": "ふじんふく",
+      "romaji": "fujinfuku",
+      "english": "womenswear",
+      "audio": "vocabulary/016_fujinfuku.mp3"
+    },
+    {
+      "japanese": "試着室",
+      "reading": "しちゃくしつ",
+      "romaji": "shichakushitsu",
+      "english": "fitting room",
+      "audio": "vocabulary/017_shichakushitsu.mp3"
+    },
+    {
+      "japanese": "エスカレーター",
+      "reading": "えすかれーたー",
+      "romaji": "esukareetaa",
+      "english": "escalator",
+      "audio": "vocabulary/018_esukareetaa.mp3"
+    },
+    {
+      "japanese": "エレベーター",
+      "reading": "えれべーたー",
+      "romaji": "erebeetaa",
+      "english": "elevator",
+      "audio": "vocabulary/019_erebeetaa.mp3"
+    },
+    {
+      "japanese": "レジ",
+      "reading": "れじ",
+      "romaji": "reji",
+      "english": "cash register",
+      "audio": "vocabulary/020_reji.mp3"
+    },
+    {
+      "japanese": "地下",
+      "reading": "ちか",
+      "romaji": "chika",
+      "english": "basement",
+      "audio": "vocabulary/021_chika.mp3"
+    },
+    {
+      "japanese": "階",
+      "reading": "かい",
+      "romaji": "kai",
+      "english": "floor; story",
+      "audio": "vocabulary/022_kai.mp3"
+    },
+    {
+      "japanese": "いらっしゃいませ",
+      "reading": "いらっしゃいませ",
+      "romaji": "irasshaimase",
+      "english": "welcome (to a store)",
+      "audio": "vocabulary/023_irasshaimase.mp3"
     },
     {
       "japanese": "かしこまりました",
       "reading": "かしこまりました",
       "romaji": "kashikomarimashita",
-      "english": "Certainly (formal acknowledgment)",
-      "audio": "vocabulary/016_kashikomarimashita.mp3"
+      "english": "certainly; understood (formal)",
+      "audio": "vocabulary/024_kashikomarimashita.mp3"
     },
     {
       "japanese": "ございます",
       "reading": "ございます",
       "romaji": "gozaimasu",
       "english": "to be; to have (formal copula)",
-      "audio": "vocabulary/017_gozaimasu.mp3"
+      "audio": "vocabulary/025_gozaimasu.mp3"
+    },
+    {
+      "japanese": "お待たせいたしました",
+      "reading": "おまたせいたしました",
+      "romaji": "omatase itashimashita",
+      "english": "sorry to have kept you waiting",
+      "audio": "vocabulary/026_omatase_itashimashita.mp3"
+    },
+    {
+      "japanese": "少々お待ちください",
+      "reading": "しょうしょうおまちください",
+      "romaji": "shoushou omachi kudasai",
+      "english": "please wait a moment",
+      "audio": "vocabulary/027_shoushou_omachi_kudasai.mp3"
+    },
+    {
+      "japanese": "いかがでしょうか",
+      "reading": "いかがでしょうか",
+      "romaji": "ikaga deshou ka",
+      "english": "how about this?; how is it?",
+      "audio": "vocabulary/028_ikaga_deshou_ka.mp3"
+    },
+    {
+      "japanese": "ご案内いたします",
+      "reading": "ごあんないいたします",
+      "romaji": "go-annai itashimasu",
+      "english": "I will show you the way",
+      "audio": "vocabulary/029_go-annai_itashimasu.mp3"
+    },
+    {
+      "japanese": "とんでもございません",
+      "reading": "とんでもございません",
+      "romaji": "tondemo gozaimasen",
+      "english": "not at all; you are too kind",
+      "audio": "vocabulary/030_tondemo_gozaimasen.mp3"
+    },
+    {
+      "japanese": "申し訳ございません",
+      "reading": "もうしわけございません",
+      "romaji": "moushiwake gozaimasen",
+      "english": "I am terribly sorry (formal)",
+      "audio": "vocabulary/031_moushiwake_gozaimasen.mp3"
+    },
+    {
+      "japanese": "ありがとうございました",
+      "reading": "ありがとうございました",
+      "romaji": "arigatou gozaimashita",
+      "english": "thank you very much (for past action)",
+      "audio": "vocabulary/032_arigatou_gozaimashita.mp3"
+    },
+    {
+      "japanese": "お会計",
+      "reading": "おかいけい",
+      "romaji": "o-kaikei",
+      "english": "bill; check; payment",
+      "audio": "vocabulary/033_o-kaikei.mp3"
+    },
+    {
+      "japanese": "レシート",
+      "reading": "れしーと",
+      "romaji": "reshiito",
+      "english": "receipt",
+      "audio": "vocabulary/034_reshiito.mp3"
+    },
+    {
+      "japanese": "領収書",
+      "reading": "りょうしゅうしょ",
+      "romaji": "ryoushuusho",
+      "english": "receipt (formal/official)",
+      "audio": "vocabulary/035_ryoushuusho.mp3"
     },
     {
       "japanese": "おつり",
       "reading": "おつり",
       "romaji": "otsuri",
       "english": "change (money)",
-      "audio": "vocabulary/018_otsuri.mp3"
+      "audio": "vocabulary/036_otsuri.mp3"
+    },
+    {
+      "japanese": "クレジットカード",
+      "reading": "くれじっとかーど",
+      "romaji": "kurejitto kaado",
+      "english": "credit card",
+      "audio": "vocabulary/037_kurejitto_kaado.mp3"
+    },
+    {
+      "japanese": "現金",
+      "reading": "げんきん",
+      "romaji": "genkin",
+      "english": "cash",
+      "audio": "vocabulary/038_genkin.mp3"
+    },
+    {
+      "japanese": "一括払い",
+      "reading": "いっかつばらい",
+      "romaji": "ikkatsu barai",
+      "english": "one-time payment",
+      "audio": "vocabulary/039_ikkatsu_barai.mp3"
+    },
+    {
+      "japanese": "分割払い",
+      "reading": "ぶんかつばらい",
+      "romaji": "bunkatsu barai",
+      "english": "installment payment",
+      "audio": "vocabulary/040_bunkatsu_barai.mp3"
+    },
+    {
+      "japanese": "消費税",
+      "reading": "しょうひぜい",
+      "romaji": "shouhizei",
+      "english": "consumption tax; sales tax",
+      "audio": "vocabulary/041_shouhizei.mp3"
+    },
+    {
+      "japanese": "税込み",
+      "reading": "ぜいこみ",
+      "romaji": "zeikomi",
+      "english": "tax included",
+      "audio": "vocabulary/042_zeikomi.mp3"
+    },
+    {
+      "japanese": "サイズ",
+      "reading": "さいず",
+      "romaji": "saizu",
+      "english": "size",
+      "audio": "vocabulary/043_saizu.mp3"
+    },
+    {
+      "japanese": "色",
+      "reading": "いろ",
+      "romaji": "iro",
+      "english": "color",
+      "audio": "vocabulary/044_iro.mp3"
+    },
+    {
+      "japanese": "柄",
+      "reading": "がら",
+      "romaji": "gara",
+      "english": "pattern; design",
+      "audio": "vocabulary/045_gara.mp3"
+    },
+    {
+      "japanese": "素材",
+      "reading": "そざい",
+      "romaji": "sozai",
+      "english": "material; fabric",
+      "audio": "vocabulary/046_sozai.mp3"
+    },
+    {
+      "japanese": "ジャケット",
+      "reading": "じゃけっと",
+      "romaji": "jaketto",
+      "english": "jacket",
+      "audio": "vocabulary/047_jaketto.mp3"
+    },
+    {
+      "japanese": "スカーフ",
+      "reading": "すかーふ",
+      "romaji": "sukaafu",
+      "english": "scarf",
+      "audio": "vocabulary/048_sukaafu.mp3"
+    },
+    {
+      "japanese": "ネクタイ",
+      "reading": "ねくたい",
+      "romaji": "nekutai",
+      "english": "necktie",
+      "audio": "vocabulary/049_nekutai.mp3"
+    },
+    {
+      "japanese": "ベルト",
+      "reading": "べると",
+      "romaji": "beruto",
+      "english": "belt",
+      "audio": "vocabulary/050_beruto.mp3"
+    },
+    {
+      "japanese": "財布",
+      "reading": "さいふ",
+      "romaji": "saifu",
+      "english": "wallet; purse",
+      "audio": "vocabulary/051_saifu.mp3"
+    },
+    {
+      "japanese": "かばん",
+      "reading": "かばん",
+      "romaji": "kaban",
+      "english": "bag",
+      "audio": "vocabulary/052_kaban.mp3"
+    },
+    {
+      "japanese": "試着する",
+      "reading": "しちゃくする",
+      "romaji": "shichaku suru",
+      "english": "to try on (clothes)",
+      "audio": "vocabulary/053_shichaku_suru.mp3"
     },
     {
       "japanese": "包む",
       "reading": "つつむ",
       "romaji": "tsutsumu",
       "english": "to wrap",
-      "audio": "vocabulary/019_tsutsumu.mp3"
+      "audio": "vocabulary/054_tsutsumu.mp3"
+    },
+    {
+      "japanese": "返品する",
+      "reading": "へんぴんする",
+      "romaji": "henpin suru",
+      "english": "to return (merchandise)",
+      "audio": "vocabulary/055_henpin_suru.mp3"
+    },
+    {
+      "japanese": "交換する",
+      "reading": "こうかんする",
+      "romaji": "koukan suru",
+      "english": "to exchange",
+      "audio": "vocabulary/056_koukan_suru.mp3"
+    },
+    {
+      "japanese": "払う",
+      "reading": "はらう",
+      "romaji": "harau",
+      "english": "to pay",
+      "audio": "vocabulary/057_harau.mp3"
+    },
+    {
+      "japanese": "さがす",
+      "reading": "さがす",
+      "romaji": "sagasu",
+      "english": "to look for; to search",
+      "audio": "vocabulary/058_sagasu.mp3"
+    },
+    {
+      "japanese": "選ぶ",
+      "reading": "えらぶ",
+      "romaji": "erabu",
+      "english": "to choose; to select",
+      "audio": "vocabulary/059_erabu.mp3"
+    },
+    {
+      "japanese": "合う",
+      "reading": "あう",
+      "romaji": "au",
+      "english": "to fit; to match; to suit",
+      "audio": "vocabulary/060_au.mp3"
+    },
+    {
+      "japanese": "お願いいたします",
+      "reading": "おねがいいたします",
+      "romaji": "onegai itashimasu",
+      "english": "please (humble request)",
+      "audio": "vocabulary/061_onegai_itashimasu.mp3"
+    },
+    {
+      "japanese": "〜ていただけますか",
+      "reading": "〜ていただけますか",
+      "romaji": "~te itadakemasu ka",
+      "english": "could you please...? (humble)",
+      "audio": "vocabulary/062_te_itadakemasu_ka.mp3"
+    },
+    {
+      "japanese": "〜させていただく",
+      "reading": "〜させていただく",
+      "romaji": "~sasete itadaku",
+      "english": "allow me to... (humble)",
+      "audio": "vocabulary/063_sasete_itadaku.mp3"
+    },
+    {
+      "japanese": "〜てよろしいでしょうか",
+      "reading": "〜てよろしいでしょうか",
+      "romaji": "~te yoroshii deshou ka",
+      "english": "would it be alright if...?",
+      "audio": "vocabulary/064_te_yoroshii_deshou_ka.mp3"
+    },
+    {
+      "japanese": "プレゼント",
+      "reading": "ぷれぜんと",
+      "romaji": "purezento",
+      "english": "present; gift",
+      "audio": "vocabulary/065_purezento.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Sales Clerk",
-      "japanese": "いらっしゃいませ。何かおさがしですか。",
-      "english": "Welcome. Are you looking for something?",
-      "audio": "dialogue/001_sales clerk.mp3"
+      "id": "l20-d01",
+      "title": "At a Department Store",
+      "lines": [
+        {
+          "speaker": "Sales Clerk",
+          "japanese": "いらっしゃいませ。何かおさがしですか。",
+          "english": "Welcome. Are you looking for something?",
+          "audio": "dialogue/d01_001_sales clerk.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、母へのプレゼントをさがしているのですが。",
+          "english": "Yes, I'm looking for a present for my mother.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Sales Clerk",
+          "japanese": "さようでございますか。どのようなものをおかんがえでしょうか。",
+          "english": "I see. What kind of thing are you thinking of?",
+          "audio": "dialogue/d01_003_sales clerk.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "スカーフかばんか、そのへんを見せていただけますか。",
+          "english": "Could you show me scarves or bags, something like that?",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Sales Clerk",
+          "japanese": "かしこまりました。こちらへどうぞ。ご案内いたします。",
+          "english": "Certainly. This way, please. I will guide you.",
+          "audio": "dialogue/d01_005_sales clerk.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "じゃあ、これをいただきます。",
+          "english": "Then I'll take this one.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Sales Clerk",
+          "japanese": "ありがとうございます。プレゼント用にお包みいたしましょうか。",
+          "english": "Thank you. Shall I wrap it as a gift for you?",
+          "audio": "dialogue/d01_007_sales clerk.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、お願いいたします。",
+          "english": "Yes, please.",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "はい、母へのプレゼントをさがしているのですが。",
-      "english": "Yes, I'm looking for a present for my mother.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l20-d02",
+      "title": "Looking for the Menswear Section",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "japanese": "すみません、ちょっとうかがいたいのですが。",
+          "english": "Excuse me, may I ask you something?",
+          "audio": "dialogue/d02_001_customer.mp3"
+        },
+        {
+          "speaker": "Employee",
+          "japanese": "はい、何でございましょうか。",
+          "english": "Yes, how may I help you?",
+          "audio": "dialogue/d02_002_employee.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "紳士服売り場はどちらでございますか。",
+          "english": "Where is the menswear department?",
+          "audio": "dialogue/d02_003_customer.mp3"
+        },
+        {
+          "speaker": "Employee",
+          "japanese": "紳士服は五階でございます。エレベーターは右手にございます。",
+          "english": "Menswear is on the fifth floor. The elevator is on your right.",
+          "audio": "dialogue/d02_004_employee.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "ネクタイとベルトもそちらにございますか。",
+          "english": "Are ties and belts also there?",
+          "audio": "dialogue/d02_005_customer.mp3"
+        },
+        {
+          "speaker": "Employee",
+          "japanese": "はい、紳士小物も五階でございます。ご案内いたしましょうか。",
+          "english": "Yes, men's accessories are also on the fifth floor. Shall I show you the way?",
+          "audio": "dialogue/d02_006_employee.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "いえ、大丈夫です。ご親切にありがとうございます。",
+          "english": "No, I'm fine. Thank you for your kindness.",
+          "audio": "dialogue/d02_007_customer.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Sales Clerk",
-      "japanese": "さようでございますか。どのようなものをおかんがえでしょうか。",
-      "english": "I see. What kind of thing are you thinking of?",
-      "audio": "dialogue/003_sales clerk.mp3"
+      "id": "l20-d03",
+      "title": "Trying on a Jacket",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "japanese": "あのう、このジャケットを試着させていただけますか。",
+          "english": "Um, may I try on this jacket?",
+          "audio": "dialogue/d03_001_customer.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "はい、どうぞ。試着室はあちらでございます。",
+          "english": "Yes, please. The fitting room is over there.",
+          "audio": "dialogue/d03_002_clerk.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "これはMサイズですか。もう少し大きいのはございますか。",
+          "english": "Is this a medium? Do you have a larger size?",
+          "audio": "dialogue/d03_003_customer.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "Lサイズをお持ちいたします。少々お待ちくださいませ。",
+          "english": "I will bring you a large. Please wait a moment.",
+          "audio": "dialogue/d03_004_clerk.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "お待たせいたしました。こちらのLサイズはいかがでしょうか。",
+          "english": "Sorry to keep you waiting. How about this large size?",
+          "audio": "dialogue/d03_005_clerk.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "ありがとうございます。ちょうどいいです。これにいたします。",
+          "english": "Thank you. It's just right. I'll take this one.",
+          "audio": "dialogue/d03_006_customer.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "スカーフかばんか、そのへんを見せていただけますか。",
-      "english": "Could you show me scarves or bags, something like that?",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l20-d04",
+      "title": "At the Cash Register",
+      "lines": [
+        {
+          "speaker": "Cashier",
+          "japanese": "お会計は一万二千円でございます。",
+          "english": "Your total is 12,000 yen.",
+          "audio": "dialogue/d04_001_cashier.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "クレジットカードでお願いいたします。",
+          "english": "I'd like to pay by credit card, please.",
+          "audio": "dialogue/d04_002_customer.mp3"
+        },
+        {
+          "speaker": "Cashier",
+          "japanese": "かしこまりました。一括払いでよろしいでしょうか。",
+          "english": "Certainly. Will a single payment be alright?",
+          "audio": "dialogue/d04_003_cashier.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "はい、一括でお願いします。",
+          "english": "Yes, one-time payment please.",
+          "audio": "dialogue/d04_004_customer.mp3"
+        },
+        {
+          "speaker": "Cashier",
+          "japanese": "こちらにサインをいただけますか。",
+          "english": "Could you sign here, please?",
+          "audio": "dialogue/d04_005_cashier.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "はい。領収書もいただけますか。",
+          "english": "Yes. Could I also get a receipt?",
+          "audio": "dialogue/d04_006_customer.mp3"
+        },
+        {
+          "speaker": "Cashier",
+          "japanese": "かしこまりました。お品物とレシートでございます。ありがとうございました。",
+          "english": "Certainly. Here are your items and receipt. Thank you very much.",
+          "audio": "dialogue/d04_007_cashier.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Sales Clerk",
-      "japanese": "かしこまりました。こちらへどうぞ。ご案内いたします。",
-      "english": "Certainly. This way, please. I will guide you.",
-      "audio": "dialogue/005_sales clerk.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "じゃあ、これをいただきます。",
-      "english": "Then I'll take this one.",
-      "audio": "dialogue/006_mary.mp3"
+      "id": "l20-d05",
+      "title": "Returning an Item",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "japanese": "すみません、この品物を返品させていただきたいのですが。",
+          "english": "Excuse me, I would like to return this item.",
+          "audio": "dialogue/d05_001_customer.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "かしこまりました。返品の理由をうかがってもよろしいでしょうか。",
+          "english": "Certainly. May I ask the reason for the return?",
+          "audio": "dialogue/d05_002_staff.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "サイズがあわなくて。交換をお願いできますか。",
+          "english": "The size doesn't fit. Could I request an exchange?",
+          "audio": "dialogue/d05_003_customer.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "レシートはお持ちでいらっしゃいますか。",
+          "english": "Do you have your receipt?",
+          "audio": "dialogue/d05_004_staff.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "はい、こちらでございます。",
+          "english": "Yes, here it is.",
+          "audio": "dialogue/d05_005_customer.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "ありがとうございます。ご希望のサイズをお持ちいたします。",
+          "english": "Thank you. I will bring your desired size.",
+          "audio": "dialogue/d05_006_staff.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "ご面倒をおかけして申し訳ございません。",
+          "english": "I'm sorry for the trouble.",
+          "audio": "dialogue/d05_007_customer.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "いいえ、とんでもございません。少々お待ちくださいませ。",
+          "english": "Not at all. Please wait a moment.",
+          "audio": "dialogue/d05_008_staff.mp3"
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,10 @@
 {
   "book": "genki1",
   "lesson": 9,
-  "vocabulary_count": 40,
-  "dialogue_count": 10,
+  "vocabulary_count": 75,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 38,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "歌舞伎",
@@ -47,304 +49,747 @@
       "audio": "vocabulary/006_chiketto.mp3"
     },
     {
-      "japanese": "伝統的",
-      "reading": "でんとうてき",
-      "romaji": "dentouteki",
-      "english": "traditional",
-      "audio": "vocabulary/007_dentouteki.mp3"
-    },
-    {
-      "japanese": "有名",
-      "reading": "ゆうめい",
-      "romaji": "yuumei",
-      "english": "famous",
-      "audio": "vocabulary/008_yuumei.mp3"
-    },
-    {
-      "japanese": "特別",
-      "reading": "とくべつ",
-      "romaji": "tokubetsu",
-      "english": "special",
-      "audio": "vocabulary/009_tokubetsu.mp3"
-    },
-    {
-      "japanese": "普通",
-      "reading": "ふつう",
-      "romaji": "futsuu",
-      "english": "ordinary; normal",
-      "audio": "vocabulary/010_futsuu.mp3"
-    },
-    {
-      "japanese": "男性",
-      "reading": "だんせい",
-      "romaji": "dansei",
-      "english": "man; male",
-      "audio": "vocabulary/011_dansei.mp3"
-    },
-    {
-      "japanese": "女性",
-      "reading": "じょせい",
-      "romaji": "josei",
-      "english": "woman; female",
-      "audio": "vocabulary/012_josei.mp3"
-    },
-    {
       "japanese": "役",
       "reading": "やく",
       "romaji": "yaku",
       "english": "role",
-      "audio": "vocabulary/013_yaku.mp3"
-    },
-    {
-      "japanese": "演じる",
-      "reading": "えんじる",
-      "romaji": "enjiru",
-      "english": "to perform; to act",
-      "audio": "vocabulary/014_enjiru.mp3"
-    },
-    {
-      "japanese": "出る",
-      "reading": "でる",
-      "romaji": "deru",
-      "english": "to appear; to come out",
-      "audio": "vocabulary/015_deru.mp3"
-    },
-    {
-      "japanese": "着く",
-      "reading": "つく",
-      "romaji": "tsuku",
-      "english": "to arrive",
-      "audio": "vocabulary/016_tsuku.mp3"
-    },
-    {
-      "japanese": "届く",
-      "reading": "とどく",
-      "romaji": "todoku",
-      "english": "to reach; to be delivered",
-      "audio": "vocabulary/017_todoku.mp3"
-    },
-    {
-      "japanese": "調べる",
-      "reading": "しらべる",
-      "romaji": "shiraberu",
-      "english": "to investigate; to look up",
-      "audio": "vocabulary/018_shiraberu.mp3"
-    },
-    {
-      "japanese": "予約する",
-      "reading": "よやくする",
-      "romaji": "yoyaku suru",
-      "english": "to reserve; to book",
-      "audio": "vocabulary/019_yoyaku_suru.mp3"
-    },
-    {
-      "japanese": "卒業する",
-      "reading": "そつぎょうする",
-      "romaji": "sotsugyou suru",
-      "english": "to graduate",
-      "audio": "vocabulary/020_sotsugyou_suru.mp3"
-    },
-    {
-      "japanese": "～年前",
-      "reading": "～ねんまえ",
-      "romaji": "~nen mae",
-      "english": "~ years ago",
-      "audio": "vocabulary/021_nen_mae.mp3"
-    },
-    {
-      "japanese": "何度も",
-      "reading": "なんども",
-      "romaji": "nando mo",
-      "english": "many times",
-      "audio": "vocabulary/022_nando_mo.mp3"
-    },
-    {
-      "japanese": "来月",
-      "reading": "らいげつ",
-      "romaji": "raigetsu",
-      "english": "next month",
-      "audio": "vocabulary/023_raigetsu.mp3"
-    },
-    {
-      "japanese": "先月",
-      "reading": "せんげつ",
-      "romaji": "sengetsu",
-      "english": "last month",
-      "audio": "vocabulary/024_sengetsu.mp3"
-    },
-    {
-      "japanese": "今月",
-      "reading": "こんげつ",
-      "romaji": "kongetsu",
-      "english": "this month",
-      "audio": "vocabulary/025_kongetsu.mp3"
-    },
-    {
-      "japanese": "劇場",
-      "reading": "げきじょう",
-      "romaji": "gekijou",
-      "english": "theater (building)",
-      "audio": "vocabulary/026_gekijou.mp3"
-    },
-    {
-      "japanese": "席",
-      "reading": "せき",
-      "romaji": "seki",
-      "english": "seat",
-      "audio": "vocabulary/027_seki.mp3"
+      "audio": "vocabulary/007_yaku.mp3"
     },
     {
       "japanese": "舞台",
       "reading": "ぶたい",
       "romaji": "butai",
       "english": "stage",
-      "audio": "vocabulary/028_butai.mp3"
+      "audio": "vocabulary/008_butai.mp3"
     },
     {
       "japanese": "衣装",
       "reading": "いしょう",
       "romaji": "ishou",
       "english": "costume",
-      "audio": "vocabulary/029_ishou.mp3"
+      "audio": "vocabulary/009_ishou.mp3"
+    },
+    {
+      "japanese": "能",
+      "reading": "のう",
+      "romaji": "nou",
+      "english": "noh theater",
+      "audio": "vocabulary/010_nou.mp3"
+    },
+    {
+      "japanese": "演目",
+      "reading": "えんもく",
+      "romaji": "enmoku",
+      "english": "program item; piece (in a performance)",
+      "audio": "vocabulary/011_enmoku.mp3"
+    },
+    {
+      "japanese": "主役",
+      "reading": "しゅやく",
+      "romaji": "shuyaku",
+      "english": "leading role; protagonist",
+      "audio": "vocabulary/012_shuyaku.mp3"
+    },
+    {
+      "japanese": "演技",
+      "reading": "えんぎ",
+      "romaji": "engi",
+      "english": "acting; performance",
+      "audio": "vocabulary/013_engi.mp3"
+    },
+    {
+      "japanese": "音楽",
+      "reading": "おんがく",
+      "romaji": "ongaku",
+      "english": "music",
+      "audio": "vocabulary/014_ongaku.mp3"
+    },
+    {
+      "japanese": "イヤホンガイド",
+      "reading": "イヤホンガイド",
+      "romaji": "iyahon gaido",
+      "english": "audio guide (earphone guide)",
+      "audio": "vocabulary/015_iyahon_gaido.mp3"
+    },
+    {
+      "japanese": "伝統",
+      "reading": "でんとう",
+      "romaji": "dentou",
+      "english": "tradition",
+      "audio": "vocabulary/016_dentou.mp3"
+    },
+    {
+      "japanese": "文化",
+      "reading": "ぶんか",
+      "romaji": "bunka",
+      "english": "culture",
+      "audio": "vocabulary/017_bunka.mp3"
+    },
+    {
+      "japanese": "芸術",
+      "reading": "げいじゅつ",
+      "romaji": "geijutsu",
+      "english": "art; fine arts",
+      "audio": "vocabulary/018_geijutsu.mp3"
+    },
+    {
+      "japanese": "芸能",
+      "reading": "げいのう",
+      "romaji": "geinou",
+      "english": "performing arts",
+      "audio": "vocabulary/019_geinou.mp3"
+    },
+    {
+      "japanese": "祭り",
+      "reading": "まつり",
+      "romaji": "matsuri",
+      "english": "festival",
+      "audio": "vocabulary/020_matsuri.mp3"
+    },
+    {
+      "japanese": "茶道",
+      "reading": "さどう",
+      "romaji": "sadou",
+      "english": "tea ceremony",
+      "audio": "vocabulary/021_sadou.mp3"
+    },
+    {
+      "japanese": "感動する",
+      "reading": "かんどうする",
+      "romaji": "kandou suru",
+      "english": "to be moved; to be impressed",
+      "audio": "vocabulary/022_kandou_suru.mp3"
+    },
+    {
+      "japanese": "興味",
+      "reading": "きょうみ",
+      "romaji": "kyoumi",
+      "english": "interest",
+      "audio": "vocabulary/023_kyoumi.mp3"
+    },
+    {
+      "japanese": "意見",
+      "reading": "いけん",
+      "romaji": "iken",
+      "english": "opinion",
+      "audio": "vocabulary/024_iken.mp3"
+    },
+    {
+      "japanese": "素晴らしい",
+      "reading": "すばらしい",
+      "romaji": "subarashii",
+      "english": "wonderful; splendid",
+      "audio": "vocabulary/025_subarashii.mp3"
+    },
+    {
+      "japanese": "つまらない",
+      "reading": "つまらない",
+      "romaji": "tsumaranai",
+      "english": "boring; uninteresting",
+      "audio": "vocabulary/026_tsumaranai.mp3"
+    },
+    {
+      "japanese": "楽しい",
+      "reading": "たのしい",
+      "romaji": "tanoshii",
+      "english": "fun; enjoyable",
+      "audio": "vocabulary/027_tanoshii.mp3"
+    },
+    {
+      "japanese": "面白い",
+      "reading": "おもしろい",
+      "romaji": "omoshiroi",
+      "english": "interesting; amusing",
+      "audio": "vocabulary/028_omoshiroi.mp3"
+    },
+    {
+      "japanese": "人気",
+      "reading": "にんき",
+      "romaji": "ninki",
+      "english": "popularity",
+      "audio": "vocabulary/029_ninki.mp3"
+    },
+    {
+      "japanese": "伝統的",
+      "reading": "でんとうてき",
+      "romaji": "dentouteki",
+      "english": "traditional",
+      "audio": "vocabulary/030_dentouteki.mp3"
+    },
+    {
+      "japanese": "有名",
+      "reading": "ゆうめい",
+      "romaji": "yuumei",
+      "english": "famous",
+      "audio": "vocabulary/031_yuumei.mp3"
+    },
+    {
+      "japanese": "特別",
+      "reading": "とくべつ",
+      "romaji": "tokubetsu",
+      "english": "special",
+      "audio": "vocabulary/032_tokubetsu.mp3"
+    },
+    {
+      "japanese": "普通",
+      "reading": "ふつう",
+      "romaji": "futsuu",
+      "english": "ordinary; normal",
+      "audio": "vocabulary/033_futsuu.mp3"
+    },
+    {
+      "japanese": "独特",
+      "reading": "どくとく",
+      "romaji": "dokutoku",
+      "english": "unique; distinctive",
+      "audio": "vocabulary/034_dokutoku.mp3"
+    },
+    {
+      "japanese": "派手",
+      "reading": "はで",
+      "romaji": "hade",
+      "english": "flashy; showy",
+      "audio": "vocabulary/035_hade.mp3"
+    },
+    {
+      "japanese": "静か",
+      "reading": "しずか",
+      "romaji": "shizuka",
+      "english": "quiet; peaceful",
+      "audio": "vocabulary/036_shizuka.mp3"
+    },
+    {
+      "japanese": "うまい",
+      "reading": "うまい",
+      "romaji": "umai",
+      "english": "skillful; good at",
+      "audio": "vocabulary/037_umai.mp3"
+    },
+    {
+      "japanese": "比べる",
+      "reading": "くらべる",
+      "romaji": "kuraberu",
+      "english": "to compare",
+      "audio": "vocabulary/038_kuraberu.mp3"
+    },
+    {
+      "japanese": "～より",
+      "reading": "～より",
+      "romaji": "~yori",
+      "english": "than ~",
+      "audio": "vocabulary/039_yori.mp3"
+    },
+    {
+      "japanese": "～の方が",
+      "reading": "～のほうが",
+      "romaji": "~no hou ga",
+      "english": "~ is more (comparison)",
+      "audio": "vocabulary/040_no_hou_ga.mp3"
+    },
+    {
+      "japanese": "どちら",
+      "reading": "どちら",
+      "romaji": "dochira",
+      "english": "which (of two)",
+      "audio": "vocabulary/041_dochira.mp3"
+    },
+    {
+      "japanese": "両方",
+      "reading": "りょうほう",
+      "romaji": "ryouhou",
+      "english": "both",
+      "audio": "vocabulary/042_ryouhou.mp3"
+    },
+    {
+      "japanese": "～年前",
+      "reading": "～ねんまえ",
+      "romaji": "~nen mae",
+      "english": "~ years ago",
+      "audio": "vocabulary/043_nen_mae.mp3"
+    },
+    {
+      "japanese": "何度も",
+      "reading": "なんども",
+      "romaji": "nando mo",
+      "english": "many times",
+      "audio": "vocabulary/044_nando_mo.mp3"
+    },
+    {
+      "japanese": "来月",
+      "reading": "らいげつ",
+      "romaji": "raigetsu",
+      "english": "next month",
+      "audio": "vocabulary/045_raigetsu.mp3"
+    },
+    {
+      "japanese": "先月",
+      "reading": "せんげつ",
+      "romaji": "sengetsu",
+      "english": "last month",
+      "audio": "vocabulary/046_sengetsu.mp3"
+    },
+    {
+      "japanese": "先週",
+      "reading": "せんしゅう",
+      "romaji": "senshuu",
+      "english": "last week",
+      "audio": "vocabulary/047_senshuu.mp3"
+    },
+    {
+      "japanese": "去年",
+      "reading": "きょねん",
+      "romaji": "kyonen",
+      "english": "last year",
+      "audio": "vocabulary/048_kyonen.mp3"
+    },
+    {
+      "japanese": "初めて",
+      "reading": "はじめて",
+      "romaji": "hajimete",
+      "english": "for the first time",
+      "audio": "vocabulary/049_hajimete.mp3"
+    },
+    {
+      "japanese": "休憩",
+      "reading": "きゅうけい",
+      "romaji": "kyuukei",
+      "english": "break; rest",
+      "audio": "vocabulary/050_kyuukei.mp3"
+    },
+    {
+      "japanese": "演じる",
+      "reading": "えんじる",
+      "romaji": "enjiru",
+      "english": "to perform; to act",
+      "audio": "vocabulary/051_enjiru.mp3"
+    },
+    {
+      "japanese": "出る",
+      "reading": "でる",
+      "romaji": "deru",
+      "english": "to appear; to come out",
+      "audio": "vocabulary/052_deru.mp3"
+    },
+    {
+      "japanese": "借りる",
+      "reading": "かりる",
+      "romaji": "kariru",
+      "english": "to borrow; to rent",
+      "audio": "vocabulary/053_kariru.mp3"
+    },
+    {
+      "japanese": "調べる",
+      "reading": "しらべる",
+      "romaji": "shiraberu",
+      "english": "to investigate; to look up",
+      "audio": "vocabulary/054_shiraberu.mp3"
+    },
+    {
+      "japanese": "予約する",
+      "reading": "よやくする",
+      "romaji": "yoyaku suru",
+      "english": "to reserve; to book",
+      "audio": "vocabulary/055_yoyaku_suru.mp3"
+    },
+    {
+      "japanese": "楽しむ",
+      "reading": "たのしむ",
+      "romaji": "tanoshimu",
+      "english": "to enjoy",
+      "audio": "vocabulary/056_tanoshimu.mp3"
+    },
+    {
+      "japanese": "思う",
+      "reading": "おもう",
+      "romaji": "omou",
+      "english": "to think",
+      "audio": "vocabulary/057_omou.mp3"
+    },
+    {
+      "japanese": "分かる",
+      "reading": "わかる",
+      "romaji": "wakaru",
+      "english": "to understand",
+      "audio": "vocabulary/058_wakaru.mp3"
+    },
+    {
+      "japanese": "売る",
+      "reading": "うる",
+      "romaji": "uru",
+      "english": "to sell",
+      "audio": "vocabulary/059_uru.mp3"
+    },
+    {
+      "japanese": "なくなる",
+      "reading": "なくなる",
+      "romaji": "nakunaru",
+      "english": "to run out; to disappear",
+      "audio": "vocabulary/060_nakunaru.mp3"
+    },
+    {
+      "japanese": "劇場",
+      "reading": "げきじょう",
+      "romaji": "gekijou",
+      "english": "theater (building)",
+      "audio": "vocabulary/061_gekijou.mp3"
+    },
+    {
+      "japanese": "席",
+      "reading": "せき",
+      "romaji": "seki",
+      "english": "seat",
+      "audio": "vocabulary/062_seki.mp3"
+    },
+    {
+      "japanese": "入り口",
+      "reading": "いりぐち",
+      "romaji": "iriguchi",
+      "english": "entrance",
+      "audio": "vocabulary/063_iriguchi.mp3"
+    },
+    {
+      "japanese": "売店",
+      "reading": "ばいてん",
+      "romaji": "baiten",
+      "english": "shop; stand; kiosk",
+      "audio": "vocabulary/064_baiten.mp3"
+    },
+    {
+      "japanese": "地下",
+      "reading": "ちか",
+      "romaji": "chika",
+      "english": "underground; basement",
+      "audio": "vocabulary/065_chika.mp3"
+    },
+    {
+      "japanese": "男性",
+      "reading": "だんせい",
+      "romaji": "dansei",
+      "english": "man; male",
+      "audio": "vocabulary/066_dansei.mp3"
+    },
+    {
+      "japanese": "女性",
+      "reading": "じょせい",
+      "romaji": "josei",
+      "english": "woman; female",
+      "audio": "vocabulary/067_josei.mp3"
+    },
+    {
+      "japanese": "彼",
+      "reading": "かれ",
+      "romaji": "kare",
+      "english": "he; him; boyfriend",
+      "audio": "vocabulary/068_kare.mp3"
     },
     {
       "japanese": "ぜひ",
       "reading": "ぜひ",
       "romaji": "zehi",
       "english": "by all means; definitely",
-      "audio": "vocabulary/030_zehi.mp3"
+      "audio": "vocabulary/069_zehi.mp3"
     },
     {
       "japanese": "～でしょう",
       "reading": "～でしょう",
       "romaji": "~deshou",
       "english": "probably; right?",
-      "audio": "vocabulary/031_deshou.mp3"
+      "audio": "vocabulary/070_deshou.mp3"
     },
     {
       "japanese": "～から",
       "reading": "～から",
       "romaji": "~kara",
       "english": "because ~",
-      "audio": "vocabulary/032_kara.mp3"
+      "audio": "vocabulary/071_kara.mp3"
     },
     {
       "japanese": "～んです",
       "reading": "～んです",
       "romaji": "~n desu",
       "english": "explanatory ~",
-      "audio": "vocabulary/033_n_desu.mp3"
-    },
-    {
-      "japanese": "物",
-      "reading": "もの",
-      "romaji": "mono",
-      "english": "thing",
-      "audio": "vocabulary/034_mono.mp3"
-    },
-    {
-      "japanese": "人",
-      "reading": "ひと",
-      "romaji": "hito",
-      "english": "person",
-      "audio": "vocabulary/035_hito.mp3"
-    },
-    {
-      "japanese": "所",
-      "reading": "ところ",
-      "romaji": "tokoro",
-      "english": "place",
-      "audio": "vocabulary/036_tokoro.mp3"
-    },
-    {
-      "japanese": "時",
-      "reading": "とき",
-      "romaji": "toki",
-      "english": "time; when",
-      "audio": "vocabulary/037_toki.mp3"
-    },
-    {
-      "japanese": "こと",
-      "reading": "こと",
-      "romaji": "koto",
-      "english": "thing (abstract); matter",
-      "audio": "vocabulary/038_koto.mp3"
+      "audio": "vocabulary/072_n_desu.mp3"
     },
     {
       "japanese": "だけ",
       "reading": "だけ",
       "romaji": "dake",
       "english": "only; just",
-      "audio": "vocabulary/039_dake.mp3"
+      "audio": "vocabulary/073_dake.mp3"
     },
     {
-      "japanese": "インターネット",
-      "reading": "インターネット",
-      "romaji": "intaanetto",
-      "english": "internet",
-      "audio": "vocabulary/040_intaanetto.mp3"
+      "japanese": "おすすめ",
+      "reading": "おすすめ",
+      "romaji": "osusume",
+      "english": "recommendation",
+      "audio": "vocabulary/074_osusume.mp3"
+    },
+    {
+      "japanese": "別の",
+      "reading": "べつの",
+      "romaji": "betsu no",
+      "english": "another; different",
+      "audio": "vocabulary/075_betsu_no.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Robert",
-      "japanese": "先生、歌舞伎を見たことがありますか。",
-      "english": "Professor, have you ever seen kabuki?",
-      "audio": "dialogue/001_robert.mp3"
+      "id": "l09-d01",
+      "title": "Have You Ever Seen Kabuki?",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "マイク、歌舞伎を見たことある？",
+          "english": "Mike, have you ever seen kabuki?",
+          "audio": "dialogue/d01_001_yuki.mp3"
+        },
+        {
+          "speaker": "Mike",
+          "japanese": "ううん、まだないんだ。見てみたいけど。",
+          "english": "No, not yet. I'd like to try watching it though.",
+          "audio": "dialogue/d01_002_mike.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "私は去年初めて見たんだけど、すごくよかったよ。",
+          "english": "I saw it for the first time last year, and it was really great.",
+          "audio": "dialogue/d01_003_yuki.mp3"
+        },
+        {
+          "speaker": "Mike",
+          "japanese": "へえ、どんなところがよかった？",
+          "english": "Oh? What was good about it?",
+          "audio": "dialogue/d01_004_mike.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "衣装がきれいだし、音楽も独特で面白かった。",
+          "english": "The costumes were beautiful, and the music was unique and interesting.",
+          "audio": "dialogue/d01_005_yuki.mp3"
+        },
+        {
+          "speaker": "Mike",
+          "japanese": "日本語が分からなくても楽しめる？",
+          "english": "Can you enjoy it even if you don\\",
+          "audio": "dialogue/d01_006_mike.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "うん、英語のイヤホンガイドがあるから大丈夫だよ。",
+          "english": "Yeah, there are English audio guides so it\\",
+          "audio": "dialogue/d01_007_yuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Professor",
-      "japanese": "ええ、何度も見たことがありますよ。",
-      "english": "Yes, I have seen it many times.",
-      "audio": "dialogue/002_professor.mp3"
+      "id": "l09-d02",
+      "title": "Kabuki Recommendation",
+      "lines": [
+        {
+          "speaker": "Robert",
+          "japanese": "先生、歌舞伎を見たことがありますか。",
+          "english": "Professor, have you ever seen kabuki?",
+          "audio": "dialogue/d02_001_robert.mp3"
+        },
+        {
+          "speaker": "Professor",
+          "japanese": "ええ、何度も見たことがありますよ。",
+          "english": "Yes, I have seen it many times.",
+          "audio": "dialogue/d02_002_professor.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "歌舞伎はどんなものですか。",
+          "english": "What is kabuki like?",
+          "audio": "dialogue/d02_003_robert.mp3"
+        },
+        {
+          "speaker": "Professor",
+          "japanese": "四百年前に始まった伝統的な演劇ですよ。",
+          "english": "It's a traditional theater that started 400 years ago.",
+          "audio": "dialogue/d02_004_professor.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "男の人だけが演じるんですよね。",
+          "english": "Only men perform, right?",
+          "audio": "dialogue/d02_005_robert.mp3"
+        },
+        {
+          "speaker": "Professor",
+          "japanese": "はい、女性の役も男性が演じます。面白いでしょう？",
+          "english": "Yes, men play women's roles too. Interesting, isn't it?",
+          "audio": "dialogue/d02_006_professor.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "まだ見たことがないから、ぜひ見てみたいです。",
+          "english": "I've never seen it, so I'd really like to try watching it.",
+          "audio": "dialogue/d02_007_robert.mp3"
+        },
+        {
+          "speaker": "Professor",
+          "japanese": "来月、有名な俳優が出る公演がありますよ。おすすめです。",
+          "english": "Next month, there's a performance with a famous actor. I recommend it.",
+          "audio": "dialogue/d02_008_professor.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Robert",
-      "japanese": "歌舞伎はどんなものですか。",
-      "english": "What is kabuki like?",
-      "audio": "dialogue/003_robert.mp3"
+      "id": "l09-d03",
+      "title": "Comparing Traditional Arts",
+      "lines": [
+        {
+          "speaker": "Lisa",
+          "japanese": "私、先週初めて能を見ました。",
+          "english": "I saw noh for the first time last week.",
+          "audio": "dialogue/d03_001_lisa.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "へえ、どうでしたか。歌舞伎と比べてどう思いましたか。",
+          "english": "Oh? How was it? What did you think compared to kabuki?",
+          "audio": "dialogue/d03_002_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "能は歌舞伎より静かで、ゆっくりしていますね。",
+          "english": "Noh is quieter and slower than kabuki.",
+          "audio": "dialogue/d03_003_lisa.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "そうですね。能の方が古いですから。",
+          "english": "That's right. Noh is older, so.",
+          "audio": "dialogue/d03_004_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "歌舞伎の方が分かりやすかったです。話が派手ですから。",
+          "english": "Kabuki was easier to understand. The stories are more flashy.",
+          "audio": "dialogue/d03_005_lisa.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "どちらが好きですか。",
+          "english": "Which do you like better?",
+          "audio": "dialogue/d03_006_kenji.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "難しいですね。両方とも素晴らしいと思います。",
+          "english": "That's difficult. I think both are wonderful.",
+          "audio": "dialogue/d03_007_lisa.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Professor",
-      "japanese": "四百年前に始まった伝統的な演劇ですよ。",
-      "english": "It\\",
-      "audio": "dialogue/004_professor.mp3"
+      "id": "l09-d04",
+      "title": "At the Kabuki Theater",
+      "lines": [
+        {
+          "speaker": "Sarah",
+          "japanese": "すみません、イヤホンガイドはどこで借りられますか。",
+          "english": "Excuse me, where can I borrow an audio guide?",
+          "audio": "dialogue/d04_001_sarah.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "入り口の右側にあるカウンターで借りられます。",
+          "english": "You can borrow one at the counter on the right side of the entrance.",
+          "audio": "dialogue/d04_002_staff.mp3"
+        },
+        {
+          "speaker": "Sarah",
+          "japanese": "今日の公演は何時間ぐらいですか。",
+          "english": "About how many hours is today\\",
+          "audio": "dialogue/d04_003_sarah.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "休憩を入れて、四時間ぐらいです。",
+          "english": "Including breaks, about four hours.",
+          "audio": "dialogue/d04_004_staff.mp3"
+        },
+        {
+          "speaker": "Sarah",
+          "japanese": "長いですね！休憩は何回ありますか。",
+          "english": "That's long! How many breaks are there?",
+          "audio": "dialogue/d04_005_sarah.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "二回あります。お弁当を食べる時間もありますよ。",
+          "english": "There are two. There's also time to eat a bento.",
+          "audio": "dialogue/d04_006_staff.mp3"
+        },
+        {
+          "speaker": "Sarah",
+          "japanese": "お弁当はどこで買えますか。",
+          "english": "Where can I buy a bento?",
+          "audio": "dialogue/d04_007_sarah.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "地下一階の売店で売っています。歌舞伎弁当がおすすめです。",
+          "english": "They sell them at the shop on basement floor 1. The kabuki bento is recommended.",
+          "audio": "dialogue/d04_008_staff.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Robert",
-      "japanese": "男の人だけが演じるんですよね。",
-      "english": "Only men perform, right?",
-      "audio": "dialogue/005_robert.mp3"
-    },
-    {
-      "speaker": "Professor",
-      "japanese": "はい、女性の役も男性が演じます。面白いでしょう？",
-      "english": "Yes, men play women\\",
-      "audio": "dialogue/006_professor.mp3"
-    },
-    {
-      "speaker": "Robert",
-      "japanese": "まだ見たことがないから、ぜひ見てみたいです。",
-      "english": "I\\",
-      "audio": "dialogue/007_robert.mp3"
-    },
-    {
-      "speaker": "Professor",
-      "japanese": "来月、有名な俳優が出る公演がありますよ。",
-      "english": "Next month, there\\",
-      "audio": "dialogue/008_professor.mp3"
-    },
-    {
-      "speaker": "Robert",
-      "japanese": "チケットはどこで買えますか。",
-      "english": "Where can I buy tickets?",
-      "audio": "dialogue/009_robert.mp3"
-    },
-    {
-      "speaker": "Professor",
-      "japanese": "インターネットで買えますよ。学生は安いチケットがありますから。",
-      "english": "You can buy them online. There are cheap tickets for students.",
-      "audio": "dialogue/010_professor.mp3"
+      "id": "l09-d05",
+      "title": "After the Show",
+      "lines": [
+        {
+          "speaker": "Tom",
+          "japanese": "いや〜、すごかった！感動した。",
+          "english": "Wow, that was amazing! I was moved.",
+          "audio": "dialogue/d05_001_tom.mp3"
+        },
+        {
+          "speaker": "Naoki",
+          "japanese": "だろ？俺もこの演目が一番好きなんだ。",
+          "english": "Right? This is my favorite performance too.",
+          "audio": "dialogue/d05_002_naoki.mp3"
+        },
+        {
+          "speaker": "Tom",
+          "japanese": "主役の俳優、演技がうまかったね。",
+          "english": "The lead actor was really good at acting, wasn\\",
+          "audio": "dialogue/d05_003_tom.mp3"
+        },
+        {
+          "speaker": "Naoki",
+          "japanese": "うん、彼は人気がある俳優だよ。テレビにも出てる。",
+          "english": "Yeah, he's a popular actor. He's also on TV.",
+          "audio": "dialogue/d05_004_naoki.mp3"
+        },
+        {
+          "speaker": "Tom",
+          "japanese": "また見に来たいな。次はいつやってるの？",
+          "english": "I'd like to come see it again. When's the next one?",
+          "audio": "dialogue/d05_005_tom.mp3"
+        },
+        {
+          "speaker": "Naoki",
+          "japanese": "来月別の演目があるよ。一緒に行く？",
+          "english": "There's a different show next month. Want to go together?",
+          "audio": "dialogue/d05_006_naoki.mp3"
+        },
+        {
+          "speaker": "Tom",
+          "japanese": "うん、行きたい！予約しておいてくれる？",
+          "english": "Yeah, I want to go! Can you make a reservation for us?",
+          "audio": "dialogue/d05_007_tom.mp3"
+        },
+        {
+          "speaker": "Naoki",
+          "japanese": "いいよ。早く買わないと、いい席がなくなるから。",
+          "english": "Sure. If we don't buy soon, the good seats will be gone.",
+          "audio": "dialogue/d05_008_naoki.mp3"
+        }
+      ]
     }
   ]
 }

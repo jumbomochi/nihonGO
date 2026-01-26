@@ -1,8 +1,10 @@
 {
   "book": "genki1",
   "lesson": 12,
-  "vocabulary_count": 39,
-  "dialogue_count": 10,
+  "vocabulary_count": 82,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 36,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "頭",
@@ -22,7 +24,7 @@
       "japanese": "お腹",
       "reading": "おなか",
       "romaji": "onaka",
-      "english": "stomach",
+      "english": "stomach; belly",
       "audio": "vocabulary/003_onaka.mp3"
     },
     {
@@ -61,283 +63,770 @@
       "audio": "vocabulary/008_te.mp3"
     },
     {
+      "japanese": "目",
+      "reading": "め",
+      "romaji": "me",
+      "english": "eye",
+      "audio": "vocabulary/009_me.mp3"
+    },
+    {
+      "japanese": "口",
+      "reading": "くち",
+      "romaji": "kuchi",
+      "english": "mouth",
+      "audio": "vocabulary/010_kuchi.mp3"
+    },
+    {
+      "japanese": "体",
+      "reading": "からだ",
+      "romaji": "karada",
+      "english": "body",
+      "audio": "vocabulary/011_karada.mp3"
+    },
+    {
+      "japanese": "背中",
+      "reading": "せなか",
+      "romaji": "senaka",
+      "english": "back (of body)",
+      "audio": "vocabulary/012_senaka.mp3"
+    },
+    {
       "japanese": "病気",
       "reading": "びょうき",
       "romaji": "byouki",
       "english": "illness; sickness",
-      "audio": "vocabulary/009_byouki.mp3"
+      "audio": "vocabulary/013_byouki.mp3"
     },
     {
       "japanese": "風邪",
       "reading": "かぜ",
       "romaji": "kaze",
       "english": "cold (illness)",
-      "audio": "vocabulary/010_kaze.mp3"
+      "audio": "vocabulary/014_kaze.mp3"
     },
     {
       "japanese": "熱",
       "reading": "ねつ",
       "romaji": "netsu",
       "english": "fever",
-      "audio": "vocabulary/011_netsu.mp3"
+      "audio": "vocabulary/015_netsu.mp3"
     },
     {
       "japanese": "咳",
       "reading": "せき",
       "romaji": "seki",
       "english": "cough",
-      "audio": "vocabulary/012_seki.mp3"
+      "audio": "vocabulary/016_seki.mp3"
     },
     {
-      "japanese": "薬",
-      "reading": "くすり",
-      "romaji": "kusuri",
-      "english": "medicine",
-      "audio": "vocabulary/013_kusuri.mp3"
+      "japanese": "鼻水",
+      "reading": "はなみず",
+      "romaji": "hanamizu",
+      "english": "runny nose",
+      "audio": "vocabulary/017_hanamizu.mp3"
     },
     {
-      "japanese": "痛い",
-      "reading": "いたい",
-      "romaji": "itai",
-      "english": "painful; hurts",
-      "audio": "vocabulary/014_itai.mp3"
+      "japanese": "症状",
+      "reading": "しょうじょう",
+      "romaji": "shoujou",
+      "english": "symptom",
+      "audio": "vocabulary/018_shoujou.mp3"
     },
     {
-      "japanese": "治る",
-      "reading": "なおる",
-      "romaji": "naoru",
-      "english": "to be cured; to heal",
-      "audio": "vocabulary/015_naoru.mp3"
+      "japanese": "アレルギー",
+      "reading": "アレルギー",
+      "romaji": "arerugii",
+      "english": "allergy",
+      "audio": "vocabulary/019_arerugii.mp3"
     },
     {
-      "japanese": "出る",
-      "reading": "でる",
-      "romaji": "deru",
-      "english": "to appear; to come out",
-      "audio": "vocabulary/016_deru.mp3"
+      "japanese": "怪我",
+      "reading": "けが",
+      "romaji": "kega",
+      "english": "injury",
+      "audio": "vocabulary/020_kega.mp3"
     },
     {
-      "japanese": "説明する",
-      "reading": "せつめいする",
-      "romaji": "setsumei suru",
-      "english": "to explain",
-      "audio": "vocabulary/017_setsumei_suru.mp3"
-    },
-    {
-      "japanese": "医者",
-      "reading": "いしゃ",
-      "romaji": "isha",
-      "english": "doctor",
-      "audio": "vocabulary/018_isha.mp3"
-    },
-    {
-      "japanese": "病院",
-      "reading": "びょういん",
-      "romaji": "byouin",
-      "english": "hospital",
-      "audio": "vocabulary/019_byouin.mp3"
-    },
-    {
-      "japanese": "診察",
-      "reading": "しんさつ",
-      "romaji": "shinsatsu",
-      "english": "medical examination",
-      "audio": "vocabulary/020_shinsatsu.mp3"
-    },
-    {
-      "japanese": "～すぎる",
-      "reading": "～すぎる",
-      "romaji": "~sugiru",
-      "english": "too much; excessively",
-      "audio": "vocabulary/021_sugiru.mp3"
-    },
-    {
-      "japanese": "～方",
-      "reading": "～かた",
-      "romaji": "~kata",
-      "english": "how to; way of",
-      "audio": "vocabulary/022_kata.mp3"
-    },
-    {
-      "japanese": "～やすい",
-      "reading": "～やすい",
-      "romaji": "~yasui",
-      "english": "easy to ~",
-      "audio": "vocabulary/023_yasui.mp3"
-    },
-    {
-      "japanese": "～にくい",
-      "reading": "～にくい",
-      "romaji": "~nikui",
-      "english": "hard to ~",
-      "audio": "vocabulary/024_nikui.mp3"
-    },
-    {
-      "japanese": "～んです",
-      "reading": "～んです",
-      "romaji": "~n desu",
-      "english": "it is that ~ (explanatory)",
-      "audio": "vocabulary/025_n_desu.mp3"
-    },
-    {
-      "japanese": "食後",
-      "reading": "しょくご",
-      "romaji": "shokugo",
-      "english": "after meals",
-      "audio": "vocabulary/026_shokugo.mp3"
-    },
-    {
-      "japanese": "食前",
-      "reading": "しょくぜん",
-      "romaji": "shokuzen",
-      "english": "before meals",
-      "audio": "vocabulary/027_shokuzen.mp3"
-    },
-    {
-      "japanese": "一日",
-      "reading": "いちにち",
-      "romaji": "ichinichi",
-      "english": "one day; per day",
-      "audio": "vocabulary/028_ichinichi.mp3"
-    },
-    {
-      "japanese": "～回",
-      "reading": "～かい",
-      "romaji": "~kai",
-      "english": "~ times (counter)",
-      "audio": "vocabulary/029_kai.mp3"
-    },
-    {
-      "japanese": "～かもしれません",
-      "reading": "～かもしれません",
-      "romaji": "~kamoshiremasen",
-      "english": "might; maybe",
-      "audio": "vocabulary/030_kamoshiremasen.mp3"
-    },
-    {
-      "japanese": "気をつける",
-      "reading": "きをつける",
-      "romaji": "ki wo tsukeru",
-      "english": "to be careful",
-      "audio": "vocabulary/031_ki_wo_tsukeru.mp3"
-    },
-    {
-      "japanese": "お大事に",
-      "reading": "おだいじに",
-      "romaji": "odaiji ni",
-      "english": "Take care (of yourself)",
-      "audio": "vocabulary/032_odaiji_ni.mp3"
-    },
-    {
-      "japanese": "眠い",
-      "reading": "ねむい",
-      "romaji": "nemui",
-      "english": "sleepy",
-      "audio": "vocabulary/033_nemui.mp3"
-    },
-    {
-      "japanese": "元気",
-      "reading": "げんき",
-      "romaji": "genki",
-      "english": "healthy; energetic",
-      "audio": "vocabulary/034_genki.mp3"
-    },
-    {
-      "japanese": "少し",
-      "reading": "すこし",
-      "romaji": "sukoshi",
-      "english": "a little",
-      "audio": "vocabulary/035_sukoshi.mp3"
-    },
-    {
-      "japanese": "全部",
-      "reading": "ぜんぶ",
-      "romaji": "zenbu",
-      "english": "all; everything",
-      "audio": "vocabulary/036_zenbu.mp3"
+      "japanese": "寝不足",
+      "reading": "ねぶそく",
+      "romaji": "nebusoku",
+      "english": "lack of sleep",
+      "audio": "vocabulary/021_nebusoku.mp3"
     },
     {
       "japanese": "ストレス",
       "reading": "ストレス",
       "romaji": "sutoresu",
       "english": "stress",
-      "audio": "vocabulary/037_sutoresu.mp3"
+      "audio": "vocabulary/022_sutoresu.mp3"
+    },
+    {
+      "japanese": "痛い",
+      "reading": "いたい",
+      "romaji": "itai",
+      "english": "painful; hurts",
+      "audio": "vocabulary/023_itai.mp3"
+    },
+    {
+      "japanese": "だるい",
+      "reading": "だるい",
+      "romaji": "darui",
+      "english": "sluggish; tired",
+      "audio": "vocabulary/024_darui.mp3"
+    },
+    {
+      "japanese": "薬",
+      "reading": "くすり",
+      "romaji": "kusuri",
+      "english": "medicine",
+      "audio": "vocabulary/025_kusuri.mp3"
+    },
+    {
+      "japanese": "風邪薬",
+      "reading": "かぜぐすり",
+      "romaji": "kazegusuri",
+      "english": "cold medicine",
+      "audio": "vocabulary/026_kazegusuri.mp3"
+    },
+    {
+      "japanese": "錠",
+      "reading": "じょう",
+      "romaji": "jou",
+      "english": "tablet (counter)",
+      "audio": "vocabulary/027_jou.mp3"
+    },
+    {
+      "japanese": "病院",
+      "reading": "びょういん",
+      "romaji": "byouin",
+      "english": "hospital",
+      "audio": "vocabulary/028_byouin.mp3"
+    },
+    {
+      "japanese": "薬局",
+      "reading": "やっきょく",
+      "romaji": "yakkyoku",
+      "english": "pharmacy",
+      "audio": "vocabulary/029_yakkyoku.mp3"
+    },
+    {
+      "japanese": "医者",
+      "reading": "いしゃ",
+      "romaji": "isha",
+      "english": "doctor",
+      "audio": "vocabulary/030_isha.mp3"
+    },
+    {
+      "japanese": "診察",
+      "reading": "しんさつ",
+      "romaji": "shinsatsu",
+      "english": "medical examination",
+      "audio": "vocabulary/031_shinsatsu.mp3"
+    },
+    {
+      "japanese": "保険証",
+      "reading": "ほけんしょう",
+      "romaji": "hokenshou",
+      "english": "health insurance card",
+      "audio": "vocabulary/032_hokenshou.mp3"
+    },
+    {
+      "japanese": "処方箋",
+      "reading": "しょほうせん",
+      "romaji": "shohousen",
+      "english": "prescription",
+      "audio": "vocabulary/033_shohousen.mp3"
+    },
+    {
+      "japanese": "マスク",
+      "reading": "マスク",
+      "romaji": "masuku",
+      "english": "face mask",
+      "audio": "vocabulary/034_masuku.mp3"
+    },
+    {
+      "japanese": "治る",
+      "reading": "なおる",
+      "romaji": "naoru",
+      "english": "to be cured; to heal",
+      "audio": "vocabulary/035_naoru.mp3"
+    },
+    {
+      "japanese": "出る",
+      "reading": "でる",
+      "romaji": "deru",
+      "english": "to appear; to come out",
+      "audio": "vocabulary/036_deru.mp3"
+    },
+    {
+      "japanese": "休む",
+      "reading": "やすむ",
+      "romaji": "yasumu",
+      "english": "to rest; to take a day off",
+      "audio": "vocabulary/037_yasumu.mp3"
+    },
+    {
+      "japanese": "壊す",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break; to ruin",
+      "audio": "vocabulary/038_kowasu.mp3"
+    },
+    {
+      "japanese": "効く",
+      "reading": "きく",
+      "romaji": "kiku",
+      "english": "to be effective; to work",
+      "audio": "vocabulary/039_kiku.mp3"
+    },
+    {
+      "japanese": "避ける",
+      "reading": "さける",
+      "romaji": "sakeru",
+      "english": "to avoid",
+      "audio": "vocabulary/040_sakeru.mp3"
+    },
+    {
+      "japanese": "続ける",
+      "reading": "つづける",
+      "romaji": "tsuzukeru",
+      "english": "to continue",
+      "audio": "vocabulary/041_tsuzukeru.mp3"
+    },
+    {
+      "japanese": "説明する",
+      "reading": "せつめいする",
+      "romaji": "setsumei suru",
+      "english": "to explain",
+      "audio": "vocabulary/042_setsumei_suru.mp3"
     },
     {
       "japanese": "運動",
       "reading": "うんどう",
       "romaji": "undou",
       "english": "exercise",
-      "audio": "vocabulary/038_undou.mp3"
+      "audio": "vocabulary/043_undou.mp3"
     },
     {
-      "japanese": "無理",
-      "reading": "むり",
-      "romaji": "muri",
-      "english": "impossible; unreasonable",
-      "audio": "vocabulary/039_muri.mp3"
+      "japanese": "食事",
+      "reading": "しょくじ",
+      "romaji": "shokuji",
+      "english": "meal; diet",
+      "audio": "vocabulary/044_shokuji.mp3"
+    },
+    {
+      "japanese": "野菜",
+      "reading": "やさい",
+      "romaji": "yasai",
+      "english": "vegetable",
+      "audio": "vocabulary/045_yasai.mp3"
+    },
+    {
+      "japanese": "お酒",
+      "reading": "おさけ",
+      "romaji": "osake",
+      "english": "alcohol; sake",
+      "audio": "vocabulary/046_osake.mp3"
+    },
+    {
+      "japanese": "夜更かし",
+      "reading": "よふかし",
+      "romaji": "yofukashi",
+      "english": "staying up late",
+      "audio": "vocabulary/047_yofukashi.mp3"
+    },
+    {
+      "japanese": "元気",
+      "reading": "げんき",
+      "romaji": "genki",
+      "english": "healthy; energetic",
+      "audio": "vocabulary/048_genki.mp3"
+    },
+    {
+      "japanese": "健康",
+      "reading": "けんこう",
+      "romaji": "kenkou",
+      "english": "health",
+      "audio": "vocabulary/049_kenkou.mp3"
+    },
+    {
+      "japanese": "ジョギング",
+      "reading": "ジョギング",
+      "romaji": "jogingu",
+      "english": "jogging",
+      "audio": "vocabulary/050_jogingu.mp3"
+    },
+    {
+      "japanese": "食後",
+      "reading": "しょくご",
+      "romaji": "shokugo",
+      "english": "after meals",
+      "audio": "vocabulary/051_shokugo.mp3"
+    },
+    {
+      "japanese": "食前",
+      "reading": "しょくぜん",
+      "romaji": "shokuzen",
+      "english": "before meals",
+      "audio": "vocabulary/052_shokuzen.mp3"
+    },
+    {
+      "japanese": "一日",
+      "reading": "いちにち",
+      "romaji": "ichinichi",
+      "english": "one day; per day",
+      "audio": "vocabulary/053_ichinichi.mp3"
+    },
+    {
+      "japanese": "～回",
+      "reading": "～かい",
+      "romaji": "~kai",
+      "english": "~ times (counter)",
+      "audio": "vocabulary/054_kai.mp3"
+    },
+    {
+      "japanese": "最近",
+      "reading": "さいきん",
+      "romaji": "saikin",
+      "english": "recently; lately",
+      "audio": "vocabulary/055_saikin.mp3"
+    },
+    {
+      "japanese": "最初",
+      "reading": "さいしょ",
+      "romaji": "saisho",
+      "english": "at first; beginning",
+      "audio": "vocabulary/056_saisho.mp3"
+    },
+    {
+      "japanese": "少し",
+      "reading": "すこし",
+      "romaji": "sukoshi",
+      "english": "a little",
+      "audio": "vocabulary/057_sukoshi.mp3"
+    },
+    {
+      "japanese": "とても",
+      "reading": "とても",
+      "romaji": "totemo",
+      "english": "very; extremely",
+      "audio": "vocabulary/058_totemo.mp3"
+    },
+    {
+      "japanese": "ゆっくり",
+      "reading": "ゆっくり",
+      "romaji": "yukkuri",
+      "english": "slowly; at ease",
+      "audio": "vocabulary/059_yukkuri.mp3"
+    },
+    {
+      "japanese": "少しずつ",
+      "reading": "すこしずつ",
+      "romaji": "sukoshizutsu",
+      "english": "little by little",
+      "audio": "vocabulary/060_sukoshizutsu.mp3"
+    },
+    {
+      "japanese": "よく",
+      "reading": "よく",
+      "romaji": "yoku",
+      "english": "well; often",
+      "audio": "vocabulary/061_yoku.mp3"
+    },
+    {
+      "japanese": "全部",
+      "reading": "ぜんぶ",
+      "romaji": "zenbu",
+      "english": "all; everything",
+      "audio": "vocabulary/062_zenbu.mp3"
+    },
+    {
+      "japanese": "お大事に",
+      "reading": "おだいじに",
+      "romaji": "odaiji ni",
+      "english": "Take care (of yourself)",
+      "audio": "vocabulary/063_odaiji_ni.mp3"
+    },
+    {
+      "japanese": "気をつける",
+      "reading": "きをつける",
+      "romaji": "ki wo tsukeru",
+      "english": "to be careful",
+      "audio": "vocabulary/064_ki_wo_tsukeru.mp3"
+    },
+    {
+      "japanese": "無理をする",
+      "reading": "むりをする",
+      "romaji": "muri wo suru",
+      "english": "to push oneself too hard",
+      "audio": "vocabulary/065_muri_wo_suru.mp3"
+    },
+    {
+      "japanese": "顔色が悪い",
+      "reading": "かおいろがわるい",
+      "romaji": "kaoiro ga warui",
+      "english": "to look pale",
+      "audio": "vocabulary/066_kaoiro_ga_warui.mp3"
+    },
+    {
+      "japanese": "参考になる",
+      "reading": "さんこうになる",
+      "romaji": "sankou ni naru",
+      "english": "to be helpful/informative",
+      "audio": "vocabulary/067_sankou_ni_naru.mp3"
+    },
+    {
+      "japanese": "ご迷惑をおかけする",
+      "reading": "ごめいわくをおかけする",
+      "romaji": "gomeiwaku wo okake suru",
+      "english": "to cause trouble (formal)",
+      "audio": "vocabulary/068_gomeiwaku_wo_okake_suru.mp3"
+    },
+    {
+      "japanese": "～すぎる",
+      "reading": "～すぎる",
+      "romaji": "~sugiru",
+      "english": "too much; excessively",
+      "audio": "vocabulary/069_sugiru.mp3"
+    },
+    {
+      "japanese": "～方",
+      "reading": "～かた",
+      "romaji": "~kata",
+      "english": "how to; way of",
+      "audio": "vocabulary/070_kata.mp3"
+    },
+    {
+      "japanese": "～やすい",
+      "reading": "～やすい",
+      "romaji": "~yasui",
+      "english": "easy to ~",
+      "audio": "vocabulary/071_yasui.mp3"
+    },
+    {
+      "japanese": "～にくい",
+      "reading": "～にくい",
+      "romaji": "~nikui",
+      "english": "hard to ~",
+      "audio": "vocabulary/072_nikui.mp3"
+    },
+    {
+      "japanese": "～んです",
+      "reading": "～んです",
+      "romaji": "~n desu",
+      "english": "it is that ~ (explanatory)",
+      "audio": "vocabulary/073_n_desu.mp3"
+    },
+    {
+      "japanese": "～より",
+      "reading": "～より",
+      "romaji": "~yori",
+      "english": "than ~",
+      "audio": "vocabulary/074_yori.mp3"
+    },
+    {
+      "japanese": "～の方が",
+      "reading": "～のほうが",
+      "romaji": "~no hou ga",
+      "english": "~ is more",
+      "audio": "vocabulary/075_no_hou_ga.mp3"
+    },
+    {
+      "japanese": "～た方がいい",
+      "reading": "～たほうがいい",
+      "romaji": "~ta hou ga ii",
+      "english": "should ~; had better ~",
+      "audio": "vocabulary/076_ta_hou_ga_ii.mp3"
+    },
+    {
+      "japanese": "～かもしれない",
+      "reading": "～かもしれない",
+      "romaji": "~kamoshirenai",
+      "english": "might; maybe",
+      "audio": "vocabulary/077_kamoshirenai.mp3"
+    },
+    {
+      "japanese": "眠い",
+      "reading": "ねむい",
+      "romaji": "nemui",
+      "english": "sleepy",
+      "audio": "vocabulary/078_nemui.mp3"
+    },
+    {
+      "japanese": "疲れる",
+      "reading": "つかれる",
+      "romaji": "tsukareru",
+      "english": "to get tired",
+      "audio": "vocabulary/079_tsukareru.mp3"
+    },
+    {
+      "japanese": "店長",
+      "reading": "てんちょう",
+      "romaji": "tenchou",
+      "english": "store manager",
+      "audio": "vocabulary/080_tenchou.mp3"
+    },
+    {
+      "japanese": "運転",
+      "reading": "うんてん",
+      "romaji": "unten",
+      "english": "driving",
+      "audio": "vocabulary/081_unten.mp3"
+    },
+    {
+      "japanese": "コツ",
+      "reading": "コツ",
+      "romaji": "kotsu",
+      "english": "trick; knack",
+      "audio": "vocabulary/082_kotsu.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Doctor",
-      "japanese": "どうしましたか。",
-      "english": "What\\",
-      "audio": "dialogue/001_doctor.mp3"
+      "id": "l12-d01",
+      "title": "At the Health Center",
+      "lines": [
+        {
+          "speaker": "Doctor",
+          "japanese": "どうしましたか。",
+          "english": "What's the matter?",
+          "audio": "dialogue/d01_001_doctor.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "昨日から頭が痛いんです。熱もあるみたいです。",
+          "english": "My head has been hurting since yesterday. I think I have a fever too.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Doctor",
+          "japanese": "のどは痛いですか。",
+          "english": "Does your throat hurt?",
+          "audio": "dialogue/d01_003_doctor.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、少し痛いです。咳も出ます。",
+          "english": "Yes, it hurts a little. I'm also coughing.",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Doctor",
+          "japanese": "最近、寝すぎたり、食べすぎたりしていませんか。",
+          "english": "Have you been sleeping or eating too much recently?",
+          "audio": "dialogue/d01_005_doctor.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "いいえ、でも勉強しすぎたかもしれません。",
+          "english": "No, but I might have studied too much.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Doctor",
+          "japanese": "風邪ですね。この薬の飲み方を説明します。一日三回、食後に飲んでください。",
+          "english": "You have a cold. I'll explain how to take this medicine. Please take it three times a day, after meals.",
+          "audio": "dialogue/d01_007_doctor.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "わかりました。ありがとうございます。",
+          "english": "I understand. Thank you.",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "昨日から頭が痛いんです。熱もあるみたいです。",
-      "english": "My head has been hurting since yesterday. I think I have a fever too.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l12-d02",
+      "title": "Calling in Sick",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "もしもし、店長、たけしですが...",
+          "english": "Hello, Manager, this is Takeshi...",
+          "audio": "dialogue/d02_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "あ、たけしくん。どうしたの？",
+          "english": "Ah, Takeshi. What happened?",
+          "audio": "dialogue/d02_002_manager.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "今日、熱があって、体がだるいんです。休ませていただけませんか。",
+          "english": "I have a fever today and my body feels sluggish. May I take the day off?",
+          "audio": "dialogue/d02_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "そうか、それは大変だね。病院には行った？",
+          "english": "I see, that's tough. Did you go to the hospital?",
+          "audio": "dialogue/d02_004_manager.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、風邪だと言われました。薬を飲んで休むように言われました。",
+          "english": "Yes, they said it was a cold. They told me to take medicine and rest.",
+          "audio": "dialogue/d02_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "わかった。ゆっくり休んで。お大事にね。",
+          "english": "Got it. Take it easy and rest. Take care.",
+          "audio": "dialogue/d02_006_manager.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ご迷惑をおかけしてすみません。よろしくお願いします。",
+          "english": "I'm sorry for the trouble. Thank you for understanding.",
+          "audio": "dialogue/d02_007_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Doctor",
-      "japanese": "のどは痛いですか。",
-      "english": "Does your throat hurt?",
-      "audio": "dialogue/003_doctor.mp3"
+      "id": "l12-d03",
+      "title": "Giving Advice to a Friend",
+      "lines": [
+        {
+          "speaker": "Ken",
+          "japanese": "ゆき、顔色が悪いよ。大丈夫？",
+          "english": "Yuki, you look pale. Are you okay?",
+          "audio": "dialogue/d03_001_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "うん、ちょっと疲れてるんだ。最近、寝不足で...",
+          "english": "Yeah, I'm a bit tired. I haven't been sleeping enough lately...",
+          "audio": "dialogue/d03_002_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "また夜更かしして勉強してるの？無理しすぎだよ。",
+          "english": "Are you staying up late studying again? You're pushing yourself too hard.",
+          "audio": "dialogue/d03_003_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "テストが近いから仕方ないよ。",
+          "english": "The test is coming up, so I can't help it.",
+          "audio": "dialogue/d03_004_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "でも、体を壊したら元も子もないよ。早く寝た方がいいよ。",
+          "english": "But if you ruin your health, it defeats the purpose. You should go to bed early.",
+          "audio": "dialogue/d03_005_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "そうだね...。今日は早く帰って休むことにする。",
+          "english": "You're right... I'll go home early today and rest.",
+          "audio": "dialogue/d03_006_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "うん、それがいいよ。暖かくして寝てね。",
+          "english": "Yeah, that sounds good. Keep warm and sleep well.",
+          "audio": "dialogue/d03_007_ken.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "はい、少し痛いです。咳も出ます。",
-      "english": "Yes, it hurts a little. I'm also coughing.",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l12-d04",
+      "title": "At a Pharmacy",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "japanese": "すみません、風邪薬を探しているんですが...",
+          "english": "Excuse me, I'm looking for cold medicine...",
+          "audio": "dialogue/d04_001_customer.mp3"
+        },
+        {
+          "speaker": "Pharmacist",
+          "japanese": "どんな症状ですか。",
+          "english": "What are your symptoms?",
+          "audio": "dialogue/d04_002_pharmacist.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "鼻水が出て、のどが痛いんです。熱はありません。",
+          "english": "I have a runny nose and my throat hurts. I don't have a fever.",
+          "audio": "dialogue/d04_003_customer.mp3"
+        },
+        {
+          "speaker": "Pharmacist",
+          "japanese": "この薬がおすすめです。飲みやすくて、よく効きますよ。",
+          "english": "I recommend this medicine. It is easy to take and works well.",
+          "audio": "dialogue/d04_004_pharmacist.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "飲み方を教えていただけますか。",
+          "english": "Could you tell me how to take it?",
+          "audio": "dialogue/d04_005_customer.mp3"
+        },
+        {
+          "speaker": "Pharmacist",
+          "japanese": "一日三回、食後に二錠ずつ飲んでください。眠くなりやすいので、車の運転は避けてください。",
+          "english": "Please take two tablets three times a day, after meals. It tends to make you drowsy, so please avoid driving.",
+          "audio": "dialogue/d04_006_pharmacist.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "わかりました。これをください。",
+          "english": "I understand. I'll take this one.",
+          "audio": "dialogue/d04_007_customer.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Doctor",
-      "japanese": "最近、寝すぎたり、食べすぎたりしていませんか。",
-      "english": "Have you been sleeping or eating too much recently?",
-      "audio": "dialogue/005_doctor.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "いいえ、でも勉強しすぎたかもしれません。",
-      "english": "No, but I might have studied too much.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Doctor",
-      "japanese": "風邪ですね。この薬の飲み方を説明します。",
-      "english": "You have a cold. I'll explain how to take this medicine.",
-      "audio": "dialogue/007_doctor.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "この薬は飲みにくいですか。",
-      "english": "Is this medicine hard to take?",
-      "audio": "dialogue/008_mary.mp3"
-    },
-    {
-      "speaker": "Doctor",
-      "japanese": "いいえ、飲みやすいですよ。一日三回、食後に飲んでください。",
-      "english": "No, it's easy to take. Please take it three times a day, after meals.",
-      "audio": "dialogue/009_doctor.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "わかりました。ありがとうございます。",
-      "english": "I understand. Thank you.",
-      "audio": "dialogue/010_mary.mp3"
+      "id": "l12-d05",
+      "title": "Discussing Healthy Lifestyle",
+      "lines": [
+        {
+          "speaker": "Tanaka",
+          "japanese": "鈴木さん、最近、すごく元気そうですね。何かしてるんですか。",
+          "english": "Suzuki-san, you look really healthy lately. Are you doing something?",
+          "audio": "dialogue/d05_001_tanaka.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "ええ、毎朝ジョギングを始めたんです。最初は大変でしたが、今は楽しいですよ。",
+          "english": "Yes, I started jogging every morning. It was hard at first, but now it's fun.",
+          "audio": "dialogue/d05_002_suzuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "いいですね。私も運動した方がいいと思うんですが、続けにくくて...",
+          "english": "That's great. I think I should exercise too, but it's hard to keep it up...",
+          "audio": "dialogue/d05_003_tanaka.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "無理しないで、少しずつやるのがコツですよ。毎日十分だけでもいいんです。",
+          "english": "The trick is to not overdo it and do a little at a time. Even just ten minutes a day is fine.",
+          "audio": "dialogue/d05_004_suzuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "そうですか。食事はどうしていますか。",
+          "english": "I see. What about your diet?",
+          "audio": "dialogue/d05_005_tanaka.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "野菜を多く食べるようにしています。お酒も飲みすぎないように気をつけています。",
+          "english": "I try to eat more vegetables. I'm also careful not to drink too much alcohol.",
+          "audio": "dialogue/d05_006_suzuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "参考になります。私もやってみます。",
+          "english": "That's helpful. I'll try it too.",
+          "audio": "dialogue/d05_007_tanaka.mp3"
+        }
+      ]
     }
   ]
 }

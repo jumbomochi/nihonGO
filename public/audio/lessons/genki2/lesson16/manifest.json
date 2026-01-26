@@ -1,8 +1,10 @@
 {
   "book": "genki2",
   "lesson": 16,
-  "vocabulary_count": 40,
-  "dialogue_count": 10,
+  "vocabulary_count": 95,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 35,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "忘れ物",
@@ -19,332 +21,897 @@
       "audio": "vocabulary/002_otoshimono.mp3"
     },
     {
+      "japanese": "財布",
+      "reading": "さいふ",
+      "romaji": "saifu",
+      "english": "wallet",
+      "audio": "vocabulary/003_saifu.mp3"
+    },
+    {
+      "japanese": "傘",
+      "reading": "かさ",
+      "romaji": "kasa",
+      "english": "umbrella",
+      "audio": "vocabulary/004_kasa.mp3"
+    },
+    {
+      "japanese": "携帯電話",
+      "reading": "けいたいでんわ",
+      "romaji": "keitai denwa",
+      "english": "cell phone",
+      "audio": "vocabulary/005_keitai_denwa.mp3"
+    },
+    {
+      "japanese": "スマートフォン",
+      "reading": "スマートフォン",
+      "romaji": "sumaatofon",
+      "english": "smartphone",
+      "audio": "vocabulary/006_sumaatofon.mp3"
+    },
+    {
+      "japanese": "かばん",
+      "reading": "かばん",
+      "romaji": "kaban",
+      "english": "bag",
+      "audio": "vocabulary/007_kaban.mp3"
+    },
+    {
+      "japanese": "マフラー",
+      "reading": "マフラー",
+      "romaji": "mafuraa",
+      "english": "scarf; muffler",
+      "audio": "vocabulary/008_mafuraa.mp3"
+    },
+    {
+      "japanese": "鍵",
+      "reading": "かぎ",
+      "romaji": "kagi",
+      "english": "key",
+      "audio": "vocabulary/009_kagi.mp3"
+    },
+    {
+      "japanese": "定期券",
+      "reading": "ていきけん",
+      "romaji": "teikiken",
+      "english": "commuter pass",
+      "audio": "vocabulary/010_teikiken.mp3"
+    },
+    {
       "japanese": "交番",
       "reading": "こうばん",
       "romaji": "kouban",
       "english": "police box",
-      "audio": "vocabulary/003_kouban.mp3"
+      "audio": "vocabulary/011_kouban.mp3"
+    },
+    {
+      "japanese": "忘れ物センター",
+      "reading": "わすれものセンター",
+      "romaji": "wasuremono sentaa",
+      "english": "lost and found center",
+      "audio": "vocabulary/012_wasuremono_sentaa.mp3"
     },
     {
       "japanese": "棚",
       "reading": "たな",
       "romaji": "tana",
       "english": "shelf",
-      "audio": "vocabulary/004_tana.mp3"
+      "audio": "vocabulary/013_tana.mp3"
+    },
+    {
+      "japanese": "窓口",
+      "reading": "まどぐち",
+      "romaji": "madoguchi",
+      "english": "counter; service window",
+      "audio": "vocabulary/014_madoguchi.mp3"
+    },
+    {
+      "japanese": "受付",
+      "reading": "うけつけ",
+      "romaji": "uketsuke",
+      "english": "reception desk",
+      "audio": "vocabulary/015_uketsuke.mp3"
+    },
+    {
+      "japanese": "案内所",
+      "reading": "あんないじょ",
+      "romaji": "annaijo",
+      "english": "information center",
+      "audio": "vocabulary/016_annaijo.mp3"
+    },
+    {
+      "japanese": "ベンチ",
+      "reading": "ベンチ",
+      "romaji": "benchi",
+      "english": "bench",
+      "audio": "vocabulary/017_benchi.mp3"
+    },
+    {
+      "japanese": "窓際",
+      "reading": "まどぎわ",
+      "romaji": "madogiwa",
+      "english": "by the window",
+      "audio": "vocabulary/018_madogiwa.mp3"
+    },
+    {
+      "japanese": "席",
+      "reading": "せき",
+      "romaji": "seki",
+      "english": "seat",
+      "audio": "vocabulary/019_seki.mp3"
+    },
+    {
+      "japanese": "場所",
+      "reading": "ばしょ",
+      "romaji": "basho",
+      "english": "place; location",
+      "audio": "vocabulary/020_basho.mp3"
     },
     {
       "japanese": "住所",
       "reading": "じゅうしょ",
       "romaji": "juusho",
       "english": "address",
-      "audio": "vocabulary/005_juusho.mp3"
+      "audio": "vocabulary/021_juusho.mp3"
     },
     {
       "japanese": "電話番号",
       "reading": "でんわばんごう",
       "romaji": "denwa bangou",
       "english": "phone number",
-      "audio": "vocabulary/006_denwa_bangou.mp3"
+      "audio": "vocabulary/022_denwa_bangou.mp3"
     },
     {
-      "japanese": "届ける",
-      "reading": "とどける",
-      "romaji": "todokeru",
-      "english": "to deliver; to report",
-      "audio": "vocabulary/007_todokeru.mp3"
+      "japanese": "連絡先",
+      "reading": "れんらくさき",
+      "romaji": "renrakusaki",
+      "english": "contact information",
+      "audio": "vocabulary/023_renrakusaki.mp3"
     },
     {
-      "japanese": "届く",
-      "reading": "とどく",
-      "romaji": "todoku",
-      "english": "to arrive; to reach",
-      "audio": "vocabulary/008_todoku.mp3"
+      "japanese": "特徴",
+      "reading": "とくちょう",
+      "romaji": "tokuchou",
+      "english": "characteristic; feature",
+      "audio": "vocabulary/024_tokuchou.mp3"
     },
     {
-      "japanese": "見つかる",
-      "reading": "みつかる",
-      "romaji": "mitsukaru",
-      "english": "to be found",
-      "audio": "vocabulary/009_mitsukaru.mp3"
+      "japanese": "中身",
+      "reading": "なかみ",
+      "romaji": "nakami",
+      "english": "contents; inside",
+      "audio": "vocabulary/025_nakami.mp3"
     },
     {
-      "japanese": "見つける",
-      "reading": "みつける",
-      "romaji": "mitsukeru",
-      "english": "to find",
-      "audio": "vocabulary/010_mitsukeru.mp3"
+      "japanese": "ケース",
+      "reading": "ケース",
+      "romaji": "keesu",
+      "english": "case; cover",
+      "audio": "vocabulary/026_keesu.mp3"
+    },
+    {
+      "japanese": "チャック",
+      "reading": "チャック",
+      "romaji": "chakku",
+      "english": "zipper",
+      "audio": "vocabulary/027_chakku.mp3"
+    },
+    {
+      "japanese": "忘れる",
+      "reading": "わすれる",
+      "romaji": "wasureru",
+      "english": "to forget",
+      "audio": "vocabulary/028_wasureru.mp3"
+    },
+    {
+      "japanese": "なくす",
+      "reading": "なくす",
+      "romaji": "nakusu",
+      "english": "to lose (something)",
+      "audio": "vocabulary/029_nakusu.mp3"
     },
     {
       "japanese": "落とす",
       "reading": "おとす",
       "romaji": "otosu",
       "english": "to drop",
-      "audio": "vocabulary/011_otosu.mp3"
+      "audio": "vocabulary/030_otosu.mp3"
     },
     {
       "japanese": "落ちる",
       "reading": "おちる",
       "romaji": "ochiru",
       "english": "to fall",
-      "audio": "vocabulary/012_ochiru.mp3"
+      "audio": "vocabulary/031_ochiru.mp3"
+    },
+    {
+      "japanese": "見つかる",
+      "reading": "みつかる",
+      "romaji": "mitsukaru",
+      "english": "to be found",
+      "audio": "vocabulary/032_mitsukaru.mp3"
+    },
+    {
+      "japanese": "見つける",
+      "reading": "みつける",
+      "romaji": "mitsukeru",
+      "english": "to find",
+      "audio": "vocabulary/033_mitsukeru.mp3"
+    },
+    {
+      "japanese": "届ける",
+      "reading": "とどける",
+      "romaji": "todokeru",
+      "english": "to deliver; to report",
+      "audio": "vocabulary/034_todokeru.mp3"
+    },
+    {
+      "japanese": "届く",
+      "reading": "とどく",
+      "romaji": "todoku",
+      "english": "to arrive; to reach",
+      "audio": "vocabulary/035_todoku.mp3"
+    },
+    {
+      "japanese": "探す",
+      "reading": "さがす",
+      "romaji": "sagasu",
+      "english": "to look for; to search",
+      "audio": "vocabulary/036_sagasu.mp3"
+    },
+    {
+      "japanese": "預かる",
+      "reading": "あずかる",
+      "romaji": "azukaru",
+      "english": "to keep; to hold (for someone)",
+      "audio": "vocabulary/037_azukaru.mp3"
+    },
+    {
+      "japanese": "置き忘れる",
+      "reading": "おきわすれる",
+      "romaji": "okiwasureru",
+      "english": "to leave behind; to misplace",
+      "audio": "vocabulary/038_okiwasureru.mp3"
+    },
+    {
+      "japanese": "気づく",
+      "reading": "きづく",
+      "romaji": "kizuku",
+      "english": "to notice",
+      "audio": "vocabulary/039_kizuku.mp3"
     },
     {
       "japanese": "置く",
       "reading": "おく",
       "romaji": "oku",
       "english": "to put; to place",
-      "audio": "vocabulary/013_oku.mp3"
+      "audio": "vocabulary/040_oku.mp3"
     },
     {
       "japanese": "閉まる",
       "reading": "しまる",
       "romaji": "shimaru",
       "english": "to close (intransitive)",
-      "audio": "vocabulary/014_shimaru.mp3"
+      "audio": "vocabulary/041_shimaru.mp3"
     },
     {
       "japanese": "閉める",
       "reading": "しめる",
       "romaji": "shimeru",
       "english": "to close (transitive)",
-      "audio": "vocabulary/015_shimeru.mp3"
+      "audio": "vocabulary/042_shimeru.mp3"
     },
     {
       "japanese": "開く",
       "reading": "あく",
       "romaji": "aku",
       "english": "to open (intransitive)",
-      "audio": "vocabulary/016_aku.mp3"
+      "audio": "vocabulary/043_aku.mp3"
     },
     {
       "japanese": "開ける",
       "reading": "あける",
       "romaji": "akeru",
       "english": "to open (transitive)",
-      "audio": "vocabulary/017_akeru.mp3"
+      "audio": "vocabulary/044_akeru.mp3"
     },
     {
       "japanese": "壊れる",
       "reading": "こわれる",
       "romaji": "kowareru",
       "english": "to break (intransitive)",
-      "audio": "vocabulary/018_kowareru.mp3"
+      "audio": "vocabulary/045_kowareru.mp3"
     },
     {
       "japanese": "壊す",
       "reading": "こわす",
       "romaji": "kowasu",
       "english": "to break (transitive)",
-      "audio": "vocabulary/019_kowasu.mp3"
-    },
-    {
-      "japanese": "汚れる",
-      "reading": "よごれる",
-      "romaji": "yogoreru",
-      "english": "to get dirty",
-      "audio": "vocabulary/020_yogoreru.mp3"
-    },
-    {
-      "japanese": "汚す",
-      "reading": "よごす",
-      "romaji": "yogosu",
-      "english": "to make dirty",
-      "audio": "vocabulary/021_yogosu.mp3"
-    },
-    {
-      "japanese": "～てある",
-      "reading": "～てある",
-      "romaji": "~te aru",
-      "english": "is in state of (resultative)",
-      "audio": "vocabulary/022_te_aru.mp3"
-    },
-    {
-      "japanese": "～てしまう",
-      "reading": "～てしまう",
-      "romaji": "~te shimau",
-      "english": "end up doing; completely do",
-      "audio": "vocabulary/023_te_shimau.mp3"
-    },
-    {
-      "japanese": "少々",
-      "reading": "しょうしょう",
-      "romaji": "shoushou",
-      "english": "a little (formal)",
-      "audio": "vocabulary/024_shoushou.mp3"
-    },
-    {
-      "japanese": "ご～",
-      "reading": "ご～",
-      "romaji": "go~",
-      "english": "honorific prefix",
-      "audio": "vocabulary/025_go.mp3"
-    },
-    {
-      "japanese": "確認",
-      "reading": "かくにん",
-      "romaji": "kakunin",
-      "english": "confirmation",
-      "audio": "vocabulary/026_kakunin.mp3"
-    },
-    {
-      "japanese": "片付ける",
-      "reading": "かたづける",
-      "romaji": "katazukeru",
-      "english": "to tidy up; to put away",
-      "audio": "vocabulary/027_katazukeru.mp3"
-    },
-    {
-      "japanese": "片付く",
-      "reading": "かたづく",
-      "romaji": "katazuku",
-      "english": "to be tidied up",
-      "audio": "vocabulary/028_katazuku.mp3"
+      "audio": "vocabulary/046_kowasu.mp3"
     },
     {
       "japanese": "消す",
       "reading": "けす",
       "romaji": "kesu",
       "english": "to turn off; to erase",
-      "audio": "vocabulary/029_kesu.mp3"
+      "audio": "vocabulary/047_kesu.mp3"
     },
     {
       "japanese": "消える",
       "reading": "きえる",
       "romaji": "kieru",
       "english": "to disappear; to go out",
-      "audio": "vocabulary/030_kieru.mp3"
+      "audio": "vocabulary/048_kieru.mp3"
     },
     {
       "japanese": "つける",
       "reading": "つける",
       "romaji": "tsukeru",
       "english": "to turn on; to attach",
-      "audio": "vocabulary/031_tsukeru.mp3"
+      "audio": "vocabulary/049_tsukeru.mp3"
     },
     {
       "japanese": "つく",
       "reading": "つく",
       "romaji": "tsuku",
       "english": "to be turned on; to be attached",
-      "audio": "vocabulary/032_tsuku.mp3"
+      "audio": "vocabulary/050_tsuku.mp3"
+    },
+    {
+      "japanese": "残る",
+      "reading": "のこる",
+      "romaji": "nokoru",
+      "english": "to remain (intransitive)",
+      "audio": "vocabulary/051_nokoru.mp3"
+    },
+    {
+      "japanese": "申し訳ありません",
+      "reading": "もうしわけありません",
+      "romaji": "moushiwake arimasen",
+      "english": "I am terribly sorry (formal)",
+      "audio": "vocabulary/052_moushiwake_arimasen.mp3"
+    },
+    {
+      "japanese": "すみません",
+      "reading": "すみません",
+      "romaji": "sumimasen",
+      "english": "I am sorry; Excuse me",
+      "audio": "vocabulary/053_sumimasen.mp3"
+    },
+    {
+      "japanese": "ごめんなさい",
+      "reading": "ごめんなさい",
+      "romaji": "gomen nasai",
+      "english": "I am sorry (polite)",
+      "audio": "vocabulary/054_gomen_nasai.mp3"
+    },
+    {
+      "japanese": "お手数をおかけして",
+      "reading": "おてすうをおかけして",
+      "romaji": "otesuu wo okake shite",
+      "english": "sorry for the trouble",
+      "audio": "vocabulary/055_otesuu_wo_okake_shite.mp3"
+    },
+    {
+      "japanese": "失礼しました",
+      "reading": "しつれいしました",
+      "romaji": "shitsurei shimashita",
+      "english": "I was rude; Excuse me (past)",
+      "audio": "vocabulary/056_shitsurei_shimashita.mp3"
+    },
+    {
+      "japanese": "以後気をつけます",
+      "reading": "いごきをつけます",
+      "romaji": "igo ki wo tsukemasu",
+      "english": "I will be careful from now on",
+      "audio": "vocabulary/057_igo_ki_wo_tsukemasu.mp3"
+    },
+    {
+      "japanese": "～てある",
+      "reading": "～てある",
+      "romaji": "~te aru",
+      "english": "is in state of (resultative)",
+      "audio": "vocabulary/058_te_aru.mp3"
+    },
+    {
+      "japanese": "～てしまう",
+      "reading": "～てしまう",
+      "romaji": "~te shimau",
+      "english": "end up doing; completely do",
+      "audio": "vocabulary/059_te_shimau.mp3"
+    },
+    {
+      "japanese": "～ちゃう",
+      "reading": "～ちゃう",
+      "romaji": "~chau",
+      "english": "casual form of ~てしまう",
+      "audio": "vocabulary/060_chau.mp3"
+    },
+    {
+      "japanese": "～ておく",
+      "reading": "～ておく",
+      "romaji": "~te oku",
+      "english": "do in advance; leave in state",
+      "audio": "vocabulary/061_te_oku.mp3"
+    },
+    {
+      "japanese": "～ばいい",
+      "reading": "～ばいい",
+      "romaji": "~ba ii",
+      "english": "should; it would be good if",
+      "audio": "vocabulary/062_ba_ii.mp3"
+    },
+    {
+      "japanese": "少々",
+      "reading": "しょうしょう",
+      "romaji": "shoushou",
+      "english": "a little (formal)",
+      "audio": "vocabulary/063_shoushou.mp3"
+    },
+    {
+      "japanese": "ご～",
+      "reading": "ご～",
+      "romaji": "go~",
+      "english": "honorific prefix",
+      "audio": "vocabulary/064_go.mp3"
+    },
+    {
+      "japanese": "かしこまりました",
+      "reading": "かしこまりました",
+      "romaji": "kashikomarimashita",
+      "english": "certainly; I understand (formal)",
+      "audio": "vocabulary/065_kashikomarimashita.mp3"
+    },
+    {
+      "japanese": "お待たせしました",
+      "reading": "おまたせしました",
+      "romaji": "omatase shimashita",
+      "english": "thank you for waiting",
+      "audio": "vocabulary/066_omatase_shimashita.mp3"
+    },
+    {
+      "japanese": "ご都合",
+      "reading": "ごつごう",
+      "romaji": "gotsugou",
+      "english": "convenience (honorific)",
+      "audio": "vocabulary/067_gotsugou.mp3"
+    },
+    {
+      "japanese": "確認",
+      "reading": "かくにん",
+      "romaji": "kakunin",
+      "english": "confirmation; checking",
+      "audio": "vocabulary/068_kakunin.mp3"
+    },
+    {
+      "japanese": "バックアップ",
+      "reading": "バックアップ",
+      "romaji": "bakkuappu",
+      "english": "backup",
+      "audio": "vocabulary/069_bakkuappu.mp3"
+    },
+    {
+      "japanese": "保存",
+      "reading": "ほぞん",
+      "romaji": "hozon",
+      "english": "saving (data); preservation",
+      "audio": "vocabulary/070_hozon.mp3"
+    },
+    {
+      "japanese": "失敗",
+      "reading": "しっぱい",
+      "romaji": "shippai",
+      "english": "failure; mistake",
+      "audio": "vocabulary/071_shippai.mp3"
+    },
+    {
+      "japanese": "問題",
+      "reading": "もんだい",
+      "romaji": "mondai",
+      "english": "problem; question",
+      "audio": "vocabulary/072_mondai.mp3"
+    },
+    {
+      "japanese": "大切",
+      "reading": "たいせつ",
+      "romaji": "taisetsu",
+      "english": "important; precious",
+      "audio": "vocabulary/073_taisetsu.mp3"
+    },
+    {
+      "japanese": "大事",
+      "reading": "だいじ",
+      "romaji": "daiji",
+      "english": "important; valuable",
+      "audio": "vocabulary/074_daiji.mp3"
+    },
+    {
+      "japanese": "汚れる",
+      "reading": "よごれる",
+      "romaji": "yogoreru",
+      "english": "to get dirty",
+      "audio": "vocabulary/075_yogoreru.mp3"
+    },
+    {
+      "japanese": "汚す",
+      "reading": "よごす",
+      "romaji": "yogosu",
+      "english": "to make dirty",
+      "audio": "vocabulary/076_yogosu.mp3"
     },
     {
       "japanese": "直す",
       "reading": "なおす",
       "romaji": "naosu",
       "english": "to fix; to repair",
-      "audio": "vocabulary/033_naosu.mp3"
+      "audio": "vocabulary/077_naosu.mp3"
     },
     {
       "japanese": "直る",
       "reading": "なおる",
       "romaji": "naoru",
       "english": "to be fixed; to heal",
-      "audio": "vocabulary/034_naoru.mp3"
-    },
-    {
-      "japanese": "窓",
-      "reading": "まど",
-      "romaji": "mado",
-      "english": "window",
-      "audio": "vocabulary/035_mado.mp3"
-    },
-    {
-      "japanese": "ドア",
-      "reading": "ドア",
-      "romaji": "doa",
-      "english": "door",
-      "audio": "vocabulary/036_doa.mp3"
-    },
-    {
-      "japanese": "電気",
-      "reading": "でんき",
-      "romaji": "denki",
-      "english": "electricity; light",
-      "audio": "vocabulary/037_denki.mp3"
-    },
-    {
-      "japanese": "エアコン",
-      "reading": "エアコン",
-      "romaji": "eakon",
-      "english": "air conditioner",
-      "audio": "vocabulary/038_eakon.mp3"
+      "audio": "vocabulary/078_naoru.mp3"
     },
     {
       "japanese": "次から",
       "reading": "つぎから",
       "romaji": "tsugi kara",
-      "english": "from now on",
-      "audio": "vocabulary/039_tsugi_kara.mp3"
+      "english": "from now on; from next time",
+      "audio": "vocabulary/079_tsugi_kara.mp3"
     },
     {
       "japanese": "気をつける",
       "reading": "きをつける",
       "romaji": "ki wo tsukeru",
       "english": "to be careful",
-      "audio": "vocabulary/040_ki_wo_tsukeru.mp3"
+      "audio": "vocabulary/080_ki_wo_tsukeru.mp3"
+    },
+    {
+      "japanese": "よかった",
+      "reading": "よかった",
+      "romaji": "yokatta",
+      "english": "good thing; I am relieved",
+      "audio": "vocabulary/081_yokatta.mp3"
+    },
+    {
+      "japanese": "助かる",
+      "reading": "たすかる",
+      "romaji": "tasukaru",
+      "english": "to be saved; to be helpful",
+      "audio": "vocabulary/082_tasukaru.mp3"
+    },
+    {
+      "japanese": "取りに行く",
+      "reading": "とりにいく",
+      "romaji": "tori ni iku",
+      "english": "to go pick up",
+      "audio": "vocabulary/083_tori_ni_iku.mp3"
+    },
+    {
+      "japanese": "降りる",
+      "reading": "おりる",
+      "romaji": "oriru",
+      "english": "to get off (vehicle)",
+      "audio": "vocabulary/084_oriru.mp3"
+    },
+    {
+      "japanese": "座る",
+      "reading": "すわる",
+      "romaji": "suwaru",
+      "english": "to sit",
+      "audio": "vocabulary/085_suwaru.mp3"
+    },
+    {
+      "japanese": "窓",
+      "reading": "まど",
+      "romaji": "mado",
+      "english": "window",
+      "audio": "vocabulary/086_mado.mp3"
+    },
+    {
+      "japanese": "ドア",
+      "reading": "ドア",
+      "romaji": "doa",
+      "english": "door",
+      "audio": "vocabulary/087_doa.mp3"
+    },
+    {
+      "japanese": "電気",
+      "reading": "でんき",
+      "romaji": "denki",
+      "english": "electricity; light",
+      "audio": "vocabulary/088_denki.mp3"
+    },
+    {
+      "japanese": "エアコン",
+      "reading": "エアコン",
+      "romaji": "eakon",
+      "english": "air conditioner",
+      "audio": "vocabulary/089_eakon.mp3"
+    },
+    {
+      "japanese": "ファイル",
+      "reading": "ファイル",
+      "romaji": "fairu",
+      "english": "file",
+      "audio": "vocabulary/090_fairu.mp3"
+    },
+    {
+      "japanese": "データ",
+      "reading": "データ",
+      "romaji": "deeta",
+      "english": "data",
+      "audio": "vocabulary/091_deeta.mp3"
+    },
+    {
+      "japanese": "ポケット",
+      "reading": "ポケット",
+      "romaji": "poketto",
+      "english": "pocket",
+      "audio": "vocabulary/092_poketto.mp3"
+    },
+    {
+      "japanese": "花",
+      "reading": "はな",
+      "romaji": "hana",
+      "english": "flower",
+      "audio": "vocabulary/093_hana.mp3"
+    },
+    {
+      "japanese": "午後",
+      "reading": "ごご",
+      "romaji": "gogo",
+      "english": "afternoon; PM",
+      "audio": "vocabulary/094_gogo.mp3"
+    },
+    {
+      "japanese": "～頃",
+      "reading": "～ごろ",
+      "romaji": "~goro",
+      "english": "around (time)",
+      "audio": "vocabulary/095_goro.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "すみません、電車に傘を忘れてしまったんですが...",
-      "english": "Excuse me, I accidentally left my umbrella on the train...",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l16-d01",
+      "title": "At the Lost and Found",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "すみません、電車に傘を忘れてしまったんですが...",
+          "english": "Excuse me, I accidentally left my umbrella on the train...",
+          "audio": "dialogue/d01_001_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "どんな傘ですか。",
+          "english": "What kind of umbrella is it?",
+          "audio": "dialogue/d01_002_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "赤い傘です。名前が書いてあります。",
+          "english": "It's a red umbrella. My name is written on it.",
+          "audio": "dialogue/d01_003_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "少々お待ちください。探してみます。",
+          "english": "Please wait a moment. I'll look for it.",
+          "audio": "dialogue/d01_004_staff.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "この傘ですか。棚に置いてありました。",
+          "english": "Is this the umbrella? It was placed on the shelf.",
+          "audio": "dialogue/d01_005_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "あ、それです！よかった、見つかって。",
+          "english": "Oh, that's it! I'm glad it was found.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "お名前とご住所を書いていただけますか。",
+          "english": "Could you please write your name and address?",
+          "audio": "dialogue/d01_007_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい。ここに書けばいいですか。",
+          "english": "Yes. Should I write here?",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Staff",
-      "japanese": "どんな傘ですか。",
-      "english": "What kind of umbrella is it?",
-      "audio": "dialogue/002_staff.mp3"
+      "id": "l16-d02",
+      "title": "A Mistake at Work",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "山本部長、申し訳ありません。大切なファイルを消してしまいました。",
+          "english": "Manager Yamamoto, I am terribly sorry. I accidentally deleted an important file.",
+          "audio": "dialogue/d02_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Yamamoto",
+          "japanese": "何？バックアップは取ってあるか。",
+          "english": "What? Is there a backup saved?",
+          "audio": "dialogue/d02_002_yamamoto.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "確認してみます...あ、先週のバックアップが残っていました。",
+          "english": "Let me check... Oh, last week's backup is still there.",
+          "audio": "dialogue/d02_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Yamamoto",
+          "japanese": "よかった。次からは気をつけてくれ。大事なデータは二つの場所に保存しておくように。",
+          "english": "Good. Be careful from now on. Make sure to save important data in two places.",
+          "audio": "dialogue/d02_004_yamamoto.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、本当に申し訳ありませんでした。以後気をつけます。",
+          "english": "Yes, I am truly sorry. I will be careful from now on.",
+          "audio": "dialogue/d02_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Yamamoto",
+          "japanese": "失敗は誰でもある。問題はそこから何を学ぶかだ。",
+          "english": "Everyone makes mistakes. The question is what you learn from them.",
+          "audio": "dialogue/d02_006_yamamoto.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "赤い傘です。名前が書いてあります。",
-      "english": "It\\",
-      "audio": "dialogue/003_mary.mp3"
+      "id": "l16-d03",
+      "title": "Finding a Lost Wallet",
+      "lines": [
+        {
+          "speaker": "Ken",
+          "japanese": "あれ、これ誰かの財布じゃない？落ちてるよ。",
+          "english": "Huh, isn't this someone's wallet? It fell here.",
+          "audio": "dialogue/d03_001_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "え！それ、私のだ！落としちゃったんだ。気づかなかった。",
+          "english": "Eh! That's mine! I dropped it. I didn't notice.",
+          "audio": "dialogue/d03_002_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "よかったね、すぐ見つかって。中身、確認した方がいいよ。",
+          "english": "Good thing it was found right away. You should check what's inside.",
+          "audio": "dialogue/d03_003_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "うん...大丈夫、全部入ってる。ありがとう、助かった！",
+          "english": "Yeah... It's fine, everything is inside. Thanks, you saved me!",
+          "audio": "dialogue/d03_004_yuki.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "いいよ。でも気をつけてね。ポケットに入れておかないと。",
+          "english": "No problem. But be careful. You should keep it in your pocket.",
+          "audio": "dialogue/d03_005_ken.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "うん、そうする。カバンのチャックも閉めておくね。",
+          "english": "Yeah, I will. I'll also keep the bag zipper closed.",
+          "audio": "dialogue/d03_006_yuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Staff",
-      "japanese": "少々お待ちください。探してみます。",
-      "english": "Please wait a moment. I'll look for it.",
-      "audio": "dialogue/004_staff.mp3"
+      "id": "l16-d04",
+      "title": "At the Police Box",
+      "lines": [
+        {
+          "speaker": "Robert",
+          "japanese": "すみません、携帯電話をなくしてしまったんですが。",
+          "english": "Excuse me, I lost my cell phone.",
+          "audio": "dialogue/d04_001_robert.mp3"
+        },
+        {
+          "speaker": "Officer",
+          "japanese": "いつ、どこでなくされましたか。",
+          "english": "When and where did you lose it?",
+          "audio": "dialogue/d04_002_officer.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "今日の午後、たぶん公園のベンチに置き忘れたと思います。",
+          "english": "This afternoon. I think I left it on a bench in the park.",
+          "audio": "dialogue/d04_003_robert.mp3"
+        },
+        {
+          "speaker": "Officer",
+          "japanese": "どんな携帯ですか。特徴を教えてください。",
+          "english": "What kind of phone is it? Please tell me its features.",
+          "audio": "dialogue/d04_004_officer.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "黒いスマートフォンで、青いケースがついています。",
+          "english": "It's a black smartphone with a blue case on it.",
+          "audio": "dialogue/d04_005_robert.mp3"
+        },
+        {
+          "speaker": "Officer",
+          "japanese": "連絡先を書いてください。届いたら、すぐご連絡します。",
+          "english": "Please write your contact information. If it's turned in, we'll contact you right away.",
+          "audio": "dialogue/d04_006_officer.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "お願いします。お手数をおかけしてすみません。",
+          "english": "Please. Sorry for the trouble.",
+          "audio": "dialogue/d04_007_robert.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Staff",
-      "japanese": "この傘ですか。棚に置いてありました。",
-      "english": "Is this the umbrella? It was placed on the shelf.",
-      "audio": "dialogue/005_staff.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "あ、それです！よかった、見つかって。",
-      "english": "Oh, that's it! I'm glad it was found.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Staff",
-      "japanese": "お名前とご住所を書いていただけますか。",
-      "english": "Could you please write your name and address?",
-      "audio": "dialogue/007_staff.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "はい。ここに書けばいいですか。",
-      "english": "Yes. Should I write here?",
-      "audio": "dialogue/008_mary.mp3"
-    },
-    {
-      "speaker": "Staff",
-      "japanese": "はい、そこにお願いします。次からは気をつけてくださいね。",
-      "english": "Yes, there please. Please be careful from now on.",
-      "audio": "dialogue/009_staff.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "ありがとうございます。電車を降りる前に確認しておきます。",
-      "english": "Thank you. I'll make sure to check before getting off the train.",
-      "audio": "dialogue/010_mary.mp3"
+      "id": "l16-d05",
+      "title": "Calling the Restaurant",
+      "lines": [
+        {
+          "speaker": "Staff",
+          "japanese": "はい、さくらレストランでございます。",
+          "english": "Hello, this is Sakura Restaurant.",
+          "audio": "dialogue/d05_001_staff.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "すみません、今日そちらで食事をした者ですが、マフラーを忘れてしまったかもしれません。",
+          "english": "Excuse me, I had a meal there today and may have left my scarf behind.",
+          "audio": "dialogue/d05_002_lisa.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "かしこまりました。何時頃いらっしゃいましたか。",
+          "english": "I understand. About what time were you here?",
+          "audio": "dialogue/d05_003_staff.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "午後一時頃です。二階の窓際の席に座っていました。",
+          "english": "Around 1 PM. I was sitting at the window seat on the second floor.",
+          "audio": "dialogue/d05_004_lisa.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "少々お待ちください。確認いたします。",
+          "english": "Please wait a moment. Let me check.",
+          "audio": "dialogue/d05_005_staff.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "お待たせしました。ピンクのマフラーがお預かりしてあります。",
+          "english": "Thank you for waiting. We have a pink scarf being kept here.",
+          "audio": "dialogue/d05_006_staff.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "それです！明日取りに行ってもいいですか。",
+          "english": "That's it! May I come pick it up tomorrow?",
+          "audio": "dialogue/d05_007_lisa.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "はい、一週間お預かりしておきますので、ご都合のよい時にお越しください。",
+          "english": "Yes, we'll keep it for one week, so please come at your convenience.",
+          "audio": "dialogue/d05_008_staff.mp3"
+        }
+      ]
     }
   ]
 }

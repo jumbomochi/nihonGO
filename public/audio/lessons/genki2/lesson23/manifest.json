@@ -1,8 +1,10 @@
 {
   "book": "genki2",
   "lesson": 23,
-  "vocabulary_count": 20,
-  "dialogue_count": 7,
+  "vocabulary_count": 65,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 38,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "別れ",
@@ -19,174 +21,705 @@
       "audio": "vocabulary/002_soubetsukai.mp3"
     },
     {
-      "japanese": "思い出",
-      "reading": "おもいで",
-      "romaji": "omoide",
-      "english": "memory; memento",
-      "audio": "vocabulary/003_omoide.mp3"
+      "japanese": "見送り",
+      "reading": "みおくり",
+      "romaji": "miokuri",
+      "english": "seeing off; send-off",
+      "audio": "vocabulary/003_miokuri.mp3"
     },
     {
-      "japanese": "約束",
-      "reading": "やくそく",
-      "romaji": "yakusoku",
-      "english": "promise; appointment",
-      "audio": "vocabulary/004_yakusoku.mp3"
-    },
-    {
-      "japanese": "連絡",
-      "reading": "れんらく",
-      "romaji": "renraku",
-      "english": "contact; communication",
-      "audio": "vocabulary/005_renraku.mp3"
-    },
-    {
-      "japanese": "機会",
-      "reading": "きかい",
-      "romaji": "kikai",
-      "english": "opportunity; chance",
-      "audio": "vocabulary/006_kikai.mp3"
-    },
-    {
-      "japanese": "将来",
-      "reading": "しょうらい",
-      "romaji": "shourai",
-      "english": "future",
-      "audio": "vocabulary/007_shourai.mp3"
-    },
-    {
-      "japanese": "夢",
-      "reading": "ゆめ",
-      "romaji": "yume",
-      "english": "dream",
-      "audio": "vocabulary/008_yume.mp3"
-    },
-    {
-      "japanese": "さびしい",
-      "reading": "さびしい",
-      "romaji": "sabishii",
-      "english": "lonely; sad",
-      "audio": "vocabulary/009_sabishii.mp3"
-    },
-    {
-      "japanese": "なつかしい",
-      "reading": "なつかしい",
-      "romaji": "natsukashii",
-      "english": "nostalgic; dear",
-      "audio": "vocabulary/010_natsukashii.mp3"
-    },
-    {
-      "japanese": "うれしい",
-      "reading": "うれしい",
-      "romaji": "ureshii",
-      "english": "happy; glad",
-      "audio": "vocabulary/011_ureshii.mp3"
-    },
-    {
-      "japanese": "ざんねん",
-      "reading": "ざんねん",
-      "romaji": "zannen",
-      "english": "regrettable; disappointing",
-      "audio": "vocabulary/012_zannen.mp3"
-    },
-    {
-      "japanese": "戻る",
-      "reading": "もどる",
-      "romaji": "modoru",
-      "english": "to return; to go back",
-      "audio": "vocabulary/013_modoru.mp3"
-    },
-    {
-      "japanese": "見送る",
-      "reading": "みおくる",
-      "romaji": "miokuru",
-      "english": "to see off",
-      "audio": "vocabulary/014_miokuru.mp3"
+      "japanese": "お別れ",
+      "reading": "おわかれ",
+      "romaji": "owakare",
+      "english": "farewell (polite)",
+      "audio": "vocabulary/004_owakare.mp3"
     },
     {
       "japanese": "別れる",
       "reading": "わかれる",
       "romaji": "wakareru",
       "english": "to part; to separate",
-      "audio": "vocabulary/015_wakareru.mp3"
+      "audio": "vocabulary/005_wakareru.mp3"
+    },
+    {
+      "japanese": "見送る",
+      "reading": "みおくる",
+      "romaji": "miokuru",
+      "english": "to see off",
+      "audio": "vocabulary/006_miokuru.mp3"
+    },
+    {
+      "japanese": "去る",
+      "reading": "さる",
+      "romaji": "saru",
+      "english": "to leave; to depart",
+      "audio": "vocabulary/007_saru.mp3"
+    },
+    {
+      "japanese": "戻る",
+      "reading": "もどる",
+      "romaji": "modoru",
+      "english": "to return; to go back",
+      "audio": "vocabulary/008_modoru.mp3"
+    },
+    {
+      "japanese": "帰国する",
+      "reading": "きこくする",
+      "romaji": "kikoku suru",
+      "english": "to return to one\\",
+      "audio": "vocabulary/009_kikoku_suru.mp3"
+    },
+    {
+      "japanese": "旅立つ",
+      "reading": "たびだつ",
+      "romaji": "tabidatsu",
+      "english": "to depart on a journey",
+      "audio": "vocabulary/010_tabidatsu.mp3"
+    },
+    {
+      "japanese": "感謝",
+      "reading": "かんしゃ",
+      "romaji": "kansha",
+      "english": "gratitude; appreciation",
+      "audio": "vocabulary/011_kansha.mp3"
     },
     {
       "japanese": "おかげで",
       "reading": "おかげで",
       "romaji": "okage de",
       "english": "thanks to",
-      "audio": "vocabulary/016_okage_de.mp3"
+      "audio": "vocabulary/012_okage_de.mp3"
     },
     {
-      "japanese": "いつか",
-      "reading": "いつか",
-      "romaji": "itsuka",
-      "english": "someday",
-      "audio": "vocabulary/017_itsuka.mp3"
+      "japanese": "お世話になる",
+      "reading": "おせわになる",
+      "romaji": "osewa ni naru",
+      "english": "to be taken care of; to be indebted to",
+      "audio": "vocabulary/013_osewa_ni_naru.mp3"
+    },
+    {
+      "japanese": "ありがたい",
+      "reading": "ありがたい",
+      "romaji": "arigatai",
+      "english": "grateful; thankful",
+      "audio": "vocabulary/014_arigatai.mp3"
+    },
+    {
+      "japanese": "恩",
+      "reading": "おん",
+      "romaji": "on",
+      "english": "favor; debt of gratitude",
+      "audio": "vocabulary/015_on.mp3"
+    },
+    {
+      "japanese": "恩返し",
+      "reading": "おんがえし",
+      "romaji": "ongaeshi",
+      "english": "repaying a favor",
+      "audio": "vocabulary/016_ongaeshi.mp3"
+    },
+    {
+      "japanese": "感謝する",
+      "reading": "かんしゃする",
+      "romaji": "kansha suru",
+      "english": "to be grateful; to appreciate",
+      "audio": "vocabulary/017_kansha_suru.mp3"
+    },
+    {
+      "japanese": "お礼",
+      "reading": "おれい",
+      "romaji": "orei",
+      "english": "thanks; gratitude; gift",
+      "audio": "vocabulary/018_orei.mp3"
+    },
+    {
+      "japanese": "さびしい",
+      "reading": "さびしい",
+      "romaji": "sabishii",
+      "english": "lonely; sad",
+      "audio": "vocabulary/019_sabishii.mp3"
+    },
+    {
+      "japanese": "なつかしい",
+      "reading": "なつかしい",
+      "romaji": "natsukashii",
+      "english": "nostalgic; dear",
+      "audio": "vocabulary/020_natsukashii.mp3"
+    },
+    {
+      "japanese": "うれしい",
+      "reading": "うれしい",
+      "romaji": "ureshii",
+      "english": "happy; glad",
+      "audio": "vocabulary/021_ureshii.mp3"
+    },
+    {
+      "japanese": "悲しい",
+      "reading": "かなしい",
+      "romaji": "kanashii",
+      "english": "sad; sorrowful",
+      "audio": "vocabulary/022_kanashii.mp3"
+    },
+    {
+      "japanese": "残念",
+      "reading": "ざんねん",
+      "romaji": "zannen",
+      "english": "regrettable; disappointing",
+      "audio": "vocabulary/023_zannen.mp3"
+    },
+    {
+      "japanese": "切ない",
+      "reading": "せつない",
+      "romaji": "setsunai",
+      "english": "painful; heartrending",
+      "audio": "vocabulary/024_setsunai.mp3"
+    },
+    {
+      "japanese": "涙",
+      "reading": "なみだ",
+      "romaji": "namida",
+      "english": "tears",
+      "audio": "vocabulary/025_namida.mp3"
+    },
+    {
+      "japanese": "泣く",
+      "reading": "なく",
+      "romaji": "naku",
+      "english": "to cry",
+      "audio": "vocabulary/026_naku.mp3"
+    },
+    {
+      "japanese": "感動する",
+      "reading": "かんどうする",
+      "romaji": "kandou suru",
+      "english": "to be moved; to be touched",
+      "audio": "vocabulary/027_kandou_suru.mp3"
+    },
+    {
+      "japanese": "恋しい",
+      "reading": "こいしい",
+      "romaji": "koishii",
+      "english": "dear; longed for; missed",
+      "audio": "vocabulary/028_koishii.mp3"
+    },
+    {
+      "japanese": "思い出",
+      "reading": "おもいで",
+      "romaji": "omoide",
+      "english": "memory; memento",
+      "audio": "vocabulary/029_omoide.mp3"
+    },
+    {
+      "japanese": "経験",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "audio": "vocabulary/030_keiken.mp3"
+    },
+    {
+      "japanese": "振り返る",
+      "reading": "ふりかえる",
+      "romaji": "furikaeru",
+      "english": "to look back; to reflect",
+      "audio": "vocabulary/031_furikaeru.mp3"
+    },
+    {
+      "japanese": "思い出す",
+      "reading": "おもいだす",
+      "romaji": "omoidasu",
+      "english": "to remember; to recall",
+      "audio": "vocabulary/032_omoidasu.mp3"
+    },
+    {
+      "japanese": "忘れる",
+      "reading": "わすれる",
+      "romaji": "wasureru",
+      "english": "to forget",
+      "audio": "vocabulary/033_wasureru.mp3"
+    },
+    {
+      "japanese": "記念",
+      "reading": "きねん",
+      "romaji": "kinen",
+      "english": "commemoration; memorial",
+      "audio": "vocabulary/034_kinen.mp3"
+    },
+    {
+      "japanese": "宝物",
+      "reading": "たからもの",
+      "romaji": "takaramono",
+      "english": "treasure; precious thing",
+      "audio": "vocabulary/035_takaramono.mp3"
+    },
+    {
+      "japanese": "約束",
+      "reading": "やくそく",
+      "romaji": "yakusoku",
+      "english": "promise; appointment",
+      "audio": "vocabulary/036_yakusoku.mp3"
+    },
+    {
+      "japanese": "誓う",
+      "reading": "ちかう",
+      "romaji": "chikau",
+      "english": "to vow; to pledge",
+      "audio": "vocabulary/037_chikau.mp3"
+    },
+    {
+      "japanese": "守る",
+      "reading": "まもる",
+      "romaji": "mamoru",
+      "english": "to keep (a promise); to protect",
+      "audio": "vocabulary/038_mamoru.mp3"
+    },
+    {
+      "japanese": "必ず",
+      "reading": "かならず",
+      "romaji": "kanarazu",
+      "english": "certainly; without fail",
+      "audio": "vocabulary/039_kanarazu.mp3"
+    },
+    {
+      "japanese": "絶対",
+      "reading": "ぜったい",
+      "romaji": "zettai",
+      "english": "absolutely; definitely",
+      "audio": "vocabulary/040_zettai.mp3"
     },
     {
       "japanese": "きっと",
       "reading": "きっと",
       "romaji": "kitto",
       "english": "surely; certainly",
-      "audio": "vocabulary/018_kitto.mp3"
+      "audio": "vocabulary/041_kitto.mp3"
+    },
+    {
+      "japanese": "連絡",
+      "reading": "れんらく",
+      "romaji": "renraku",
+      "english": "contact; communication",
+      "audio": "vocabulary/042_renraku.mp3"
+    },
+    {
+      "japanese": "連絡先",
+      "reading": "れんらくさき",
+      "romaji": "renrakusaki",
+      "english": "contact information",
+      "audio": "vocabulary/043_renrakusaki.mp3"
+    },
+    {
+      "japanese": "メッセージ",
+      "reading": "メッセージ",
+      "romaji": "messeeji",
+      "english": "message",
+      "audio": "vocabulary/044_messeeji.mp3"
+    },
+    {
+      "japanese": "ビデオ通話",
+      "reading": "ビデオつうわ",
+      "romaji": "bideo tsuuwa",
+      "english": "video call",
+      "audio": "vocabulary/045_bideo_tsuuwa.mp3"
+    },
+    {
+      "japanese": "時差",
+      "reading": "じさ",
+      "romaji": "jisa",
+      "english": "time difference",
+      "audio": "vocabulary/046_jisa.mp3"
+    },
+    {
+      "japanese": "連絡する",
+      "reading": "れんらくする",
+      "romaji": "renraku suru",
+      "english": "to contact; to get in touch",
+      "audio": "vocabulary/047_renraku_suru.mp3"
+    },
+    {
+      "japanese": "返事",
+      "reading": "へんじ",
+      "romaji": "henji",
+      "english": "reply; response",
+      "audio": "vocabulary/048_henji.mp3"
+    },
+    {
+      "japanese": "届く",
+      "reading": "とどく",
+      "romaji": "todoku",
+      "english": "to reach; to arrive",
+      "audio": "vocabulary/049_todoku.mp3"
+    },
+    {
+      "japanese": "将来",
+      "reading": "しょうらい",
+      "romaji": "shourai",
+      "english": "future",
+      "audio": "vocabulary/050_shourai.mp3"
+    },
+    {
+      "japanese": "夢",
+      "reading": "ゆめ",
+      "romaji": "yume",
+      "english": "dream",
+      "audio": "vocabulary/051_yume.mp3"
+    },
+    {
+      "japanese": "目標",
+      "reading": "もくひょう",
+      "romaji": "mokuhyou",
+      "english": "goal; objective",
+      "audio": "vocabulary/052_mokuhyou.mp3"
+    },
+    {
+      "japanese": "機会",
+      "reading": "きかい",
+      "romaji": "kikai",
+      "english": "opportunity; chance",
+      "audio": "vocabulary/053_kikai.mp3"
+    },
+    {
+      "japanese": "いつか",
+      "reading": "いつか",
+      "romaji": "itsuka",
+      "english": "someday",
+      "audio": "vocabulary/054_itsuka.mp3"
+    },
+    {
+      "japanese": "いずれ",
+      "reading": "いずれ",
+      "romaji": "izure",
+      "english": "eventually; someday",
+      "audio": "vocabulary/055_izure.mp3"
+    },
+    {
+      "japanese": "叶う",
+      "reading": "かなう",
+      "romaji": "kanau",
+      "english": "to come true; to be fulfilled",
+      "audio": "vocabulary/056_kanau.mp3"
+    },
+    {
+      "japanese": "願う",
+      "reading": "ねがう",
+      "romaji": "negau",
+      "english": "to wish; to hope",
+      "audio": "vocabulary/057_negau.mp3"
     },
     {
       "japanese": "お元気で",
       "reading": "おげんきで",
       "romaji": "ogenki de",
       "english": "take care (farewell)",
-      "audio": "vocabulary/019_ogenki_de.mp3"
+      "audio": "vocabulary/058_ogenki_de.mp3"
     },
     {
       "japanese": "気をつけて",
       "reading": "きをつけて",
       "romaji": "ki wo tsukete",
       "english": "be careful; take care",
-      "audio": "vocabulary/020_ki_wo_tsukete.mp3"
+      "audio": "vocabulary/059_ki_wo_tsukete.mp3"
+    },
+    {
+      "japanese": "また会いましょう",
+      "reading": "またあいましょう",
+      "romaji": "mata aimashou",
+      "english": "let us meet again",
+      "audio": "vocabulary/060_mata_aimashou.mp3"
+    },
+    {
+      "japanese": "お体に気をつけて",
+      "reading": "おからだにきをつけて",
+      "romaji": "okarada ni ki wo tsukete",
+      "english": "please take care of your health",
+      "audio": "vocabulary/061_okarada_ni_ki_wo_tsukete.mp3"
+    },
+    {
+      "japanese": "頑張って",
+      "reading": "がんばって",
+      "romaji": "ganbatte",
+      "english": "do your best; good luck",
+      "audio": "vocabulary/062_ganbatte.mp3"
+    },
+    {
+      "japanese": "ご活躍をお祈りします",
+      "reading": "ごかつやくをおいのりします",
+      "romaji": "gokatsuyaku wo oinori shimasu",
+      "english": "I wish you success (formal)",
+      "audio": "vocabulary/063_gokatsuyaku_wo_oinori_shimasu.mp3"
+    },
+    {
+      "japanese": "縁",
+      "reading": "えん",
+      "romaji": "en",
+      "english": "fate; bond; connection",
+      "audio": "vocabulary/064_en.mp3"
+    },
+    {
+      "japanese": "ご縁があれば",
+      "reading": "ごえんがあれば",
+      "romaji": "goen ga areba",
+      "english": "if fate allows; if we are destined",
+      "audio": "vocabulary/065_goen_ga_areba.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Friend",
-      "japanese": "メアリー、もうすぐアメリカに帰るんだね。さびしくなるよ。",
-      "english": "Mary, you're going back to America soon. I'll miss you.",
-      "audio": "dialogue/001_friend.mp3"
+      "id": "l23-d01",
+      "title": "Farewell Party Speech",
+      "lines": [
+        {
+          "speaker": "Professor Yamada",
+          "japanese": "では、メアリーさんからひとことお願いします。",
+          "english": "Now, may we have a few words from Mary.",
+          "audio": "dialogue/d01_001_professor yamada.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "本日はお忙しい中、このような送別会を開いていただき、誠にありがとうございます。",
+          "english": "Thank you very much for taking time out of your busy schedules to hold this farewell party for me today.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "皆様のおかげで、日本での一年間は本当に充実した日々でした。",
+          "english": "Thanks to all of you, my year in Japan was truly fulfilling.",
+          "audio": "dialogue/d01_003_mary.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "日本語がもっと上手だったら、もっと色々なことを伝えられたのに、と思います。",
+          "english": "I wish my Japanese were better so I could express more.",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "また日本に戻ってこられるといいと思っています。",
+          "english": "I hope I can return to Japan again.",
+          "audio": "dialogue/d01_005_mary.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "皆様のご健康とご活躍をお祈りしております。本当にありがとうございました。",
+          "english": "I pray for your health and success. Thank you so much.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Audience",
+          "japanese": "メアリーさん、頑張ってね！また会おうね！",
+          "english": "Mary, do your best! Let us meet again!",
+          "audio": "dialogue/d01_007_audience.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "うん、私もさびしいよ。もっとながくいられたらいいのに。",
-      "english": "Yeah, I'm sad too. I wish I could stay longer.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l23-d02",
+      "title": "Saying Goodbye to Close Friends",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "メアリー、もうすぐアメリカに帰るんだね。さびしくなるよ。",
+          "english": "Mary, you're going back to America soon. I'll miss you.",
+          "audio": "dialogue/d02_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、私もさびしいよ。もっとながくいられたらいいのに。",
+          "english": "Yeah, I'm sad too. I wish I could stay longer.",
+          "audio": "dialogue/d02_002_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "一年間、本当に楽しかったね。色々なところに一緒に行けてよかった。",
+          "english": "This past year was really fun. I am glad we could go to so many places together.",
+          "audio": "dialogue/d02_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "私もたけしに出会えてよかった。たけしのおかげで日本語が上手になったよ。",
+          "english": "I'm glad I met you too, Takeshi. Thanks to you, my Japanese improved.",
+          "audio": "dialogue/d02_004_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "絶対また日本に来てね。その時は、京都に連れて行ってあげるから。",
+          "english": "Definitely come back to Japan. When you do, I'll take you to Kyoto.",
+          "audio": "dialogue/d02_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、約束だよ。たけしもアメリカに遊びに来てね。",
+          "english": "Yeah, it's a promise. You should come visit America too, Takeshi.",
+          "audio": "dialogue/d02_006_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "必ず行くよ。じゃあ、元気でね。泣かないで。",
+          "english": "I'll definitely go. Well then, take care. Don't cry.",
+          "audio": "dialogue/d02_007_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "たけしも元気でね。ありがとう、本当に。",
+          "english": "You take care too, Takeshi. Thank you, really.",
+          "audio": "dialogue/d02_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "日本でべんきょうできてよかったね。",
-      "english": "It's good that you could study in Japan.",
-      "audio": "dialogue/003_friend.mp3"
+      "id": "l23-d03",
+      "title": "At the Airport",
+      "lines": [
+        {
+          "speaker": "Host Mother",
+          "japanese": "メアリーちゃん、忘れ物はない？パスポートは持った？",
+          "english": "Mary, did you forget anything? Do you have your passport?",
+          "audio": "dialogue/d03_001_host mother.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、大丈夫です。お母さん、一年間本当にお世話になりました。",
+          "english": "Yes, I am fine. Mom, thank you so much for taking care of me this past year.",
+          "audio": "dialogue/d03_002_mary.mp3"
+        },
+        {
+          "speaker": "Host Father",
+          "japanese": "こちらこそ、メアリーさんが来てくれて、にぎやかで楽しかったよ。",
+          "english": "We should thank you. Having you here made things lively and fun.",
+          "audio": "dialogue/d03_003_host father.mp3"
+        },
+        {
+          "speaker": "Host Mother",
+          "japanese": "実の娘みたいだったから、行ってほしくないのに...",
+          "english": "You were like our own daughter, so I don't want you to go...",
+          "audio": "dialogue/d03_004_host mother.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "私も帰りたくないです。でも、また必ず会いに来ます。",
+          "english": "I don't want to go back either. But I will definitely come to see you again.",
+          "audio": "dialogue/d03_005_mary.mp3"
+        },
+        {
+          "speaker": "Host Father",
+          "japanese": "いつでも帰っておいで。メアリーさんの部屋はそのままにしておくから。",
+          "english": "Come back anytime. We'll keep your room just as it is.",
+          "audio": "dialogue/d03_006_host father.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとうございます。お体に気をつけてください。",
+          "english": "Thank you. Please take care of your health.",
+          "audio": "dialogue/d03_007_mary.mp3"
+        },
+        {
+          "speaker": "Host Mother",
+          "japanese": "あなたもね。着いたら連絡してね。お元気で！",
+          "english": "You too. Contact us when you arrive. Take care!",
+          "audio": "dialogue/d03_008_host mother.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ほんとうに。みんなにあえてよかった。",
-      "english": "Really. I'm glad I could meet everyone.",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l23-d04",
+      "title": "Promising to Keep in Touch",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "メアリー、アメリカに帰っても連絡してくれる？",
+          "english": "Mary, will you keep in touch even after you go back to America?",
+          "audio": "dialogue/d04_001_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "もちろん！毎日SNSで話そうよ。",
+          "english": "Of course! Let's talk on social media every day.",
+          "audio": "dialogue/d04_002_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "ビデオ通話もしようね。時差があるけど、週末なら大丈夫だよね。",
+          "english": "Let's do video calls too. There is a time difference, but weekends should work, right?",
+          "audio": "dialogue/d04_003_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、土曜日の夜なら、日本は日曜日の朝だから、ちょうどいいね。",
+          "english": "Yeah, if it is Saturday night for me, it is Sunday morning in Japan, so that works perfectly.",
+          "audio": "dialogue/d04_004_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "日本語を忘れないように、日本語で話そうね。",
+          "english": "Let's talk in Japanese so you don't forget.",
+          "audio": "dialogue/d04_005_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとう。ゆきが間違いを直してくれるといいな。",
+          "english": "Thanks. I hope you will correct my mistakes.",
+          "audio": "dialogue/d04_006_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "任せて！絶対忘れないでね。私たち、ずっと友達だから。",
+          "english": "Leave it to me! Don't forget, okay? We are friends forever.",
+          "audio": "dialogue/d04_007_yuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "ビデオ通話で話せばいいよ。それに、日本の会社で働けるといいね。",
-      "english": "We can talk on video calls. And I hope you can work at a Japanese company.",
-      "audio": "dialogue/005_friend.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "そうだね。いつかもどってきたいな。",
-      "english": "Yeah. I want to come back someday.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Friend",
-      "japanese": "ぜったいもどってきてね。お元気で。",
-      "english": "Definitely come back. Take care.",
-      "audio": "dialogue/007_friend.mp3"
+      "id": "l23-d05",
+      "title": "Reflecting on Memories",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "この写真、覚えてる？みんなで富士山に登った時のだよ。",
+          "english": "Do you remember this photo? It is from when we all climbed Mt. Fuji.",
+          "audio": "dialogue/d05_001_yuki.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "なつかしい！あの日は本当に大変だったね。死ぬかと思った。",
+          "english": "How nostalgic! That day was really tough. I thought I was going to die.",
+          "audio": "dialogue/d05_002_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "でも、頂上から見た日の出は最高だったよね。苦労したかいがあった。",
+          "english": "But the sunrise from the summit was amazing. All the effort was worth it.",
+          "audio": "dialogue/d05_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "本当に。あの経験がなかったら、日本の良さがわからなかったかもしれない。",
+          "english": "Really. Without that experience, I might not have understood the beauty of Japan.",
+          "audio": "dialogue/d05_004_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "この写真は花見の時だね。桜がとてもきれいだった。",
+          "english": "This photo is from hanami. The cherry blossoms were so beautiful.",
+          "audio": "dialogue/d05_005_yuki.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "来年の春、メアリーがいないのにお花見をするのは寂しいな。",
+          "english": "It will be sad to have hanami next spring without Mary.",
+          "audio": "dialogue/d05_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "写真を送ってね。そうすれば、一緒にお花見している気分になれるから。",
+          "english": "Send me photos. That way, I can feel like I am doing hanami together with you.",
+          "audio": "dialogue/d05_007_mary.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "この一年の思い出は、一生忘れないよ。また会える日を楽しみにしてるね。",
+          "english": "I'll never forget the memories of this year. I'm looking forward to the day we meet again.",
+          "audio": "dialogue/d05_008_yuki.mp3"
+        }
+      ]
     }
   ]
 }

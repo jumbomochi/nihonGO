@@ -1,8 +1,10 @@
 {
   "book": "genki2",
   "lesson": 21,
-  "vocabulary_count": 17,
-  "dialogue_count": 6,
+  "vocabulary_count": 64,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 37,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "どろぼう",
@@ -12,18 +14,18 @@
       "audio": "vocabulary/001_dorobou.mp3"
     },
     {
-      "japanese": "警察",
-      "reading": "けいさつ",
-      "romaji": "keisatsu",
-      "english": "police",
-      "audio": "vocabulary/002_keisatsu.mp3"
-    },
-    {
       "japanese": "犯人",
       "reading": "はんにん",
       "romaji": "hannin",
       "english": "criminal; culprit",
-      "audio": "vocabulary/003_hannin.mp3"
+      "audio": "vocabulary/002_hannin.mp3"
+    },
+    {
+      "japanese": "犯罪",
+      "reading": "はんざい",
+      "romaji": "hanzai",
+      "english": "crime",
+      "audio": "vocabulary/003_hanzai.mp3"
     },
     {
       "japanese": "事件",
@@ -40,126 +42,671 @@
       "audio": "vocabulary/005_higai.mp3"
     },
     {
-      "japanese": "めちゃくちゃ",
-      "reading": "めちゃくちゃ",
-      "romaji": "mechakucha",
-      "english": "mess; chaos",
-      "audio": "vocabulary/006_mechakucha.mp3"
+      "japanese": "被害届",
+      "reading": "ひがいとどけ",
+      "romaji": "higaitodoke",
+      "english": "damage report; police report",
+      "audio": "vocabulary/006_higaitodoke.mp3"
     },
     {
-      "japanese": "ぬすむ",
-      "reading": "ぬすむ",
-      "romaji": "nusumu",
-      "english": "to steal",
-      "audio": "vocabulary/007_nusumu.mp3"
+      "japanese": "被害者",
+      "reading": "ひがいしゃ",
+      "romaji": "higaisha",
+      "english": "victim",
+      "audio": "vocabulary/007_higaisha.mp3"
     },
     {
-      "japanese": "こわす",
-      "reading": "こわす",
-      "romaji": "kowasu",
-      "english": "to break; to destroy",
-      "audio": "vocabulary/008_kowasu.mp3"
+      "japanese": "証拠",
+      "reading": "しょうこ",
+      "romaji": "shouko",
+      "english": "evidence; proof",
+      "audio": "vocabulary/008_shouko.mp3"
     },
     {
-      "japanese": "ふむ",
-      "reading": "ふむ",
-      "romaji": "fumu",
-      "english": "to step on",
-      "audio": "vocabulary/009_fumu.mp3"
+      "japanese": "指紋",
+      "reading": "しもん",
+      "romaji": "shimon",
+      "english": "fingerprint",
+      "audio": "vocabulary/009_shimon.mp3"
     },
     {
-      "japanese": "わらう",
-      "reading": "わらう",
-      "romaji": "warau",
-      "english": "to laugh",
-      "audio": "vocabulary/010_warau.mp3"
+      "japanese": "容疑者",
+      "reading": "ようぎしゃ",
+      "romaji": "yougisha",
+      "english": "suspect",
+      "audio": "vocabulary/010_yougisha.mp3"
     },
     {
-      "japanese": "しかる",
-      "reading": "しかる",
-      "romaji": "shikaru",
-      "english": "to scold",
-      "audio": "vocabulary/011_shikaru.mp3"
+      "japanese": "警察",
+      "reading": "けいさつ",
+      "romaji": "keisatsu",
+      "english": "police",
+      "audio": "vocabulary/011_keisatsu.mp3"
     },
     {
-      "japanese": "ほめる",
-      "reading": "ほめる",
-      "romaji": "homeru",
-      "english": "to praise",
-      "audio": "vocabulary/012_homeru.mp3"
+      "japanese": "警察官",
+      "reading": "けいさつかん",
+      "romaji": "keisatsukan",
+      "english": "police officer",
+      "audio": "vocabulary/012_keisatsukan.mp3"
     },
     {
-      "japanese": "つかまえる",
-      "reading": "つかまえる",
-      "romaji": "tsukamaeru",
-      "english": "to catch; to arrest",
-      "audio": "vocabulary/013_tsukamaeru.mp3"
+      "japanese": "交番",
+      "reading": "こうばん",
+      "romaji": "kouban",
+      "english": "police box",
+      "audio": "vocabulary/013_kouban.mp3"
     },
     {
-      "japanese": "いじめる",
-      "reading": "いじめる",
-      "romaji": "ijimeru",
-      "english": "to bully; to tease",
-      "audio": "vocabulary/014_ijimeru.mp3"
+      "japanese": "届け",
+      "reading": "とどけ",
+      "romaji": "todoke",
+      "english": "report; notification",
+      "audio": "vocabulary/014_todoke.mp3"
     },
     {
-      "japanese": "かわいそう",
-      "reading": "かわいそう",
-      "romaji": "kawaisou",
-      "english": "pitiful; poor thing",
-      "audio": "vocabulary/015_kawaisou.mp3"
+      "japanese": "届ける",
+      "reading": "とどける",
+      "romaji": "todokeru",
+      "english": "to report; to notify",
+      "audio": "vocabulary/015_todokeru.mp3"
     },
     {
-      "japanese": "しかたがない",
-      "reading": "しかたがない",
-      "romaji": "shikata ga nai",
-      "english": "cannot be helped",
-      "audio": "vocabulary/016_shikata_ga_nai.mp3"
+      "japanese": "通報する",
+      "reading": "つうほうする",
+      "romaji": "tsuuhou suru",
+      "english": "to report (to authorities)",
+      "audio": "vocabulary/016_tsuuhou_suru.mp3"
+    },
+    {
+      "japanese": "捜査",
+      "reading": "そうさ",
+      "romaji": "sousa",
+      "english": "investigation",
+      "audio": "vocabulary/017_sousa.mp3"
+    },
+    {
+      "japanese": "逮捕する",
+      "reading": "たいほする",
+      "romaji": "taiho suru",
+      "english": "to arrest",
+      "audio": "vocabulary/018_taiho_suru.mp3"
+    },
+    {
+      "japanese": "かぎ",
+      "reading": "かぎ",
+      "romaji": "kagi",
+      "english": "key; lock",
+      "audio": "vocabulary/019_kagi.mp3"
+    },
+    {
+      "japanese": "防犯カメラ",
+      "reading": "ぼうはんかめら",
+      "romaji": "bouhan kamera",
+      "english": "security camera",
+      "audio": "vocabulary/020_bouhan_kamera.mp3"
+    },
+    {
+      "japanese": "セキュリティ",
+      "reading": "セキュリティ",
+      "romaji": "sekyuriti",
+      "english": "security",
+      "audio": "vocabulary/021_sekyuriti.mp3"
+    },
+    {
+      "japanese": "安全",
+      "reading": "あんぜん",
+      "romaji": "anzen",
+      "english": "safety; security",
+      "audio": "vocabulary/022_anzen.mp3"
+    },
+    {
+      "japanese": "危険",
+      "reading": "きけん",
+      "romaji": "kiken",
+      "english": "danger; dangerous",
+      "audio": "vocabulary/023_kiken.mp3"
+    },
+    {
+      "japanese": "窓",
+      "reading": "まど",
+      "romaji": "mado",
+      "english": "window",
+      "audio": "vocabulary/024_mado.mp3"
+    },
+    {
+      "japanese": "ドア",
+      "reading": "ドア",
+      "romaji": "doa",
+      "english": "door",
+      "audio": "vocabulary/025_doa.mp3"
+    },
+    {
+      "japanese": "大家",
+      "reading": "おおや",
+      "romaji": "ooya",
+      "english": "landlord",
+      "audio": "vocabulary/026_ooya.mp3"
+    },
+    {
+      "japanese": "近所",
+      "reading": "きんじょ",
+      "romaji": "kinjo",
+      "english": "neighborhood",
+      "audio": "vocabulary/027_kinjo.mp3"
     },
     {
       "japanese": "こわい",
       "reading": "こわい",
       "romaji": "kowai",
       "english": "scary; afraid",
-      "audio": "vocabulary/017_kowai.mp3"
+      "audio": "vocabulary/028_kowai.mp3"
+    },
+    {
+      "japanese": "かわいそう",
+      "reading": "かわいそう",
+      "romaji": "kawaisou",
+      "english": "pitiful; poor thing",
+      "audio": "vocabulary/029_kawaisou.mp3"
+    },
+    {
+      "japanese": "ひどい",
+      "reading": "ひどい",
+      "romaji": "hidoi",
+      "english": "terrible; cruel",
+      "audio": "vocabulary/030_hidoi.mp3"
+    },
+    {
+      "japanese": "びっくりする",
+      "reading": "びっくりする",
+      "romaji": "bikkuri suru",
+      "english": "to be surprised; shocked",
+      "audio": "vocabulary/031_bikkuri_suru.mp3"
+    },
+    {
+      "japanese": "安心",
+      "reading": "あんしん",
+      "romaji": "anshin",
+      "english": "relief; peace of mind",
+      "audio": "vocabulary/032_anshin.mp3"
+    },
+    {
+      "japanese": "心配",
+      "reading": "しんぱい",
+      "romaji": "shinpai",
+      "english": "worry; concern",
+      "audio": "vocabulary/033_shinpai.mp3"
+    },
+    {
+      "japanese": "最悪",
+      "reading": "さいあく",
+      "romaji": "saiaku",
+      "english": "the worst",
+      "audio": "vocabulary/034_saiaku.mp3"
+    },
+    {
+      "japanese": "大変",
+      "reading": "たいへん",
+      "romaji": "taihen",
+      "english": "terrible; hard; serious",
+      "audio": "vocabulary/035_taihen.mp3"
+    },
+    {
+      "japanese": "めちゃくちゃ",
+      "reading": "めちゃくちゃ",
+      "romaji": "mechakucha",
+      "english": "mess; chaos; messed up",
+      "audio": "vocabulary/036_mechakucha.mp3"
+    },
+    {
+      "japanese": "しかたがない",
+      "reading": "しかたがない",
+      "romaji": "shikata ga nai",
+      "english": "cannot be helped",
+      "audio": "vocabulary/037_shikata_ga_nai.mp3"
+    },
+    {
+      "japanese": "保険",
+      "reading": "ほけん",
+      "romaji": "hoken",
+      "english": "insurance",
+      "audio": "vocabulary/038_hoken.mp3"
+    },
+    {
+      "japanese": "保険会社",
+      "reading": "ほけんがいしゃ",
+      "romaji": "hoken gaisha",
+      "english": "insurance company",
+      "audio": "vocabulary/039_hoken_gaisha.mp3"
+    },
+    {
+      "japanese": "請求",
+      "reading": "せいきゅう",
+      "romaji": "seikyuu",
+      "english": "claim; billing",
+      "audio": "vocabulary/040_seikyuu.mp3"
+    },
+    {
+      "japanese": "レシート",
+      "reading": "レシート",
+      "romaji": "reshiito",
+      "english": "receipt",
+      "audio": "vocabulary/041_reshiito.mp3"
+    },
+    {
+      "japanese": "書類",
+      "reading": "しょるい",
+      "romaji": "shorui",
+      "english": "documents; paperwork",
+      "audio": "vocabulary/042_shorui.mp3"
+    },
+    {
+      "japanese": "貴重品",
+      "reading": "きちょうひん",
+      "romaji": "kichouhin",
+      "english": "valuables",
+      "audio": "vocabulary/043_kichouhin.mp3"
+    },
+    {
+      "japanese": "現金",
+      "reading": "げんきん",
+      "romaji": "genkin",
+      "english": "cash",
+      "audio": "vocabulary/044_genkin.mp3"
+    },
+    {
+      "japanese": "ぬすむ",
+      "reading": "ぬすむ",
+      "romaji": "nusumu",
+      "english": "to steal",
+      "audio": "vocabulary/045_nusumu.mp3"
+    },
+    {
+      "japanese": "とる",
+      "reading": "とる",
+      "romaji": "toru",
+      "english": "to take; to steal",
+      "audio": "vocabulary/046_toru.mp3"
+    },
+    {
+      "japanese": "こわす",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break; to destroy",
+      "audio": "vocabulary/047_kowasu.mp3"
+    },
+    {
+      "japanese": "ふむ",
+      "reading": "ふむ",
+      "romaji": "fumu",
+      "english": "to step on",
+      "audio": "vocabulary/048_fumu.mp3"
+    },
+    {
+      "japanese": "わらう",
+      "reading": "わらう",
+      "romaji": "warau",
+      "english": "to laugh",
+      "audio": "vocabulary/049_warau.mp3"
+    },
+    {
+      "japanese": "しかる",
+      "reading": "しかる",
+      "romaji": "shikaru",
+      "english": "to scold",
+      "audio": "vocabulary/050_shikaru.mp3"
+    },
+    {
+      "japanese": "ほめる",
+      "reading": "ほめる",
+      "romaji": "homeru",
+      "english": "to praise",
+      "audio": "vocabulary/051_homeru.mp3"
+    },
+    {
+      "japanese": "つかまえる",
+      "reading": "つかまえる",
+      "romaji": "tsukamaeru",
+      "english": "to catch; to arrest",
+      "audio": "vocabulary/052_tsukamaeru.mp3"
+    },
+    {
+      "japanese": "いじめる",
+      "reading": "いじめる",
+      "romaji": "ijimeru",
+      "english": "to bully; to tease",
+      "audio": "vocabulary/053_ijimeru.mp3"
+    },
+    {
+      "japanese": "たたく",
+      "reading": "たたく",
+      "romaji": "tataku",
+      "english": "to hit; to strike",
+      "audio": "vocabulary/054_tataku.mp3"
+    },
+    {
+      "japanese": "おこる",
+      "reading": "おこる",
+      "romaji": "okoru",
+      "english": "to get angry",
+      "audio": "vocabulary/055_okoru.mp3"
+    },
+    {
+      "japanese": "強制的",
+      "reading": "きょうせいてき",
+      "romaji": "kyouseiteki",
+      "english": "compulsory; forced",
+      "audio": "vocabulary/056_kyouseiteki.mp3"
+    },
+    {
+      "japanese": "許可",
+      "reading": "きょか",
+      "romaji": "kyoka",
+      "english": "permission",
+      "audio": "vocabulary/057_kyoka.mp3"
+    },
+    {
+      "japanese": "許す",
+      "reading": "ゆるす",
+      "romaji": "yurusu",
+      "english": "to permit; to forgive",
+      "audio": "vocabulary/058_yurusu.mp3"
+    },
+    {
+      "japanese": "命令",
+      "reading": "めいれい",
+      "romaji": "meirei",
+      "english": "order; command",
+      "audio": "vocabulary/059_meirei.mp3"
+    },
+    {
+      "japanese": "自由",
+      "reading": "じゆう",
+      "romaji": "jiyuu",
+      "english": "freedom; free",
+      "audio": "vocabulary/060_jiyuu.mp3"
+    },
+    {
+      "japanese": "仕方なく",
+      "reading": "しかたなく",
+      "romaji": "shikata naku",
+      "english": "reluctantly; having no choice",
+      "audio": "vocabulary/061_shikata_naku.mp3"
+    },
+    {
+      "japanese": "やむを得ず",
+      "reading": "やむをえず",
+      "romaji": "yamu wo ezu",
+      "english": "unavoidably; having no choice",
+      "audio": "vocabulary/062_yamu_wo_ezu.mp3"
+    },
+    {
+      "japanese": "外出する",
+      "reading": "がいしゅつする",
+      "romaji": "gaishutsu suru",
+      "english": "to go out",
+      "audio": "vocabulary/063_gaishutsu_suru.mp3"
+    },
+    {
+      "japanese": "経験",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "audio": "vocabulary/064_keiken.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "たけしさん、どうしたの？元気なさそうだけど。",
-      "english": "Takeshi, what's wrong? You don't look well.",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l21-d01",
+      "title": "Reporting to Police",
+      "lines": [
+        {
+          "speaker": "Officer",
+          "japanese": "どうされましたか。",
+          "english": "How may I help you?",
+          "audio": "dialogue/d01_001_officer.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "きのうの夜、どろぼうにはいられたんです。被害届を出したいのですが。",
+          "english": "Last night, my place was burglarized. I would like to file a damage report.",
+          "audio": "dialogue/d01_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Officer",
+          "japanese": "それは大変でしたね。何時ごろ、どろぼうに入られましたか。",
+          "english": "That must have been terrible. About what time did the burglary occur?",
+          "audio": "dialogue/d01_003_officer.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "夜の十一時から朝の六時の間だと思います。外出していたので。",
+          "english": "I think it was between 11 PM and 6 AM. I was out.",
+          "audio": "dialogue/d01_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Officer",
+          "japanese": "何をとられましたか。",
+          "english": "What was stolen?",
+          "audio": "dialogue/d01_005_officer.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "パソコンとカメラとお金をとられました。全部で二十万円ぐらいです。",
+          "english": "My computer, camera, and money were stolen. About 200,000 yen in total.",
+          "audio": "dialogue/d01_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Officer",
+          "japanese": "窓やドアは、こわされていましたか。",
+          "english": "Were the windows or doors broken?",
+          "audio": "dialogue/d01_007_officer.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、窓のかぎをこわされました。",
+          "english": "Yes, the window lock was broken.",
+          "audio": "dialogue/d01_008_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "きのう、どろぼうにはいられたんだ。",
-      "english": "I was burglarized yesterday.",
-      "audio": "dialogue/002_takeshi.mp3"
+      "id": "l21-d02",
+      "title": "Telling a Friend",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "たけしくん、どうしたの？元気なさそうだけど。",
+          "english": "Takeshi, what's wrong? You don't look well.",
+          "audio": "dialogue/d02_001_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "きのう、どろぼうにはいられたんだ。最悪だよ。",
+          "english": "I was burglarized yesterday. It was the worst.",
+          "audio": "dialogue/d02_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "えっ、うそ！それは大へんだったね。何をとられたの？",
+          "english": "What? No way! That must have been terrible. What was taken?",
+          "audio": "dialogue/d02_003_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "パソコンとカメラをとられた。それに、へやをめちゃくちゃにされたんだ。",
+          "english": "My computer and camera were taken. On top of that, my room was messed up.",
+          "audio": "dialogue/d02_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ひどい！けいさつにれんらくした？",
+          "english": "That's awful! Did you contact the police?",
+          "audio": "dialogue/d02_005_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、すぐ来てくれて、いろいろ聞かれた。でも、犯人を見つけるのは難しいって言われた。",
+          "english": "Yes, they came right away and I was asked various questions. But I was told it would be difficult to find the culprit.",
+          "audio": "dialogue/d02_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "そっか...。何か手伝えることある？",
+          "english": "I see... Is there anything I can help with?",
+          "audio": "dialogue/d02_007_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ありがとう。とりあえず、かぎを変えさせられるから、お金がかかるんだ。",
+          "english": "Thanks. For now, I'm being made to change the locks, so it's going to cost money.",
+          "audio": "dialogue/d02_008_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "えっ、本当？それは大へんだったね。何をとられたの？",
-      "english": "What? Really? That must have been terrible. What was taken?",
-      "audio": "dialogue/003_mary.mp3"
+      "id": "l21-d03",
+      "title": "Neighborhood Safety Discussion",
+      "lines": [
+        {
+          "speaker": "Neighbor",
+          "japanese": "木村さん、聞きましたよ。大変でしたね。",
+          "english": "Mr. Kimura, I heard about what happened. That must have been terrible.",
+          "audio": "dialogue/d03_001_neighbor.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ええ、本当にびっくりしました。最近、この辺りは安全だと思っていたんですけど。",
+          "english": "Yes, I was really surprised. I thought this area was safe recently.",
+          "audio": "dialogue/d03_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Neighbor",
+          "japanese": "実は、先月も近くでどろぼうに入られた家があったそうです。",
+          "english": "Actually, I heard there was another house nearby that was burglarized last month.",
+          "audio": "dialogue/d03_003_neighbor.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "えっ、そうなんですか。知りませんでした。",
+          "english": "What, really? I didn't know that.",
+          "audio": "dialogue/d03_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Neighbor",
+          "japanese": "防犯カメラをつけた方がいいかもしれませんね。",
+          "english": "It might be a good idea to install security cameras.",
+          "audio": "dialogue/d03_005_neighbor.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "そうですね。大家さんにそうだんしてみます。",
+          "english": "You're right. I'll consult with my landlord.",
+          "audio": "dialogue/d03_006_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "パソコンとカメラをとられた。それに、へやをめちゃくちゃにされた。",
-      "english": "My computer and camera were taken. And my room was messed up.",
-      "audio": "dialogue/004_takeshi.mp3"
+      "id": "l21-d04",
+      "title": "Insurance Claim",
+      "lines": [
+        {
+          "speaker": "Agent",
+          "japanese": "お電話ありがとうございます。保険会社でございます。",
+          "english": "Thank you for calling. This is the insurance company.",
+          "audio": "dialogue/d04_001_agent.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "どろぼうの被害にあったのですが、保険の請求について聞きたいのですが。",
+          "english": "I was the victim of a burglary, and I would like to ask about filing an insurance claim.",
+          "audio": "dialogue/d04_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Agent",
+          "japanese": "お見舞い申し上げます。まず、警察に届けを出されましたか。",
+          "english": "I am sorry to hear that. First, have you filed a report with the police?",
+          "audio": "dialogue/d04_003_agent.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、きのう出しました。被害届の番号もあります。",
+          "english": "Yes, I filed one yesterday. I also have the report number.",
+          "audio": "dialogue/d04_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Agent",
+          "japanese": "ありがとうございます。盗まれたものの写真やレシートはお持ちですか。",
+          "english": "Thank you. Do you have photos or receipts of the stolen items?",
+          "audio": "dialogue/d04_005_agent.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "パソコンのレシートはあります。カメラのは捨てられたかもしれません。",
+          "english": "I have the receipt for the computer. The camera receipt might have been thrown away.",
+          "audio": "dialogue/d04_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Agent",
+          "japanese": "かしこまりました。書類をお送りしますので、ご記入の上、返送してください。",
+          "english": "Understood. We will send you the forms, so please fill them out and return them.",
+          "audio": "dialogue/d04_007_agent.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ひどいね。けいさつにれんらくした？",
-      "english": "That's awful. Did you contact the police?",
-      "audio": "dialogue/005_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "うん、すぐ来てくれて、いろいろ聞かれた。",
-      "english": "Yes, they came right away and I was asked various questions.",
-      "audio": "dialogue/006_takeshi.mp3"
+      "id": "l21-d05",
+      "title": "Aftermath Discussion",
+      "lines": [
+        {
+          "speaker": "Robert",
+          "japanese": "どろぼうの件、その後どうなった？",
+          "english": "How did the burglary situation turn out?",
+          "audio": "dialogue/d05_001_robert.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "犯人はまだ見つかってないけど、保険でお金が戻ってくることになったよ。",
+          "english": "The culprit hasn't been found yet, but the insurance will pay me back.",
+          "audio": "dialogue/d05_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "よかったね。新しいパソコン、もう買った？",
+          "english": "That's good. Did you buy a new computer yet?",
+          "audio": "dialogue/d05_003_robert.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、昨日買わされた。レポートの締め切りが近かったから。",
+          "english": "Yeah, I was forced to buy one yesterday. The report deadline was coming up.",
+          "audio": "dialogue/d05_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "アパートのセキュリティはどうするの？",
+          "english": "What are you going to do about apartment security?",
+          "audio": "dialogue/d05_005_robert.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "大家さんに防犯カメラをつけてもらった。それに、かぎも新しくされたよ。",
+          "english": "I had the landlord install security cameras. Also, the locks were replaced.",
+          "audio": "dialogue/d05_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "それは安心だね。もうこわい思いはしたくないよね。",
+          "english": "That's reassuring. You don't want to go through that scary experience again.",
+          "audio": "dialogue/d05_007_robert.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、本当に。でも、いい経験にはなったかな。",
+          "english": "Yeah, really. But I guess it was a learning experience.",
+          "audio": "dialogue/d05_008_takeshi.mp3"
+        }
+      ]
     }
   ]
 }

@@ -1,207 +1,753 @@
 {
   "book": "genki2",
   "lesson": 18,
-  "vocabulary_count": 23,
-  "dialogue_count": 6,
+  "vocabulary_count": 69,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 38,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
-      "japanese": "アルバイト",
-      "reading": "あるばいと",
-      "romaji": "arubaito",
-      "english": "part-time job",
-      "audio": "vocabulary/001_arubaito.mp3"
-    },
-    {
-      "japanese": "きゅうりょう",
-      "reading": "きゅうりょう",
-      "romaji": "kyuuryou",
-      "english": "salary; pay",
-      "audio": "vocabulary/002_kyuuryou.mp3"
-    },
-    {
-      "japanese": "じきゅう",
-      "reading": "じきゅう",
-      "romaji": "jikyuu",
-      "english": "hourly wage",
-      "audio": "vocabulary/003_jikyuu.mp3"
-    },
-    {
-      "japanese": "レジ",
-      "reading": "れじ",
-      "romaji": "reji",
-      "english": "cash register",
-      "audio": "vocabulary/004_reji.mp3"
-    },
-    {
-      "japanese": "コンビニ",
-      "reading": "こんびに",
-      "romaji": "konbini",
-      "english": "convenience store",
-      "audio": "vocabulary/005_konbini.mp3"
-    },
-    {
-      "japanese": "しなもの",
-      "reading": "しなもの",
-      "romaji": "shinamono",
-      "english": "goods; products",
-      "audio": "vocabulary/006_shinamono.mp3"
-    },
-    {
-      "japanese": "おきゃくさん",
-      "reading": "おきゃくさん",
-      "romaji": "okyakusan",
-      "english": "customer",
-      "audio": "vocabulary/007_okyakusan.mp3"
-    },
-    {
-      "japanese": "けいけん",
-      "reading": "けいけん",
-      "romaji": "keiken",
-      "english": "experience",
-      "audio": "vocabulary/008_keiken.mp3"
-    },
-    {
-      "japanese": "あける",
+      "japanese": "開ける",
       "reading": "あける",
       "romaji": "akeru",
       "english": "to open (transitive)",
-      "audio": "vocabulary/009_akeru.mp3"
+      "audio": "vocabulary/001_akeru.mp3"
     },
     {
-      "japanese": "あく",
+      "japanese": "開く",
       "reading": "あく",
       "romaji": "aku",
       "english": "to open (intransitive)",
-      "audio": "vocabulary/010_aku.mp3"
+      "audio": "vocabulary/002_aku.mp3"
     },
     {
-      "japanese": "しめる",
+      "japanese": "閉める",
       "reading": "しめる",
       "romaji": "shimeru",
       "english": "to close (transitive)",
-      "audio": "vocabulary/011_shimeru.mp3"
+      "audio": "vocabulary/003_shimeru.mp3"
     },
     {
-      "japanese": "しまる",
+      "japanese": "閉まる",
       "reading": "しまる",
       "romaji": "shimaru",
       "english": "to close (intransitive)",
-      "audio": "vocabulary/012_shimaru.mp3"
+      "audio": "vocabulary/004_shimaru.mp3"
     },
     {
       "japanese": "つける",
       "reading": "つける",
       "romaji": "tsukeru",
       "english": "to turn on (transitive)",
-      "audio": "vocabulary/013_tsukeru.mp3"
+      "audio": "vocabulary/005_tsukeru.mp3"
     },
     {
       "japanese": "つく",
       "reading": "つく",
       "romaji": "tsuku",
       "english": "to turn on (intransitive)",
-      "audio": "vocabulary/014_tsuku.mp3"
+      "audio": "vocabulary/006_tsuku.mp3"
     },
     {
-      "japanese": "けす",
+      "japanese": "消す",
       "reading": "けす",
       "romaji": "kesu",
-      "english": "to turn off (transitive)",
-      "audio": "vocabulary/015_kesu.mp3"
+      "english": "to turn off; to extinguish (transitive)",
+      "audio": "vocabulary/007_kesu.mp3"
     },
     {
-      "japanese": "きえる",
+      "japanese": "消える",
       "reading": "きえる",
       "romaji": "kieru",
-      "english": "to go out (intransitive)",
-      "audio": "vocabulary/016_kieru.mp3"
+      "english": "to go out; to disappear (intransitive)",
+      "audio": "vocabulary/008_kieru.mp3"
     },
     {
-      "japanese": "ならべる",
+      "japanese": "並べる",
       "reading": "ならべる",
       "romaji": "naraberu",
-      "english": "to line up (transitive)",
-      "audio": "vocabulary/017_naraberu.mp3"
+      "english": "to line up; to arrange (transitive)",
+      "audio": "vocabulary/009_naraberu.mp3"
     },
     {
-      "japanese": "ならぶ",
+      "japanese": "並ぶ",
       "reading": "ならぶ",
       "romaji": "narabu",
       "english": "to stand in line (intransitive)",
-      "audio": "vocabulary/018_narabu.mp3"
+      "audio": "vocabulary/010_narabu.mp3"
     },
     {
-      "japanese": "なれる",
+      "japanese": "壊す",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break (transitive)",
+      "audio": "vocabulary/011_kowasu.mp3"
+    },
+    {
+      "japanese": "壊れる",
+      "reading": "こわれる",
+      "romaji": "kowareru",
+      "english": "to break (intransitive)",
+      "audio": "vocabulary/012_kowareru.mp3"
+    },
+    {
+      "japanese": "落とす",
+      "reading": "おとす",
+      "romaji": "otosu",
+      "english": "to drop (transitive)",
+      "audio": "vocabulary/013_otosu.mp3"
+    },
+    {
+      "japanese": "落ちる",
+      "reading": "おちる",
+      "romaji": "ochiru",
+      "english": "to fall (intransitive)",
+      "audio": "vocabulary/014_ochiru.mp3"
+    },
+    {
+      "japanese": "入れる",
+      "reading": "いれる",
+      "romaji": "ireru",
+      "english": "to put in (transitive)",
+      "audio": "vocabulary/015_ireru.mp3"
+    },
+    {
+      "japanese": "入る",
+      "reading": "はいる",
+      "romaji": "hairu",
+      "english": "to enter (intransitive)",
+      "audio": "vocabulary/016_hairu.mp3"
+    },
+    {
+      "japanese": "アルバイト",
+      "reading": "あるばいと",
+      "romaji": "arubaito",
+      "english": "part-time job",
+      "audio": "vocabulary/017_arubaito.mp3"
+    },
+    {
+      "japanese": "給料",
+      "reading": "きゅうりょう",
+      "romaji": "kyuuryou",
+      "english": "salary; pay",
+      "audio": "vocabulary/018_kyuuryou.mp3"
+    },
+    {
+      "japanese": "時給",
+      "reading": "じきゅう",
+      "romaji": "jikyuu",
+      "english": "hourly wage",
+      "audio": "vocabulary/019_jikyuu.mp3"
+    },
+    {
+      "japanese": "シフト",
+      "reading": "しふと",
+      "romaji": "shifuto",
+      "english": "shift (work schedule)",
+      "audio": "vocabulary/020_shifuto.mp3"
+    },
+    {
+      "japanese": "休憩",
+      "reading": "きゅうけい",
+      "romaji": "kyuukei",
+      "english": "break; rest",
+      "audio": "vocabulary/021_kyuukei.mp3"
+    },
+    {
+      "japanese": "研修",
+      "reading": "けんしゅう",
+      "romaji": "kenshuu",
+      "english": "training",
+      "audio": "vocabulary/022_kenshuu.mp3"
+    },
+    {
+      "japanese": "経験",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "audio": "vocabulary/023_keiken.mp3"
+    },
+    {
+      "japanese": "店長",
+      "reading": "てんちょう",
+      "romaji": "tenchou",
+      "english": "store manager",
+      "audio": "vocabulary/024_tenchou.mp3"
+    },
+    {
+      "japanese": "同僚",
+      "reading": "どうりょう",
+      "romaji": "douryou",
+      "english": "coworker; colleague",
+      "audio": "vocabulary/025_douryou.mp3"
+    },
+    {
+      "japanese": "先輩",
+      "reading": "せんぱい",
+      "romaji": "senpai",
+      "english": "senior (at work/school)",
+      "audio": "vocabulary/026_senpai.mp3"
+    },
+    {
+      "japanese": "後輩",
+      "reading": "こうはい",
+      "romaji": "kouhai",
+      "english": "junior (at work/school)",
+      "audio": "vocabulary/027_kouhai.mp3"
+    },
+    {
+      "japanese": "制服",
+      "reading": "せいふく",
+      "romaji": "seifuku",
+      "english": "uniform",
+      "audio": "vocabulary/028_seifuku.mp3"
+    },
+    {
+      "japanese": "コンビニ",
+      "reading": "こんびに",
+      "romaji": "konbini",
+      "english": "convenience store",
+      "audio": "vocabulary/029_konbini.mp3"
+    },
+    {
+      "japanese": "レジ",
+      "reading": "れじ",
+      "romaji": "reji",
+      "english": "cash register",
+      "audio": "vocabulary/030_reji.mp3"
+    },
+    {
+      "japanese": "品物",
+      "reading": "しなもの",
+      "romaji": "shinamono",
+      "english": "goods; products",
+      "audio": "vocabulary/031_shinamono.mp3"
+    },
+    {
+      "japanese": "商品",
+      "reading": "しょうひん",
+      "romaji": "shouhin",
+      "english": "merchandise; product",
+      "audio": "vocabulary/032_shouhin.mp3"
+    },
+    {
+      "japanese": "棚",
+      "reading": "たな",
+      "romaji": "tana",
+      "english": "shelf",
+      "audio": "vocabulary/033_tana.mp3"
+    },
+    {
+      "japanese": "入り口",
+      "reading": "いりぐち",
+      "romaji": "iriguchi",
+      "english": "entrance",
+      "audio": "vocabulary/034_iriguchi.mp3"
+    },
+    {
+      "japanese": "出口",
+      "reading": "でぐち",
+      "romaji": "deguchi",
+      "english": "exit",
+      "audio": "vocabulary/035_deguchi.mp3"
+    },
+    {
+      "japanese": "値段",
+      "reading": "ねだん",
+      "romaji": "nedan",
+      "english": "price",
+      "audio": "vocabulary/036_nedan.mp3"
+    },
+    {
+      "japanese": "お弁当",
+      "reading": "おべんとう",
+      "romaji": "obentou",
+      "english": "boxed lunch",
+      "audio": "vocabulary/037_obentou.mp3"
+    },
+    {
+      "japanese": "袋",
+      "reading": "ふくろ",
+      "romaji": "fukuro",
+      "english": "bag",
+      "audio": "vocabulary/038_fukuro.mp3"
+    },
+    {
+      "japanese": "お客さん",
+      "reading": "おきゃくさん",
+      "romaji": "okyakusan",
+      "english": "customer; guest",
+      "audio": "vocabulary/039_okyakusan.mp3"
+    },
+    {
+      "japanese": "いらっしゃいませ",
+      "reading": "いらっしゃいませ",
+      "romaji": "irasshaimase",
+      "english": "welcome (shop greeting)",
+      "audio": "vocabulary/040_irasshaimase.mp3"
+    },
+    {
+      "japanese": "かしこまりました",
+      "reading": "かしこまりました",
+      "romaji": "kashikomarimashita",
+      "english": "certainly (formal)",
+      "audio": "vocabulary/041_kashikomarimashita.mp3"
+    },
+    {
+      "japanese": "少々お待ちください",
+      "reading": "しょうしょうおまちください",
+      "romaji": "shoushou omachi kudasai",
+      "english": "please wait a moment (polite)",
+      "audio": "vocabulary/042_shoushou_omachi_kudasai.mp3"
+    },
+    {
+      "japanese": "お疲れ様です",
+      "reading": "おつかれさまです",
+      "romaji": "otsukaresama desu",
+      "english": "good work; thank you for your work",
+      "audio": "vocabulary/043_otsukaresama_desu.mp3"
+    },
+    {
+      "japanese": "接客",
+      "reading": "せっきゃく",
+      "romaji": "sekkyaku",
+      "english": "customer service",
+      "audio": "vocabulary/044_sekkyaku.mp3"
+    },
+    {
+      "japanese": "クレーム",
+      "reading": "くれーむ",
+      "romaji": "kureemu",
+      "english": "complaint",
+      "audio": "vocabulary/045_kureemu.mp3"
+    },
+    {
+      "japanese": "交換",
+      "reading": "こうかん",
+      "romaji": "koukan",
+      "english": "exchange",
+      "audio": "vocabulary/046_koukan.mp3"
+    },
+    {
+      "japanese": "返品",
+      "reading": "へんぴん",
+      "romaji": "henpin",
+      "english": "return (of goods)",
+      "audio": "vocabulary/047_henpin.mp3"
+    },
+    {
+      "japanese": "慣れる",
       "reading": "なれる",
       "romaji": "nareru",
       "english": "to get used to",
-      "audio": "vocabulary/019_nareru.mp3"
+      "audio": "vocabulary/048_nareru.mp3"
+    },
+    {
+      "japanese": "疲れる",
+      "reading": "つかれる",
+      "romaji": "tsukareru",
+      "english": "to get tired",
+      "audio": "vocabulary/049_tsukareru.mp3"
+    },
+    {
+      "japanese": "困る",
+      "reading": "こまる",
+      "romaji": "komaru",
+      "english": "to be troubled; to be in difficulty",
+      "audio": "vocabulary/050_komaru.mp3"
+    },
+    {
+      "japanese": "忙しい",
+      "reading": "いそがしい",
+      "romaji": "isogashii",
+      "english": "busy",
+      "audio": "vocabulary/051_isogashii.mp3"
+    },
+    {
+      "japanese": "暇",
+      "reading": "ひま",
+      "romaji": "hima",
+      "english": "free time; not busy",
+      "audio": "vocabulary/052_hima.mp3"
+    },
+    {
+      "japanese": "楽",
+      "reading": "らく",
+      "romaji": "raku",
+      "english": "easy; comfortable",
+      "audio": "vocabulary/053_raku.mp3"
+    },
+    {
+      "japanese": "きつい",
+      "reading": "きつい",
+      "romaji": "kitsui",
+      "english": "tough; hard; tight",
+      "audio": "vocabulary/054_kitsui.mp3"
+    },
+    {
+      "japanese": "自動",
+      "reading": "じどう",
+      "romaji": "jidou",
+      "english": "automatic",
+      "audio": "vocabulary/055_jidou.mp3"
+    },
+    {
+      "japanese": "温める",
+      "reading": "あたためる",
+      "romaji": "atatameru",
+      "english": "to heat up; to warm",
+      "audio": "vocabulary/056_atatameru.mp3"
+    },
+    {
+      "japanese": "確認する",
+      "reading": "かくにんする",
+      "romaji": "kakunin suru",
+      "english": "to confirm; to check",
+      "audio": "vocabulary/057_kakunin_suru.mp3"
+    },
+    {
+      "japanese": "説明する",
+      "reading": "せつめいする",
+      "romaji": "setsumei suru",
+      "english": "to explain",
+      "audio": "vocabulary/058_setsumei_suru.mp3"
+    },
+    {
+      "japanese": "準備する",
+      "reading": "じゅんびする",
+      "romaji": "junbi suru",
+      "english": "to prepare",
+      "audio": "vocabulary/059_junbi_suru.mp3"
+    },
+    {
+      "japanese": "増やす",
+      "reading": "ふやす",
+      "romaji": "fuyasu",
+      "english": "to increase (transitive)",
+      "audio": "vocabulary/060_fuyasu.mp3"
     },
     {
       "japanese": "やめる",
       "reading": "やめる",
       "romaji": "yameru",
       "english": "to quit; to stop",
-      "audio": "vocabulary/020_yameru.mp3"
+      "audio": "vocabulary/061_yameru.mp3"
+    },
+    {
+      "japanese": "閉店",
+      "reading": "へいてん",
+      "romaji": "heiten",
+      "english": "store closing",
+      "audio": "vocabulary/062_heiten.mp3"
+    },
+    {
+      "japanese": "開店",
+      "reading": "かいてん",
+      "romaji": "kaiten",
+      "english": "store opening",
+      "audio": "vocabulary/063_kaiten.mp3"
+    },
+    {
+      "japanese": "無理する",
+      "reading": "むりする",
+      "romaji": "muri suru",
+      "english": "to overdo it; to push oneself too hard",
+      "audio": "vocabulary/064_muri_suru.mp3"
     },
     {
       "japanese": "だんだん",
       "reading": "だんだん",
       "romaji": "dandan",
       "english": "gradually",
-      "audio": "vocabulary/021_dandan.mp3"
+      "audio": "vocabulary/065_dandan.mp3"
     },
     {
       "japanese": "ますます",
       "reading": "ますます",
       "romaji": "masumasu",
       "english": "more and more",
-      "audio": "vocabulary/022_masumasu.mp3"
+      "audio": "vocabulary/066_masumasu.mp3"
     },
     {
       "japanese": "とうとう",
       "reading": "とうとう",
       "romaji": "toutou",
       "english": "finally; at last",
-      "audio": "vocabulary/023_toutou.mp3"
+      "audio": "vocabulary/067_toutou.mp3"
+    },
+    {
+      "japanese": "最近",
+      "reading": "さいきん",
+      "romaji": "saikin",
+      "english": "recently; lately",
+      "audio": "vocabulary/068_saikin.mp3"
+    },
+    {
+      "japanese": "すぐに",
+      "reading": "すぐに",
+      "romaji": "sugu ni",
+      "english": "immediately; right away",
+      "audio": "vocabulary/069_sugu_ni.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Friend",
-      "japanese": "ジョン、さいきんいそがしそうだね。",
-      "english": "John, you seem busy lately.",
-      "audio": "dialogue/001_friend.mp3"
+      "id": "l18-d01",
+      "title": "Customer Service",
+      "lines": [
+        {
+          "speaker": "John",
+          "japanese": "いらっしゃいませ。",
+          "english": "Welcome!",
+          "audio": "dialogue/d01_001_john.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "すみません、これはいくらですか。ねだんが見えないんですけど。",
+          "english": "Excuse me, how much is this? I can't see the price.",
+          "audio": "dialogue/d01_002_customer.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "しょうしょうおまちください。確認してまいります。",
+          "english": "Please wait a moment. I'll go check.",
+          "audio": "dialogue/d01_003_john.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "大変おまたせいたしました。こちらは三百八十円でございます。",
+          "english": "Sorry for the wait. This is 380 yen.",
+          "audio": "dialogue/d01_004_john.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "ありがとう。それから、このおべんとうを温めてもらえますか。",
+          "english": "Thank you. Also, can you heat up this bento?",
+          "audio": "dialogue/d01_005_customer.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "かしこまりました。お箸はおつけしますか。",
+          "english": "Certainly. Would you like chopsticks?",
+          "audio": "dialogue/d01_006_john.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "お願いします。",
+          "english": "Yes, please.",
+          "audio": "dialogue/d01_007_customer.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "ありがとうございます。またお越しくださいませ。",
+          "english": "Thank you very much. Please come again.",
+          "audio": "dialogue/d01_008_john.mp3"
+        }
+      ]
     },
     {
-      "speaker": "John",
-      "japanese": "うん、コンビニでアルバイトをはじめたんだ。",
-      "english": "Yeah, I started a part-time job at a convenience store.",
-      "audio": "dialogue/002_john.mp3"
+      "id": "l18-d02",
+      "title": "Training Session",
+      "lines": [
+        {
+          "speaker": "John",
+          "japanese": "ゆきさん、閉店の準備について説明しますね。",
+          "english": "Yuki, I'll explain the closing procedures.",
+          "audio": "dialogue/d02_001_john.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "はい、よろしくお願いします。",
+          "english": "Yes, please go ahead.",
+          "audio": "dialogue/d02_002_yuki.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "まず、レジをしながら、お客さんがいなくなるのを待ちます。",
+          "english": "First, while working the register, we wait for customers to leave.",
+          "audio": "dialogue/d02_003_john.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "十一時になったら、入り口のドアを閉めます。ドアは自動で閉まりませんから、気をつけてください。",
+          "english": "At 11 o'clock, close the entrance door. The door doesn't close automatically, so please be careful.",
+          "audio": "dialogue/d02_004_john.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "電気も消すんですか。",
+          "english": "Do we turn off the lights too?",
+          "audio": "dialogue/d02_005_yuki.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "いいえ、電気は夜中に自動で消えますから、そのままで大丈夫です。",
+          "english": "No, the lights turn off automatically at night, so it's fine to leave them.",
+          "audio": "dialogue/d02_006_john.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "分かりました。だんだん覚えてきました。",
+          "english": "I understand. I'm gradually getting the hang of it.",
+          "audio": "dialogue/d02_007_yuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "へえ、どう？たいへん？",
-      "english": "Oh, really? How is it? Is it tough?",
-      "audio": "dialogue/003_friend.mp3"
+      "id": "l18-d03",
+      "title": "Break Time Chat",
+      "lines": [
+        {
+          "speaker": "Kenji",
+          "japanese": "ジョン、さっきの客、大変だったね。",
+          "english": "John, that customer just now was tough, huh.",
+          "audio": "dialogue/d03_001_kenji.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "うん、なんで怒ってたのか、よく分からなかった。",
+          "english": "Yeah, I didn't really understand why they were angry.",
+          "audio": "dialogue/d03_002_john.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "まあ、ああいう人もいるよ。気にしないで。",
+          "english": "Well, there are people like that. Don't worry about it.",
+          "audio": "dialogue/d03_003_kenji.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "アルバイト始めたばかりの時は、もっと大変だったなあ。",
+          "english": "When I had just started the part-time job, it was even harder.",
+          "audio": "dialogue/d03_004_john.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "音楽聞きながら仕事できたら、楽なんだけどな。",
+          "english": "It would be easier if we could listen to music while working.",
+          "audio": "dialogue/d03_005_kenji.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "それはダメだろう。でも、最近、仕事に慣れてきたよ。",
+          "english": "That's not allowed, is it. But lately, I've been getting used to the work.",
+          "audio": "dialogue/d03_006_john.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "時給も上がっていくといいよね。",
+          "english": "It'd be nice if the hourly wage went up too.",
+          "audio": "dialogue/d03_007_kenji.mp3"
+        }
+      ]
     },
     {
-      "speaker": "John",
-      "japanese": "はじめはたいへんだったけど、だんだんなれてきたよ。",
-      "english": "It was tough at first, but I've gradually gotten used to it.",
-      "audio": "dialogue/004_john.mp3"
+      "id": "l18-d04",
+      "title": "Handling a Complaint",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "japanese": "すみません、昨日ここで買った傘が壊れていたんですけど。",
+          "english": "Excuse me, the umbrella I bought here yesterday was broken.",
+          "audio": "dialogue/d04_001_customer.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "大変申し訳ございません。傘はもうお開きになりましたか。",
+          "english": "I'm very sorry. Have you opened the umbrella already?",
+          "audio": "dialogue/d04_002_john.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "ええ、開けたら、すぐに壊れました。",
+          "english": "Yes, when I opened it, it broke immediately.",
+          "audio": "dialogue/d04_003_customer.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "店長を呼んでまいりますので、少々お待ちください。",
+          "english": "I'll call the manager, so please wait a moment.",
+          "audio": "dialogue/d04_004_john.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "お待たせいたしました。ご不便をおかけして、申し訳ございません。",
+          "english": "Sorry for the wait. We apologize for the inconvenience.",
+          "audio": "dialogue/d04_005_manager.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "新しい傘と交換してもらえますか。",
+          "english": "Can I exchange it for a new umbrella?",
+          "audio": "dialogue/d04_006_customer.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "はい、もちろんでございます。こちらの新しいものをどうぞ。",
+          "english": "Yes, of course. Please take this new one.",
+          "audio": "dialogue/d04_007_manager.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "ありがとうございます。",
+          "english": "Thank you.",
+          "audio": "dialogue/d04_008_customer.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "よかったね。しごとは何をするの？",
-      "english": "That's good. What do you do at work?",
-      "audio": "dialogue/005_friend.mp3"
-    },
-    {
-      "speaker": "John",
-      "japanese": "レジをしながら、しなものをならべたりするんだ。",
-      "english": "I arrange products while working the register.",
-      "audio": "dialogue/006_john.mp3"
+      "id": "l18-d05",
+      "title": "End of Shift",
+      "lines": [
+        {
+          "speaker": "Mika",
+          "japanese": "ジョン、今日もお疲れ様。",
+          "english": "John, good work today.",
+          "audio": "dialogue/d05_001_mika.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "みかさんもお疲れ様。今日は忙しかったね。",
+          "english": "You too, Mika. It was busy today, huh.",
+          "audio": "dialogue/d05_002_john.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "うん、立ちながら六時間はきついよ。",
+          "english": "Yeah, six hours while standing is tough.",
+          "audio": "dialogue/d05_003_mika.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "ほんとに。ところで、来月からシフト増やすんだって？",
+          "english": "Really. By the way, I heard you're increasing your shifts from next month?",
+          "audio": "dialogue/d05_004_john.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "うん、お金がもっと必要になってきたから。",
+          "english": "Yeah, because I've come to need more money.",
+          "audio": "dialogue/d05_005_mika.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "大変だね。でも無理しないでね。",
+          "english": "That's tough. But don't overdo it.",
+          "audio": "dialogue/d05_006_john.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "ありがとう。じゃあ、またあしたね。",
+          "english": "Thanks. Well, see you tomorrow.",
+          "audio": "dialogue/d05_007_mika.mp3"
+        },
+        {
+          "speaker": "John",
+          "japanese": "うん、気をつけて帰ってね。",
+          "english": "Yeah, get home safely.",
+          "audio": "dialogue/d05_008_john.mp3"
+        }
+      ]
     }
   ]
 }

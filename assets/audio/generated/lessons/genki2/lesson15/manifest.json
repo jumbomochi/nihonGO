@@ -1,350 +1,823 @@
 {
   "book": "genki2",
   "lesson": 15,
-  "vocabulary_count": 40,
-  "dialogue_count": 10,
+  "vocabulary_count": 79,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 38,
+  "has_multiple_dialogues": true,
   "vocabulary": [
-    {
-      "japanese": "準備",
-      "reading": "じゅんび",
-      "romaji": "junbi",
-      "english": "preparation",
-      "audio": "vocabulary/001_junbi.mp3"
-    },
-    {
-      "japanese": "計画",
-      "reading": "けいかく",
-      "romaji": "keikaku",
-      "english": "plan",
-      "audio": "vocabulary/002_keikaku.mp3"
-    },
-    {
-      "japanese": "地図",
-      "reading": "ちず",
-      "romaji": "chizu",
-      "english": "map",
-      "audio": "vocabulary/003_chizu.mp3"
-    },
-    {
-      "japanese": "観光",
-      "reading": "かんこう",
-      "romaji": "kankou",
-      "english": "sightseeing",
-      "audio": "vocabulary/004_kankou.mp3"
-    },
-    {
-      "japanese": "名物",
-      "reading": "めいぶつ",
-      "romaji": "meibutsu",
-      "english": "local specialty",
-      "audio": "vocabulary/005_meibutsu.mp3"
-    },
-    {
-      "japanese": "蕎麦",
-      "reading": "そば",
-      "romaji": "soba",
-      "english": "buckwheat noodles",
-      "audio": "vocabulary/006_soba.mp3"
-    },
-    {
-      "japanese": "善光寺",
-      "reading": "ぜんこうじ",
-      "romaji": "Zenkouji",
-      "english": "Zenkoji Temple",
-      "audio": "vocabulary/007_Zenkouji.mp3"
-    },
-    {
-      "japanese": "神社",
-      "reading": "じんじゃ",
-      "romaji": "jinja",
-      "english": "Shinto shrine",
-      "audio": "vocabulary/008_jinja.mp3"
-    },
-    {
-      "japanese": "お寺",
-      "reading": "おてら",
-      "romaji": "otera",
-      "english": "Buddhist temple",
-      "audio": "vocabulary/009_otera.mp3"
-    },
-    {
-      "japanese": "景色",
-      "reading": "けしき",
-      "romaji": "keshiki",
-      "english": "scenery; view",
-      "audio": "vocabulary/010_keshiki.mp3"
-    },
-    {
-      "japanese": "自然",
-      "reading": "しぜん",
-      "romaji": "shizen",
-      "english": "nature",
-      "audio": "vocabulary/011_shizen.mp3"
-    },
-    {
-      "japanese": "～よう",
-      "reading": "～よう",
-      "romaji": "~you",
-      "english": "volitional form (let\\",
-      "audio": "vocabulary/012_you.mp3"
-    },
     {
       "japanese": "～ようと思う",
       "reading": "～ようとおもう",
       "romaji": "~you to omou",
       "english": "thinking of ~ing",
-      "audio": "vocabulary/013_you_to_omou.mp3"
+      "audio": "vocabulary/001_you_to_omou.mp3"
+    },
+    {
+      "japanese": "～ようとする",
+      "reading": "～ようとする",
+      "romaji": "~you to suru",
+      "english": "to try to ~",
+      "audio": "vocabulary/002_you_to_suru.mp3"
+    },
+    {
+      "japanese": "～ようか",
+      "reading": "～ようか",
+      "romaji": "~you ka",
+      "english": "shall we ~?",
+      "audio": "vocabulary/003_you_ka.mp3"
     },
     {
       "japanese": "～ておく",
       "reading": "～ておく",
       "romaji": "~te oku",
       "english": "to do ~ in advance",
-      "audio": "vocabulary/014_te_oku.mp3"
+      "audio": "vocabulary/004_te_oku.mp3"
     },
     {
       "japanese": "～ために",
       "reading": "～ために",
       "romaji": "~tame ni",
       "english": "in order to ~",
-      "audio": "vocabulary/015_tame_ni.mp3"
+      "audio": "vocabulary/005_tame_ni.mp3"
     },
     {
       "japanese": "～ように",
       "reading": "～ように",
       "romaji": "~you ni",
       "english": "so that ~",
-      "audio": "vocabulary/016_you_ni.mp3"
+      "audio": "vocabulary/006_you_ni.mp3"
     },
     {
-      "japanese": "～ようになる",
-      "reading": "～ようになる",
-      "romaji": "~you ni naru",
-      "english": "to become able to ~",
-      "audio": "vocabulary/017_you_ni_naru.mp3"
+      "japanese": "旅行",
+      "reading": "りょこう",
+      "romaji": "ryokou",
+      "english": "trip; travel",
+      "audio": "vocabulary/007_ryokou.mp3"
     },
     {
-      "japanese": "泊まる",
-      "reading": "とまる",
-      "romaji": "tomaru",
-      "english": "to stay (overnight)",
-      "audio": "vocabulary/018_tomaru.mp3"
+      "japanese": "準備",
+      "reading": "じゅんび",
+      "romaji": "junbi",
+      "english": "preparation",
+      "audio": "vocabulary/008_junbi.mp3"
     },
     {
-      "japanese": "予約する",
-      "reading": "よやくする",
-      "romaji": "yoyaku suru",
-      "english": "to make a reservation",
-      "audio": "vocabulary/019_yoyaku_suru.mp3"
+      "japanese": "計画",
+      "reading": "けいかく",
+      "romaji": "keikaku",
+      "english": "plan",
+      "audio": "vocabulary/009_keikaku.mp3"
     },
     {
-      "japanese": "ダウンロードする",
-      "reading": "ダウンロードする",
-      "romaji": "daunroodo suru",
-      "english": "to download",
-      "audio": "vocabulary/020_daunroodo_suru.mp3"
-    },
-    {
-      "japanese": "確認する",
-      "reading": "かくにんする",
-      "romaji": "kakunin suru",
-      "english": "to confirm; to check",
-      "audio": "vocabulary/021_kakunin_suru.mp3"
-    },
-    {
-      "japanese": "出発する",
-      "reading": "しゅっぱつする",
-      "romaji": "shuppatsu suru",
-      "english": "to depart",
-      "audio": "vocabulary/022_shuppatsu_suru.mp3"
-    },
-    {
-      "japanese": "到着する",
-      "reading": "とうちゃくする",
-      "romaji": "touchaku suru",
-      "english": "to arrive",
-      "audio": "vocabulary/023_touchaku_suru.mp3"
-    },
-    {
-      "japanese": "乗り換える",
-      "reading": "のりかえる",
-      "romaji": "norikaeru",
-      "english": "to transfer (trains)",
-      "audio": "vocabulary/024_norikaeru.mp3"
+      "japanese": "地図",
+      "reading": "ちず",
+      "romaji": "chizu",
+      "english": "map",
+      "audio": "vocabulary/010_chizu.mp3"
     },
     {
       "japanese": "荷物",
       "reading": "にもつ",
       "romaji": "nimotsu",
       "english": "luggage; baggage",
-      "audio": "vocabulary/025_nimotsu.mp3"
+      "audio": "vocabulary/011_nimotsu.mp3"
     },
     {
       "japanese": "スーツケース",
       "reading": "スーツケース",
       "romaji": "suutsukeesu",
       "english": "suitcase",
-      "audio": "vocabulary/026_suutsukeesu.mp3"
+      "audio": "vocabulary/012_suutsukeesu.mp3"
     },
     {
       "japanese": "パスポート",
       "reading": "パスポート",
       "romaji": "pasupooto",
       "english": "passport",
-      "audio": "vocabulary/027_pasupooto.mp3"
+      "audio": "vocabulary/013_pasupooto.mp3"
     },
     {
       "japanese": "切符",
       "reading": "きっぷ",
       "romaji": "kippu",
       "english": "ticket",
-      "audio": "vocabulary/028_kippu.mp3"
+      "audio": "vocabulary/014_kippu.mp3"
     },
     {
-      "japanese": "新幹線",
-      "reading": "しんかんせん",
-      "romaji": "shinkansen",
-      "english": "bullet train",
-      "audio": "vocabulary/029_shinkansen.mp3"
+      "japanese": "出発",
+      "reading": "しゅっぱつ",
+      "romaji": "shuppatsu",
+      "english": "departure",
+      "audio": "vocabulary/015_shuppatsu.mp3"
     },
     {
-      "japanese": "特急",
-      "reading": "とっきゅう",
-      "romaji": "tokkyuu",
-      "english": "express train",
-      "audio": "vocabulary/030_tokkyuu.mp3"
+      "japanese": "到着",
+      "reading": "とうちゃく",
+      "romaji": "touchaku",
+      "english": "arrival",
+      "audio": "vocabulary/016_touchaku.mp3"
     },
     {
-      "japanese": "各駅停車",
-      "reading": "かくえきていしゃ",
-      "romaji": "kakueki teisha",
-      "english": "local train",
-      "audio": "vocabulary/031_kakueki_teisha.mp3"
+      "japanese": "お土産",
+      "reading": "おみやげ",
+      "romaji": "omiyage",
+      "english": "souvenir",
+      "audio": "vocabulary/017_omiyage.mp3"
+    },
+    {
+      "japanese": "観光",
+      "reading": "かんこう",
+      "romaji": "kankou",
+      "english": "sightseeing",
+      "audio": "vocabulary/018_kankou.mp3"
+    },
+    {
+      "japanese": "～たら",
+      "reading": "～たら",
+      "romaji": "~tara",
+      "english": "if ~; when ~",
+      "audio": "vocabulary/019_tara.mp3"
+    },
+    {
+      "japanese": "場合",
+      "reading": "ばあい",
+      "romaji": "baai",
+      "english": "case; situation",
+      "audio": "vocabulary/020_baai.mp3"
+    },
+    {
+      "japanese": "～ようになる",
+      "reading": "～ようになる",
+      "romaji": "~you ni naru",
+      "english": "to become able to ~",
+      "audio": "vocabulary/021_you_ni_naru.mp3"
+    },
+    {
+      "japanese": "～ようにする",
+      "reading": "～ようにする",
+      "romaji": "~you ni suru",
+      "english": "to make sure to ~",
+      "audio": "vocabulary/022_you_ni_suru.mp3"
     },
     {
       "japanese": "～らしい",
       "reading": "～らしい",
       "romaji": "~rashii",
       "english": "I hear that ~; apparently",
-      "audio": "vocabulary/032_rashii.mp3"
+      "audio": "vocabulary/023_rashii.mp3"
     },
     {
-      "japanese": "旅行中",
-      "reading": "りょこうちゅう",
-      "romaji": "ryokou chuu",
-      "english": "during the trip",
-      "audio": "vocabulary/033_ryokou_chuu.mp3"
+      "japanese": "山",
+      "reading": "やま",
+      "romaji": "yama",
+      "english": "mountain",
+      "audio": "vocabulary/024_yama.mp3"
     },
     {
-      "japanese": "早起き",
-      "reading": "はやおき",
-      "romaji": "hayaoki",
-      "english": "waking up early",
-      "audio": "vocabulary/034_hayaoki.mp3"
+      "japanese": "景色",
+      "reading": "けしき",
+      "romaji": "keshiki",
+      "english": "scenery; view",
+      "audio": "vocabulary/025_keshiki.mp3"
     },
     {
-      "japanese": "間に合う",
-      "reading": "まにあう",
-      "romaji": "maniau",
-      "english": "to be on time",
-      "audio": "vocabulary/035_maniau.mp3"
+      "japanese": "自然",
+      "reading": "しぜん",
+      "romaji": "shizen",
+      "english": "nature",
+      "audio": "vocabulary/026_shizen.mp3"
     },
     {
-      "japanese": "遅れる",
-      "reading": "おくれる",
-      "romaji": "okureru",
-      "english": "to be late",
-      "audio": "vocabulary/036_okureru.mp3"
+      "japanese": "森",
+      "reading": "もり",
+      "romaji": "mori",
+      "english": "forest",
+      "audio": "vocabulary/027_mori.mp3"
     },
     {
-      "japanese": "慣れる",
-      "reading": "なれる",
-      "romaji": "nareru",
-      "english": "to get used to",
-      "audio": "vocabulary/037_nareru.mp3"
+      "japanese": "川",
+      "reading": "かわ",
+      "romaji": "kawa",
+      "english": "river",
+      "audio": "vocabulary/028_kawa.mp3"
+    },
+    {
+      "japanese": "登山",
+      "reading": "とざん",
+      "romaji": "tozan",
+      "english": "mountain climbing",
+      "audio": "vocabulary/029_tozan.mp3"
+    },
+    {
+      "japanese": "ハイキング",
+      "reading": "ハイキング",
+      "romaji": "haikingu",
+      "english": "hiking",
+      "audio": "vocabulary/030_haikingu.mp3"
+    },
+    {
+      "japanese": "登山靴",
+      "reading": "とざんぐつ",
+      "romaji": "tozangutsu",
+      "english": "hiking boots",
+      "audio": "vocabulary/031_tozangutsu.mp3"
+    },
+    {
+      "japanese": "温泉",
+      "reading": "おんせん",
+      "romaji": "onsen",
+      "english": "hot spring",
+      "audio": "vocabulary/032_onsen.mp3"
+    },
+    {
+      "japanese": "露天風呂",
+      "reading": "ろてんぶろ",
+      "romaji": "rotenburo",
+      "english": "outdoor bath",
+      "audio": "vocabulary/033_rotenburo.mp3"
+    },
+    {
+      "japanese": "浴衣",
+      "reading": "ゆかた",
+      "romaji": "yukata",
+      "english": "casual summer kimono; bathrobe",
+      "audio": "vocabulary/034_yukata.mp3"
+    },
+    {
+      "japanese": "タオル",
+      "reading": "タオル",
+      "romaji": "taoru",
+      "english": "towel",
+      "audio": "vocabulary/035_taoru.mp3"
+    },
+    {
+      "japanese": "脱衣所",
+      "reading": "だついじょ",
+      "romaji": "datsuijo",
+      "english": "changing room",
+      "audio": "vocabulary/036_datsuijo.mp3"
+    },
+    {
+      "japanese": "入浴",
+      "reading": "にゅうよく",
+      "romaji": "nyuuyoku",
+      "english": "bathing",
+      "audio": "vocabulary/037_nyuuyoku.mp3"
+    },
+    {
+      "japanese": "気持ちいい",
+      "reading": "きもちいい",
+      "romaji": "kimochi ii",
+      "english": "feels good; comfortable",
+      "audio": "vocabulary/038_kimochi_ii.mp3"
+    },
+    {
+      "japanese": "疲れが取れる",
+      "reading": "つかれがとれる",
+      "romaji": "tsukare ga toreru",
+      "english": "fatigue goes away; to feel refreshed",
+      "audio": "vocabulary/039_tsukare_ga_toreru.mp3"
+    },
+    {
+      "japanese": "善光寺",
+      "reading": "ぜんこうじ",
+      "romaji": "Zenkouji",
+      "english": "Zenkoji Temple",
+      "audio": "vocabulary/040_Zenkouji.mp3"
+    },
+    {
+      "japanese": "神社",
+      "reading": "じんじゃ",
+      "romaji": "jinja",
+      "english": "Shinto shrine",
+      "audio": "vocabulary/041_jinja.mp3"
+    },
+    {
+      "japanese": "お寺",
+      "reading": "おてら",
+      "romaji": "otera",
+      "english": "Buddhist temple",
+      "audio": "vocabulary/042_otera.mp3"
+    },
+    {
+      "japanese": "美術館",
+      "reading": "びじゅつかん",
+      "romaji": "bijutsukan",
+      "english": "art museum",
+      "audio": "vocabulary/043_bijutsukan.mp3"
+    },
+    {
+      "japanese": "名物",
+      "reading": "めいぶつ",
+      "romaji": "meibutsu",
+      "english": "local specialty",
+      "audio": "vocabulary/044_meibutsu.mp3"
+    },
+    {
+      "japanese": "蕎麦",
+      "reading": "そば",
+      "romaji": "soba",
+      "english": "buckwheat noodles",
+      "audio": "vocabulary/045_soba.mp3"
+    },
+    {
+      "japanese": "おやき",
+      "reading": "おやき",
+      "romaji": "oyaki",
+      "english": "stuffed dumplings (Nagano specialty)",
+      "audio": "vocabulary/046_oyaki.mp3"
+    },
+    {
+      "japanese": "おすすめ",
+      "reading": "おすすめ",
+      "romaji": "osusume",
+      "english": "recommendation",
+      "audio": "vocabulary/047_osusume.mp3"
+    },
+    {
+      "japanese": "旅館",
+      "reading": "りょかん",
+      "romaji": "ryokan",
+      "english": "traditional Japanese inn",
+      "audio": "vocabulary/048_ryokan.mp3"
+    },
+    {
+      "japanese": "ホテル",
+      "reading": "ホテル",
+      "romaji": "hoteru",
+      "english": "hotel",
+      "audio": "vocabulary/049_hoteru.mp3"
+    },
+    {
+      "japanese": "和室",
+      "reading": "わしつ",
+      "romaji": "washitsu",
+      "english": "Japanese-style room",
+      "audio": "vocabulary/050_washitsu.mp3"
+    },
+    {
+      "japanese": "洋室",
+      "reading": "ようしつ",
+      "romaji": "youshitsu",
+      "english": "Western-style room",
+      "audio": "vocabulary/051_youshitsu.mp3"
+    },
+    {
+      "japanese": "予約",
+      "reading": "よやく",
+      "romaji": "yoyaku",
+      "english": "reservation",
+      "audio": "vocabulary/052_yoyaku.mp3"
+    },
+    {
+      "japanese": "チェックイン",
+      "reading": "チェックイン",
+      "romaji": "chekku in",
+      "english": "check-in",
+      "audio": "vocabulary/053_chekku_in.mp3"
+    },
+    {
+      "japanese": "チェックアウト",
+      "reading": "チェックアウト",
+      "romaji": "chekku auto",
+      "english": "check-out",
+      "audio": "vocabulary/054_chekku_auto.mp3"
+    },
+    {
+      "japanese": "夕食",
+      "reading": "ゆうしょく",
+      "romaji": "yuushoku",
+      "english": "dinner; evening meal",
+      "audio": "vocabulary/055_yuushoku.mp3"
+    },
+    {
+      "japanese": "朝食",
+      "reading": "ちょうしょく",
+      "romaji": "choushoku",
+      "english": "breakfast",
+      "audio": "vocabulary/056_choushoku.mp3"
+    },
+    {
+      "japanese": "新幹線",
+      "reading": "しんかんせん",
+      "romaji": "shinkansen",
+      "english": "bullet train",
+      "audio": "vocabulary/057_shinkansen.mp3"
+    },
+    {
+      "japanese": "特急",
+      "reading": "とっきゅう",
+      "romaji": "tokkyuu",
+      "english": "express train",
+      "audio": "vocabulary/058_tokkyuu.mp3"
+    },
+    {
+      "japanese": "各駅停車",
+      "reading": "かくえきていしゃ",
+      "romaji": "kakueki teisha",
+      "english": "local train",
+      "audio": "vocabulary/059_kakueki_teisha.mp3"
+    },
+    {
+      "japanese": "乗り換える",
+      "reading": "のりかえる",
+      "romaji": "norikaeru",
+      "english": "to transfer (trains)",
+      "audio": "vocabulary/060_norikaeru.mp3"
+    },
+    {
+      "japanese": "駅前",
+      "reading": "えきまえ",
+      "romaji": "ekimae",
+      "english": "in front of the station",
+      "audio": "vocabulary/061_ekimae.mp3"
+    },
+    {
+      "japanese": "バス",
+      "reading": "バス",
+      "romaji": "basu",
+      "english": "bus",
+      "audio": "vocabulary/062_basu.mp3"
+    },
+    {
+      "japanese": "泊まる",
+      "reading": "とまる",
+      "romaji": "tomaru",
+      "english": "to stay (overnight)",
+      "audio": "vocabulary/063_tomaru.mp3"
+    },
+    {
+      "japanese": "予約する",
+      "reading": "よやくする",
+      "romaji": "yoyaku suru",
+      "english": "to make a reservation",
+      "audio": "vocabulary/064_yoyaku_suru.mp3"
+    },
+    {
+      "japanese": "出発する",
+      "reading": "しゅっぱつする",
+      "romaji": "shuppatsu suru",
+      "english": "to depart",
+      "audio": "vocabulary/065_shuppatsu_suru.mp3"
+    },
+    {
+      "japanese": "到着する",
+      "reading": "とうちゃくする",
+      "romaji": "touchaku suru",
+      "english": "to arrive",
+      "audio": "vocabulary/066_touchaku_suru.mp3"
+    },
+    {
+      "japanese": "登る",
+      "reading": "のぼる",
+      "romaji": "noboru",
+      "english": "to climb",
+      "audio": "vocabulary/067_noboru.mp3"
     },
     {
       "japanese": "迷う",
       "reading": "まよう",
       "romaji": "mayou",
       "english": "to get lost; to hesitate",
-      "audio": "vocabulary/038_mayou.mp3"
+      "audio": "vocabulary/068_mayou.mp3"
     },
     {
-      "japanese": "それと",
-      "reading": "それと",
-      "romaji": "soreto",
-      "english": "and also",
-      "audio": "vocabulary/039_soreto.mp3"
+      "japanese": "調べる",
+      "reading": "しらべる",
+      "romaji": "shiraberu",
+      "english": "to look up; to investigate",
+      "audio": "vocabulary/069_shiraberu.mp3"
     },
     {
-      "japanese": "～だけ",
-      "reading": "～だけ",
-      "romaji": "~dake",
-      "english": "only ~",
-      "audio": "vocabulary/040_dake.mp3"
+      "japanese": "貯める",
+      "reading": "ためる",
+      "romaji": "tameru",
+      "english": "to save (money)",
+      "audio": "vocabulary/070_tameru.mp3"
+    },
+    {
+      "japanese": "天気予報",
+      "reading": "てんきよほう",
+      "romaji": "tenki yohou",
+      "english": "weather forecast",
+      "audio": "vocabulary/071_tenki_yohou.mp3"
+    },
+    {
+      "japanese": "晴れ",
+      "reading": "はれ",
+      "romaji": "hare",
+      "english": "sunny; clear weather",
+      "audio": "vocabulary/072_hare.mp3"
+    },
+    {
+      "japanese": "雨",
+      "reading": "あめ",
+      "romaji": "ame",
+      "english": "rain",
+      "audio": "vocabulary/073_ame.mp3"
+    },
+    {
+      "japanese": "傘",
+      "reading": "かさ",
+      "romaji": "kasa",
+      "english": "umbrella",
+      "audio": "vocabulary/074_kasa.mp3"
+    },
+    {
+      "japanese": "カッパ",
+      "reading": "カッパ",
+      "romaji": "kappa",
+      "english": "rain jacket; raincoat",
+      "audio": "vocabulary/075_kappa.mp3"
+    },
+    {
+      "japanese": "旅行中",
+      "reading": "りょこうちゅう",
+      "romaji": "ryokou chuu",
+      "english": "during the trip",
+      "audio": "vocabulary/076_ryokou_chuu.mp3"
+    },
+    {
+      "japanese": "早起き",
+      "reading": "はやおき",
+      "romaji": "hayaoki",
+      "english": "waking up early",
+      "audio": "vocabulary/077_hayaoki.mp3"
+    },
+    {
+      "japanese": "帰り",
+      "reading": "かえり",
+      "romaji": "kaeri",
+      "english": "return; on the way back",
+      "audio": "vocabulary/078_kaeri.mp3"
+    },
+    {
+      "japanese": "来週",
+      "reading": "らいしゅう",
+      "romaji": "raishuu",
+      "english": "next week",
+      "audio": "vocabulary/079_raishuu.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "来週の旅行、楽しみだね。準備はできた？",
-      "english": "I'm excited about next week's trip. Are you ready?",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l15-d01",
+      "title": "Planning a Trip",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "来週の旅行、楽しみだね。準備はできた？",
+          "english": "I'm excited about next week's trip. Are you ready?",
+          "audio": "dialogue/d01_001_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、ホテルを予約しておいたよ。",
+          "english": "Yeah, I booked the hotel in advance.",
+          "audio": "dialogue/d01_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとう！私は地図をダウンロードしておこうと思ってる。",
+          "english": "Thanks! I'm thinking of downloading maps in advance.",
+          "audio": "dialogue/d01_003_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "長野で何をしようか。",
+          "english": "What shall we do in Nagano?",
+          "audio": "dialogue/d01_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "温泉に入りたいな。それと、善光寺に行こうよ。",
+          "english": "I want to go to hot springs. And let's go to Zenkoji Temple.",
+          "audio": "dialogue/d01_005_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "いいね。早起きできるように、早く寝よう。",
+          "english": "Good idea. Let's go to bed early so we can wake up early.",
+          "audio": "dialogue/d01_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "長野の名物を食べるために、おいしいレストランを調べておいてね。",
+          "english": "Look up good restaurants in advance so we can eat Nagano specialties.",
+          "audio": "dialogue/d01_007_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "わかった。蕎麦がおいしいらしいよ。",
+          "english": "Got it. I hear the soba is delicious.",
+          "audio": "dialogue/d01_008_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "うん、ホテルを予約しておいたよ。",
-      "english": "Yeah, I booked the hotel in advance.",
-      "audio": "dialogue/002_takeshi.mp3"
+      "id": "l15-d02",
+      "title": "Checking In at a Ryokan",
+      "lines": [
+        {
+          "speaker": "Staff",
+          "japanese": "いらっしゃいませ。ご予約のお名前をお願いいたします。",
+          "english": "Welcome. May I have your reservation name, please?",
+          "audio": "dialogue/d02_001_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "木村と申します。二名で予約しました。",
+          "english": "My name is Kimura. We made a reservation for two.",
+          "audio": "dialogue/d02_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "木村様ですね。お部屋は二階の和室でございます。",
+          "english": "Mr. Kimura, yes. Your room is a Japanese-style room on the second floor.",
+          "audio": "dialogue/d02_003_staff.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "温泉は何時まで入れますか。",
+          "english": "Until what time can we use the hot spring?",
+          "audio": "dialogue/d02_004_mary.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "夜十一時まででございます。浴衣は部屋にご用意しております。",
+          "english": "Until 11 PM. Yukata robes are prepared in your room.",
+          "audio": "dialogue/d02_005_staff.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "夕食は何時からですか。",
+          "english": "What time does dinner start?",
+          "audio": "dialogue/d02_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Staff",
+          "japanese": "六時からお食事処でお待ちしております。どうぞごゆっくりお過ごしください。",
+          "english": "We will be waiting at the dining hall from 6 PM. Please enjoy your stay.",
+          "audio": "dialogue/d02_007_staff.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ありがとう！私は地図をダウンロードしておこうと思ってる。",
-      "english": "Thanks! I\\",
-      "audio": "dialogue/003_mary.mp3"
+      "id": "l15-d03",
+      "title": "If the Weather is Bad",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "天気予報を見たんだけど、明日は雨かもしれないって。",
+          "english": "I checked the weather forecast, and it might rain tomorrow.",
+          "audio": "dialogue/d03_001_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "そうなの？雨だったら、ハイキングはやめよう。",
+          "english": "Really? If it rains, let's skip the hiking.",
+          "audio": "dialogue/d03_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、雨の場合は美術館に行こうと思う。",
+          "english": "Yeah, if it rains I'm thinking of going to the art museum.",
+          "audio": "dialogue/d03_003_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "長野市立美術館がいいらしいよ。写真を見ておいた。",
+          "english": "I hear the Nagano City Art Museum is good. I looked at photos beforehand.",
+          "audio": "dialogue/d03_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "晴れたら、山に登れるように、登山靴を持っていこう。",
+          "english": "If it's sunny, let's bring hiking boots so we can climb the mountain.",
+          "audio": "dialogue/d03_005_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "いいね。傘も持っていったほうがいいよね。",
+          "english": "Good idea. We should bring umbrellas too, right?",
+          "audio": "dialogue/d03_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん。濡れないように、カッパも準備しておこう。",
+          "english": "Yeah. Let's prepare rain jackets too so we don't get wet.",
+          "audio": "dialogue/d03_007_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "長野で何をしようか。",
-      "english": "What shall we do in Nagano?",
-      "audio": "dialogue/004_takeshi.mp3"
+      "id": "l15-d04",
+      "title": "Getting Local Recommendations",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "すみません、この辺でおすすめの場所はありますか。",
+          "english": "Excuse me, are there any recommended places around here?",
+          "audio": "dialogue/d04_001_mary.mp3"
+        },
+        {
+          "speaker": "Shopkeeper",
+          "japanese": "善光寺は絶対に行ったほうがいいですよ。歴史があって、とても素敵です。",
+          "english": "You should definitely go to Zenkoji Temple. It has history and is very lovely.",
+          "audio": "dialogue/d04_002_shopkeeper.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "善光寺に行くために、バスに乗ったほうがいいですか。",
+          "english": "Should I take the bus to go to Zenkoji?",
+          "audio": "dialogue/d04_003_mary.mp3"
+        },
+        {
+          "speaker": "Shopkeeper",
+          "japanese": "歩いても行けますよ。二十分ぐらいです。",
+          "english": "You can walk there too. It's about 20 minutes.",
+          "audio": "dialogue/d04_004_shopkeeper.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "長野の名物は何ですか。",
+          "english": "What are the local specialties of Nagano?",
+          "audio": "dialogue/d04_005_mary.mp3"
+        },
+        {
+          "speaker": "Shopkeeper",
+          "japanese": "信州そばが有名です。あと、おやきも食べてみてください。",
+          "english": "Shinshu soba is famous. Also, please try oyaki.",
+          "audio": "dialogue/d04_006_shopkeeper.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "そばを食べるために、おすすめのお店はありますか。",
+          "english": "Is there a recommended restaurant for eating soba?",
+          "audio": "dialogue/d04_007_mary.mp3"
+        },
+        {
+          "speaker": "Shopkeeper",
+          "japanese": "駅前の「山田屋」がおいしいですよ。迷わないように、地図を描きましょうか。",
+          "english": "\"Yamadaya\" in front of the station is delicious. Shall I draw a map so you don\\",
+          "audio": "dialogue/d04_008_shopkeeper.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "温泉に入りたいな。それと、善光寺に行こうよ。",
-      "english": "I want to go to hot springs. And let's go to Zenkoji Temple.",
-      "audio": "dialogue/005_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "いいね。早起きできるように、早く寝よう。",
-      "english": "Good idea. Let's go to bed early so we can wake up early.",
-      "audio": "dialogue/006_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "長野の名物を食べるために、おいしいレストランを調べておいてね。",
-      "english": "Look up good restaurants in advance so we can eat Nagano specialties.",
-      "audio": "dialogue/007_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "わかった。蕎麦がおいしいらしいよ。",
-      "english": "Got it. I hear the soba is delicious.",
-      "audio": "dialogue/008_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "日本語をもっと上手に話せるようになりたいな。",
-      "english": "I want to become able to speak Japanese better.",
-      "audio": "dialogue/009_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "旅行中、日本語だけで話そうか。",
-      "english": "Shall we speak only in Japanese during the trip?",
-      "audio": "dialogue/010_takeshi.mp3"
+      "id": "l15-d05",
+      "title": "At the Hot Spring",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "わあ、温泉、気持ちよかった！疲れが取れたよ。",
+          "english": "Wow, the hot spring felt great! My fatigue is gone.",
+          "audio": "dialogue/d05_001_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "本当に。露天風呂から見た山の景色が最高だったね。",
+          "english": "Really. The mountain view from the outdoor bath was the best.",
+          "audio": "dialogue/d05_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "また来られるように、お金を貯めようと思う。",
+          "english": "I'm thinking of saving money so we can come again.",
+          "audio": "dialogue/d05_003_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "明日は早く出発するために、七時に起きよう。",
+          "english": "Let's wake up at 7 to leave early tomorrow.",
+          "audio": "dialogue/d05_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん。朝ご飯を食べてから、善光寺に行こう。",
+          "english": "Yeah. Let's go to Zenkoji after eating breakfast.",
+          "audio": "dialogue/d05_005_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "お土産を忘れないように、帰りに駅で買っておこう。",
+          "english": "Let's buy souvenirs at the station on the way back so we don't forget.",
+          "audio": "dialogue/d05_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "いい旅行になったね。日本語も上手になったような気がする。",
+          "english": "This became a great trip. I feel like my Japanese has improved too.",
+          "audio": "dialogue/d05_007_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、また旅行に行こうよ。",
+          "english": "Yeah, let's go on a trip again.",
+          "audio": "dialogue/d05_008_takeshi.mp3"
+        }
+      ]
     }
   ]
 }

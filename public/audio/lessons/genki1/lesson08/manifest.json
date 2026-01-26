@@ -1,8 +1,10 @@
 {
   "book": "genki1",
   "lesson": 8,
-  "vocabulary_count": 40,
-  "dialogue_count": 9,
+  "vocabulary_count": 72,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 37,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "肉",
@@ -12,333 +14,755 @@
       "audio": "vocabulary/001_niku.mp3"
     },
     {
-      "japanese": "野菜",
-      "reading": "やさい",
-      "romaji": "yasai",
-      "english": "vegetable",
-      "audio": "vocabulary/002_yasai.mp3"
+      "japanese": "牛肉",
+      "reading": "ぎゅうにく",
+      "romaji": "gyuuniku",
+      "english": "beef",
+      "audio": "vocabulary/002_gyuuniku.mp3"
     },
     {
-      "japanese": "果物",
-      "reading": "くだもの",
-      "romaji": "kudamono",
-      "english": "fruit",
-      "audio": "vocabulary/003_kudamono.mp3"
+      "japanese": "豚肉",
+      "reading": "ぶたにく",
+      "romaji": "butaniku",
+      "english": "pork",
+      "audio": "vocabulary/003_butaniku.mp3"
+    },
+    {
+      "japanese": "鶏肉",
+      "reading": "とりにく",
+      "romaji": "toriniku",
+      "english": "chicken (meat)",
+      "audio": "vocabulary/004_toriniku.mp3"
     },
     {
       "japanese": "魚",
       "reading": "さかな",
       "romaji": "sakana",
       "english": "fish",
-      "audio": "vocabulary/004_sakana.mp3"
+      "audio": "vocabulary/005_sakana.mp3"
+    },
+    {
+      "japanese": "えび",
+      "reading": "えび",
+      "romaji": "ebi",
+      "english": "shrimp",
+      "audio": "vocabulary/006_ebi.mp3"
+    },
+    {
+      "japanese": "イカ",
+      "reading": "イカ",
+      "romaji": "ika",
+      "english": "squid",
+      "audio": "vocabulary/007_ika.mp3"
+    },
+    {
+      "japanese": "焼き肉",
+      "reading": "やきにく",
+      "romaji": "yakiniku",
+      "english": "grilled meat; yakiniku",
+      "audio": "vocabulary/008_yakiniku.mp3"
+    },
+    {
+      "japanese": "焼き鳥",
+      "reading": "やきとり",
+      "romaji": "yakitori",
+      "english": "grilled chicken skewers",
+      "audio": "vocabulary/009_yakitori.mp3"
     },
     {
       "japanese": "卵",
       "reading": "たまご",
       "romaji": "tamago",
       "english": "egg",
-      "audio": "vocabulary/005_tamago.mp3"
+      "audio": "vocabulary/010_tamago.mp3"
+    },
+    {
+      "japanese": "野菜",
+      "reading": "やさい",
+      "romaji": "yasai",
+      "english": "vegetable",
+      "audio": "vocabulary/011_yasai.mp3"
+    },
+    {
+      "japanese": "玉ねぎ",
+      "reading": "たまねぎ",
+      "romaji": "tamanegi",
+      "english": "onion",
+      "audio": "vocabulary/012_tamanegi.mp3"
+    },
+    {
+      "japanese": "ピーマン",
+      "reading": "ピーマン",
+      "romaji": "piiman",
+      "english": "bell pepper",
+      "audio": "vocabulary/013_piiman.mp3"
+    },
+    {
+      "japanese": "きのこ",
+      "reading": "きのこ",
+      "romaji": "kinoko",
+      "english": "mushroom",
+      "audio": "vocabulary/014_kinoko.mp3"
+    },
+    {
+      "japanese": "とうもろこし",
+      "reading": "とうもろこし",
+      "romaji": "toumorokoshi",
+      "english": "corn",
+      "audio": "vocabulary/015_toumorokoshi.mp3"
+    },
+    {
+      "japanese": "にんじん",
+      "reading": "にんじん",
+      "romaji": "ninjin",
+      "english": "carrot",
+      "audio": "vocabulary/016_ninjin.mp3"
+    },
+    {
+      "japanese": "キャベツ",
+      "reading": "キャベツ",
+      "romaji": "kyabetsu",
+      "english": "cabbage",
+      "audio": "vocabulary/017_kyabetsu.mp3"
+    },
+    {
+      "japanese": "なす",
+      "reading": "なす",
+      "romaji": "nasu",
+      "english": "eggplant",
+      "audio": "vocabulary/018_nasu.mp3"
+    },
+    {
+      "japanese": "果物",
+      "reading": "くだもの",
+      "romaji": "kudamono",
+      "english": "fruit",
+      "audio": "vocabulary/019_kudamono.mp3"
     },
     {
       "japanese": "ご飯",
       "reading": "ごはん",
       "romaji": "gohan",
       "english": "rice; meal",
-      "audio": "vocabulary/006_gohan.mp3"
+      "audio": "vocabulary/020_gohan.mp3"
+    },
+    {
+      "japanese": "おにぎり",
+      "reading": "おにぎり",
+      "romaji": "onigiri",
+      "english": "rice ball",
+      "audio": "vocabulary/021_onigiri.mp3"
     },
     {
       "japanese": "パン",
       "reading": "パン",
       "romaji": "pan",
       "english": "bread",
-      "audio": "vocabulary/007_pan.mp3"
+      "audio": "vocabulary/022_pan.mp3"
+    },
+    {
+      "japanese": "サラダ",
+      "reading": "サラダ",
+      "romaji": "sarada",
+      "english": "salad",
+      "audio": "vocabulary/023_sarada.mp3"
+    },
+    {
+      "japanese": "塩",
+      "reading": "しお",
+      "romaji": "shio",
+      "english": "salt",
+      "audio": "vocabulary/024_shio.mp3"
+    },
+    {
+      "japanese": "たれ",
+      "reading": "たれ",
+      "romaji": "tare",
+      "english": "sauce (for grilling)",
+      "audio": "vocabulary/025_tare.mp3"
+    },
+    {
+      "japanese": "しょうゆ",
+      "reading": "しょうゆ",
+      "romaji": "shouyu",
+      "english": "soy sauce",
+      "audio": "vocabulary/026_shouyu.mp3"
+    },
+    {
+      "japanese": "こしょう",
+      "reading": "こしょう",
+      "romaji": "koshou",
+      "english": "pepper",
+      "audio": "vocabulary/027_koshou.mp3"
     },
     {
       "japanese": "作る",
       "reading": "つくる",
       "romaji": "tsukuru",
       "english": "to make; to cook",
-      "audio": "vocabulary/008_tsukuru.mp3"
+      "audio": "vocabulary/028_tsukuru.mp3"
     },
     {
       "japanese": "焼く",
       "reading": "やく",
       "romaji": "yaku",
       "english": "to bake; to grill",
-      "audio": "vocabulary/009_yaku.mp3"
+      "audio": "vocabulary/029_yaku.mp3"
     },
     {
       "japanese": "切る",
       "reading": "きる",
       "romaji": "kiru",
       "english": "to cut",
-      "audio": "vocabulary/010_kiru.mp3"
+      "audio": "vocabulary/030_kiru.mp3"
+    },
+    {
+      "japanese": "焦がす",
+      "reading": "こがす",
+      "romaji": "kogasu",
+      "english": "to burn; to scorch",
+      "audio": "vocabulary/031_kogasu.mp3"
+    },
+    {
+      "japanese": "刺す",
+      "reading": "さす",
+      "romaji": "sasu",
+      "english": "to pierce; to skewer",
+      "audio": "vocabulary/032_sasu.mp3"
+    },
+    {
+      "japanese": "かける",
+      "reading": "かける",
+      "romaji": "kakeru",
+      "english": "to pour over; to sprinkle",
+      "audio": "vocabulary/033_kakeru.mp3"
+    },
+    {
+      "japanese": "つける",
+      "reading": "つける",
+      "romaji": "tsukeru",
+      "english": "to dip; to apply",
+      "audio": "vocabulary/034_tsukeru.mp3"
+    },
+    {
+      "japanese": "料理する",
+      "reading": "りょうりする",
+      "romaji": "ryouri suru",
+      "english": "to cook",
+      "audio": "vocabulary/035_ryouri_suru.mp3"
+    },
+    {
+      "japanese": "包丁",
+      "reading": "ほうちょう",
+      "romaji": "houchou",
+      "english": "kitchen knife",
+      "audio": "vocabulary/036_houchou.mp3"
+    },
+    {
+      "japanese": "串",
+      "reading": "くし",
+      "romaji": "kushi",
+      "english": "skewer",
+      "audio": "vocabulary/037_kushi.mp3"
+    },
+    {
+      "japanese": "皿",
+      "reading": "さら",
+      "romaji": "sara",
+      "english": "plate; dish",
+      "audio": "vocabulary/038_sara.mp3"
+    },
+    {
+      "japanese": "コップ",
+      "reading": "コップ",
+      "romaji": "koppu",
+      "english": "cup; glass",
+      "audio": "vocabulary/039_koppu.mp3"
+    },
+    {
+      "japanese": "引き出し",
+      "reading": "ひきだし",
+      "romaji": "hikidashi",
+      "english": "drawer",
+      "audio": "vocabulary/040_hikidashi.mp3"
     },
     {
       "japanese": "天気予報",
       "reading": "てんきよほう",
       "romaji": "tenki yohou",
       "english": "weather forecast",
-      "audio": "vocabulary/011_tenki_yohou.mp3"
+      "audio": "vocabulary/041_tenki_yohou.mp3"
+    },
+    {
+      "japanese": "天気",
+      "reading": "てんき",
+      "romaji": "tenki",
+      "english": "weather",
+      "audio": "vocabulary/042_tenki.mp3"
     },
     {
       "japanese": "晴れる",
       "reading": "はれる",
       "romaji": "hareru",
       "english": "to become sunny",
-      "audio": "vocabulary/012_hareru.mp3"
+      "audio": "vocabulary/043_hareru.mp3"
     },
     {
       "japanese": "曇る",
       "reading": "くもる",
       "romaji": "kumoru",
       "english": "to become cloudy",
-      "audio": "vocabulary/013_kumoru.mp3"
+      "audio": "vocabulary/044_kumoru.mp3"
     },
     {
       "japanese": "降る",
       "reading": "ふる",
       "romaji": "furu",
       "english": "to fall (rain/snow)",
-      "audio": "vocabulary/014_furu.mp3"
+      "audio": "vocabulary/045_furu.mp3"
     },
     {
       "japanese": "雨",
       "reading": "あめ",
       "romaji": "ame",
       "english": "rain",
-      "audio": "vocabulary/015_ame.mp3"
-    },
-    {
-      "japanese": "雪",
-      "reading": "ゆき",
-      "romaji": "yuki",
-      "english": "snow",
-      "audio": "vocabulary/016_yuki.mp3"
+      "audio": "vocabulary/046_ame.mp3"
     },
     {
       "japanese": "持って行く",
       "reading": "もっていく",
       "romaji": "motte iku",
       "english": "to take (something)",
-      "audio": "vocabulary/017_motte_iku.mp3"
+      "audio": "vocabulary/047_motte_iku.mp3"
     },
     {
       "japanese": "持って来る",
       "reading": "もってくる",
       "romaji": "motte kuru",
       "english": "to bring (something)",
-      "audio": "vocabulary/018_motte_kuru.mp3"
+      "audio": "vocabulary/048_motte_kuru.mp3"
     },
     {
       "japanese": "連れて行く",
       "reading": "つれていく",
       "romaji": "tsurete iku",
       "english": "to take (someone)",
-      "audio": "vocabulary/019_tsurete_iku.mp3"
+      "audio": "vocabulary/049_tsurete_iku.mp3"
     },
     {
       "japanese": "連れて来る",
       "reading": "つれてくる",
       "romaji": "tsurete kuru",
       "english": "to bring (someone)",
-      "audio": "vocabulary/020_tsurete_kuru.mp3"
+      "audio": "vocabulary/050_tsurete_kuru.mp3"
     },
     {
       "japanese": "思う",
       "reading": "おもう",
       "romaji": "omou",
       "english": "to think",
-      "audio": "vocabulary/021_omou.mp3"
+      "audio": "vocabulary/051_omou.mp3"
     },
     {
       "japanese": "言う",
       "reading": "いう",
       "romaji": "iu",
       "english": "to say",
-      "audio": "vocabulary/022_iu.mp3"
+      "audio": "vocabulary/052_iu.mp3"
     },
     {
-      "japanese": "信じる",
-      "reading": "しんじる",
-      "romaji": "shinjiru",
-      "english": "to believe",
-      "audio": "vocabulary/023_shinjiru.mp3"
-    },
-    {
-      "japanese": "始める",
-      "reading": "はじめる",
-      "romaji": "hajimeru",
-      "english": "to begin (transitive)",
-      "audio": "vocabulary/024_hajimeru.mp3"
-    },
-    {
-      "japanese": "始まる",
-      "reading": "はじまる",
-      "romaji": "hajimaru",
-      "english": "to begin (intransitive)",
-      "audio": "vocabulary/025_hajimaru.mp3"
-    },
-    {
-      "japanese": "決める",
-      "reading": "きめる",
-      "romaji": "kimeru",
-      "english": "to decide",
-      "audio": "vocabulary/026_kimeru.mp3"
-    },
-    {
-      "japanese": "手伝う",
-      "reading": "てつだう",
-      "romaji": "tetsudau",
-      "english": "to help; to assist",
-      "audio": "vocabulary/027_tetsudau.mp3"
+      "japanese": "教える",
+      "reading": "おしえる",
+      "romaji": "oshieru",
+      "english": "to teach; to tell",
+      "audio": "vocabulary/053_oshieru.mp3"
     },
     {
       "japanese": "呼ぶ",
       "reading": "よぶ",
       "romaji": "yobu",
       "english": "to call; to invite",
-      "audio": "vocabulary/028_yobu.mp3"
+      "audio": "vocabulary/054_yobu.mp3"
     },
     {
-      "japanese": "今度",
-      "reading": "こんど",
-      "romaji": "kondo",
-      "english": "this time; next time",
-      "audio": "vocabulary/029_kondo.mp3"
+      "japanese": "始める",
+      "reading": "はじめる",
+      "romaji": "hajimeru",
+      "english": "to begin (transitive)",
+      "audio": "vocabulary/055_hajimeru.mp3"
     },
     {
-      "japanese": "楽しみ",
-      "reading": "たのしみ",
-      "romaji": "tanoshimi",
-      "english": "looking forward to",
-      "audio": "vocabulary/030_tanoshimi.mp3"
+      "japanese": "始まる",
+      "reading": "はじまる",
+      "romaji": "hajimaru",
+      "english": "to begin (intransitive)",
+      "audio": "vocabulary/056_hajimaru.mp3"
+    },
+    {
+      "japanese": "手伝う",
+      "reading": "てつだう",
+      "romaji": "tetsudau",
+      "english": "to help; to assist",
+      "audio": "vocabulary/057_tetsudau.mp3"
+    },
+    {
+      "japanese": "招く",
+      "reading": "まねく",
+      "romaji": "maneku",
+      "english": "to invite",
+      "audio": "vocabulary/058_maneku.mp3"
+    },
+    {
+      "japanese": "気をつける",
+      "reading": "きをつける",
+      "romaji": "ki wo tsukeru",
+      "english": "to be careful",
+      "audio": "vocabulary/059_ki_wo_tsukeru.mp3"
     },
     {
       "japanese": "バーベキュー",
       "reading": "バーベキュー",
       "romaji": "baabekyuu",
       "english": "barbecue",
-      "audio": "vocabulary/031_baabekyuu.mp3"
+      "audio": "vocabulary/060_baabekyuu.mp3"
     },
     {
       "japanese": "パーティー",
       "reading": "パーティー",
       "romaji": "paatii",
       "english": "party",
-      "audio": "vocabulary/032_paatii.mp3"
+      "audio": "vocabulary/061_paatii.mp3"
     },
     {
-      "japanese": "プレゼント",
-      "reading": "プレゼント",
-      "romaji": "purezento",
-      "english": "present; gift",
-      "audio": "vocabulary/033_purezento.mp3"
+      "japanese": "お願い",
+      "reading": "おねがい",
+      "romaji": "onegai",
+      "english": "request; favor",
+      "audio": "vocabulary/062_onegai.mp3"
+    },
+    {
+      "japanese": "火",
+      "reading": "ひ",
+      "romaji": "hi",
+      "english": "fire",
+      "audio": "vocabulary/063_hi.mp3"
+    },
+    {
+      "japanese": "今度",
+      "reading": "こんど",
+      "romaji": "kondo",
+      "english": "this time; next time",
+      "audio": "vocabulary/064_kondo.mp3"
     },
     {
       "japanese": "傘",
       "reading": "かさ",
       "romaji": "kasa",
       "english": "umbrella",
-      "audio": "vocabulary/034_kasa.mp3"
+      "audio": "vocabulary/065_kasa.mp3"
+    },
+    {
+      "japanese": "楽しみ",
+      "reading": "たのしみ",
+      "romaji": "tanoshimi",
+      "english": "looking forward to",
+      "audio": "vocabulary/066_tanoshimi.mp3"
     },
     {
       "japanese": "わかった",
       "reading": "わかった",
       "romaji": "wakatta",
       "english": "I understand; got it",
-      "audio": "vocabulary/035_wakatta.mp3"
+      "audio": "vocabulary/067_wakatta.mp3"
     },
     {
       "japanese": "～と思う",
       "reading": "～とおもう",
       "romaji": "~to omou",
       "english": "I think that ~",
-      "audio": "vocabulary/036_to_omou.mp3"
+      "audio": "vocabulary/068_to_omou.mp3"
     },
     {
       "japanese": "～と言う",
       "reading": "～という",
       "romaji": "~to iu",
       "english": "to say that ~",
-      "audio": "vocabulary/037_to_iu.mp3"
-    },
-    {
-      "japanese": "～ないで",
-      "reading": "～ないで",
-      "romaji": "~naide",
-      "english": "without doing ~; don\\",
-      "audio": "vocabulary/038_naide.mp3"
+      "audio": "vocabulary/069_to_iu.mp3"
     },
     {
       "japanese": "いいね",
       "reading": "いいね",
       "romaji": "ii ne",
       "english": "sounds good; nice",
-      "audio": "vocabulary/039_ii_ne.mp3"
+      "audio": "vocabulary/070_ii_ne.mp3"
     },
     {
-      "japanese": "～よね",
-      "reading": "～よね",
-      "romaji": "~yo ne",
-      "english": "right?; isn\\",
-      "audio": "vocabulary/040_yo_ne.mp3"
+      "japanese": "いただきます",
+      "reading": "いただきます",
+      "romaji": "itadakimasu",
+      "english": "expression before eating",
+      "audio": "vocabulary/071_itadakimasu.mp3"
+    },
+    {
+      "japanese": "召し上がる",
+      "reading": "めしあがる",
+      "romaji": "meshiagaru",
+      "english": "to eat (honorific)",
+      "audio": "vocabulary/072_meshiagaru.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "今度の土曜日、バーベキューをしない？",
-      "english": "Shall we have a barbecue this Saturday?",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l08-d01",
+      "title": "Planning a Barbecue",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "今度の土曜日、バーベキューをしない？",
+          "english": "Shall we have a barbecue this Saturday?",
+          "audio": "dialogue/d01_001_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "いいね！何を持って行く？",
+          "english": "Sounds good! What should we bring?",
+          "audio": "dialogue/d01_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "私は肉を買うと思う。",
+          "english": "I think I'll buy the meat.",
+          "audio": "dialogue/d01_003_robert.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "ありがとう。たけしさんは料理するのが上手だよね。",
+          "english": "Thanks. Takeshi, you're good at cooking, right?",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、焼き肉を焼くのは好きだよ。",
+          "english": "Yeah, I like grilling meat.",
+          "audio": "dialogue/d01_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "天気予報は何と言っていた？",
+          "english": "What did the weather forecast say?",
+          "audio": "dialogue/d01_006_robert.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "晴れると思う。でも、傘を持って来てね。",
+          "english": "I think it will be sunny. But bring an umbrella just in case.",
+          "audio": "dialogue/d01_007_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "遅く来ないでね。十時に始めるから。",
+          "english": "Don't come late. We're starting at 10.",
+          "audio": "dialogue/d01_008_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "いいね！何を持って行く？",
-      "english": "Sounds good! What should we bring?",
-      "audio": "dialogue/002_takeshi.mp3"
+      "id": "l08-d02",
+      "title": "Asking for Help",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "田中さん、すみません。ちょっとお願いがあるんですが。",
+          "english": "Mrs. Tanaka, excuse me. I have a small favor to ask.",
+          "audio": "dialogue/d02_001_yuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "はい、何ですか。",
+          "english": "Yes, what is it?",
+          "audio": "dialogue/d02_002_tanaka.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "野菜を切るのを手伝っていただけませんか。",
+          "english": "Could you help me cut the vegetables?",
+          "audio": "dialogue/d02_003_yuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "いいですよ。何を切りますか。",
+          "english": "Sure. What should I cut?",
+          "audio": "dialogue/d02_004_tanaka.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "ピーマンと玉ねぎをお願いします。",
+          "english": "Bell peppers and onions, please.",
+          "audio": "dialogue/d02_005_yuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "わかりました。包丁はどこですか。",
+          "english": "Understood. Where is the knife?",
+          "audio": "dialogue/d02_006_tanaka.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "あそこの引き出しにあると思います。",
+          "english": "I think it is in that drawer over there.",
+          "audio": "dialogue/d02_007_yuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Robert",
-      "japanese": "私は肉を買うと思う。",
-      "english": "I think I\\",
-      "audio": "dialogue/003_robert.mp3"
+      "id": "l08-d03",
+      "title": "Cooking Instructions",
+      "lines": [
+        {
+          "speaker": "Ken",
+          "japanese": "たけし、焼き鳥の作り方を教えてくれない？",
+          "english": "Takeshi, can you teach me how to make yakitori?",
+          "audio": "dialogue/d03_001_ken.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "いいよ。まず、鶏肉を小さく切って。",
+          "english": "Sure. First, cut the chicken into small pieces.",
+          "audio": "dialogue/d03_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "うん。それから？",
+          "english": "Okay. Then?",
+          "audio": "dialogue/d03_003_ken.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "串に刺して、塩をかけるか、たれをつけて。",
+          "english": "Put them on skewers and add salt or sauce.",
+          "audio": "dialogue/d03_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "火が強すぎないように気をつけてね。",
+          "english": "Be careful not to make the fire too strong.",
+          "audio": "dialogue/d03_005_ken.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "そうそう。焦がさないでね。",
+          "english": "Right, right. Don't burn them.",
+          "audio": "dialogue/d03_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "わかった。やってみる！",
+          "english": "Got it. I will try!",
+          "audio": "dialogue/d03_007_ken.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ありがとう。たけしさんは料理するのが上手だよね。",
-      "english": "Thanks. Takeshi, you\\",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l08-d04",
+      "title": "At the Barbecue",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "いい天気になったね！来てよかった。",
+          "english": "The weather turned out nice! Glad I came.",
+          "audio": "dialogue/d04_001_mary.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "本当だね。雨が降ると思ったけど。",
+          "english": "Really. I thought it would rain.",
+          "audio": "dialogue/d04_002_robert.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "この牛肉、もう焼けたと思う。食べて！",
+          "english": "I think this beef is done. Eat up!",
+          "audio": "dialogue/d04_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "わあ、おいしそう！いただきます。",
+          "english": "Wow, it looks delicious! Let's eat.",
+          "audio": "dialogue/d04_004_mary.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "うまい！たけしは焼くのが本当に上手だね。",
+          "english": "Delicious! You are really good at grilling, Takeshi.",
+          "audio": "dialogue/d04_005_robert.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ありがとう。もっと焼こうか？",
+          "english": "Thanks. Shall I grill more?",
+          "audio": "dialogue/d04_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、お願い！野菜も焼いて。",
+          "english": "Yes, please! Grill some vegetables too.",
+          "audio": "dialogue/d04_007_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "うん、焼き肉を焼くのは好きだよ。",
-      "english": "Yeah, I like grilling meat.",
-      "audio": "dialogue/005_takeshi.mp3"
-    },
-    {
-      "speaker": "Robert",
-      "japanese": "天気予報は何と言っていた？",
-      "english": "What did the weather forecast say?",
-      "audio": "dialogue/006_robert.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "晴れると思う。でも、傘を持って来てね。",
-      "english": "I think it will be sunny. But bring an umbrella just in case.",
-      "audio": "dialogue/007_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "遅く来ないでね。十時に始めるから。",
-      "english": "Don't come late. We're starting at 10.",
-      "audio": "dialogue/008_takeshi.mp3"
-    },
-    {
-      "speaker": "Robert",
-      "japanese": "わかった。楽しみだね！",
-      "english": "Got it. Looking forward to it!",
-      "audio": "dialogue/009_robert.mp3"
+      "id": "l08-d05",
+      "title": "Offering Food",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "鈴木さん、いらっしゃいませ。来てくださってありがとうございます。",
+          "english": "Mr. Suzuki, welcome. Thank you for coming.",
+          "audio": "dialogue/d05_001_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "お招きいただきありがとう。いい天気ですね。",
+          "english": "Thank you for inviting me. Nice weather, isnt it?",
+          "audio": "dialogue/d05_002_suzuki.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "どうぞ、お肉を召し上がってください。",
+          "english": "Please have some meat.",
+          "audio": "dialogue/d05_003_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "ありがとうございます。これは何の肉ですか。",
+          "english": "Thank you. What kind of meat is this?",
+          "audio": "dialogue/d05_004_suzuki.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "牛肉です。たれか塩、どちらがいいですか。",
+          "english": "Beef. Would you like sauce or salt?",
+          "audio": "dialogue/d05_005_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "塩でお願いします。魚はありますか。",
+          "english": "Salt, please. Do you have fish?",
+          "audio": "dialogue/d05_006_suzuki.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "はい、えびとイカがあります。今焼いていると思います。",
+          "english": "Yes, we have shrimp and squid. I think they are grilling now.",
+          "audio": "dialogue/d05_007_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "それはいいですね。楽しみです。",
+          "english": "That sounds great. I am looking forward to it.",
+          "audio": "dialogue/d05_008_suzuki.mp3"
+        }
+      ]
     }
   ]
 }

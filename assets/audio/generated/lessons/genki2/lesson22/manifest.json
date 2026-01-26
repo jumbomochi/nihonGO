@@ -1,8 +1,10 @@
 {
   "book": "genki2",
   "lesson": 22,
-  "vocabulary_count": 19,
-  "dialogue_count": 6,
+  "vocabulary_count": 68,
+  "dialogue_count": 4,
+  "total_dialogue_lines": 28,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "教育",
@@ -12,168 +14,667 @@
       "audio": "vocabulary/001_kyouiku.mp3"
     },
     {
-      "japanese": "受験",
-      "reading": "じゅけん",
-      "romaji": "juken",
-      "english": "entrance examination",
-      "audio": "vocabulary/002_juken.mp3"
+      "japanese": "小学校",
+      "reading": "しょうがっこう",
+      "romaji": "shougakkou",
+      "english": "elementary school",
+      "audio": "vocabulary/002_shougakkou.mp3"
+    },
+    {
+      "japanese": "中学校",
+      "reading": "ちゅうがっこう",
+      "romaji": "chuugakkou",
+      "english": "middle school; junior high",
+      "audio": "vocabulary/003_chuugakkou.mp3"
+    },
+    {
+      "japanese": "高校",
+      "reading": "こうこう",
+      "romaji": "koukou",
+      "english": "high school",
+      "audio": "vocabulary/004_koukou.mp3"
+    },
+    {
+      "japanese": "大学",
+      "reading": "だいがく",
+      "romaji": "daigaku",
+      "english": "university; college",
+      "audio": "vocabulary/005_daigaku.mp3"
     },
     {
       "japanese": "入学",
       "reading": "にゅうがく",
       "romaji": "nyuugaku",
       "english": "entering school; enrollment",
-      "audio": "vocabulary/003_nyuugaku.mp3"
+      "audio": "vocabulary/006_nyuugaku.mp3"
     },
     {
       "japanese": "卒業",
       "reading": "そつぎょう",
       "romaji": "sotsugyou",
       "english": "graduation",
-      "audio": "vocabulary/004_sotsugyou.mp3"
+      "audio": "vocabulary/007_sotsugyou.mp3"
+    },
+    {
+      "japanese": "義務教育",
+      "reading": "ぎむきょういく",
+      "romaji": "gimukyouiku",
+      "english": "compulsory education",
+      "audio": "vocabulary/008_gimukyouiku.mp3"
+    },
+    {
+      "japanese": "私立",
+      "reading": "しりつ",
+      "romaji": "shiritsu",
+      "english": "private (school)",
+      "audio": "vocabulary/009_shiritsu.mp3"
+    },
+    {
+      "japanese": "公立",
+      "reading": "こうりつ",
+      "romaji": "kouritsu",
+      "english": "public (school)",
+      "audio": "vocabulary/010_kouritsu.mp3"
+    },
+    {
+      "japanese": "学年",
+      "reading": "がくねん",
+      "romaji": "gakunen",
+      "english": "school year; grade level",
+      "audio": "vocabulary/011_gakunen.mp3"
+    },
+    {
+      "japanese": "学期",
+      "reading": "がっき",
+      "romaji": "gakki",
+      "english": "school term; semester",
+      "audio": "vocabulary/012_gakki.mp3"
+    },
+    {
+      "japanese": "受験",
+      "reading": "じゅけん",
+      "romaji": "juken",
+      "english": "entrance examination",
+      "audio": "vocabulary/013_juken.mp3"
     },
     {
       "japanese": "塾",
       "reading": "じゅく",
       "romaji": "juku",
       "english": "cram school",
-      "audio": "vocabulary/005_juku.mp3"
+      "audio": "vocabulary/014_juku.mp3"
+    },
+    {
+      "japanese": "予備校",
+      "reading": "よびこう",
+      "romaji": "yobikou",
+      "english": "prep school (for university exams)",
+      "audio": "vocabulary/015_yobikou.mp3"
+    },
+    {
+      "japanese": "志望校",
+      "reading": "しぼうこう",
+      "romaji": "shiboukou",
+      "english": "school of choice; first-choice school",
+      "audio": "vocabulary/016_shiboukou.mp3"
+    },
+    {
+      "japanese": "模試",
+      "reading": "もし",
+      "romaji": "moshi",
+      "english": "practice exam; mock test",
+      "audio": "vocabulary/017_moshi.mp3"
+    },
+    {
+      "japanese": "偏差値",
+      "reading": "へんさち",
+      "romaji": "hensachi",
+      "english": "deviation value (academic ranking score)",
+      "audio": "vocabulary/018_hensachi.mp3"
+    },
+    {
+      "japanese": "合格",
+      "reading": "ごうかく",
+      "romaji": "goukaku",
+      "english": "passing (an exam); acceptance",
+      "audio": "vocabulary/019_goukaku.mp3"
+    },
+    {
+      "japanese": "不合格",
+      "reading": "ふごうかく",
+      "romaji": "fugoukaku",
+      "english": "failing (an exam); rejection",
+      "audio": "vocabulary/020_fugoukaku.mp3"
+    },
+    {
+      "japanese": "浪人",
+      "reading": "ろうにん",
+      "romaji": "rounin",
+      "english": "student studying for another year to retake exams",
+      "audio": "vocabulary/021_rounin.mp3"
+    },
+    {
+      "japanese": "推薦",
+      "reading": "すいせん",
+      "romaji": "suisen",
+      "english": "recommendation (for admission)",
+      "audio": "vocabulary/022_suisen.mp3"
+    },
+    {
+      "japanese": "科目",
+      "reading": "かもく",
+      "romaji": "kamoku",
+      "english": "subject; course",
+      "audio": "vocabulary/023_kamoku.mp3"
+    },
+    {
+      "japanese": "国語",
+      "reading": "こくご",
+      "romaji": "kokugo",
+      "english": "Japanese language (as a subject)",
+      "audio": "vocabulary/024_kokugo.mp3"
+    },
+    {
+      "japanese": "数学",
+      "reading": "すうがく",
+      "romaji": "suugaku",
+      "english": "mathematics",
+      "audio": "vocabulary/025_suugaku.mp3"
+    },
+    {
+      "japanese": "理科",
+      "reading": "りか",
+      "romaji": "rika",
+      "english": "science",
+      "audio": "vocabulary/026_rika.mp3"
+    },
+    {
+      "japanese": "社会",
+      "reading": "しゃかい",
+      "romaji": "shakai",
+      "english": "social studies",
+      "audio": "vocabulary/027_shakai.mp3"
+    },
+    {
+      "japanese": "英語",
+      "reading": "えいご",
+      "romaji": "eigo",
+      "english": "English (language)",
+      "audio": "vocabulary/028_eigo.mp3"
+    },
+    {
+      "japanese": "体育",
+      "reading": "たいいく",
+      "romaji": "taiiku",
+      "english": "physical education",
+      "audio": "vocabulary/029_taiiku.mp3"
+    },
+    {
+      "japanese": "美術",
+      "reading": "びじゅつ",
+      "romaji": "bijutsu",
+      "english": "art",
+      "audio": "vocabulary/030_bijutsu.mp3"
+    },
+    {
+      "japanese": "部活",
+      "reading": "ぶかつ",
+      "romaji": "bukatsu",
+      "english": "club activities",
+      "audio": "vocabulary/031_bukatsu.mp3"
+    },
+    {
+      "japanese": "運動部",
+      "reading": "うんどうぶ",
+      "romaji": "undoubu",
+      "english": "sports club",
+      "audio": "vocabulary/032_undoubu.mp3"
+    },
+    {
+      "japanese": "文化部",
+      "reading": "ぶんかぶ",
+      "romaji": "bunkabu",
+      "english": "culture club (non-sports)",
+      "audio": "vocabulary/033_bunkabu.mp3"
+    },
+    {
+      "japanese": "文化祭",
+      "reading": "ぶんかさい",
+      "romaji": "bunkasai",
+      "english": "school cultural festival",
+      "audio": "vocabulary/034_bunkasai.mp3"
+    },
+    {
+      "japanese": "体育祭",
+      "reading": "たいいくさい",
+      "romaji": "taiikusai",
+      "english": "sports festival",
+      "audio": "vocabulary/035_taiikusai.mp3"
+    },
+    {
+      "japanese": "修学旅行",
+      "reading": "しゅうがくりょこう",
+      "romaji": "shuugakuryokou",
+      "english": "school trip",
+      "audio": "vocabulary/036_shuugakuryokou.mp3"
+    },
+    {
+      "japanese": "息子",
+      "reading": "むすこ",
+      "romaji": "musuko",
+      "english": "son",
+      "audio": "vocabulary/037_musuko.mp3"
+    },
+    {
+      "japanese": "娘",
+      "reading": "むすめ",
+      "romaji": "musume",
+      "english": "daughter",
+      "audio": "vocabulary/038_musume.mp3"
+    },
+    {
+      "japanese": "子供",
+      "reading": "こども",
+      "romaji": "kodomo",
+      "english": "child; children",
+      "audio": "vocabulary/039_kodomo.mp3"
+    },
+    {
+      "japanese": "保護者",
+      "reading": "ほごしゃ",
+      "romaji": "hogosha",
+      "english": "guardian; parent",
+      "audio": "vocabulary/040_hogosha.mp3"
+    },
+    {
+      "japanese": "三者面談",
+      "reading": "さんしゃめんだん",
+      "romaji": "sanshamendan",
+      "english": "parent-teacher-student conference",
+      "audio": "vocabulary/041_sanshamendan.mp3"
+    },
+    {
+      "japanese": "期待",
+      "reading": "きたい",
+      "romaji": "kitai",
+      "english": "expectation",
+      "audio": "vocabulary/042_kitai.mp3"
+    },
+    {
+      "japanese": "将来",
+      "reading": "しょうらい",
+      "romaji": "shourai",
+      "english": "future",
+      "audio": "vocabulary/043_shourai.mp3"
+    },
+    {
+      "japanese": "成績",
+      "reading": "せいせき",
+      "romaji": "seiseki",
+      "english": "grades; academic record",
+      "audio": "vocabulary/044_seiseki.mp3"
     },
     {
       "japanese": "学歴",
       "reading": "がくれき",
       "romaji": "gakureki",
       "english": "educational background",
-      "audio": "vocabulary/006_gakureki.mp3"
+      "audio": "vocabulary/045_gakureki.mp3"
     },
     {
-      "japanese": "就職",
-      "reading": "しゅうしょく",
-      "romaji": "shuushoku",
-      "english": "finding employment",
-      "audio": "vocabulary/007_shuushoku.mp3"
+      "japanese": "競争",
+      "reading": "きょうそう",
+      "romaji": "kyousou",
+      "english": "competition",
+      "audio": "vocabulary/046_kyousou.mp3"
+    },
+    {
+      "japanese": "プレッシャー",
+      "reading": "プレッシャー",
+      "romaji": "puresshaa",
+      "english": "pressure",
+      "audio": "vocabulary/047_puresshaa.mp3"
     },
     {
       "japanese": "奨学金",
       "reading": "しょうがくきん",
       "romaji": "shougakukin",
       "english": "scholarship",
-      "audio": "vocabulary/008_shougakukin.mp3"
+      "audio": "vocabulary/048_shougakukin.mp3"
+    },
+    {
+      "japanese": "就職",
+      "reading": "しゅうしょく",
+      "romaji": "shuushoku",
+      "english": "finding employment",
+      "audio": "vocabulary/049_shuushoku.mp3"
+    },
+    {
+      "japanese": "目標",
+      "reading": "もくひょう",
+      "romaji": "mokuhyou",
+      "english": "goal; objective",
+      "audio": "vocabulary/050_mokuhyou.mp3"
+    },
+    {
+      "japanese": "努力",
+      "reading": "どりょく",
+      "romaji": "doryoku",
+      "english": "effort",
+      "audio": "vocabulary/051_doryoku.mp3"
+    },
+    {
+      "japanese": "苦労",
+      "reading": "くろう",
+      "romaji": "kurou",
+      "english": "hardship; trouble",
+      "audio": "vocabulary/052_kurou.mp3"
     },
     {
       "japanese": "受ける",
       "reading": "うける",
       "romaji": "ukeru",
       "english": "to take (an exam); to receive",
-      "audio": "vocabulary/009_ukeru.mp3"
+      "audio": "vocabulary/053_ukeru.mp3"
     },
     {
       "japanese": "受かる",
       "reading": "うかる",
       "romaji": "ukaru",
       "english": "to pass (an exam)",
-      "audio": "vocabulary/010_ukaru.mp3"
+      "audio": "vocabulary/054_ukaru.mp3"
     },
     {
       "japanese": "落ちる",
       "reading": "おちる",
       "romaji": "ochiru",
       "english": "to fail (an exam); to fall",
-      "audio": "vocabulary/011_ochiru.mp3"
+      "audio": "vocabulary/055_ochiru.mp3"
+    },
+    {
+      "japanese": "通う",
+      "reading": "かよう",
+      "romaji": "kayou",
+      "english": "to commute; to attend regularly",
+      "audio": "vocabulary/056_kayou.mp3"
     },
     {
       "japanese": "暗記する",
       "reading": "あんきする",
       "romaji": "anki suru",
       "english": "to memorize",
-      "audio": "vocabulary/012_anki_suru.mp3"
+      "audio": "vocabulary/057_anki_suru.mp3"
     },
     {
       "japanese": "復習する",
       "reading": "ふくしゅうする",
       "romaji": "fukushuu suru",
       "english": "to review",
-      "audio": "vocabulary/013_fukushuu_suru.mp3"
+      "audio": "vocabulary/058_fukushuu_suru.mp3"
     },
     {
       "japanese": "予習する",
       "reading": "よしゅうする",
       "romaji": "yoshuu suru",
       "english": "to prepare for class",
-      "audio": "vocabulary/014_yoshuu_suru.mp3"
+      "audio": "vocabulary/059_yoshuu_suru.mp3"
+    },
+    {
+      "japanese": "合格する",
+      "reading": "ごうかくする",
+      "romaji": "goukaku suru",
+      "english": "to pass (an exam)",
+      "audio": "vocabulary/060_goukaku_suru.mp3"
+    },
+    {
+      "japanese": "卒業する",
+      "reading": "そつぎょうする",
+      "romaji": "sotsugyou suru",
+      "english": "to graduate",
+      "audio": "vocabulary/061_sotsugyou_suru.mp3"
+    },
+    {
+      "japanese": "入学する",
+      "reading": "にゅうがくする",
+      "romaji": "nyuugaku suru",
+      "english": "to enter school",
+      "audio": "vocabulary/062_nyuugaku_suru.mp3"
     },
     {
       "japanese": "厳しい",
       "reading": "きびしい",
       "romaji": "kibishii",
       "english": "strict; harsh",
-      "audio": "vocabulary/015_kibishii.mp3"
+      "audio": "vocabulary/063_kibishii.mp3"
     },
     {
       "japanese": "必要",
       "reading": "ひつよう",
       "romaji": "hitsuyou",
       "english": "necessary; needed",
-      "audio": "vocabulary/016_hitsuyou.mp3"
+      "audio": "vocabulary/064_hitsuyou.mp3"
     },
     {
-      "japanese": "確か",
-      "reading": "たしか",
-      "romaji": "tashika",
-      "english": "certain; if I remember correctly",
-      "audio": "vocabulary/017_tashika.mp3"
+      "japanese": "真面目",
+      "reading": "まじめ",
+      "romaji": "majime",
+      "english": "serious; diligent",
+      "audio": "vocabulary/065_majime.mp3"
     },
     {
       "japanese": "結局",
       "reading": "けっきょく",
       "romaji": "kekkyoku",
       "english": "in the end; after all",
-      "audio": "vocabulary/018_kekkyoku.mp3"
+      "audio": "vocabulary/066_kekkyoku.mp3"
     },
     {
       "japanese": "せっかく",
       "reading": "せっかく",
       "romaji": "sekkaku",
       "english": "with much effort; specially",
-      "audio": "vocabulary/019_sekkaku.mp3"
+      "audio": "vocabulary/067_sekkaku.mp3"
+    },
+    {
+      "japanese": "確か",
+      "reading": "たしか",
+      "romaji": "tashika",
+      "english": "certain; if I remember correctly",
+      "audio": "vocabulary/068_tashika.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "日本の学校はたいへんだって聞いたけど、本当？",
-      "english": "I heard Japanese schools are tough. Is that true?",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l22-d02",
+      "title": "Student Talking About School Life",
+      "lines": [
+        {
+          "speaker": "Kenji",
+          "japanese": "あー、今日も部活で疲れた。",
+          "english": "Ahh, I am tired from club activities again today.",
+          "audio": "dialogue/d01_001_kenji.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "けんじ、野球部だっけ？毎日練習があるわけ？",
+          "english": "Kenji, you're in the baseball club, right? So you have practice every day?",
+          "audio": "dialogue/d01_002_yuki.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "うん、でも好きだから続けられるようになった。",
+          "english": "Yeah, but I've become able to keep going because I like it.",
+          "audio": "dialogue/d01_003_kenji.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "塾も行ってるの？すごいね。",
+          "english": "You're also going to cram school? That's impressive.",
+          "audio": "dialogue/d01_004_yuki.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "親に行かされてるんだ。自分では行きたくないわけじゃないけど。",
+          "english": "My parents are making me go. It's not that I don't want to go myself, though.",
+          "audio": "dialogue/d01_005_kenji.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "受験、もうすぐだもんね。お互い頑張ろう！",
+          "english": "The entrance exams are coming up soon, after all. Let's both do our best!",
+          "audio": "dialogue/d01_006_yuki.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "うん。志望校に受かるはずだって信じてる。",
+          "english": "Yeah. I believe I should be able to pass my first-choice school.",
+          "audio": "dialogue/d01_007_kenji.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "うん、じゅけんがあるからね。いい大学に入らないと、いい会社に就職できないわけ。",
-      "english": "Yeah, because of entrance exams. If you don't get into a good university, you can't get a job at a good company—that's the reasoning.",
-      "audio": "dialogue/002_friend.mp3"
+      "id": "l22-d03",
+      "title": "Teacher-Parent Meeting",
+      "lines": [
+        {
+          "speaker": "Sato-sensei",
+          "japanese": "鈴木さん、本日はお越しいただきありがとうございます。",
+          "english": "Mrs. Suzuki, thank you for coming today.",
+          "audio": "dialogue/d02_001_sato-sensei.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "こちらこそ、お時間をいただきありがとうございます。美紀の成績はいかがでしょうか。",
+          "english": "Thank you for your time. How are Miki's grades?",
+          "audio": "dialogue/d02_002_suzuki.mp3"
+        },
+        {
+          "speaker": "Sato-sensei",
+          "japanese": "美紀さんは真面目に勉強しているはずですが、数学がもう少し努力が必要です。",
+          "english": "Miki should be studying diligently, but she needs a bit more effort in math.",
+          "audio": "dialogue/d02_003_sato-sensei.mp3"
+        },
+        {
+          "speaker": "Miki",
+          "japanese": "予習と復習をするようにしているんですが...",
+          "english": "I've been trying to do preview and review, but...",
+          "audio": "dialogue/d02_004_miki.mp3"
+        },
+        {
+          "speaker": "Sato-sensei",
+          "japanese": "補習に参加させていただけますか。理解が深まるわけです。",
+          "english": "Could we have her participate in supplementary lessons? Her understanding will deepen.",
+          "audio": "dialogue/d02_005_sato-sensei.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "もちろんです。家でも復習させるようにいたします。",
+          "english": "Of course. I will make sure she reviews at home as well.",
+          "audio": "dialogue/d02_006_suzuki.mp3"
+        },
+        {
+          "speaker": "Sato-sensei",
+          "japanese": "ご協力いただければ、志望校に合格できるはずです。",
+          "english": "With your cooperation, she should be able to pass her first-choice school.",
+          "audio": "dialogue/d02_007_sato-sensei.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "それで、みんなじゅくに行くわけね。",
-      "english": "So that's why everyone goes to cram school.",
-      "audio": "dialogue/003_mary.mp3"
+      "id": "l22-d04",
+      "title": "Comparing Education Systems",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "日本の学校は宿題が多いって本当？",
+          "english": "Is it true that Japanese schools have a lot of homework?",
+          "audio": "dialogue/d03_001_mary.mp3"
+        },
+        {
+          "speaker": "Naomi",
+          "japanese": "うん、毎日あるよ。アメリカはそんなにないの？",
+          "english": "Yeah, every day. Doesn't America have that much?",
+          "audio": "dialogue/d03_002_naomi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "科目によるけど、日本ほどじゃないわけ。でも部活がないのが違うね。",
+          "english": "It depends on the subject, but it's not as much as Japan. But not having club activities is a difference.",
+          "audio": "dialogue/d03_003_mary.mp3"
+        },
+        {
+          "speaker": "Naomi",
+          "japanese": "えっ、放課後のスポーツとかないの？",
+          "english": "What? You have no after-school sports or anything?",
+          "audio": "dialogue/d03_004_naomi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "あるけど、日本みたいに毎日じゃない。シーズン制なの。",
+          "english": "We have them, but not every day like Japan. It's seasonal.",
+          "audio": "dialogue/d03_005_mary.mp3"
+        },
+        {
+          "speaker": "Naomi",
+          "japanese": "そうなんだ。日本にいる間に日本式を体験してみたらいいよ。",
+          "english": "I see. While you are in Japan, you should try experiencing the Japanese style.",
+          "audio": "dialogue/d03_006_naomi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、せっかく日本に来たんだから、色々経験するようにしてる。",
+          "english": "Yeah, since I came all the way to Japan, I'm trying to experience various things.",
+          "audio": "dialogue/d03_007_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "そう。でも、さいきんは変わってきてるはずだよ。",
-      "english": "Right. But recently it should be changing.",
-      "audio": "dialogue/004_friend.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "どういうふうに？",
-      "english": "In what way?",
-      "audio": "dialogue/005_mary.mp3"
-    },
-    {
-      "speaker": "Friend",
-      "japanese": "学歴だけじゃなくて、けいけんやスキルも大切にされるようになってきた。",
-      "english": "Not just academic background, but experience and skills have come to be valued too.",
-      "audio": "dialogue/006_friend.mp3"
+      "id": "l22-d05",
+      "title": "Discussing Cram Schools",
+      "lines": [
+        {
+          "speaker": "Kimura",
+          "japanese": "本田さん、お子さんは塾に通ってますか。",
+          "english": "Mr. Honda, does your child attend cram school?",
+          "audio": "dialogue/d04_001_kimura.mp3"
+        },
+        {
+          "speaker": "Honda",
+          "japanese": "ええ、中学から通わせています。今は高校受験の準備中です。",
+          "english": "Yes, I've been having him attend since middle school. Now he's preparing for high school entrance exams.",
+          "audio": "dialogue/d04_002_honda.mp3"
+        },
+        {
+          "speaker": "Kimura",
+          "japanese": "うちの息子は勉強が嫌いで、塾に行かせても効果があるのか...",
+          "english": "My son hates studying, so I wonder if sending him to cram school would even be effective...",
+          "audio": "dialogue/d04_003_kimura.mp3"
+        },
+        {
+          "speaker": "Honda",
+          "japanese": "無理に行かせても意味がないわけです。まずは興味を持たせることが大切ですよ。",
+          "english": "Forcing him to go wouldn't make sense. First, getting him interested is important.",
+          "audio": "dialogue/d04_004_honda.mp3"
+        },
+        {
+          "speaker": "Kimura",
+          "japanese": "なるほど。どうやって興味を持たせましたか。",
+          "english": "I see. How did you get him interested?",
+          "audio": "dialogue/d04_005_kimura.mp3"
+        },
+        {
+          "speaker": "Honda",
+          "japanese": "将来の夢について話し合いました。目標ができると、勉強するようになりますよ。",
+          "english": "We talked about his future dreams. Once he has a goal, he starts studying.",
+          "audio": "dialogue/d04_006_honda.mp3"
+        },
+        {
+          "speaker": "Kimura",
+          "japanese": "そうですか。もっと早く相談すればよかったです。ありがとうございます。",
+          "english": "I see. I should have consulted you earlier. Thank you.",
+          "audio": "dialogue/d04_007_kimura.mp3"
+        }
+      ]
     }
   ]
 }

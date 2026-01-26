@@ -1,240 +1,701 @@
 {
   "book": "genki2",
   "lesson": 17,
-  "vocabulary_count": 26,
-  "dialogue_count": 8,
+  "vocabulary_count": 65,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 34,
+  "has_multiple_dialogues": true,
   "vocabulary": [
-    {
-      "japanese": "ぐち",
-      "reading": "ぐち",
-      "romaji": "guchi",
-      "english": "complaint; grumble",
-      "audio": "vocabulary/001_guchi.mp3"
-    },
-    {
-      "japanese": "ふまん",
-      "reading": "ふまん",
-      "romaji": "fuman",
-      "english": "dissatisfaction",
-      "audio": "vocabulary/002_fuman.mp3"
-    },
-    {
-      "japanese": "ルームメイト",
-      "reading": "るーむめいと",
-      "romaji": "ruumeito",
-      "english": "roommate",
-      "audio": "vocabulary/003_ruumeito.mp3"
-    },
-    {
-      "japanese": "かんりにん",
-      "reading": "かんりにん",
-      "romaji": "kanrinin",
-      "english": "building manager",
-      "audio": "vocabulary/004_kanrinin.mp3"
-    },
-    {
-      "japanese": "きそく",
-      "reading": "きそく",
-      "romaji": "kisoku",
-      "english": "rule; regulation",
-      "audio": "vocabulary/005_kisoku.mp3"
-    },
-    {
-      "japanese": "となり",
-      "reading": "となり",
-      "romaji": "tonari",
-      "english": "next door; neighbor",
-      "audio": "vocabulary/006_tonari.mp3"
-    },
     {
       "japanese": "うわさ",
       "reading": "うわさ",
       "romaji": "uwasa",
       "english": "rumor; gossip",
-      "audio": "vocabulary/007_uwasa.mp3"
-    },
-    {
-      "japanese": "じじょう",
-      "reading": "じじょう",
-      "romaji": "jijou",
-      "english": "circumstances",
-      "audio": "vocabulary/008_jijou.mp3"
-    },
-    {
-      "japanese": "めんどう",
-      "reading": "めんどう",
-      "romaji": "mendou",
-      "english": "trouble; hassle",
-      "audio": "vocabulary/009_mendou.mp3"
-    },
-    {
-      "japanese": "よてい",
-      "reading": "よてい",
-      "romaji": "yotei",
-      "english": "plan; schedule",
-      "audio": "vocabulary/010_yotei.mp3"
+      "audio": "vocabulary/001_uwasa.mp3"
     },
     {
       "japanese": "ニュース",
       "reading": "にゅーす",
       "romaji": "nyuusu",
       "english": "news",
-      "audio": "vocabulary/011_nyuusu.mp3"
+      "audio": "vocabulary/002_nyuusu.mp3"
     },
     {
-      "japanese": "てんきよほう",
+      "japanese": "天気予報",
       "reading": "てんきよほう",
       "romaji": "tenkiyohou",
       "english": "weather forecast",
-      "audio": "vocabulary/012_tenkiyohou.mp3"
+      "audio": "vocabulary/003_tenkiyohou.mp3"
     },
     {
-      "japanese": "なおす",
-      "reading": "なおす",
-      "romaji": "naosu",
-      "english": "to fix; to repair",
-      "audio": "vocabulary/013_naosu.mp3"
+      "japanese": "発表",
+      "reading": "はっぴょう",
+      "romaji": "happyou",
+      "english": "announcement; presentation",
+      "audio": "vocabulary/004_happyou.mp3"
     },
     {
-      "japanese": "まもる",
-      "reading": "まもる",
-      "romaji": "mamoru",
-      "english": "to protect; to obey",
-      "audio": "vocabulary/014_mamoru.mp3"
+      "japanese": "報告",
+      "reading": "ほうこく",
+      "romaji": "houkoku",
+      "english": "report",
+      "audio": "vocabulary/005_houkoku.mp3"
     },
     {
-      "japanese": "こわす",
-      "reading": "こわす",
-      "romaji": "kowasu",
-      "english": "to break; to destroy",
-      "audio": "vocabulary/015_kowasu.mp3"
+      "japanese": "情報",
+      "reading": "じょうほう",
+      "romaji": "jouhou",
+      "english": "information",
+      "audio": "vocabulary/006_jouhou.mp3"
     },
     {
-      "japanese": "よごす",
-      "reading": "よごす",
-      "romaji": "yogosu",
-      "english": "to make dirty",
-      "audio": "vocabulary/016_yogosu.mp3"
+      "japanese": "伝える",
+      "reading": "つたえる",
+      "romaji": "tsutaeru",
+      "english": "to convey; to tell",
+      "audio": "vocabulary/007_tsutaeru.mp3"
     },
     {
-      "japanese": "さわぐ",
-      "reading": "さわぐ",
-      "romaji": "sawagu",
-      "english": "to make noise",
-      "audio": "vocabulary/017_sawagu.mp3"
+      "japanese": "聞く",
+      "reading": "きく",
+      "romaji": "kiku",
+      "english": "to hear; to ask",
+      "audio": "vocabulary/008_kiku.mp3"
     },
     {
-      "japanese": "たのむ",
-      "reading": "たのむ",
-      "romaji": "tanomu",
-      "english": "to ask; to request",
-      "audio": "vocabulary/018_tanomu.mp3"
+      "japanese": "見た目",
+      "reading": "みため",
+      "romaji": "mitame",
+      "english": "appearance; looks",
+      "audio": "vocabulary/009_mitame.mp3"
     },
     {
-      "japanese": "ことわる",
-      "reading": "ことわる",
-      "romaji": "kotowaru",
-      "english": "to refuse; to decline",
-      "audio": "vocabulary/019_kotowaru.mp3"
+      "japanese": "中身",
+      "reading": "なかみ",
+      "romaji": "nakami",
+      "english": "contents; inside; true nature",
+      "audio": "vocabulary/010_nakami.mp3"
     },
     {
-      "japanese": "がまんする",
-      "reading": "がまんする",
-      "romaji": "gaman suru",
-      "english": "to endure",
-      "audio": "vocabulary/020_gaman_suru.mp3"
+      "japanese": "実際",
+      "reading": "じっさい",
+      "romaji": "jissai",
+      "english": "actually; in reality",
+      "audio": "vocabulary/011_jissai.mp3"
     },
     {
-      "japanese": "そうだんする",
-      "reading": "そうだんする",
-      "romaji": "soudan suru",
-      "english": "to consult",
-      "audio": "vocabulary/021_soudan_suru.mp3"
+      "japanese": "おだやか",
+      "reading": "おだやか",
+      "romaji": "odayaka",
+      "english": "calm; gentle",
+      "audio": "vocabulary/012_odayaka.mp3"
     },
     {
-      "japanese": "うるさい",
-      "reading": "うるさい",
-      "romaji": "urusai",
-      "english": "noisy; annoying",
-      "audio": "vocabulary/022_urusai.mp3"
+      "japanese": "やさしい",
+      "reading": "やさしい",
+      "romaji": "yasashii",
+      "english": "kind; gentle",
+      "audio": "vocabulary/013_yasashii.mp3"
     },
     {
       "japanese": "きびしい",
       "reading": "きびしい",
       "romaji": "kibishii",
       "english": "strict; harsh",
-      "audio": "vocabulary/023_kibishii.mp3"
+      "audio": "vocabulary/014_kibishii.mp3"
     },
     {
-      "japanese": "ちょくせつ",
+      "japanese": "うれしそう",
+      "reading": "うれしそう",
+      "romaji": "ureshisou",
+      "english": "looking happy",
+      "audio": "vocabulary/015_ureshisou.mp3"
+    },
+    {
+      "japanese": "かなしそう",
+      "reading": "かなしそう",
+      "romaji": "kanashisou",
+      "english": "looking sad",
+      "audio": "vocabulary/016_kanashisou.mp3"
+    },
+    {
+      "japanese": "ストレス",
+      "reading": "すとれす",
+      "romaji": "sutoresu",
+      "english": "stress",
+      "audio": "vocabulary/017_sutoresu.mp3"
+    },
+    {
+      "japanese": "不満",
+      "reading": "ふまん",
+      "romaji": "fuman",
+      "english": "dissatisfaction; complaint",
+      "audio": "vocabulary/018_fuman.mp3"
+    },
+    {
+      "japanese": "心配",
+      "reading": "しんぱい",
+      "romaji": "shinpai",
+      "english": "worry; concern",
+      "audio": "vocabulary/019_shinpai.mp3"
+    },
+    {
+      "japanese": "気持ち",
+      "reading": "きもち",
+      "romaji": "kimochi",
+      "english": "feeling; mood",
+      "audio": "vocabulary/020_kimochi.mp3"
+    },
+    {
+      "japanese": "イライラする",
+      "reading": "いらいらする",
+      "romaji": "iraira suru",
+      "english": "to be irritated",
+      "audio": "vocabulary/021_iraira_suru.mp3"
+    },
+    {
+      "japanese": "落ち込む",
+      "reading": "おちこむ",
+      "romaji": "ochikomu",
+      "english": "to feel depressed; to be down",
+      "audio": "vocabulary/022_ochikomu.mp3"
+    },
+    {
+      "japanese": "がっかりする",
+      "reading": "がっかりする",
+      "romaji": "gakkari suru",
+      "english": "to be disappointed",
+      "audio": "vocabulary/023_gakkari_suru.mp3"
+    },
+    {
+      "japanese": "うんざりする",
+      "reading": "うんざりする",
+      "romaji": "unzari suru",
+      "english": "to be fed up",
+      "audio": "vocabulary/024_unzari_suru.mp3"
+    },
+    {
+      "japanese": "たまる",
+      "reading": "たまる",
+      "romaji": "tamaru",
+      "english": "to accumulate; to build up",
+      "audio": "vocabulary/025_tamaru.mp3"
+    },
+    {
+      "japanese": "がまんする",
+      "reading": "がまんする",
+      "romaji": "gaman suru",
+      "english": "to endure; to put up with",
+      "audio": "vocabulary/026_gaman_suru.mp3"
+    },
+    {
+      "japanese": "部長",
+      "reading": "ぶちょう",
+      "romaji": "buchou",
+      "english": "department head; manager",
+      "audio": "vocabulary/027_buchou.mp3"
+    },
+    {
+      "japanese": "社長",
+      "reading": "しゃちょう",
+      "romaji": "shachou",
+      "english": "company president",
+      "audio": "vocabulary/028_shachou.mp3"
+    },
+    {
+      "japanese": "副社長",
+      "reading": "ふくしゃちょう",
+      "romaji": "fukushachou",
+      "english": "vice president",
+      "audio": "vocabulary/029_fukushachou.mp3"
+    },
+    {
+      "japanese": "同僚",
+      "reading": "どうりょう",
+      "romaji": "douryou",
+      "english": "colleague; coworker",
+      "audio": "vocabulary/030_douryou.mp3"
+    },
+    {
+      "japanese": "経理",
+      "reading": "けいり",
+      "romaji": "keiri",
+      "english": "accounting; accountant",
+      "audio": "vocabulary/031_keiri.mp3"
+    },
+    {
+      "japanese": "納期",
+      "reading": "のうき",
+      "romaji": "nouki",
+      "english": "delivery date; deadline",
+      "audio": "vocabulary/032_nouki.mp3"
+    },
+    {
+      "japanese": "方針",
+      "reading": "ほうしん",
+      "romaji": "houshin",
+      "english": "policy; course",
+      "audio": "vocabulary/033_houshin.mp3"
+    },
+    {
+      "japanese": "残業",
+      "reading": "ざんぎょう",
+      "romaji": "zangyou",
+      "english": "overtime work",
+      "audio": "vocabulary/034_zangyou.mp3"
+    },
+    {
+      "japanese": "雇う",
+      "reading": "やとう",
+      "romaji": "yatou",
+      "english": "to hire; to employ",
+      "audio": "vocabulary/035_yatou.mp3"
+    },
+    {
+      "japanese": "やめる",
+      "reading": "やめる",
+      "romaji": "yameru",
+      "english": "to quit; to resign",
+      "audio": "vocabulary/036_yameru.mp3"
+    },
+    {
+      "japanese": "相談する",
+      "reading": "そうだんする",
+      "romaji": "soudan suru",
+      "english": "to consult",
+      "audio": "vocabulary/037_soudan_suru.mp3"
+    },
+    {
+      "japanese": "確認する",
+      "reading": "かくにんする",
+      "romaji": "kakunin suru",
+      "english": "to confirm; to verify",
+      "audio": "vocabulary/038_kakunin_suru.mp3"
+    },
+    {
+      "japanese": "ルームメイト",
+      "reading": "るーむめいと",
+      "romaji": "ruumeito",
+      "english": "roommate",
+      "audio": "vocabulary/039_ruumeito.mp3"
+    },
+    {
+      "japanese": "管理人",
+      "reading": "かんりにん",
+      "romaji": "kanrinin",
+      "english": "building manager; superintendent",
+      "audio": "vocabulary/040_kanrinin.mp3"
+    },
+    {
+      "japanese": "隣",
+      "reading": "となり",
+      "romaji": "tonari",
+      "english": "next door; neighbor",
+      "audio": "vocabulary/041_tonari.mp3"
+    },
+    {
+      "japanese": "規則",
+      "reading": "きそく",
+      "romaji": "kisoku",
+      "english": "rule; regulation",
+      "audio": "vocabulary/042_kisoku.mp3"
+    },
+    {
+      "japanese": "事情",
+      "reading": "じじょう",
+      "romaji": "jijou",
+      "english": "circumstances; situation",
+      "audio": "vocabulary/043_jijou.mp3"
+    },
+    {
+      "japanese": "うまくいく",
+      "reading": "うまくいく",
+      "romaji": "umaku iku",
+      "english": "to go well",
+      "audio": "vocabulary/044_umaku_iku.mp3"
+    },
+    {
+      "japanese": "守る",
+      "reading": "まもる",
+      "romaji": "mamoru",
+      "english": "to protect; to obey (rules)",
+      "audio": "vocabulary/045_mamoru.mp3"
+    },
+    {
+      "japanese": "騒ぐ",
+      "reading": "さわぐ",
+      "romaji": "sawagu",
+      "english": "to make noise; to be rowdy",
+      "audio": "vocabulary/046_sawagu.mp3"
+    },
+    {
+      "japanese": "汚す",
+      "reading": "よごす",
+      "romaji": "yogosu",
+      "english": "to make dirty",
+      "audio": "vocabulary/047_yogosu.mp3"
+    },
+    {
+      "japanese": "壊す",
+      "reading": "こわす",
+      "romaji": "kowasu",
+      "english": "to break; to destroy",
+      "audio": "vocabulary/048_kowasu.mp3"
+    },
+    {
+      "japanese": "ぐち",
+      "reading": "ぐち",
+      "romaji": "guchi",
+      "english": "complaint; grumble",
+      "audio": "vocabulary/049_guchi.mp3"
+    },
+    {
+      "japanese": "文句",
+      "reading": "もんく",
+      "romaji": "monku",
+      "english": "complaint; objection",
+      "audio": "vocabulary/050_monku.mp3"
+    },
+    {
+      "japanese": "面倒",
+      "reading": "めんどう",
+      "romaji": "mendou",
+      "english": "trouble; hassle",
+      "audio": "vocabulary/051_mendou.mp3"
+    },
+    {
+      "japanese": "うるさい",
+      "reading": "うるさい",
+      "romaji": "urusai",
+      "english": "noisy; annoying",
+      "audio": "vocabulary/052_urusai.mp3"
+    },
+    {
+      "japanese": "頼む",
+      "reading": "たのむ",
+      "romaji": "tanomu",
+      "english": "to ask; to request",
+      "audio": "vocabulary/053_tanomu.mp3"
+    },
+    {
+      "japanese": "断る",
+      "reading": "ことわる",
+      "romaji": "kotowaru",
+      "english": "to refuse; to decline",
+      "audio": "vocabulary/054_kotowaru.mp3"
+    },
+    {
+      "japanese": "直す",
+      "reading": "なおす",
+      "romaji": "naosu",
+      "english": "to fix; to repair",
+      "audio": "vocabulary/055_naosu.mp3"
+    },
+    {
+      "japanese": "文句を言う",
+      "reading": "もんくをいう",
+      "romaji": "monku wo iu",
+      "english": "to complain",
+      "audio": "vocabulary/056_monku_wo_iu.mp3"
+    },
+    {
+      "japanese": "直接",
       "reading": "ちょくせつ",
       "romaji": "chokusetsu",
       "english": "directly",
-      "audio": "vocabulary/024_chokusetsu.mp3"
+      "audio": "vocabulary/057_chokusetsu.mp3"
     },
     {
       "japanese": "どうやら",
       "reading": "どうやら",
       "romaji": "douyara",
-      "english": "apparently",
-      "audio": "vocabulary/025_douyara.mp3"
+      "english": "apparently; it seems",
+      "audio": "vocabulary/058_douyara.mp3"
     },
     {
-      "japanese": "によると",
-      "reading": "によると",
-      "romaji": "ni yoru to",
-      "english": "according to",
-      "audio": "vocabulary/026_ni_yoru_to.mp3"
+      "japanese": "正式に",
+      "reading": "せいしきに",
+      "romaji": "seishiki ni",
+      "english": "officially; formally",
+      "audio": "vocabulary/059_seishiki_ni.mp3"
+    },
+    {
+      "japanese": "結構",
+      "reading": "けっこう",
+      "romaji": "kekkou",
+      "english": "fairly; quite",
+      "audio": "vocabulary/060_kekkou.mp3"
+    },
+    {
+      "japanese": "全然",
+      "reading": "ぜんぜん",
+      "romaji": "zenzen",
+      "english": "not at all (with negative)",
+      "audio": "vocabulary/061_zenzen.mp3"
+    },
+    {
+      "japanese": "～によると",
+      "reading": "～によると",
+      "romaji": "~ni yoru to",
+      "english": "according to ~",
+      "audio": "vocabulary/062_ni_yoru_to.mp3"
+    },
+    {
+      "japanese": "折り返し",
+      "reading": "おりかえし",
+      "romaji": "orikaeshi",
+      "english": "return (call); reply",
+      "audio": "vocabulary/063_orikaeshi.mp3"
+    },
+    {
+      "japanese": "なんとかなる",
+      "reading": "なんとかなる",
+      "romaji": "nantoka naru",
+      "english": "to work out somehow",
+      "audio": "vocabulary/064_nantoka_naru.mp3"
+    },
+    {
+      "japanese": "予定",
+      "reading": "よてい",
+      "romaji": "yotei",
+      "english": "plan; schedule",
+      "audio": "vocabulary/065_yotei.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Friend",
-      "japanese": "メアリーさん、どうしたの？つかれてるみたいだけど。",
-      "english": "Mary, what's wrong? You look tired.",
-      "audio": "dialogue/001_friend.mp3"
+      "id": "l17-d01",
+      "title": "Office Gossip",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "ねえ、聞いた？田中さん、来月やめるんだって。",
+          "english": "Hey, did you hear? Tanaka-san is quitting next month, apparently.",
+          "audio": "dialogue/d01_001_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "えっ、うそ！どうして？",
+          "english": "What, no way! Why?",
+          "audio": "dialogue/d01_002_mika.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "部長とうまくいってないらしいよ。毎日ぐちを言ってたみたい。",
+          "english": "Apparently, things aren't going well with the department head. It seems she was complaining every day.",
+          "audio": "dialogue/d01_003_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "そうなんだ。でも田中さんがいなくなったら、仕事が大変になりそう。",
+          "english": "I see. But if Tanaka-san leaves, work will become tough.",
+          "audio": "dialogue/d01_004_mika.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "ほんとだよね。だれか新しい人を早く雇えばいいんだけど。",
+          "english": "Totally. I wish they would hire someone new soon.",
+          "audio": "dialogue/d01_005_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "私も最近、仕事のストレスがたまってて、ぐちを言いたくなる。",
+          "english": "Lately, I've been building up work stress too and feel like complaining.",
+          "audio": "dialogue/d01_006_mika.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "うん、ルームメイトがうるさくて、ぜんぜんねむれないの。",
-      "english": "Yeah, my roommate is noisy and I can't sleep at all.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l17-d02",
+      "title": "Reporting to the Boss",
+      "lines": [
+        {
+          "speaker": "Manager",
+          "japanese": "鈴木さん、さっきの電話は何でしたか。",
+          "english": "Suzuki-san, what was that phone call about?",
+          "audio": "dialogue/d02_001_manager.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "はい、山本商事の方からでした。納期を早めてほしいそうです。",
+          "english": "Yes, it was from someone at Yamamoto Trading. They said they want to move up the delivery date.",
+          "audio": "dialogue/d02_002_suzuki.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "納期ですか。どのぐらい早くしたいと言っていましたか。",
+          "english": "The delivery date? How much earlier did they say they want it?",
+          "audio": "dialogue/d02_003_manager.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "一週間早くできないかということでした。",
+          "english": "They asked if we could do it a week earlier.",
+          "audio": "dialogue/d02_004_suzuki.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "一週間ですか。工場に相談すれば、なんとかなるかもしれません。",
+          "english": "A week? If we consult with the factory, we might be able to work something out.",
+          "audio": "dialogue/d02_005_manager.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "はい、無理なら連絡してほしいとも言っていました。",
+          "english": "Yes, they also said they'd like us to contact them if it's not possible.",
+          "audio": "dialogue/d02_006_suzuki.mp3"
+        },
+        {
+          "speaker": "Manager",
+          "japanese": "わかりました。すぐ確認して、折り返し電話しましょう。",
+          "english": "Understood. Let's confirm right away and call them back.",
+          "audio": "dialogue/d02_007_manager.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "そうなんだ。どんなふうにうるさいの？",
-      "english": "I see. In what way is she noisy?",
-      "audio": "dialogue/003_friend.mp3"
+      "id": "l17-d03",
+      "title": "Appearances Can Be Deceiving",
+      "lines": [
+        {
+          "speaker": "Kenji",
+          "japanese": "高橋さんって、いつもやさしそうに見えるよね。",
+          "english": "Takahashi-san always looks kind, doesn\\",
+          "audio": "dialogue/d03_001_kenji.mp3"
+        },
+        {
+          "speaker": "Aya",
+          "japanese": "うん、でも実際は結構きびしいって聞いたよ。",
+          "english": "Yeah, but I heard she\\",
+          "audio": "dialogue/d03_002_aya.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "えっ、そうなの？全然そう見えない。",
+          "english": "Really? She doesn't seem like that at all.",
+          "audio": "dialogue/d03_003_kenji.mp3"
+        },
+        {
+          "speaker": "Aya",
+          "japanese": "仕事になると、すごくきびしくなるらしい。",
+          "english": "Apparently, when it comes to work, she becomes very strict.",
+          "audio": "dialogue/d03_004_aya.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "へえ。見た目はおだやかそうだけど、中身は違うんだ。",
+          "english": "Huh. She looks calm, but inside she's different.",
+          "audio": "dialogue/d03_005_kenji.mp3"
+        },
+        {
+          "speaker": "Aya",
+          "japanese": "だから、仕事を頼むなら、ちゃんと準備してからの方がいいよ。",
+          "english": "So if you're going to ask her for work help, it's better to prepare properly first.",
+          "audio": "dialogue/d03_006_aya.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "まいばん友だちをよんで、おそくまでパーティーするんだって。",
-      "english": "She invites friends over every night and parties until late, apparently.",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l17-d04",
+      "title": "Roommate Problems",
+      "lines": [
+        {
+          "speaker": "Friend",
+          "japanese": "メアリーさん、どうしたの？つかれてるみたいだけど。",
+          "english": "Mary, what's wrong? You look tired.",
+          "audio": "dialogue/d04_001_friend.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、ルームメイトがうるさくて、ぜんぜんねむれないの。",
+          "english": "Yeah, my roommate is noisy and I can't sleep at all.",
+          "audio": "dialogue/d04_002_mary.mp3"
+        },
+        {
+          "speaker": "Friend",
+          "japanese": "そうなんだ。どんなふうにうるさいの？",
+          "english": "I see. In what way is she noisy?",
+          "audio": "dialogue/d04_003_friend.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "まいばん友だちをよんで、おそくまでパーティーするんだって。",
+          "english": "She invites friends over every night and parties until late, apparently.",
+          "audio": "dialogue/d04_004_mary.mp3"
+        },
+        {
+          "speaker": "Friend",
+          "japanese": "それは大へんだね。ちょくせつ話したら？",
+          "english": "That's tough. Why don't you talk to her directly?",
+          "audio": "dialogue/d04_005_friend.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "話したんだけど、ぜんぜん聞いてくれないの。がまんできない。",
+          "english": "I did talk to her, but she doesn't listen at all. I can't stand it.",
+          "audio": "dialogue/d04_006_mary.mp3"
+        },
+        {
+          "speaker": "Friend",
+          "japanese": "じゃあ、かんりにんに言えば？",
+          "english": "Then, how about telling the building manager?",
+          "audio": "dialogue/d04_007_friend.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "そうだね。それがいいかもしれない。",
+          "english": "You're right. That might be good.",
+          "audio": "dialogue/d04_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Friend",
-      "japanese": "それは大へんだね。ちょくせつ話したら？",
-      "english": "That's tough. Why don't you talk to her directly?",
-      "audio": "dialogue/005_friend.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "話したんだけど、ぜんぜん聞いてくれないの。",
-      "english": "I did talk to her, but she doesn't listen at all.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Friend",
-      "japanese": "じゃあ、かんりにんに言えば？",
-      "english": "Then, how about telling the building manager?",
-      "audio": "dialogue/007_friend.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "そうだね。それがいいかもしれない。",
-      "english": "You're right. That might be good.",
-      "audio": "dialogue/008_mary.mp3"
+      "id": "l17-d05",
+      "title": "Sharing the News",
+      "lines": [
+        {
+          "speaker": "Sato",
+          "japanese": "山田さん、聞きましたか？社長がかわるそうですよ。",
+          "english": "Yamada-san, did you hear? The company president is changing, apparently.",
+          "audio": "dialogue/d05_001_sato.mp3"
+        },
+        {
+          "speaker": "Yamada",
+          "japanese": "えっ、本当ですか？どこでそれを聞いたんですか？",
+          "english": "What, really? Where did you hear that?",
+          "audio": "dialogue/d05_002_yamada.mp3"
+        },
+        {
+          "speaker": "Sato",
+          "japanese": "経理の田村さんによると、来月正式に発表されるらしいです。",
+          "english": "According to Tamura-san in accounting, it will be officially announced next month.",
+          "audio": "dialogue/d05_003_sato.mp3"
+        },
+        {
+          "speaker": "Yamada",
+          "japanese": "そうですか。新しい社長は誰になるんでしょうか。",
+          "english": "I see. I wonder who the new president will be.",
+          "audio": "dialogue/d05_004_yamada.mp3"
+        },
+        {
+          "speaker": "Sato",
+          "japanese": "副社長がなるって言ってましたよ。",
+          "english": "They said the vice president will take over.",
+          "audio": "dialogue/d05_005_sato.mp3"
+        },
+        {
+          "speaker": "Yamada",
+          "japanese": "ああ、なるほど。会社のほうしんがかわったら、どうなるかな。",
+          "english": "Ah, I see. If the company policy changes, I wonder what will happen.",
+          "audio": "dialogue/d05_006_yamada.mp3"
+        },
+        {
+          "speaker": "Sato",
+          "japanese": "何かかわれば、また教えますね。",
+          "english": "If anything changes, I\\",
+          "audio": "dialogue/d05_007_sato.mp3"
+        }
+      ]
     }
   ]
 }

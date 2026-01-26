@@ -1,343 +1,706 @@
 {
   "book": "genki2",
   "lesson": 14,
-  "vocabulary_count": 39,
-  "dialogue_count": 10,
+  "vocabulary_count": 64,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 36,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
-      "japanese": "ホワイトデー",
-      "reading": "ホワイトデー",
-      "romaji": "howaito dee",
-      "english": "White Day (March 14)",
-      "audio": "vocabulary/001_howaito_dee.mp3"
+      "japanese": "プレゼント",
+      "reading": "プレゼント",
+      "romaji": "purezento",
+      "english": "present; gift",
+      "audio": "vocabulary/001_purezento.mp3"
     },
     {
-      "japanese": "チョコレート",
-      "reading": "チョコレート",
-      "romaji": "chokoreeto",
-      "english": "chocolate",
-      "audio": "vocabulary/002_chokoreeto.mp3"
+      "japanese": "贈り物",
+      "reading": "おくりもの",
+      "romaji": "okurimono",
+      "english": "gift (formal)",
+      "audio": "vocabulary/002_okurimono.mp3"
     },
     {
-      "japanese": "手作り",
-      "reading": "てづくり",
-      "romaji": "tezukuri",
-      "english": "handmade",
-      "audio": "vocabulary/003_tezukuri.mp3"
+      "japanese": "お返し",
+      "reading": "おかえし",
+      "romaji": "okaeshi",
+      "english": "return gift; reciprocation",
+      "audio": "vocabulary/003_okaeshi.mp3"
     },
     {
-      "japanese": "レシピ",
-      "reading": "レシピ",
-      "romaji": "reshipi",
-      "english": "recipe",
-      "audio": "vocabulary/004_reshipi.mp3"
+      "japanese": "お礼",
+      "reading": "おれい",
+      "romaji": "orei",
+      "english": "thanks; gratitude",
+      "audio": "vocabulary/004_orei.mp3"
     },
     {
-      "japanese": "材料",
-      "reading": "ざいりょう",
-      "romaji": "zairyou",
-      "english": "ingredients; materials",
-      "audio": "vocabulary/005_zairyou.mp3"
+      "japanese": "ラッピング",
+      "reading": "ラッピング",
+      "romaji": "rappingu",
+      "english": "wrapping",
+      "audio": "vocabulary/005_rappingu.mp3"
     },
     {
-      "japanese": "心",
-      "reading": "こころ",
-      "romaji": "kokoro",
-      "english": "heart; mind",
-      "audio": "vocabulary/006_kokoro.mp3"
-    },
-    {
-      "japanese": "気持ち",
-      "reading": "きもち",
-      "romaji": "kimochi",
-      "english": "feeling",
-      "audio": "vocabulary/007_kimochi.mp3"
-    },
-    {
-      "japanese": "アイデア",
-      "reading": "アイデア",
-      "romaji": "aidea",
-      "english": "idea",
-      "audio": "vocabulary/008_aidea.mp3"
-    },
-    {
-      "japanese": "義理チョコ",
-      "reading": "ぎりチョコ",
-      "romaji": "giri choko",
-      "english": "obligation chocolate",
-      "audio": "vocabulary/009_giri_choko.mp3"
-    },
-    {
-      "japanese": "本命チョコ",
-      "reading": "ほんめいチョコ",
-      "romaji": "honmei choko",
-      "english": "true love chocolate",
-      "audio": "vocabulary/010_honmei_choko.mp3"
-    },
-    {
-      "japanese": "込める",
-      "reading": "こめる",
-      "romaji": "komeru",
-      "english": "to put into; to include",
-      "audio": "vocabulary/011_komeru.mp3"
-    },
-    {
-      "japanese": "届ける",
-      "reading": "とどける",
-      "romaji": "todokeru",
-      "english": "to deliver",
-      "audio": "vocabulary/012_todokeru.mp3"
+      "japanese": "リボン",
+      "reading": "リボン",
+      "romaji": "ribon",
+      "english": "ribbon",
+      "audio": "vocabulary/006_ribon.mp3"
     },
     {
       "japanese": "渡す",
       "reading": "わたす",
       "romaji": "watasu",
       "english": "to hand over; to give",
-      "audio": "vocabulary/013_watasu.mp3"
+      "audio": "vocabulary/007_watasu.mp3"
     },
     {
       "japanese": "受け取る",
       "reading": "うけとる",
       "romaji": "uketoru",
       "english": "to receive; to accept",
-      "audio": "vocabulary/014_uketoru.mp3"
+      "audio": "vocabulary/008_uketoru.mp3"
     },
     {
-      "japanese": "包む",
-      "reading": "つつむ",
-      "romaji": "tsutsumu",
-      "english": "to wrap",
-      "audio": "vocabulary/015_tsutsumu.mp3"
+      "japanese": "気持ち",
+      "reading": "きもち",
+      "romaji": "kimochi",
+      "english": "feeling; emotion",
+      "audio": "vocabulary/009_kimochi.mp3"
     },
     {
-      "japanese": "溶かす",
-      "reading": "とかす",
-      "romaji": "tokasu",
-      "english": "to melt (transitive)",
-      "audio": "vocabulary/016_tokasu.mp3"
+      "japanese": "心",
+      "reading": "こころ",
+      "romaji": "kokoro",
+      "english": "heart; mind",
+      "audio": "vocabulary/010_kokoro.mp3"
     },
     {
-      "japanese": "混ぜる",
-      "reading": "まぜる",
-      "romaji": "mazeru",
-      "english": "to mix",
-      "audio": "vocabulary/017_mazeru.mp3"
-    },
-    {
-      "japanese": "冷やす",
-      "reading": "ひやす",
-      "romaji": "hiyasu",
-      "english": "to cool; to chill",
-      "audio": "vocabulary/018_hiyasu.mp3"
-    },
-    {
-      "japanese": "固まる",
-      "reading": "かたまる",
-      "romaji": "katamaru",
-      "english": "to harden; to solidify",
-      "audio": "vocabulary/019_katamaru.mp3"
-    },
-    {
-      "japanese": "～たら",
-      "reading": "～たら",
-      "romaji": "~tara",
-      "english": "if; when",
-      "audio": "vocabulary/020_tara.mp3"
-    },
-    {
-      "japanese": "～たらどうですか",
-      "reading": "～たらどうですか",
-      "romaji": "~tara dou desu ka",
-      "english": "how about ~ing?",
-      "audio": "vocabulary/021_tara_dou_desu_ka.mp3"
-    },
-    {
-      "japanese": "～といい",
-      "reading": "～といい",
-      "romaji": "~to ii",
-      "english": "I hope ~",
-      "audio": "vocabulary/022_to_ii.mp3"
-    },
-    {
-      "japanese": "～時",
-      "reading": "～とき",
-      "romaji": "~toki",
-      "english": "when ~",
-      "audio": "vocabulary/023_toki.mp3"
-    },
-    {
-      "japanese": "きっと",
-      "reading": "きっと",
-      "romaji": "kitto",
-      "english": "surely; definitely",
-      "audio": "vocabulary/024_kitto.mp3"
-    },
-    {
-      "japanese": "たぶん",
-      "reading": "たぶん",
-      "romaji": "tabun",
-      "english": "probably; maybe",
-      "audio": "vocabulary/025_tabun.mp3"
-    },
-    {
-      "japanese": "もし",
-      "reading": "もし",
-      "romaji": "moshi",
-      "english": "if (hypothetical)",
-      "audio": "vocabulary/026_moshi.mp3"
-    },
-    {
-      "japanese": "必ず",
-      "reading": "かならず",
-      "romaji": "kanarazu",
-      "english": "without fail; always",
-      "audio": "vocabulary/027_kanarazu.mp3"
-    },
-    {
-      "japanese": "絶対に",
-      "reading": "ぜったいに",
-      "romaji": "zettai ni",
-      "english": "absolutely",
-      "audio": "vocabulary/028_zettai_ni.mp3"
-    },
-    {
-      "japanese": "ほしがる",
-      "reading": "ほしがる",
-      "romaji": "hoshigaru",
-      "english": "to want (third person)",
-      "audio": "vocabulary/029_hoshigaru.mp3"
-    },
-    {
-      "japanese": "返す",
-      "reading": "かえす",
-      "romaji": "kaesu",
-      "english": "to return (something)",
-      "audio": "vocabulary/030_kaesu.mp3"
-    },
-    {
-      "japanese": "信じる",
-      "reading": "しんじる",
-      "romaji": "shinjiru",
-      "english": "to believe",
-      "audio": "vocabulary/031_shinjiru.mp3"
+      "japanese": "喜ぶ",
+      "reading": "よろこぶ",
+      "romaji": "yorokobu",
+      "english": "to be glad; to be pleased",
+      "audio": "vocabulary/011_yorokobu.mp3"
     },
     {
       "japanese": "驚く",
       "reading": "おどろく",
       "romaji": "odoroku",
       "english": "to be surprised",
-      "audio": "vocabulary/032_odoroku.mp3"
+      "audio": "vocabulary/012_odoroku.mp3"
     },
     {
       "japanese": "感謝する",
       "reading": "かんしゃする",
       "romaji": "kansha suru",
-      "english": "to appreciate; to thank",
-      "audio": "vocabulary/033_kansha_suru.mp3"
+      "english": "to appreciate; to be grateful",
+      "audio": "vocabulary/013_kansha_suru.mp3"
     },
     {
-      "japanese": "告白する",
-      "reading": "こくはくする",
-      "romaji": "kokuhaku suru",
-      "english": "to confess (love)",
-      "audio": "vocabulary/034_kokuhaku_suru.mp3"
+      "japanese": "感動する",
+      "reading": "かんどうする",
+      "romaji": "kandou suru",
+      "english": "to be moved; to be touched",
+      "audio": "vocabulary/014_kandou_suru.mp3"
     },
     {
-      "japanese": "付き合う",
-      "reading": "つきあう",
-      "romaji": "tsukiau",
-      "english": "to go out with; to date",
-      "audio": "vocabulary/035_tsukiau.mp3"
+      "japanese": "恥ずかしい",
+      "reading": "はずかしい",
+      "romaji": "hazukashii",
+      "english": "embarrassed; shy",
+      "audio": "vocabulary/015_hazukashii.mp3"
+    },
+    {
+      "japanese": "緊張する",
+      "reading": "きんちょうする",
+      "romaji": "kinchou suru",
+      "english": "to be nervous; to be tense",
+      "audio": "vocabulary/016_kinchou_suru.mp3"
+    },
+    {
+      "japanese": "ドキドキする",
+      "reading": "ドキドキする",
+      "romaji": "dokidoki suru",
+      "english": "to feel nervous/excited (heart pounding)",
+      "audio": "vocabulary/017_dokidoki_suru.mp3"
+    },
+    {
+      "japanese": "うれしい",
+      "reading": "うれしい",
+      "romaji": "ureshii",
+      "english": "happy; glad",
+      "audio": "vocabulary/018_ureshii.mp3"
     },
     {
       "japanese": "恋人",
       "reading": "こいびと",
       "romaji": "koibito",
       "english": "lover; sweetheart",
-      "audio": "vocabulary/036_koibito.mp3"
+      "audio": "vocabulary/019_koibito.mp3"
+    },
+    {
+      "japanese": "彼氏",
+      "reading": "かれし",
+      "romaji": "kareshi",
+      "english": "boyfriend",
+      "audio": "vocabulary/020_kareshi.mp3"
+    },
+    {
+      "japanese": "彼女",
+      "reading": "かのじょ",
+      "romaji": "kanojo",
+      "english": "girlfriend; she",
+      "audio": "vocabulary/021_kanojo.mp3"
     },
     {
       "japanese": "片思い",
       "reading": "かたおもい",
       "romaji": "kataomoi",
-      "english": "unrequited love",
-      "audio": "vocabulary/037_kataomoi.mp3"
+      "english": "unrequited love; one-sided love",
+      "audio": "vocabulary/022_kataomoi.mp3"
     },
     {
       "japanese": "両思い",
       "reading": "りょうおもい",
       "romaji": "ryouomoi",
       "english": "mutual love",
-      "audio": "vocabulary/038_ryouomoi.mp3"
+      "audio": "vocabulary/023_ryouomoi.mp3"
     },
     {
-      "japanese": "ドキドキする",
-      "reading": "ドキドキする",
-      "romaji": "dokidoki suru",
-      "english": "to feel nervous/excited",
-      "audio": "vocabulary/039_dokidoki_suru.mp3"
+      "japanese": "告白する",
+      "reading": "こくはくする",
+      "romaji": "kokuhaku suru",
+      "english": "to confess (love)",
+      "audio": "vocabulary/024_kokuhaku_suru.mp3"
+    },
+    {
+      "japanese": "付き合う",
+      "reading": "つきあう",
+      "romaji": "tsukiau",
+      "english": "to go out with; to date",
+      "audio": "vocabulary/025_tsukiau.mp3"
+    },
+    {
+      "japanese": "仲がいい",
+      "reading": "なかがいい",
+      "romaji": "naka ga ii",
+      "english": "to be on good terms; close",
+      "audio": "vocabulary/026_naka_ga_ii.mp3"
+    },
+    {
+      "japanese": "ほしい",
+      "reading": "ほしい",
+      "romaji": "hoshii",
+      "english": "to want (something)",
+      "audio": "vocabulary/027_hoshii.mp3"
+    },
+    {
+      "japanese": "ほしがる",
+      "reading": "ほしがる",
+      "romaji": "hoshigaru",
+      "english": "to want (third person)",
+      "audio": "vocabulary/028_hoshigaru.mp3"
+    },
+    {
+      "japanese": "欲しがっている",
+      "reading": "ほしがっている",
+      "romaji": "hoshigatteiru",
+      "english": "is wanting (third person)",
+      "audio": "vocabulary/029_hoshigatteiru.mp3"
+    },
+    {
+      "japanese": "～たがる",
+      "reading": "～たがる",
+      "romaji": "~tagaru",
+      "english": "to want to do (third person)",
+      "audio": "vocabulary/030_tagaru.mp3"
+    },
+    {
+      "japanese": "欲しいものリスト",
+      "reading": "ほしいものリスト",
+      "romaji": "hoshii mono risuto",
+      "english": "wish list",
+      "audio": "vocabulary/031_hoshii_mono_risuto.mp3"
+    },
+    {
+      "japanese": "あげる",
+      "reading": "あげる",
+      "romaji": "ageru",
+      "english": "to give (to equals/inferiors)",
+      "audio": "vocabulary/032_ageru.mp3"
+    },
+    {
+      "japanese": "もらう",
+      "reading": "もらう",
+      "romaji": "morau",
+      "english": "to receive",
+      "audio": "vocabulary/033_morau.mp3"
+    },
+    {
+      "japanese": "くれる",
+      "reading": "くれる",
+      "romaji": "kureru",
+      "english": "to give (to me/my group)",
+      "audio": "vocabulary/034_kureru.mp3"
+    },
+    {
+      "japanese": "～てあげる",
+      "reading": "～てあげる",
+      "romaji": "~te ageru",
+      "english": "to do for someone",
+      "audio": "vocabulary/035_te_ageru.mp3"
+    },
+    {
+      "japanese": "～てもらう",
+      "reading": "～てもらう",
+      "romaji": "~te morau",
+      "english": "to have someone do; to receive the favor",
+      "audio": "vocabulary/036_te_morau.mp3"
+    },
+    {
+      "japanese": "～てくれる",
+      "reading": "～てくれる",
+      "romaji": "~te kureru",
+      "english": "to do for me (as a favor)",
+      "audio": "vocabulary/037_te_kureru.mp3"
+    },
+    {
+      "japanese": "チョコレート",
+      "reading": "チョコレート",
+      "romaji": "chokoreeto",
+      "english": "chocolate",
+      "audio": "vocabulary/038_chokoreeto.mp3"
+    },
+    {
+      "japanese": "チョコ",
+      "reading": "チョコ",
+      "romaji": "choko",
+      "english": "chocolate (casual)",
+      "audio": "vocabulary/039_choko.mp3"
+    },
+    {
+      "japanese": "トリュフ",
+      "reading": "トリュフ",
+      "romaji": "toryufu",
+      "english": "truffle (chocolate)",
+      "audio": "vocabulary/040_toryufu.mp3"
+    },
+    {
+      "japanese": "ビターチョコ",
+      "reading": "ビターチョコ",
+      "romaji": "bitaa choko",
+      "english": "bitter/dark chocolate",
+      "audio": "vocabulary/041_bitaa_choko.mp3"
+    },
+    {
+      "japanese": "ミルクチョコ",
+      "reading": "ミルクチョコ",
+      "romaji": "miruku choko",
+      "english": "milk chocolate",
+      "audio": "vocabulary/042_miruku_choko.mp3"
+    },
+    {
+      "japanese": "ホワイトチョコ",
+      "reading": "ホワイトチョコ",
+      "romaji": "howaito choko",
+      "english": "white chocolate",
+      "audio": "vocabulary/043_howaito_choko.mp3"
+    },
+    {
+      "japanese": "お菓子",
+      "reading": "おかし",
+      "romaji": "okashi",
+      "english": "sweets; snacks",
+      "audio": "vocabulary/044_okashi.mp3"
+    },
+    {
+      "japanese": "キャンディー",
+      "reading": "キャンディー",
+      "romaji": "kyandii",
+      "english": "candy",
+      "audio": "vocabulary/045_kyandii.mp3"
+    },
+    {
+      "japanese": "クッキー",
+      "reading": "クッキー",
+      "romaji": "kukkii",
+      "english": "cookie",
+      "audio": "vocabulary/046_kukkii.mp3"
+    },
+    {
+      "japanese": "ケーキ",
+      "reading": "ケーキ",
+      "romaji": "keeki",
+      "english": "cake",
+      "audio": "vocabulary/047_keeki.mp3"
+    },
+    {
+      "japanese": "ホワイトデー",
+      "reading": "ホワイトデー",
+      "romaji": "howaito dee",
+      "english": "White Day (March 14)",
+      "audio": "vocabulary/048_howaito_dee.mp3"
+    },
+    {
+      "japanese": "義理チョコ",
+      "reading": "ぎりチョコ",
+      "romaji": "giri choko",
+      "english": "obligation chocolate",
+      "audio": "vocabulary/049_giri_choko.mp3"
+    },
+    {
+      "japanese": "本命チョコ",
+      "reading": "ほんめいチョコ",
+      "romaji": "honmei choko",
+      "english": "true love chocolate",
+      "audio": "vocabulary/050_honmei_choko.mp3"
+    },
+    {
+      "japanese": "友チョコ",
+      "reading": "ともチョコ",
+      "romaji": "tomo choko",
+      "english": "friend chocolate",
+      "audio": "vocabulary/051_tomo_choko.mp3"
+    },
+    {
+      "japanese": "自分チョコ",
+      "reading": "じぶんチョコ",
+      "romaji": "jibun choko",
+      "english": "chocolate for oneself",
+      "audio": "vocabulary/052_jibun_choko.mp3"
+    },
+    {
+      "japanese": "手作り",
+      "reading": "てづくり",
+      "romaji": "tezukuri",
+      "english": "handmade",
+      "audio": "vocabulary/053_tezukuri.mp3"
+    },
+    {
+      "japanese": "高級",
+      "reading": "こうきゅう",
+      "romaji": "koukyuu",
+      "english": "high-class; luxury",
+      "audio": "vocabulary/054_koukyuu.mp3"
+    },
+    {
+      "japanese": "記念日",
+      "reading": "きねんび",
+      "romaji": "kinenbi",
+      "english": "anniversary; memorial day",
+      "audio": "vocabulary/055_kinenbi.mp3"
+    },
+    {
+      "japanese": "特別な",
+      "reading": "とくべつな",
+      "romaji": "tokubetsu na",
+      "english": "special",
+      "audio": "vocabulary/056_tokubetsu_na.mp3"
+    },
+    {
+      "japanese": "レシピ",
+      "reading": "レシピ",
+      "romaji": "reshipi",
+      "english": "recipe",
+      "audio": "vocabulary/057_reshipi.mp3"
+    },
+    {
+      "japanese": "材料",
+      "reading": "ざいりょう",
+      "romaji": "zairyou",
+      "english": "ingredients; materials",
+      "audio": "vocabulary/058_zairyou.mp3"
+    },
+    {
+      "japanese": "溶かす",
+      "reading": "とかす",
+      "romaji": "tokasu",
+      "english": "to melt (transitive)",
+      "audio": "vocabulary/059_tokasu.mp3"
+    },
+    {
+      "japanese": "混ぜる",
+      "reading": "まぜる",
+      "romaji": "mazeru",
+      "english": "to mix",
+      "audio": "vocabulary/060_mazeru.mp3"
+    },
+    {
+      "japanese": "冷やす",
+      "reading": "ひやす",
+      "romaji": "hiyasu",
+      "english": "to cool; to chill",
+      "audio": "vocabulary/061_hiyasu.mp3"
+    },
+    {
+      "japanese": "包む",
+      "reading": "つつむ",
+      "romaji": "tsutsumu",
+      "english": "to wrap",
+      "audio": "vocabulary/062_tsutsumu.mp3"
+    },
+    {
+      "japanese": "込める",
+      "reading": "こめる",
+      "romaji": "komeru",
+      "english": "to put into; to include",
+      "audio": "vocabulary/063_komeru.mp3"
+    },
+    {
+      "japanese": "配る",
+      "reading": "くばる",
+      "romaji": "kubaru",
+      "english": "to distribute; to hand out",
+      "audio": "vocabulary/064_kubaru.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Mary",
-      "japanese": "バレンタインデーに何をあげたらいいと思う？",
-      "english": "What do you think I should give for Valentine's Day?",
-      "audio": "dialogue/001_mary.mp3"
+      "id": "l14-d01",
+      "title": "Giving Chocolate to a Friend",
+      "lines": [
+        {
+          "speaker": "Mary",
+          "japanese": "けんじくん、これ、バレンタインのチョコ。",
+          "english": "Kenji, here, Valentine\\",
+          "audio": "dialogue/d01_001_mary.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "え、本当？ありがとう！",
+          "english": "Really? Thanks!",
+          "audio": "dialogue/d01_002_kenji.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "いつも優しくしてくれるから、お礼に作ったの。",
+          "english": "You\\",
+          "audio": "dialogue/d01_003_mary.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "手作り？すごい！食べていい？",
+          "english": "Handmade? Amazing! Can I eat one?",
+          "audio": "dialogue/d01_004_kenji.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "うん、どうぞ。気に入ってくれるといいな。",
+          "english": "Yes, go ahead. I hope you like them.",
+          "audio": "dialogue/d01_005_mary.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "うまい！メアリー、料理上手だね。",
+          "english": "Delicious! Mary, you\\",
+          "audio": "dialogue/d01_006_kenji.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "本当？よかった！",
+          "english": "Really? Great!",
+          "audio": "dialogue/d01_007_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "誰にあげるの？",
-      "english": "Who are you giving it to?",
-      "audio": "dialogue/002_takeshi.mp3"
+      "id": "l14-d02",
+      "title": "Chocolates at the Office",
+      "lines": [
+        {
+          "speaker": "Suzuki",
+          "japanese": "田中さん、これ、バレンタインのチョコレートです。よかったらどうぞ。",
+          "english": "Tanaka-san, here is some Valentine\\",
+          "audio": "dialogue/d02_001_suzuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "ありがとうございます。いただきます。",
+          "english": "Thank you very much. I will accept it gratefully.",
+          "audio": "dialogue/d02_002_tanaka.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "部署のみんなにも配っていますので。",
+          "english": "I\\",
+          "audio": "dialogue/d02_003_suzuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "いつもお世話になっています。ホワイトデーにお返ししますね。",
+          "english": "Thank you for always taking care of me. I\\",
+          "audio": "dialogue/d02_004_tanaka.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "いえいえ、お気になさらないでください。",
+          "english": "No, no, please don\\",
+          "audio": "dialogue/d02_005_suzuki.mp3"
+        },
+        {
+          "speaker": "Tanaka",
+          "japanese": "鈴木さんのチョコ、毎年楽しみにしているんですよ。",
+          "english": "I look forward to your chocolates every year, you know.",
+          "audio": "dialogue/d02_006_tanaka.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ホストファミリーの弟。いつも優しくしてくれるから。",
-      "english": "My host family's younger brother. He's always kind to me.",
-      "audio": "dialogue/003_mary.mp3"
+      "id": "l14-d03",
+      "title": "Valentine\\",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "ミカ、今年のバレンタイン、どうするの？",
+          "english": "Mika, what are you doing for Valentine\\",
+          "audio": "dialogue/d03_001_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "彼氏にチョコを作ろうと思ってるの。でも、何を作ったらいいか分からなくて。",
+          "english": "I\\",
+          "audio": "dialogue/d03_002_mika.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "彼、何がほしがってる？",
+          "english": "What does he want?",
+          "audio": "dialogue/d03_003_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "甘いものが好きだから、トリュフチョコを作ったらどうかな。",
+          "english": "He likes sweet things, so maybe I should make truffle chocolates.",
+          "audio": "dialogue/d03_004_mika.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "いいね！喜んでくれるといいね。",
+          "english": "Nice! I hope he\\",
+          "audio": "dialogue/d03_005_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "うん。ユキは？",
+          "english": "Yeah. How about you, Yuki?",
+          "audio": "dialogue/d03_006_mika.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "私は友チョコを作るつもり。一緒にチョコ作り、しない？",
+          "english": "I\\",
+          "audio": "dialogue/d03_007_yuki.mp3"
+        },
+        {
+          "speaker": "Mika",
+          "japanese": "いいね、そうしよう！",
+          "english": "Sounds good, let\\",
+          "audio": "dialogue/d03_008_mika.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "彼は何がほしがっているの？",
-      "english": "What does he want?",
-      "audio": "dialogue/004_takeshi.mp3"
+      "id": "l14-d04",
+      "title": "Thank You for the Gift",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "メアリーさん、この間のチョコレート、ありがとう。",
+          "english": "Mary, thank you for the chocolate the other day.",
+          "audio": "dialogue/d04_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "どういたしまして。美味しかった？",
+          "english": "You\\",
+          "audio": "dialogue/d04_002_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "うん、すごく美味しかった！心を込めて作ってくれたんだね。",
+          "english": "Yes, it was really delicious! You made it with care, didn\\",
+          "audio": "dialogue/d04_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "喜んでもらえてうれしい。",
+          "english": "I\\",
+          "audio": "dialogue/d04_004_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "お返しに、ホワイトデーに何かあげたいんだけど、何がいい？",
+          "english": "I want to give you something in return for White Day. What would you like?",
+          "audio": "dialogue/d04_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "えー、何でもいいよ。気持ちが一番大切だから。",
+          "english": "Oh, anything is fine. The thought is what matters most.",
+          "audio": "dialogue/d04_006_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "じゃあ、考えておくね。楽しみにしてて！",
+          "english": "Then I\\",
+          "audio": "dialogue/d04_007_takeshi.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "ゲームが好きみたい。でも高いから...",
-      "english": "He seems to like games. But they\\",
-      "audio": "dialogue/005_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "チョコレートを作ったらどう？日本では手作りチョコが人気だよ。",
-      "english": "How about making chocolate? Handmade chocolate is popular in Japan.",
-      "audio": "dialogue/006_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "いいアイデアだね！作り方を知っている？",
-      "english": "Good idea! Do you know how to make it?",
-      "audio": "dialogue/007_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "インターネットで調べたら、レシピが見つかると思うよ。",
-      "english": "If you search online, I think you\\",
-      "audio": "dialogue/008_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "喜んでくれるといいな。",
-      "english": "I hope he\\",
-      "audio": "dialogue/009_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "心を込めて作ったら、きっと喜ぶよ。",
-      "english": "If you make it with care, he\\",
-      "audio": "dialogue/010_takeshi.mp3"
+      "id": "l14-d05",
+      "title": "Shopping for Chocolate",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "japanese": "すみません、バレンタインのチョコレートを探しているんですが。",
+          "english": "Excuse me, I\\",
+          "audio": "dialogue/d05_001_customer.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "はい、本命用ですか、義理用ですか。",
+          "english": "Yes, is it for a romantic interest or for obligation?",
+          "audio": "dialogue/d05_002_clerk.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "本命用です。彼がビターチョコをほしがっていたので。",
+          "english": "For my romantic interest. He\\",
+          "audio": "dialogue/d05_003_customer.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "でしたら、こちらの高級チョコレートはいかがですか。",
+          "english": "In that case, how about this premium chocolate?",
+          "audio": "dialogue/d05_004_clerk.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "素敵ですね。ラッピングもお願いできますか。",
+          "english": "It\\",
+          "audio": "dialogue/d05_005_customer.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "もちろんです。リボンの色はどうされますか。",
+          "english": "Of course. What color ribbon would you like?",
+          "audio": "dialogue/d05_006_clerk.mp3"
+        },
+        {
+          "speaker": "Customer",
+          "japanese": "赤でお願いします。",
+          "english": "Red, please.",
+          "audio": "dialogue/d05_007_customer.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "かしこまりました。きっと喜ばれますよ。",
+          "english": "Understood. I\\",
+          "audio": "dialogue/d05_008_clerk.mp3"
+        }
+      ]
     }
   ]
 }

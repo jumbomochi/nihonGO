@@ -1,330 +1,731 @@
 {
   "book": "genki1",
   "lesson": 3,
-  "vocabulary_count": 38,
-  "dialogue_count": 9,
+  "vocabulary_count": 65,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 39,
+  "has_multiple_dialogues": true,
   "vocabulary": [
-    {
-      "japanese": "行く",
-      "reading": "いく",
-      "romaji": "iku",
-      "english": "to go",
-      "audio": "vocabulary/001_iku.mp3"
-    },
-    {
-      "japanese": "帰る",
-      "reading": "かえる",
-      "romaji": "kaeru",
-      "english": "to return; to go home",
-      "audio": "vocabulary/002_kaeru.mp3"
-    },
-    {
-      "japanese": "聞く",
-      "reading": "きく",
-      "romaji": "kiku",
-      "english": "to listen; to hear",
-      "audio": "vocabulary/003_kiku.mp3"
-    },
-    {
-      "japanese": "飲む",
-      "reading": "のむ",
-      "romaji": "nomu",
-      "english": "to drink",
-      "audio": "vocabulary/004_nomu.mp3"
-    },
-    {
-      "japanese": "話す",
-      "reading": "はなす",
-      "romaji": "hanasu",
-      "english": "to speak; to talk",
-      "audio": "vocabulary/005_hanasu.mp3"
-    },
-    {
-      "japanese": "読む",
-      "reading": "よむ",
-      "romaji": "yomu",
-      "english": "to read",
-      "audio": "vocabulary/006_yomu.mp3"
-    },
-    {
-      "japanese": "会う",
-      "reading": "あう",
-      "romaji": "au",
-      "english": "to meet",
-      "audio": "vocabulary/007_au.mp3"
-    },
-    {
-      "japanese": "買う",
-      "reading": "かう",
-      "romaji": "kau",
-      "english": "to buy",
-      "audio": "vocabulary/008_kau.mp3"
-    },
-    {
-      "japanese": "食べる",
-      "reading": "たべる",
-      "romaji": "taberu",
-      "english": "to eat",
-      "audio": "vocabulary/009_taberu.mp3"
-    },
-    {
-      "japanese": "見る",
-      "reading": "みる",
-      "romaji": "miru",
-      "english": "to see; to watch",
-      "audio": "vocabulary/010_miru.mp3"
-    },
-    {
-      "japanese": "起きる",
-      "reading": "おきる",
-      "romaji": "okiru",
-      "english": "to wake up; to get up",
-      "audio": "vocabulary/011_okiru.mp3"
-    },
-    {
-      "japanese": "寝る",
-      "reading": "ねる",
-      "romaji": "neru",
-      "english": "to sleep; to go to bed",
-      "audio": "vocabulary/012_neru.mp3"
-    },
-    {
-      "japanese": "来る",
-      "reading": "くる",
-      "romaji": "kuru",
-      "english": "to come",
-      "audio": "vocabulary/013_kuru.mp3"
-    },
-    {
-      "japanese": "する",
-      "reading": "する",
-      "romaji": "suru",
-      "english": "to do",
-      "audio": "vocabulary/014_suru.mp3"
-    },
-    {
-      "japanese": "勉強する",
-      "reading": "べんきょうする",
-      "romaji": "benkyou suru",
-      "english": "to study",
-      "audio": "vocabulary/015_benkyou_suru.mp3"
-    },
     {
       "japanese": "日曜日",
       "reading": "にちようび",
       "romaji": "nichiyoubi",
       "english": "Sunday",
-      "audio": "vocabulary/016_nichiyoubi.mp3"
+      "audio": "vocabulary/001_nichiyoubi.mp3"
     },
     {
       "japanese": "月曜日",
       "reading": "げつようび",
       "romaji": "getsuyoubi",
       "english": "Monday",
-      "audio": "vocabulary/017_getsuyoubi.mp3"
+      "audio": "vocabulary/002_getsuyoubi.mp3"
     },
     {
       "japanese": "火曜日",
       "reading": "かようび",
       "romaji": "kayoubi",
       "english": "Tuesday",
-      "audio": "vocabulary/018_kayoubi.mp3"
+      "audio": "vocabulary/003_kayoubi.mp3"
     },
     {
       "japanese": "水曜日",
       "reading": "すいようび",
       "romaji": "suiyoubi",
       "english": "Wednesday",
-      "audio": "vocabulary/019_suiyoubi.mp3"
+      "audio": "vocabulary/004_suiyoubi.mp3"
     },
     {
       "japanese": "木曜日",
       "reading": "もくようび",
       "romaji": "mokuyoubi",
       "english": "Thursday",
-      "audio": "vocabulary/020_mokuyoubi.mp3"
+      "audio": "vocabulary/005_mokuyoubi.mp3"
     },
     {
       "japanese": "金曜日",
       "reading": "きんようび",
       "romaji": "kinyoubi",
       "english": "Friday",
-      "audio": "vocabulary/021_kinyoubi.mp3"
+      "audio": "vocabulary/006_kinyoubi.mp3"
     },
     {
       "japanese": "土曜日",
       "reading": "どようび",
       "romaji": "doyoubi",
       "english": "Saturday",
-      "audio": "vocabulary/022_doyoubi.mp3"
+      "audio": "vocabulary/007_doyoubi.mp3"
     },
     {
       "japanese": "朝",
       "reading": "あさ",
       "romaji": "asa",
       "english": "morning",
-      "audio": "vocabulary/023_asa.mp3"
+      "audio": "vocabulary/008_asa.mp3"
     },
     {
       "japanese": "昼",
       "reading": "ひる",
       "romaji": "hiru",
       "english": "noon; daytime",
-      "audio": "vocabulary/024_hiru.mp3"
+      "audio": "vocabulary/009_hiru.mp3"
+    },
+    {
+      "japanese": "午後",
+      "reading": "ごご",
+      "romaji": "gogo",
+      "english": "afternoon; P.M.",
+      "audio": "vocabulary/010_gogo.mp3"
+    },
+    {
+      "japanese": "夕方",
+      "reading": "ゆうがた",
+      "romaji": "yuugata",
+      "english": "evening (early)",
+      "audio": "vocabulary/011_yuugata.mp3"
     },
     {
       "japanese": "夜",
       "reading": "よる",
       "romaji": "yoru",
       "english": "night; evening",
-      "audio": "vocabulary/025_yoru.mp3"
+      "audio": "vocabulary/012_yoru.mp3"
     },
     {
       "japanese": "今日",
       "reading": "きょう",
       "romaji": "kyou",
       "english": "today",
-      "audio": "vocabulary/026_kyou.mp3"
+      "audio": "vocabulary/013_kyou.mp3"
     },
     {
       "japanese": "明日",
       "reading": "あした",
       "romaji": "ashita",
       "english": "tomorrow",
-      "audio": "vocabulary/027_ashita.mp3"
+      "audio": "vocabulary/014_ashita.mp3"
+    },
+    {
+      "japanese": "昨日",
+      "reading": "きのう",
+      "romaji": "kinou",
+      "english": "yesterday",
+      "audio": "vocabulary/015_kinou.mp3"
     },
     {
       "japanese": "週末",
       "reading": "しゅうまつ",
       "romaji": "shuumatsu",
       "english": "weekend",
-      "audio": "vocabulary/028_shuumatsu.mp3"
+      "audio": "vocabulary/016_shuumatsu.mp3"
     },
     {
-      "japanese": "学校",
-      "reading": "がっこう",
-      "romaji": "gakkou",
-      "english": "school",
-      "audio": "vocabulary/029_gakkou.mp3"
+      "japanese": "毎日",
+      "reading": "まいにち",
+      "romaji": "mainichi",
+      "english": "every day",
+      "audio": "vocabulary/017_mainichi.mp3"
     },
     {
-      "japanese": "家",
-      "reading": "いえ/うち",
-      "romaji": "ie / uchi",
-      "english": "house; home",
-      "audio": "vocabulary/030_ie_uchi.mp3"
+      "japanese": "毎週",
+      "reading": "まいしゅう",
+      "romaji": "maishuu",
+      "english": "every week",
+      "audio": "vocabulary/018_maishuu.mp3"
     },
     {
-      "japanese": "駅",
-      "reading": "えき",
-      "romaji": "eki",
-      "english": "station",
-      "audio": "vocabulary/031_eki.mp3"
+      "japanese": "今",
+      "reading": "いま",
+      "romaji": "ima",
+      "english": "now",
+      "audio": "vocabulary/019_ima.mp3"
     },
     {
       "japanese": "映画館",
       "reading": "えいがかん",
       "romaji": "eigakan",
       "english": "movie theater",
-      "audio": "vocabulary/032_eigakan.mp3"
+      "audio": "vocabulary/020_eigakan.mp3"
     },
     {
       "japanese": "レストラン",
       "reading": "れすとらん",
       "romaji": "resutoran",
       "english": "restaurant",
-      "audio": "vocabulary/033_resutoran.mp3"
+      "audio": "vocabulary/021_resutoran.mp3"
+    },
+    {
+      "japanese": "図書館",
+      "reading": "としょかん",
+      "romaji": "toshokan",
+      "english": "library",
+      "audio": "vocabulary/022_toshokan.mp3"
+    },
+    {
+      "japanese": "公園",
+      "reading": "こうえん",
+      "romaji": "kouen",
+      "english": "park",
+      "audio": "vocabulary/023_kouen.mp3"
     },
     {
       "japanese": "喫茶店",
       "reading": "きっさてん",
       "romaji": "kissaten",
-      "english": "coffee shop; café",
-      "audio": "vocabulary/034_kissaten.mp3"
+      "english": "coffee shop; cafe",
+      "audio": "vocabulary/024_kissaten.mp3"
+    },
+    {
+      "japanese": "駅",
+      "reading": "えき",
+      "romaji": "eki",
+      "english": "station",
+      "audio": "vocabulary/025_eki.mp3"
+    },
+    {
+      "japanese": "学校",
+      "reading": "がっこう",
+      "romaji": "gakkou",
+      "english": "school",
+      "audio": "vocabulary/026_gakkou.mp3"
+    },
+    {
+      "japanese": "家",
+      "reading": "いえ/うち",
+      "romaji": "ie / uchi",
+      "english": "house; home",
+      "audio": "vocabulary/027_ie_uchi.mp3"
+    },
+    {
+      "japanese": "町",
+      "reading": "まち",
+      "romaji": "machi",
+      "english": "town; city",
+      "audio": "vocabulary/028_machi.mp3"
+    },
+    {
+      "japanese": "病院",
+      "reading": "びょういん",
+      "romaji": "byouin",
+      "english": "hospital",
+      "audio": "vocabulary/029_byouin.mp3"
+    },
+    {
+      "japanese": "行く",
+      "reading": "いく",
+      "romaji": "iku",
+      "english": "to go",
+      "audio": "vocabulary/030_iku.mp3"
+    },
+    {
+      "japanese": "帰る",
+      "reading": "かえる",
+      "romaji": "kaeru",
+      "english": "to return; to go home",
+      "audio": "vocabulary/031_kaeru.mp3"
+    },
+    {
+      "japanese": "聞く",
+      "reading": "きく",
+      "romaji": "kiku",
+      "english": "to listen; to hear",
+      "audio": "vocabulary/032_kiku.mp3"
+    },
+    {
+      "japanese": "飲む",
+      "reading": "のむ",
+      "romaji": "nomu",
+      "english": "to drink",
+      "audio": "vocabulary/033_nomu.mp3"
+    },
+    {
+      "japanese": "話す",
+      "reading": "はなす",
+      "romaji": "hanasu",
+      "english": "to speak; to talk",
+      "audio": "vocabulary/034_hanasu.mp3"
+    },
+    {
+      "japanese": "読む",
+      "reading": "よむ",
+      "romaji": "yomu",
+      "english": "to read",
+      "audio": "vocabulary/035_yomu.mp3"
+    },
+    {
+      "japanese": "会う",
+      "reading": "あう",
+      "romaji": "au",
+      "english": "to meet",
+      "audio": "vocabulary/036_au.mp3"
+    },
+    {
+      "japanese": "買う",
+      "reading": "かう",
+      "romaji": "kau",
+      "english": "to buy",
+      "audio": "vocabulary/037_kau.mp3"
+    },
+    {
+      "japanese": "書く",
+      "reading": "かく",
+      "romaji": "kaku",
+      "english": "to write",
+      "audio": "vocabulary/038_kaku.mp3"
+    },
+    {
+      "japanese": "待つ",
+      "reading": "まつ",
+      "romaji": "matsu",
+      "english": "to wait",
+      "audio": "vocabulary/039_matsu.mp3"
+    },
+    {
+      "japanese": "泳ぐ",
+      "reading": "およぐ",
+      "romaji": "oyogu",
+      "english": "to swim",
+      "audio": "vocabulary/040_oyogu.mp3"
+    },
+    {
+      "japanese": "休む",
+      "reading": "やすむ",
+      "romaji": "yasumu",
+      "english": "to rest; to take a day off",
+      "audio": "vocabulary/041_yasumu.mp3"
+    },
+    {
+      "japanese": "食べる",
+      "reading": "たべる",
+      "romaji": "taberu",
+      "english": "to eat",
+      "audio": "vocabulary/042_taberu.mp3"
+    },
+    {
+      "japanese": "見る",
+      "reading": "みる",
+      "romaji": "miru",
+      "english": "to see; to watch",
+      "audio": "vocabulary/043_miru.mp3"
+    },
+    {
+      "japanese": "起きる",
+      "reading": "おきる",
+      "romaji": "okiru",
+      "english": "to wake up; to get up",
+      "audio": "vocabulary/044_okiru.mp3"
+    },
+    {
+      "japanese": "寝る",
+      "reading": "ねる",
+      "romaji": "neru",
+      "english": "to sleep; to go to bed",
+      "audio": "vocabulary/045_neru.mp3"
+    },
+    {
+      "japanese": "出る",
+      "reading": "でる",
+      "romaji": "deru",
+      "english": "to leave; to exit",
+      "audio": "vocabulary/046_deru.mp3"
+    },
+    {
+      "japanese": "来る",
+      "reading": "くる",
+      "romaji": "kuru",
+      "english": "to come",
+      "audio": "vocabulary/047_kuru.mp3"
+    },
+    {
+      "japanese": "する",
+      "reading": "する",
+      "romaji": "suru",
+      "english": "to do",
+      "audio": "vocabulary/048_suru.mp3"
+    },
+    {
+      "japanese": "勉強する",
+      "reading": "べんきょうする",
+      "romaji": "benkyou suru",
+      "english": "to study",
+      "audio": "vocabulary/049_benkyou_suru.mp3"
     },
     {
       "japanese": "映画",
       "reading": "えいが",
       "romaji": "eiga",
       "english": "movie",
-      "audio": "vocabulary/035_eiga.mp3"
+      "audio": "vocabulary/050_eiga.mp3"
     },
     {
       "japanese": "音楽",
       "reading": "おんがく",
       "romaji": "ongaku",
       "english": "music",
-      "audio": "vocabulary/036_ongaku.mp3"
+      "audio": "vocabulary/051_ongaku.mp3"
+    },
+    {
+      "japanese": "買い物",
+      "reading": "かいもの",
+      "romaji": "kaimono",
+      "english": "shopping",
+      "audio": "vocabulary/052_kaimono.mp3"
+    },
+    {
+      "japanese": "テニス",
+      "reading": "てにす",
+      "romaji": "tenisu",
+      "english": "tennis",
+      "audio": "vocabulary/053_tenisu.mp3"
+    },
+    {
+      "japanese": "カラオケ",
+      "reading": "からおけ",
+      "romaji": "karaoke",
+      "english": "karaoke",
+      "audio": "vocabulary/054_karaoke.mp3"
+    },
+    {
+      "japanese": "散歩",
+      "reading": "さんぽ",
+      "romaji": "sanpo",
+      "english": "walk; stroll",
+      "audio": "vocabulary/055_sanpo.mp3"
+    },
+    {
+      "japanese": "何時",
+      "reading": "なんじ",
+      "romaji": "nanji",
+      "english": "what time",
+      "audio": "vocabulary/056_nanji.mp3"
+    },
+    {
+      "japanese": "何曜日",
+      "reading": "なんようび",
+      "romaji": "nanyoubi",
+      "english": "what day of the week",
+      "audio": "vocabulary/057_nanyoubi.mp3"
+    },
+    {
+      "japanese": "いつ",
+      "reading": "いつ",
+      "romaji": "itsu",
+      "english": "when",
+      "audio": "vocabulary/058_itsu.mp3"
+    },
+    {
+      "japanese": "どこ",
+      "reading": "どこ",
+      "romaji": "doko",
+      "english": "where",
+      "audio": "vocabulary/059_doko.mp3"
+    },
+    {
+      "japanese": "暇",
+      "reading": "ひま",
+      "romaji": "hima",
+      "english": "free (time); not busy",
+      "audio": "vocabulary/060_hima.mp3"
+    },
+    {
+      "japanese": "予定",
+      "reading": "よてい",
+      "romaji": "yotei",
+      "english": "plans; schedule",
+      "audio": "vocabulary/061_yotei.mp3"
+    },
+    {
+      "japanese": "一緒に",
+      "reading": "いっしょに",
+      "romaji": "issho ni",
+      "english": "together",
+      "audio": "vocabulary/062_issho_ni.mp3"
     },
     {
       "japanese": "雑誌",
       "reading": "ざっし",
       "romaji": "zasshi",
       "english": "magazine",
-      "audio": "vocabulary/037_zasshi.mp3"
+      "audio": "vocabulary/063_zasshi.mp3"
     },
     {
       "japanese": "テレビ",
       "reading": "てれび",
       "romaji": "terebi",
       "english": "television",
-      "audio": "vocabulary/038_terebi.mp3"
+      "audio": "vocabulary/064_terebi.mp3"
+    },
+    {
+      "japanese": "友達",
+      "reading": "ともだち",
+      "romaji": "tomodachi",
+      "english": "friend",
+      "audio": "vocabulary/065_tomodachi.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Takeshi",
-      "japanese": "メアリーさん、こんにちは。",
-      "english": "Hi, Mary.",
-      "audio": "dialogue/001_takeshi.mp3"
+      "id": "l03-d01",
+      "title": "Movie Invitation",
+      "lines": [
+        {
+          "speaker": "Takeshi",
+          "japanese": "メアリーさん、こんにちは。",
+          "english": "Hi, Mary.",
+          "audio": "dialogue/d01_001_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "あ、たけしさん。こんにちは。",
+          "english": "Oh, Takeshi. Hello.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "いま、なにをしていますか。",
+          "english": "What are you doing now?",
+          "audio": "dialogue/d01_003_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "にほんごをべんきょうしています。",
+          "english": "I'm studying Japanese.",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "そうですか。あのう、どようびにえいがをみませんか。",
+          "english": "I see. Um, won't you watch a movie on Saturday?",
+          "audio": "dialogue/d01_005_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "いいですね。なんじにあいますか。",
+          "english": "That sounds good. What time shall we meet?",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "にじはんにえきのまえであいましょう。",
+          "english": "Let's meet in front of the station at 2:30.",
+          "audio": "dialogue/d01_007_takeshi.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、わかりました。たのしみにしています。",
+          "english": "OK, got it. I'm looking forward to it.",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "あ、たけしさん。こんにちは。",
-      "english": "Oh, Takeshi. Hello.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l03-d02",
+      "title": "Dinner Plans",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "すずきさん、きょうのよるは おひまですか。",
+          "english": "Mr. Suzuki, are you free this evening?",
+          "audio": "dialogue/d02_001_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "はい、とくによていは ありません。",
+          "english": "Yes, I don't have any particular plans.",
+          "audio": "dialogue/d02_002_suzuki.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "じゃあ、いっしょに ゆうごはんを たべませんか。",
+          "english": "Then, won't you have dinner together with me?",
+          "audio": "dialogue/d02_003_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "いいですね。どこで たべますか。",
+          "english": "That sounds good. Where shall we eat?",
+          "audio": "dialogue/d02_004_suzuki.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "えきのちかくに あたらしい イタリアりょうりの レストランが ありますよ。",
+          "english": "There's a new Italian restaurant near the station.",
+          "audio": "dialogue/d02_005_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "いいですね。なんじに いきますか。",
+          "english": "Sounds good. What time shall we go?",
+          "audio": "dialogue/d02_006_suzuki.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "ろくじはんは どうですか。",
+          "english": "How about 6:30?",
+          "audio": "dialogue/d02_007_yuki.mp3"
+        },
+        {
+          "speaker": "Suzuki",
+          "japanese": "いいですよ。ろくじはんに しましょう。",
+          "english": "Sure. Let's make it 6:30.",
+          "audio": "dialogue/d02_008_suzuki.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "いま、なにをしていますか。",
-      "english": "What are you doing now?",
-      "audio": "dialogue/003_takeshi.mp3"
+      "id": "l03-d03",
+      "title": "Declining an Invitation",
+      "lines": [
+        {
+          "speaker": "Ken",
+          "japanese": "リサさん、きんようびの よるは ひまですか。",
+          "english": "Lisa, are you free on Friday evening?",
+          "audio": "dialogue/d03_001_ken.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "きんようびですか。なにか ありますか。",
+          "english": "Friday? Is there something?",
+          "audio": "dialogue/d03_002_lisa.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "はい、いっしょに カラオケに いきませんか。",
+          "english": "Yes, won't you go to karaoke together?",
+          "audio": "dialogue/d03_003_ken.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "すみません、きんようびは ちょっと...",
+          "english": "Sorry, Friday is a little... (I can't)",
+          "audio": "dialogue/d03_004_lisa.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "ああ、そうですか。ざんねんですね。",
+          "english": "Oh, I see. That's too bad.",
+          "audio": "dialogue/d03_005_ken.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "どようびは どうですか。どようびなら だいじょうぶです。",
+          "english": "How about Saturday? Saturday would be fine.",
+          "audio": "dialogue/d03_006_lisa.mp3"
+        },
+        {
+          "speaker": "Ken",
+          "japanese": "どようびですか。いいですよ。じゃあ、どようびに しましょう。",
+          "english": "Saturday? Sure. Then let's make it Saturday.",
+          "audio": "dialogue/d03_007_ken.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "にほんごをべんきょうしています。",
-      "english": "I'm studying Japanese.",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l03-d04",
+      "title": "Weekend Plans",
+      "lines": [
+        {
+          "speaker": "Robert",
+          "japanese": "けんじさん、しゅうまつは なにを しますか。",
+          "english": "Kenji, what are you doing this weekend?",
+          "audio": "dialogue/d04_001_robert.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "どようびの あさは テニスを します。",
+          "english": "I'll play tennis on Saturday morning.",
+          "audio": "dialogue/d04_002_kenji.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "いいですね。ごごは なにを しますか。",
+          "english": "That's nice. What will you do in the afternoon?",
+          "audio": "dialogue/d04_003_robert.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "ごごは ともだちと まちに いきます。かいものを します。",
+          "english": "In the afternoon, I'll go to town with a friend. We'll go shopping.",
+          "audio": "dialogue/d04_004_kenji.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "にちようびは？",
+          "english": "How about Sunday?",
+          "audio": "dialogue/d04_005_robert.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "にちようびは うちで やすみます。ロバートさんは？",
+          "english": "On Sunday, I'll rest at home. How about you, Robert?",
+          "audio": "dialogue/d04_006_kenji.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "どようびは びょういんに いきます。にちようびは としょかんで べんきょうします。",
+          "english": "Saturday I'll go to the hospital. Sunday I'll study at the library.",
+          "audio": "dialogue/d04_007_robert.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "そうですか。おだいじに。",
+          "english": "I see. Take care.",
+          "audio": "dialogue/d04_008_kenji.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Takeshi",
-      "japanese": "そうですか。あのう、どようびにえいがをみませんか。",
-      "english": "I see. Um, won't you watch a movie on Saturday?",
-      "audio": "dialogue/005_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "いいですね。なんじにあいますか。",
-      "english": "That sounds good. What time shall we meet?",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "にじはんにえきのまえであいましょう。",
-      "english": "Let's meet in front of the station at 2:30.",
-      "audio": "dialogue/007_takeshi.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "はい、わかりました。たのしみにしています。",
-      "english": "OK, got it. I'm looking forward to it.",
-      "audio": "dialogue/008_mary.mp3"
-    },
-    {
-      "speaker": "Takeshi",
-      "japanese": "じゃあ、どようびに。",
-      "english": "See you Saturday, then.",
-      "audio": "dialogue/009_takeshi.mp3"
+      "id": "l03-d05",
+      "title": "Confirming Plans",
+      "lines": [
+        {
+          "speaker": "Yuki",
+          "japanese": "もしもし、たけしさん。ゆきです。",
+          "english": "Hello, Takeshi. This is Yuki.",
+          "audio": "dialogue/d05_001_yuki.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "ああ、ゆきさん。こんばんは。",
+          "english": "Oh, Yuki. Good evening.",
+          "audio": "dialogue/d05_002_takeshi.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "あしたの よていを かくにんしたいんですが...",
+          "english": "I'd like to confirm tomorrow's plans...",
+          "audio": "dialogue/d05_003_yuki.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、じゅうじに しぶやえきで あいますね。",
+          "english": "Yes, we're meeting at Shibuya Station at 10, right?",
+          "audio": "dialogue/d05_004_takeshi.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "はい。どこで あいますか。かいさつぐちの まえですか。",
+          "english": "Yes. Where shall we meet? In front of the ticket gate?",
+          "audio": "dialogue/d05_005_yuki.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "そうですね。ハチこうの まえは どうですか。",
+          "english": "Let's see. How about in front of Hachiko?",
+          "audio": "dialogue/d05_006_takeshi.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "ハチこうの まえですね。わかりました。じゃあ、あした。",
+          "english": "In front of Hachiko, right. Got it. See you tomorrow then.",
+          "audio": "dialogue/d05_007_yuki.mp3"
+        },
+        {
+          "speaker": "Takeshi",
+          "japanese": "はい、あした。おやすみなさい。",
+          "english": "Yes, see you tomorrow. Good night.",
+          "audio": "dialogue/d05_008_takeshi.mp3"
+        }
+      ]
     }
   ]
 }

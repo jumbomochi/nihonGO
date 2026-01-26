@@ -1,8 +1,10 @@
 {
   "book": "genki1",
   "lesson": 4,
-  "vocabulary_count": 40,
-  "dialogue_count": 10,
+  "vocabulary_count": 76,
+  "dialogue_count": 5,
+  "total_dialogue_lines": 36,
+  "has_multiple_dialogues": true,
   "vocabulary": [
     {
       "japanese": "ある",
@@ -96,255 +98,693 @@
       "audio": "vocabulary/013_aida.mp3"
     },
     {
+      "japanese": "そば",
+      "reading": "そば",
+      "romaji": "soba",
+      "english": "near; beside",
+      "audio": "vocabulary/014_soba.mp3"
+    },
+    {
+      "japanese": "父",
+      "reading": "ちち",
+      "romaji": "chichi",
+      "english": "father (own)",
+      "audio": "vocabulary/015_chichi.mp3"
+    },
+    {
+      "japanese": "母",
+      "reading": "はは",
+      "romaji": "haha",
+      "english": "mother (own)",
+      "audio": "vocabulary/016_haha.mp3"
+    },
+    {
+      "japanese": "兄",
+      "reading": "あに",
+      "romaji": "ani",
+      "english": "older brother (own)",
+      "audio": "vocabulary/017_ani.mp3"
+    },
+    {
+      "japanese": "姉",
+      "reading": "あね",
+      "romaji": "ane",
+      "english": "older sister (own)",
+      "audio": "vocabulary/018_ane.mp3"
+    },
+    {
+      "japanese": "弟",
+      "reading": "おとうと",
+      "romaji": "otouto",
+      "english": "younger brother",
+      "audio": "vocabulary/019_otouto.mp3"
+    },
+    {
+      "japanese": "妹",
+      "reading": "いもうと",
+      "romaji": "imouto",
+      "english": "younger sister",
+      "audio": "vocabulary/020_imouto.mp3"
+    },
+    {
+      "japanese": "家族",
+      "reading": "かぞく",
+      "romaji": "kazoku",
+      "english": "family",
+      "audio": "vocabulary/021_kazoku.mp3"
+    },
+    {
+      "japanese": "両親",
+      "reading": "りょうしん",
+      "romaji": "ryoushin",
+      "english": "parents",
+      "audio": "vocabulary/022_ryoushin.mp3"
+    },
+    {
+      "japanese": "お父さん",
+      "reading": "おとうさん",
+      "romaji": "otousan",
+      "english": "father (polite)",
+      "audio": "vocabulary/023_otousan.mp3"
+    },
+    {
+      "japanese": "お母さん",
+      "reading": "おかあさん",
+      "romaji": "okaasan",
+      "english": "mother (polite)",
+      "audio": "vocabulary/024_okaasan.mp3"
+    },
+    {
+      "japanese": "お兄さん",
+      "reading": "おにいさん",
+      "romaji": "oniisan",
+      "english": "older brother (polite)",
+      "audio": "vocabulary/025_oniisan.mp3"
+    },
+    {
+      "japanese": "お姉さん",
+      "reading": "おねえさん",
+      "romaji": "oneesan",
+      "english": "older sister (polite)",
+      "audio": "vocabulary/026_oneesan.mp3"
+    },
+    {
+      "japanese": "ご家族",
+      "reading": "ごかぞく",
+      "romaji": "gokazoku",
+      "english": "family (polite)",
+      "audio": "vocabulary/027_gokazoku.mp3"
+    },
+    {
+      "japanese": "ご両親",
+      "reading": "ごりょうしん",
+      "romaji": "goryoushin",
+      "english": "parents (polite)",
+      "audio": "vocabulary/028_goryoushin.mp3"
+    },
+    {
       "japanese": "公園",
       "reading": "こうえん",
       "romaji": "kouen",
       "english": "park",
-      "audio": "vocabulary/014_kouen.mp3"
+      "audio": "vocabulary/029_kouen.mp3"
     },
     {
       "japanese": "スーパー",
       "reading": "スーパー",
       "romaji": "suupaa",
       "english": "supermarket",
-      "audio": "vocabulary/015_suupaa.mp3"
+      "audio": "vocabulary/030_suupaa.mp3"
     },
     {
       "japanese": "デパート",
       "reading": "デパート",
       "romaji": "depaato",
       "english": "department store",
-      "audio": "vocabulary/016_depaato.mp3"
+      "audio": "vocabulary/031_depaato.mp3"
     },
     {
       "japanese": "病院",
       "reading": "びょういん",
       "romaji": "byouin",
       "english": "hospital",
-      "audio": "vocabulary/017_byouin.mp3"
+      "audio": "vocabulary/032_byouin.mp3"
     },
     {
       "japanese": "ホテル",
       "reading": "ホテル",
       "romaji": "hoteru",
       "english": "hotel",
-      "audio": "vocabulary/018_hoteru.mp3"
+      "audio": "vocabulary/033_hoteru.mp3"
     },
     {
       "japanese": "本屋",
       "reading": "ほんや",
       "romaji": "honya",
       "english": "bookstore",
-      "audio": "vocabulary/019_honya.mp3"
+      "audio": "vocabulary/034_honya.mp3"
     },
     {
       "japanese": "町",
       "reading": "まち",
       "romaji": "machi",
       "english": "town; city",
-      "audio": "vocabulary/020_machi.mp3"
+      "audio": "vocabulary/035_machi.mp3"
+    },
+    {
+      "japanese": "郵便局",
+      "reading": "ゆうびんきょく",
+      "romaji": "yuubinkyoku",
+      "english": "post office",
+      "audio": "vocabulary/036_yuubinkyoku.mp3"
+    },
+    {
+      "japanese": "銀行",
+      "reading": "ぎんこう",
+      "romaji": "ginkou",
+      "english": "bank",
+      "audio": "vocabulary/037_ginkou.mp3"
+    },
+    {
+      "japanese": "コンビニ",
+      "reading": "コンビニ",
+      "romaji": "konbini",
+      "english": "convenience store",
+      "audio": "vocabulary/038_konbini.mp3"
+    },
+    {
+      "japanese": "机",
+      "reading": "つくえ",
+      "romaji": "tsukue",
+      "english": "desk",
+      "audio": "vocabulary/039_tsukue.mp3"
+    },
+    {
+      "japanese": "椅子",
+      "reading": "いす",
+      "romaji": "isu",
+      "english": "chair",
+      "audio": "vocabulary/040_isu.mp3"
+    },
+    {
+      "japanese": "本棚",
+      "reading": "ほんだな",
+      "romaji": "hondana",
+      "english": "bookshelf",
+      "audio": "vocabulary/041_hondana.mp3"
+    },
+    {
+      "japanese": "かばん",
+      "reading": "かばん",
+      "romaji": "kaban",
+      "english": "bag",
+      "audio": "vocabulary/042_kaban.mp3"
+    },
+    {
+      "japanese": "傘",
+      "reading": "かさ",
+      "romaji": "kasa",
+      "english": "umbrella",
+      "audio": "vocabulary/043_kasa.mp3"
+    },
+    {
+      "japanese": "携帯",
+      "reading": "けいたい",
+      "romaji": "keitai",
+      "english": "cell phone",
+      "audio": "vocabulary/044_keitai.mp3"
+    },
+    {
+      "japanese": "財布",
+      "reading": "さいふ",
+      "romaji": "saifu",
+      "english": "wallet",
+      "audio": "vocabulary/045_saifu.mp3"
+    },
+    {
+      "japanese": "鍵",
+      "reading": "かぎ",
+      "romaji": "kagi",
+      "english": "key",
+      "audio": "vocabulary/046_kagi.mp3"
     },
     {
       "japanese": "猫",
       "reading": "ねこ",
       "romaji": "neko",
       "english": "cat",
-      "audio": "vocabulary/021_neko.mp3"
+      "audio": "vocabulary/047_neko.mp3"
     },
     {
       "japanese": "犬",
       "reading": "いぬ",
       "romaji": "inu",
       "english": "dog",
-      "audio": "vocabulary/022_inu.mp3"
+      "audio": "vocabulary/048_inu.mp3"
     },
     {
       "japanese": "木",
       "reading": "き",
       "romaji": "ki",
       "english": "tree",
-      "audio": "vocabulary/023_ki.mp3"
+      "audio": "vocabulary/049_ki.mp3"
     },
     {
       "japanese": "花",
       "reading": "はな",
       "romaji": "hana",
       "english": "flower",
-      "audio": "vocabulary/024_hana.mp3"
+      "audio": "vocabulary/050_hana.mp3"
     },
     {
       "japanese": "いつも",
       "reading": "いつも",
       "romaji": "itsumo",
       "english": "always",
-      "audio": "vocabulary/025_itsumo.mp3"
+      "audio": "vocabulary/051_itsumo.mp3"
     },
     {
       "japanese": "たいてい",
       "reading": "たいてい",
       "romaji": "taitei",
       "english": "usually",
-      "audio": "vocabulary/026_taitei.mp3"
+      "audio": "vocabulary/052_taitei.mp3"
     },
     {
       "japanese": "よく",
       "reading": "よく",
       "romaji": "yoku",
       "english": "often; well",
-      "audio": "vocabulary/027_yoku.mp3"
+      "audio": "vocabulary/053_yoku.mp3"
     },
     {
       "japanese": "時々",
       "reading": "ときどき",
       "romaji": "tokidoki",
       "english": "sometimes",
-      "audio": "vocabulary/028_tokidoki.mp3"
+      "audio": "vocabulary/054_tokidoki.mp3"
     },
     {
       "japanese": "あまり",
       "reading": "あまり",
       "romaji": "amari",
       "english": "not very; not much",
-      "audio": "vocabulary/029_amari.mp3"
+      "audio": "vocabulary/055_amari.mp3"
     },
     {
       "japanese": "全然",
       "reading": "ぜんぜん",
       "romaji": "zenzen",
       "english": "not at all",
-      "audio": "vocabulary/030_zenzen.mp3"
+      "audio": "vocabulary/056_zenzen.mp3"
     },
     {
       "japanese": "住む",
       "reading": "すむ",
       "romaji": "sumu",
       "english": "to live; to reside",
-      "audio": "vocabulary/031_sumu.mp3"
+      "audio": "vocabulary/057_sumu.mp3"
     },
     {
       "japanese": "働く",
       "reading": "はたらく",
       "romaji": "hataraku",
       "english": "to work",
-      "audio": "vocabulary/032_hataraku.mp3"
+      "audio": "vocabulary/058_hataraku.mp3"
     },
     {
       "japanese": "知る",
       "reading": "しる",
       "romaji": "shiru",
       "english": "to know",
-      "audio": "vocabulary/033_shiru.mp3"
+      "audio": "vocabulary/059_shiru.mp3"
     },
     {
       "japanese": "持つ",
       "reading": "もつ",
       "romaji": "motsu",
       "english": "to have; to hold",
-      "audio": "vocabulary/034_motsu.mp3"
+      "audio": "vocabulary/060_motsu.mp3"
+    },
+    {
+      "japanese": "置く",
+      "reading": "おく",
+      "romaji": "oku",
+      "english": "to put; to place",
+      "audio": "vocabulary/061_oku.mp3"
+    },
+    {
+      "japanese": "歩く",
+      "reading": "あるく",
+      "romaji": "aruku",
+      "english": "to walk",
+      "audio": "vocabulary/062_aruku.mp3"
     },
     {
       "japanese": "先週",
       "reading": "せんしゅう",
       "romaji": "senshuu",
       "english": "last week",
-      "audio": "vocabulary/035_senshuu.mp3"
+      "audio": "vocabulary/063_senshuu.mp3"
     },
     {
       "japanese": "来週",
       "reading": "らいしゅう",
       "romaji": "raishuu",
       "english": "next week",
-      "audio": "vocabulary/036_raishuu.mp3"
+      "audio": "vocabulary/064_raishuu.mp3"
     },
     {
       "japanese": "去年",
       "reading": "きょねん",
       "romaji": "kyonen",
       "english": "last year",
-      "audio": "vocabulary/037_kyonen.mp3"
+      "audio": "vocabulary/065_kyonen.mp3"
     },
     {
       "japanese": "来年",
       "reading": "らいねん",
       "romaji": "rainen",
       "english": "next year",
-      "audio": "vocabulary/038_rainen.mp3"
+      "audio": "vocabulary/066_rainen.mp3"
+    },
+    {
+      "japanese": "今朝",
+      "reading": "けさ",
+      "romaji": "kesa",
+      "english": "this morning",
+      "audio": "vocabulary/067_kesa.mp3"
+    },
+    {
+      "japanese": "昨日",
+      "reading": "きのう",
+      "romaji": "kinou",
+      "english": "yesterday",
+      "audio": "vocabulary/068_kinou.mp3"
     },
     {
       "japanese": "～人",
       "reading": "～にん",
       "romaji": "~nin",
       "english": "counter for people",
-      "audio": "vocabulary/039_nin.mp3"
+      "audio": "vocabulary/069_nin.mp3"
     },
     {
       "japanese": "～匹",
       "reading": "～ひき",
       "romaji": "~hiki",
       "english": "counter for small animals",
-      "audio": "vocabulary/040_hiki.mp3"
+      "audio": "vocabulary/070_hiki.mp3"
+    },
+    {
+      "japanese": "～台",
+      "reading": "～だい",
+      "romaji": "~dai",
+      "english": "counter for machines/vehicles",
+      "audio": "vocabulary/071_dai.mp3"
+    },
+    {
+      "japanese": "～冊",
+      "reading": "～さつ",
+      "romaji": "~satsu",
+      "english": "counter for books",
+      "audio": "vocabulary/072_satsu.mp3"
+    },
+    {
+      "japanese": "広い",
+      "reading": "ひろい",
+      "romaji": "hiroi",
+      "english": "spacious; wide",
+      "audio": "vocabulary/073_hiroi.mp3"
+    },
+    {
+      "japanese": "狭い",
+      "reading": "せまい",
+      "romaji": "semai",
+      "english": "narrow; cramped",
+      "audio": "vocabulary/074_semai.mp3"
+    },
+    {
+      "japanese": "遠い",
+      "reading": "とおい",
+      "romaji": "tooi",
+      "english": "far",
+      "audio": "vocabulary/075_tooi.mp3"
+    },
+    {
+      "japanese": "近い",
+      "reading": "ちかい",
+      "romaji": "chikai",
+      "english": "near; close",
+      "audio": "vocabulary/076_chikai.mp3"
     }
   ],
   "dialogues": [
     {
-      "speaker": "Sue",
-      "japanese": "デートはどうでしたか。",
-      "english": "How was the date?",
-      "audio": "dialogue/001_sue.mp3"
+      "id": "l04-d01",
+      "title": "The First Date",
+      "lines": [
+        {
+          "speaker": "Sue",
+          "japanese": "デートはどうでしたか。",
+          "english": "How was the date?",
+          "audio": "dialogue/d01_001_sue.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "とても楽しかったです。",
+          "english": "It was very fun.",
+          "audio": "dialogue/d01_002_mary.mp3"
+        },
+        {
+          "speaker": "Sue",
+          "japanese": "どこに行きましたか。",
+          "english": "Where did you go?",
+          "audio": "dialogue/d01_003_sue.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "映画を見て、レストランに行きました。",
+          "english": "We watched a movie and went to a restaurant.",
+          "audio": "dialogue/d01_004_mary.mp3"
+        },
+        {
+          "speaker": "Sue",
+          "japanese": "レストランはどこにありましたか。",
+          "english": "Where was the restaurant?",
+          "audio": "dialogue/d01_005_sue.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "駅の近くにありました。",
+          "english": "It was near the station.",
+          "audio": "dialogue/d01_006_mary.mp3"
+        },
+        {
+          "speaker": "Sue",
+          "japanese": "いいですね。また会いますか。",
+          "english": "That's nice. Will you meet again?",
+          "audio": "dialogue/d01_007_sue.mp3"
+        },
+        {
+          "speaker": "Mary",
+          "japanese": "はい、来週の土曜日に会います。",
+          "english": "Yes, we'll meet next Saturday.",
+          "audio": "dialogue/d01_008_mary.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "とても楽しかったです。",
-      "english": "It was very fun.",
-      "audio": "dialogue/002_mary.mp3"
+      "id": "l04-d02",
+      "title": "Describing a Room",
+      "lines": [
+        {
+          "speaker": "Tom",
+          "japanese": "へや、ひろいね。",
+          "english": "The room is spacious, huh.",
+          "audio": "dialogue/d02_001_tom.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "まあね。テレビは本棚のとなりにあるよ。",
+          "english": "Yeah. The TV is next to the bookshelf.",
+          "audio": "dialogue/d02_002_kenji.mp3"
+        },
+        {
+          "speaker": "Tom",
+          "japanese": "ベッドの上に何がある？",
+          "english": "What's on the bed?",
+          "audio": "dialogue/d02_003_tom.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "ああ、ねこがいる。たまだよ。",
+          "english": "Oh, there is a cat. That is Tama.",
+          "audio": "dialogue/d02_004_kenji.mp3"
+        },
+        {
+          "speaker": "Tom",
+          "japanese": "かわいい！つくえの下にも何かいる？",
+          "english": "Cute! Is there something under the desk too?",
+          "audio": "dialogue/d02_005_tom.mp3"
+        },
+        {
+          "speaker": "Kenji",
+          "japanese": "うん、犬のポチがいる。",
+          "english": "Yeah, my dog Pochi is there.",
+          "audio": "dialogue/d02_006_kenji.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Sue",
-      "japanese": "どこに行きましたか。",
-      "english": "Where did you go?",
-      "audio": "dialogue/003_sue.mp3"
+      "id": "l04-d03",
+      "title": "Talking About Family",
+      "lines": [
+        {
+          "speaker": "Lisa",
+          "japanese": "ゆきさんのかぞくはどこにすんでいますか。",
+          "english": "Where does your family live, Yuki?",
+          "audio": "dialogue/d03_001_lisa.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "大阪にすんでいます。父と母と姉がいます。",
+          "english": "They live in Osaka. I have a father, mother, and older sister.",
+          "audio": "dialogue/d03_002_yuki.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "お姉さんは何をしていますか。",
+          "english": "What does your older sister do?",
+          "audio": "dialogue/d03_003_lisa.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "姉は病院ではたらいています。かんごしです。",
+          "english": "My sister works at a hospital. She is a nurse.",
+          "audio": "dialogue/d03_004_yuki.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "そうですか。リサさんのかぞくは？",
+          "english": "I see. How about your family, Lisa?",
+          "audio": "dialogue/d03_005_lisa.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "弟が二人います。二人ともアメリカにいます。",
+          "english": "I have two younger brothers. Both of them are in America.",
+          "audio": "dialogue/d03_006_lisa.mp3"
+        },
+        {
+          "speaker": "Yuki",
+          "japanese": "よくれんらくしますか。",
+          "english": "Do you contact them often?",
+          "audio": "dialogue/d03_007_yuki.mp3"
+        },
+        {
+          "speaker": "Lisa",
+          "japanese": "はい、時々ビデオでんわをします。",
+          "english": "Yes, I sometimes video call them.",
+          "audio": "dialogue/d03_008_lisa.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Mary",
-      "japanese": "映画を見て、レストランに行きました。",
-      "english": "We watched a movie and went to a restaurant.",
-      "audio": "dialogue/004_mary.mp3"
+      "id": "l04-d04",
+      "title": "Asking for Directions",
+      "lines": [
+        {
+          "speaker": "Robert",
+          "japanese": "すみません。ゆうびんきょくはどこにありますか。",
+          "english": "Excuse me. Where is the post office?",
+          "audio": "dialogue/d04_001_robert.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "ゆうびんきょくですか。えきの近くにありますよ。",
+          "english": "The post office? It is near the station.",
+          "audio": "dialogue/d04_002_clerk.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "駅のどちらがわですか。",
+          "english": "Which side of the station?",
+          "audio": "dialogue/d04_003_robert.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "駅の右がわです。銀行ととしょかんの間にあります。",
+          "english": "On the right side of the station. It is between the bank and the library.",
+          "audio": "dialogue/d04_004_clerk.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "ここから遠いですか。",
+          "english": "Is it far from here?",
+          "audio": "dialogue/d04_005_robert.mp3"
+        },
+        {
+          "speaker": "Clerk",
+          "japanese": "いいえ、あるいて五分ぐらいです。",
+          "english": "No, it is about five minutes on foot.",
+          "audio": "dialogue/d04_006_clerk.mp3"
+        },
+        {
+          "speaker": "Robert",
+          "japanese": "ありがとうございます。",
+          "english": "Thank you very much.",
+          "audio": "dialogue/d04_007_robert.mp3"
+        }
+      ]
     },
     {
-      "speaker": "Sue",
-      "japanese": "レストランはどこにありましたか。",
-      "english": "Where was the restaurant?",
-      "audio": "dialogue/005_sue.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "駅の近くにありました。",
-      "english": "It was near the station.",
-      "audio": "dialogue/006_mary.mp3"
-    },
-    {
-      "speaker": "Sue",
-      "japanese": "何を食べましたか。",
-      "english": "What did you eat?",
-      "audio": "dialogue/007_sue.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "たけしさんはラーメンを食べました。私はカレーを食べました。",
-      "english": "Takeshi ate ramen. I ate curry.",
-      "audio": "dialogue/008_mary.mp3"
-    },
-    {
-      "speaker": "Sue",
-      "japanese": "いいですね。また会いますか。",
-      "english": "That's nice. Will you meet again?",
-      "audio": "dialogue/009_sue.mp3"
-    },
-    {
-      "speaker": "Mary",
-      "japanese": "はい、来週の土曜日に会います。",
-      "english": "Yes, we'll meet next Saturday.",
-      "audio": "dialogue/010_mary.mp3"
+      "id": "l04-d05",
+      "title": "What is in Your Bag?",
+      "lines": [
+        {
+          "speaker": "Kim",
+          "japanese": "あれ、私のけいたい、どこ？",
+          "english": "Huh, where is my phone?",
+          "audio": "dialogue/d05_001_kim.mp3"
+        },
+        {
+          "speaker": "Roommate",
+          "japanese": "かばんの中にない？",
+          "english": "Is it not in your bag?",
+          "audio": "dialogue/d05_002_roommate.mp3"
+        },
+        {
+          "speaker": "Kim",
+          "japanese": "見た。ない。つくえの上にもない。",
+          "english": "I looked. It is not there. It is not on the desk either.",
+          "audio": "dialogue/d05_003_kim.mp3"
+        },
+        {
+          "speaker": "Roommate",
+          "japanese": "ソファーの下は？",
+          "english": "How about under the sofa?",
+          "audio": "dialogue/d05_004_roommate.mp3"
+        },
+        {
+          "speaker": "Kim",
+          "japanese": "あ、あった！ソファーとテーブルの間にあった。",
+          "english": "Oh, I found it! It was between the sofa and the table.",
+          "audio": "dialogue/d05_005_kim.mp3"
+        },
+        {
+          "speaker": "Roommate",
+          "japanese": "よかった。いつもけいたい、どこかにおくよね。",
+          "english": "Good. You always put your phone somewhere, huh.",
+          "audio": "dialogue/d05_006_roommate.mp3"
+        },
+        {
+          "speaker": "Kim",
+          "japanese": "うん、わるいくせ。",
+          "english": "Yeah, it is a bad habit.",
+          "audio": "dialogue/d05_007_kim.mp3"
+        }
+      ]
     }
   ]
 }
