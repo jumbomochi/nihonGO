@@ -199,15 +199,20 @@ function GenkiLessonScreen({
     const dialogueSection = lesson.sections.find(s => s.type === 'dialogue');
     const hasMultipleDialogues = dialogueSection?.content.dialogues && dialogueSection.content.dialogues.length > 1;
 
+    // Sanitize speaker name for filename (lowercase, keep spaces for matching existing files)
+    const speakerName = speaker.toLowerCase();
+
     let filename: string;
     if (hasMultipleDialogues) {
       // Multiple dialogues: d01_001_mary.mp3
-      filename = `d${(dialogueIndex + 1).toString().padStart(2, '0')}_${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
+      filename = `d${(dialogueIndex + 1).toString().padStart(2, '0')}_${(lineIndex + 1).toString().padStart(3, '0')}_${speakerName}.mp3`;
     } else {
       // Single dialogue (backward compat): 001_mary.mp3
-      filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speaker.toLowerCase()}.mp3`;
+      filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speakerName}.mp3`;
     }
-    return getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
+    const path = getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
+    // URL-encode the path to handle spaces in speaker names
+    return encodeURI(path);
   }, [lesson]);
 
   if (!lesson) {
