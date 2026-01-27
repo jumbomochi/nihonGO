@@ -14,6 +14,7 @@ import {
   JLPTListening,
 } from '@/data/jlpt/types';
 import { getN3Units } from '@/data/jlpt/n3';
+import { getN2Units } from '@/data/jlpt/n2';
 
 type ExamPhase = 'intro' | 'vocabulary' | 'grammar' | 'reading' | 'listening' | 'results';
 
@@ -185,7 +186,17 @@ export default function MockExamScreen() {
 
   // Generate questions once on mount
   const sectionQuestions = useMemo<SectionQuestions>(() => {
-    const units = jlptLevel === 'N3' ? getN3Units() : [];
+    const getUnitsForLevel = () => {
+      switch (jlptLevel) {
+        case 'N3':
+          return getN3Units();
+        case 'N2':
+          return getN2Units();
+        default:
+          return [];
+      }
+    };
+    const units = getUnitsForLevel();
     const allVocabulary = units.flatMap((u) => u.sections.vocabulary);
     const allKanji = units.flatMap((u) => u.sections.kanji);
     const allGrammar = units.flatMap((u) => u.sections.grammar);

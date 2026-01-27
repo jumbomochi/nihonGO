@@ -3,8 +3,9 @@ import { router, useLocalSearchParams } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
 import { UnitCard } from '@/components/jlpt';
-import { JLPTLevel } from '@/data/jlpt/types';
+import { JLPTLevel, JLPTUnit } from '@/data/jlpt/types';
 import { getN3Units } from '@/data/jlpt/n3';
+import { getN2Units } from '@/data/jlpt/n2';
 
 export default function JLPTLevelScreen() {
   const { level } = useLocalSearchParams<{ level: string }>();
@@ -15,7 +16,17 @@ export default function JLPTLevelScreen() {
   const completedUnits = new Set(progress?.unitsCompleted || []);
 
   // Get units for this level
-  const units = jlptLevel === 'N3' ? getN3Units() : [];
+  const getUnitsForLevel = (level: JLPTLevel): JLPTUnit[] => {
+    switch (level) {
+      case 'N3':
+        return getN3Units();
+      case 'N2':
+        return getN2Units();
+      default:
+        return [];
+    }
+  };
+  const units = getUnitsForLevel(jlptLevel);
 
   const handleUnitPress = (unitId: string) => {
     router.push(`/jlpt/${level}/${unitId}` as any);
