@@ -25,10 +25,14 @@ export function DialogueSection({
   // Track playing state as "dialogueIndex-lineIndex"
   const [playingKey, setPlayingKey] = useState<string | null>(null);
   const [loadingKey, setLoadingKey] = useState<string | null>(null);
+  const [playingFullDialogue, setPlayingFullDialogue] = useState<number | null>(null); // dialogueIndex being played
+  const [isLoadingFull, setIsLoadingFull] = useState<number | null>(null);
   const soundRef = useRef<Audio.Sound | null>(null);
   const webAudioRef = useRef<HTMLAudioElement | null>(null);
+  const fullPlaybackAbortRef = useRef<boolean>(false);
 
   const stopCurrentAudio = useCallback(async () => {
+    fullPlaybackAbortRef.current = true; // Stop any full dialogue playback
     if (Platform.OS === 'web' && webAudioRef.current) {
       webAudioRef.current.pause();
       webAudioRef.current = null;
@@ -39,7 +43,101 @@ export function DialogueSection({
       soundRef.current = null;
     }
     setPlayingKey(null);
+    setPlayingFullDialogue(null);
   }, []);
+
+  // Play a single audio file and return a promise that resolves when finished
+  const playAudioAsync = useCallback((audioPath: string): Promise<void> => {
+    return new Promise(async (resolve, reject) => {
+      const fullUrl = Platform.OS === 'web' && typeof window !== 'undefined'
+        ? `${window.location.origin}${audioPath}`
+        : audioPath;
+
+      try {
+        if (Platform.OS === 'web' && typeof window !== 'undefined') {
+          const audio = new window.Audio(fullUrl);
+          webAudioRef.current = audio;
+          audio.onended = () => {
+            webAudioRef.current = null;
+            resolve();
+          };
+          audio.onerror = () => {
+            webAudioRef.current = null;
+            reject(new Error('Web audio error'));
+          };
+          await audio.play();
+        } else {
+          await Audio.setAudioModeAsync({
+            playsInSilentModeIOS: true,
+            staysActiveInBackground: false,
+          });
+          const { sound } = await Audio.Sound.createAsync(
+            { uri: fullUrl },
+            { shouldPlay: true }
+          );
+          soundRef.current = sound;
+          sound.setOnPlaybackStatusUpdate((status) => {
+            if (status.isLoaded && status.didJustFinish) {
+              sound.unloadAsync();
+              soundRef.current = null;
+              resolve();
+            }
+          });
+        }
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }, []);
+
+  // Play full dialogue with pauses between speakers
+  const playFullDialogue = useCallback(async (dialogueIndex: number) => {
+    if (!getLineAudioPath) return;
+
+    const dialogue = allDialogues[dialogueIndex];
+    if (!dialogue) return;
+
+    // If already playing this dialogue, stop it
+    if (playingFullDialogue === dialogueIndex) {
+      await stopCurrentAudio();
+      return;
+    }
+
+    // Stop any current audio first
+    await stopCurrentAudio();
+    fullPlaybackAbortRef.current = false;
+    setIsLoadingFull(dialogueIndex);
+    setPlayingFullDialogue(dialogueIndex);
+
+    const PAUSE_BETWEEN_SPEAKERS = 600; // milliseconds pause between speakers
+
+    try {
+      for (let lineIndex = 0; lineIndex < dialogue.lines.length; lineIndex++) {
+        // Check if playback was aborted
+        if (fullPlaybackAbortRef.current) break;
+
+        const line = dialogue.lines[lineIndex];
+        const audioPath = getLineAudioPath(dialogueIndex, lineIndex, line.speaker);
+
+        setPlayingKey(`${dialogueIndex}-${lineIndex}`);
+        setIsLoadingFull(null);
+
+        await playAudioAsync(audioPath);
+
+        // Add pause between speakers (except after the last line)
+        if (lineIndex < dialogue.lines.length - 1 && !fullPlaybackAbortRef.current) {
+          await new Promise(resolve => setTimeout(resolve, PAUSE_BETWEEN_SPEAKERS));
+        }
+      }
+    } catch (error) {
+      console.error('Error playing full dialogue:', error);
+    } finally {
+      if (!fullPlaybackAbortRef.current) {
+        setPlayingKey(null);
+        setPlayingFullDialogue(null);
+      }
+    }
+  }, [allDialogues, getLineAudioPath, playingFullDialogue, stopCurrentAudio, playAudioAsync]);
 
   const playLineAudio = useCallback(async (dialogueIndex: number, lineIndex: number, speaker: string) => {
     if (!getLineAudioPath) return;
@@ -167,15 +265,26 @@ export function DialogueSection({
               </View>
             </View>
 
-            {/* Play full audio button (only for first dialogue if audioTracks provided) */}
-            {dialogueIndex === 0 && audioTracks && audioTracks.length > 0 && onPlayAudio && (
+            {/* Play full dialogue button with pauses between speakers */}
+            {getLineAudioPath && (
               <Pressable
-                onPress={() => onPlayAudio(audioTracks[0])}
-                className="flex-row items-center bg-sakura-500 rounded-xl p-4 mb-4"
+                onPress={() => playFullDialogue(dialogueIndex)}
+                disabled={isLoadingFull === dialogueIndex}
+                className={`flex-row items-center rounded-xl p-4 mb-4 ${
+                  playingFullDialogue === dialogueIndex ? 'bg-sakura-600' : 'bg-sakura-500'
+                }`}
               >
-                <FontAwesome name="play-circle" size={24} color="#fff" />
+                {isLoadingFull === dialogueIndex ? (
+                  <ActivityIndicator size="small" color="#fff" />
+                ) : (
+                  <FontAwesome
+                    name={playingFullDialogue === dialogueIndex ? 'pause-circle' : 'play-circle'}
+                    size={24}
+                    color="#fff"
+                  />
+                )}
                 <Text className="text-white font-semibold ml-3">
-                  Play Dialogue Audio
+                  {playingFullDialogue === dialogueIndex ? 'Stop Dialogue' : 'Play Full Dialogue'}
                 </Text>
               </Pressable>
             )}
