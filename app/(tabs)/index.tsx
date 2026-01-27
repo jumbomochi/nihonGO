@@ -24,7 +24,7 @@ import {
 
 export default function LearnScreen() {
   const { profile } = useUserStore();
-  const { apiKey, loadApiKey, setApiKey, isLoading } = useSettingsStore();
+  const { apiKey, aiProvider, loadApiKey, setApiKey, isLoading } = useSettingsStore();
   const [showApiKeyInput, setShowApiKeyInput] = useState(false);
   const [apiKeyInput, setApiKeyInput] = useState('');
   const [selectedBook, setSelectedBook] = useState<GenkiBook>('genki1');
@@ -75,8 +75,8 @@ export default function LearnScreen() {
           </Text>
         </View>
 
-        {/* API Key Section */}
-        {!apiKey ? (
+        {/* API Key Section - only show when using Claude and no key is set */}
+        {aiProvider === 'claude' && !apiKey ? (
           <View className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-5 mb-6 border border-amber-200 dark:border-amber-800">
             <View className="flex-row items-center mb-3">
               <FontAwesome name="key" size={20} color="#d97706" />
