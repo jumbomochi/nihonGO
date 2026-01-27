@@ -6,6 +6,7 @@ import { UnitCard } from '@/components/jlpt';
 import { JLPTLevel, JLPTUnit } from '@/data/jlpt/types';
 import { getN3Units } from '@/data/jlpt/n3';
 import { getN2Units } from '@/data/jlpt/n2';
+import { getN1Units } from '@/data/jlpt/n1';
 
 export default function JLPTLevelScreen() {
   const { level } = useLocalSearchParams<{ level: string }>();
@@ -22,6 +23,8 @@ export default function JLPTLevelScreen() {
         return getN3Units();
       case 'N2':
         return getN2Units();
+      case 'N1':
+        return getN1Units();
       default:
         return [];
     }

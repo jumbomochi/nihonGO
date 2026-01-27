@@ -15,6 +15,7 @@ import {
 } from '@/data/jlpt/types';
 import { getN3Units } from '@/data/jlpt/n3';
 import { getN2Units } from '@/data/jlpt/n2';
+import { getN1Units } from '@/data/jlpt/n1';
 
 type ExamPhase = 'intro' | 'vocabulary' | 'grammar' | 'reading' | 'listening' | 'results';
 
@@ -192,6 +193,8 @@ export default function MockExamScreen() {
           return getN3Units();
         case 'N2':
           return getN2Units();
+        case 'N1':
+          return getN1Units();
         default:
           return [];
       }
