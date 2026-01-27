@@ -173,6 +173,32 @@ export default function LearnScreen() {
           ))}
         </View>
 
+        {/* JLPT Section */}
+        <View className="mt-8">
+          <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            JLPT Courses
+          </Text>
+          <Pressable
+            onPress={() => router.push('/jlpt' as any)}
+            className="bg-gradient-to-r from-purple-50 to-sakura-50 dark:from-purple-900/20 dark:to-sakura-900/20 rounded-2xl p-5 border border-purple-200 dark:border-purple-800"
+          >
+            <View className="flex-row items-center">
+              <View className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl items-center justify-center">
+                <Text className="text-2xl font-bold text-purple-600">N</Text>
+              </View>
+              <View className="flex-1 ml-4">
+                <Text className="text-lg font-semibold text-gray-900 dark:text-white">
+                  JLPT N5 to N1
+                </Text>
+                <Text className="text-sm text-gray-500 dark:text-gray-400">
+                  Complete Japanese proficiency courses
+                </Text>
+              </View>
+              <FontAwesome name="chevron-right" size={16} color="#9ca3af" />
+            </View>
+          </Pressable>
+        </View>
+
         {/* Learning Style Info */}
         <View className="mt-8 bg-sakura-50 dark:bg-sakura-900/20 rounded-2xl p-5">
           <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-2">

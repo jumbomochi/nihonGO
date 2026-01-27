@@ -6,6 +6,7 @@ import { getAllLessonIds, GENKI_BOOKS } from '@/data/genki';
 import { AlphabetProgress } from '@/types/alphabet';
 import { CharacterMastery } from '@/types/games';
 import { ACHIEVEMENTS } from '@/data/achievements';
+import { JLPTLevel, JLPTProgress, MockExamAttempt } from '@/data/jlpt/types';
 
 interface LessonProgress {
   topicId: string;
@@ -73,6 +74,9 @@ interface ProgressState {
   speedChallengeHighScore: number;
   perfectQuizzes: number;
 
+  // JLPT Progress
+  jlptProgress: Record<JLPTLevel, JLPTProgress>;
+
   // Actions
   completeLesson: (topicId: string, timeSpentSeconds: number) => void;
   addWordsLearned: (count: number) => void;
@@ -120,6 +124,13 @@ interface ProgressState {
 
   // Achievement Checking
   checkAchievements: () => string[];
+
+  // JLPT Methods
+  isJLPTLevelUnlocked: (level: JLPTLevel) => boolean;
+  completeJLPTUnit: (level: JLPTLevel, unitId: string) => void;
+  recordJLPTExamAttempt: (attempt: MockExamAttempt) => void;
+  getJLPTLevelProgress: (level: JLPTLevel) => JLPTProgress;
+  isGenki2Complete: () => boolean;
 }
 
 function getToday(): string {
@@ -189,6 +200,13 @@ const defaultState = {
   matchingGamesWon: 0,
   speedChallengeHighScore: 0,
   perfectQuizzes: 0,
+  jlptProgress: {
+    N5: { level: 'N5', unitsCompleted: [], unitProgress: {}, mockExamAttempts: [], unlocked: true },
+    N4: { level: 'N4', unitsCompleted: [], unitProgress: {}, mockExamAttempts: [], unlocked: true },
+    N3: { level: 'N3', unitsCompleted: [], unitProgress: {}, mockExamAttempts: [], unlocked: false },
+    N2: { level: 'N2', unitsCompleted: [], unitProgress: {}, mockExamAttempts: [], unlocked: false },
+    N1: { level: 'N1', unitsCompleted: [], unitProgress: {}, mockExamAttempts: [], unlocked: false },
+  } as Record<JLPTLevel, JLPTProgress>,
 };
 
 export const useProgressStore = create<ProgressState>()(
@@ -617,6 +635,92 @@ export const useProgressStore = create<ProgressState>()(
         }
 
         return newUnlocks;
+      },
+
+      // JLPT Methods
+      isGenki2Complete: () => {
+        const state = get();
+        // Check if all Genki 2 lessons (13-23) are completed
+        const genki2LessonIds = getAllLessonIds('genki2');
+        return genki2LessonIds.every((id) =>
+          state.completedLessons.some((l) => l.topicId === id)
+        );
+      },
+
+      isJLPTLevelUnlocked: (level: JLPTLevel) => {
+        const state = get();
+        switch (level) {
+          case 'N5':
+          case 'N4':
+            return true; // Always available (maps to Genki)
+          case 'N3':
+            // Unlocks after completing Genki 2
+            return state.isGenki2Complete();
+          case 'N2':
+            // Unlocks after passing N3 mock exam
+            return state.jlptProgress.N3.mockExamAttempts.some((a) => a.passed);
+          case 'N1':
+            // Unlocks after passing N2 mock exam
+            return state.jlptProgress.N2.mockExamAttempts.some((a) => a.passed);
+          default:
+            return false;
+        }
+      },
+
+      completeJLPTUnit: (level: JLPTLevel, unitId: string) => {
+        set((state) => {
+          const levelProgress = state.jlptProgress[level];
+          if (levelProgress.unitsCompleted.includes(unitId)) {
+            return state;
+          }
+
+          return {
+            jlptProgress: {
+              ...state.jlptProgress,
+              [level]: {
+                ...levelProgress,
+                unitsCompleted: [...levelProgress.unitsCompleted, unitId],
+              },
+            },
+          };
+        });
+      },
+
+      recordJLPTExamAttempt: (attempt: MockExamAttempt) => {
+        set((state) => {
+          const levelProgress = state.jlptProgress[attempt.level];
+
+          // If passed, unlock next level
+          const updates: Partial<Record<JLPTLevel, JLPTProgress>> = {
+            [attempt.level]: {
+              ...levelProgress,
+              mockExamAttempts: [...levelProgress.mockExamAttempts, attempt],
+            },
+          };
+
+          // Unlock next level if passed
+          if (attempt.passed) {
+            const nextLevel = attempt.level === 'N3' ? 'N2' : attempt.level === 'N2' ? 'N1' : null;
+            if (nextLevel) {
+              updates[nextLevel] = {
+                ...state.jlptProgress[nextLevel],
+                unlocked: true,
+                unlockedAt: new Date().toISOString(),
+              };
+            }
+          }
+
+          return {
+            jlptProgress: {
+              ...state.jlptProgress,
+              ...updates,
+            },
+          };
+        });
+      },
+
+      getJLPTLevelProgress: (level: JLPTLevel) => {
+        return get().jlptProgress[level];
       },
     }),
     {
