@@ -33,6 +33,8 @@ export function UnitCard({
   return (
     <Pressable
       onPress={handlePress}
+      accessibilityRole="button"
+      accessibilityLabel={`Unit ${unitNumber}: ${theme}${isCompleted ? ', completed' : ''}`}
       className={`bg-white dark:bg-gray-800 rounded-2xl border ${
         isCompleted
           ? 'border-green-200 dark:border-green-800'

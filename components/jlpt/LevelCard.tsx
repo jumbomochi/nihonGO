@@ -46,6 +46,9 @@ export function LevelCard({
     <Pressable
       onPress={handlePress}
       disabled={!isUnlocked}
+      accessibilityRole="button"
+      accessibilityLabel={`${title}, ${subtitle}${!isUnlocked ? ', locked' : ''}`}
+      accessibilityState={{ disabled: !isUnlocked }}
       className={`rounded-2xl border p-4 ${colors.bg} ${colors.border} ${!isUnlocked ? 'opacity-60' : ''}`}
     >
       <View className="flex-row items-center">
