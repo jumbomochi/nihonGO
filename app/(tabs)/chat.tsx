@@ -13,6 +13,7 @@ import { triggerImpact } from '@/lib/haptics';
 import { useChat } from '@/hooks/useChat';
 import { useSettingsStore } from '@/stores/settingsStore';
 const selectApiKey = (state: ReturnType<typeof useSettingsStore.getState>) => state.apiKey;
+const selectAiProvider = (state: ReturnType<typeof useSettingsStore.getState>) => state.aiProvider;
 const selectLoadApiKey = (state: ReturnType<typeof useSettingsStore.getState>) => state.loadApiKey;
 const selectIsLoading = (state: ReturnType<typeof useSettingsStore.getState>) => state.isLoading;
 const selectIsOnline = (state: ReturnType<typeof useSettingsStore.getState>) => state.isOnline;
@@ -24,6 +25,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 export default function ChatScreen() {
   const { messages, isLoading, error, sendUserMessage, clearChat } = useChat();
   const apiKey = useSettingsStore(selectApiKey);
+  const aiProvider = useSettingsStore(selectAiProvider);
   const loadApiKey = useSettingsStore(selectLoadApiKey);
   const isLoadingApiKey = useSettingsStore(selectIsLoading);
   const isOnline = useSettingsStore(selectIsOnline);
@@ -58,7 +60,8 @@ export default function ChatScreen() {
     }
   }, [messages]);
 
-  if (!apiKey && !isLoadingApiKey) {
+  // Only require API key for Claude provider
+  if (aiProvider === 'claude' && !apiKey && !isLoadingApiKey) {
     return (
       <SafeAreaView className="flex-1 bg-white dark:bg-gray-900 items-center justify-center px-6">
         <FontAwesome name="comments" size={48} color="#d1d5db" />
@@ -66,7 +69,7 @@ export default function ChatScreen() {
           API Key Required
         </Text>
         <Text className="text-gray-500 dark:text-gray-400 mt-2 text-center">
-          Please add your Claude API key on the Learn tab to start chatting
+          Please add your Claude API key in the Profile tab to start chatting
         </Text>
       </SafeAreaView>
     );
