@@ -207,39 +207,40 @@ export default function JLPTUnitScreen() {
       </View>
 
       {/* Section Tabs */}
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        className="border-b border-gray-200 dark:border-gray-800"
-        contentContainerClassName="px-4 py-2"
-      >
-        {SECTIONS.map((section) => (
-          <Pressable
-            key={section.id}
-            onPress={() => setActiveSection(section.id)}
-            className={`flex-row items-center px-4 py-2 rounded-full mr-2 ${
-              activeSection === section.id
-                ? 'bg-sakura-500'
-                : 'bg-gray-100 dark:bg-gray-800'
-            }`}
-          >
-            <FontAwesome
-              name={section.icon as any}
-              size={14}
-              color={activeSection === section.id ? '#fff' : '#6b7280'}
-            />
-            <Text
-              className={`ml-2 text-sm font-medium ${
+      <View className="border-b border-gray-200 dark:border-gray-800">
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerClassName="px-4 py-2 items-center"
+        >
+          {SECTIONS.map((section) => (
+            <Pressable
+              key={section.id}
+              onPress={() => setActiveSection(section.id)}
+              className={`flex-row items-center px-4 py-2 rounded-full mr-2 ${
                 activeSection === section.id
-                  ? 'text-white'
-                  : 'text-gray-600 dark:text-gray-400'
+                  ? 'bg-sakura-500'
+                  : 'bg-gray-100 dark:bg-gray-800'
               }`}
             >
-              {section.title}
-            </Text>
-          </Pressable>
-        ))}
-      </ScrollView>
+              <FontAwesome
+                name={section.icon as any}
+                size={14}
+                color={activeSection === section.id ? '#fff' : '#6b7280'}
+              />
+              <Text
+                className={`ml-2 text-sm font-medium ${
+                  activeSection === section.id
+                    ? 'text-white'
+                    : 'text-gray-600 dark:text-gray-400'
+                }`}
+              >
+                {section.title}
+              </Text>
+            </Pressable>
+          ))}
+        </ScrollView>
+      </View>
 
       {/* Content */}
       <ScrollView className="flex-1" contentContainerClassName="px-4 py-6">
