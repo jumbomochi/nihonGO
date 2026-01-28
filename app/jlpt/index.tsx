@@ -15,15 +15,15 @@ const JLPT_LEVELS: {
   {
     level: 'N5',
     title: 'JLPT N5',
-    subtitle: 'Beginner - Genki 1',
-    totalUnits: 12,
+    subtitle: 'Beginner - Exam Prep',
+    totalUnits: 10,
     unlockRequirement: 'Always available',
   },
   {
     level: 'N4',
     title: 'JLPT N4',
-    subtitle: 'Elementary - Genki 2',
-    totalUnits: 11,
+    subtitle: 'Elementary - Exam Prep',
+    totalUnits: 10,
     unlockRequirement: 'Always available',
   },
   {
@@ -53,12 +53,7 @@ export default function JLPTHubScreen() {
   const { isJLPTLevelUnlocked, getJLPTLevelProgress } = useProgressStore();
 
   const handleLevelPress = (level: JLPTLevel) => {
-    if (level === 'N5' || level === 'N4') {
-      // N5/N4 redirect to Genki lessons
-      router.push('/(tabs)');
-    } else {
-      router.push(`/jlpt/${level.toLowerCase()}` as any);
-    }
+    router.push(`/jlpt/${level.toLowerCase()}` as any);
   };
 
   const handleBack = () => {
@@ -124,7 +119,7 @@ export default function JLPTHubScreen() {
             </Text>
           </View>
           <Text className="text-xs text-blue-600 dark:text-blue-400">
-            N5 and N4 content is covered by Genki 1 and 2. N3-N1 levels include themed units with vocabulary, kanji, grammar, reading, and listening practice.
+            N5 and N4 provide exam-focused content that supplements Genki textbooks. N3-N1 are complete courses with vocabulary, kanji, grammar, reading, and listening practice.
           </Text>
         </View>
       </ScrollView>
