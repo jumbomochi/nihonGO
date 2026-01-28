@@ -4,7 +4,11 @@ import { router, useLocalSearchParams } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
 import { JLPTLevel, JLPTUnit } from '@/data/jlpt/types';
+import { getN5Unit } from '@/data/jlpt/n5';
+import { getN4Unit } from '@/data/jlpt/n4';
 import { getN3Unit } from '@/data/jlpt/n3';
+import { getN2Unit } from '@/data/jlpt/n2';
+import { getN1Unit } from '@/data/jlpt/n1';
 import { KanjiCard } from '@/components/jlpt';
 import { VocabularyList } from '@/components/lesson/VocabularyList';
 import { GrammarSection } from '@/components/lesson/GrammarSection';
@@ -26,11 +30,28 @@ export default function JLPTUnitScreen() {
   const [unit, setUnit] = useState<JLPTUnit | null>(null);
 
   useEffect(() => {
-    // Load unit data
-    if (jlptLevel === 'N3' && unitId) {
-      const loadedUnit = getN3Unit(unitId);
-      setUnit(loadedUnit || null);
+    // Load unit data based on level
+    if (!unitId) return;
+
+    let loadedUnit: JLPTUnit | undefined;
+    switch (jlptLevel) {
+      case 'N5':
+        loadedUnit = getN5Unit(unitId);
+        break;
+      case 'N4':
+        loadedUnit = getN4Unit(unitId);
+        break;
+      case 'N3':
+        loadedUnit = getN3Unit(unitId);
+        break;
+      case 'N2':
+        loadedUnit = getN2Unit(unitId);
+        break;
+      case 'N1':
+        loadedUnit = getN1Unit(unitId);
+        break;
     }
+    setUnit(loadedUnit || null);
   }, [jlptLevel, unitId]);
 
   const handleBack = () => {
