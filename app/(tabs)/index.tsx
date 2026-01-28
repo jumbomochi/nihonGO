@@ -1,20 +1,16 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { memo, useState } from 'react';
 import {
   View,
   Text,
   SafeAreaView,
   ScrollView,
   Pressable,
-  ActivityIndicator,
 } from 'react-native';
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { triggerSelection } from '@/lib/haptics';
 import { useUserStore } from '@/stores/userStore';
-import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
-import { Button } from '@/components/common/Button';
-import { Input } from '@/components/common/Input';
 import { GenkiBook, GenkiLesson } from '@/types/genki';
 import {
   GENKI_BOOKS,
@@ -24,22 +20,7 @@ import {
 
 export default function LearnScreen() {
   const { profile } = useUserStore();
-  const { apiKey, aiProvider, loadApiKey, setApiKey, isLoading } = useSettingsStore();
-  const [showApiKeyInput, setShowApiKeyInput] = useState(false);
-  const [apiKeyInput, setApiKeyInput] = useState('');
   const [selectedBook, setSelectedBook] = useState<GenkiBook>('genki1');
-
-  useEffect(() => {
-    loadApiKey();
-  }, []);
-
-  const handleSaveApiKey = async () => {
-    if (apiKeyInput.trim()) {
-      await setApiKey(apiKeyInput.trim());
-      setShowApiKeyInput(false);
-      setApiKeyInput('');
-    }
-  };
 
   const greeting =
     profile.learningStyle === 'conversational'
@@ -51,16 +32,6 @@ export default function LearnScreen() {
   const lessons = lessonIds
     .map((id) => getLessonOrPlaceholder(id))
     .filter((l): l is GenkiLesson => l !== undefined);
-
-  // Show loading state
-  if (isLoading) {
-    return (
-      <SafeAreaView className="flex-1 bg-white dark:bg-gray-900 items-center justify-center">
-        <ActivityIndicator size="large" color="#ec4899" />
-        <Text className="text-gray-500 dark:text-gray-400 mt-4">Loading...</Text>
-      </SafeAreaView>
-    );
-  }
 
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
@@ -74,84 +45,6 @@ export default function LearnScreen() {
             {greeting}
           </Text>
         </View>
-
-        {/* API Key Section - only show when using Claude and no key is set */}
-        {aiProvider === 'claude' && !apiKey ? (
-          <View className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-5 mb-6 border border-amber-200 dark:border-amber-800">
-            <View className="flex-row items-center mb-3">
-              <FontAwesome name="key" size={20} color="#d97706" />
-              <Text className="text-lg font-semibold text-amber-800 dark:text-amber-200 ml-3">
-                API Key Required
-              </Text>
-            </View>
-            <Text className="text-amber-700 dark:text-amber-300 mb-4">
-              Enter your Claude API key to unlock AI-powered lessons and chat.
-            </Text>
-            <Input
-              value={apiKeyInput}
-              onChangeText={setApiKeyInput}
-              placeholder="sk-ant-..."
-              label="Claude API Key"
-              secureTextEntry
-              autoCapitalize="none"
-            />
-            <View className="mt-4">
-              <Button
-                title="Save API Key"
-                onPress={handleSaveApiKey}
-                disabled={!apiKeyInput.trim()}
-              />
-            </View>
-            <Text className="text-xs text-amber-600 dark:text-amber-400 text-center mt-3">
-              Your API key is stored securely on your device
-            </Text>
-          </View>
-        ) : showApiKeyInput ? (
-          <View className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 mb-6">
-            <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Update API Key
-            </Text>
-            <Input
-              value={apiKeyInput}
-              onChangeText={setApiKeyInput}
-              placeholder="sk-ant-..."
-              secureTextEntry
-              autoCapitalize="none"
-            />
-            <View className="flex-row gap-3 mt-4">
-              <View className="flex-1">
-                <Button
-                  title="Cancel"
-                  variant="outline"
-                  onPress={() => {
-                    setShowApiKeyInput(false);
-                    setApiKeyInput('');
-                  }}
-                />
-              </View>
-              <View className="flex-1">
-                <Button
-                  title="Save"
-                  onPress={handleSaveApiKey}
-                  disabled={!apiKeyInput.trim()}
-                />
-              </View>
-            </View>
-          </View>
-        ) : (
-          <Pressable
-            onPress={() => setShowApiKeyInput(true)}
-            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 mb-6 flex-row items-center active:bg-gray-100 dark:active:bg-gray-700"
-            accessibilityRole="button"
-            accessibilityLabel="API key configured. Tap to update."
-          >
-            <FontAwesome name="check-circle" size={20} color="#22c55e" />
-            <Text className="text-gray-600 dark:text-gray-400 ml-3 flex-1">
-              API key configured
-            </Text>
-            <FontAwesome name="pencil" size={16} color="#9ca3af" />
-          </Pressable>
-        )}
 
         {/* Book Selector */}
         <BookSelector
