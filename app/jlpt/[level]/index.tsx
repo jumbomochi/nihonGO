@@ -7,6 +7,7 @@ import { JLPTLevel, JLPTUnit } from '@/data/jlpt/types';
 import { getN3Units } from '@/data/jlpt/n3';
 import { getN2Units } from '@/data/jlpt/n2';
 import { getN1Units } from '@/data/jlpt/n1';
+import { getN4Units } from '@/data/jlpt/n4';
 
 export default function JLPTLevelScreen() {
   const { level } = useLocalSearchParams<{ level: string }>();
@@ -19,6 +20,10 @@ export default function JLPTLevelScreen() {
   // Get units for this level
   const getUnitsForLevel = (level: JLPTLevel): JLPTUnit[] => {
     switch (level) {
+      case 'N5':
+        return [];
+      case 'N4':
+        return getN4Units();
       case 'N3':
         return getN3Units();
       case 'N2':
