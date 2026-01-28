@@ -1,20 +1,20 @@
-// JLPT N5 - Beginner Level
-// Themes: Greetings & Introductions, Numbers & Time, Daily Activities, Food & Drinks,
-// Places & Directions, Family & People, Objects & Things, Adjectives & Descriptions, Verbs & Actions, Basic Conversation
+// JLPT N5 - Beginner Level (Exam-Focused Supplement to Genki I)
+// Focus: Test strategies, supplementary vocabulary, exam-style practice
+// Complements Genki I content rather than duplicating it
 
 import { JLPTUnit, JLPTUnitMeta } from '../types';
 
 // Import all N5 units
-import { unit01 } from './units/unit01-greetings-introductions';
-import { unit02 } from './units/unit02-numbers-time';
-import { unit03 } from './units/unit03-daily-activities';
-import { unit04 } from './units/unit04-food-drinks';
-import { unit05 } from './units/unit05-places-directions';
-import { unit06 } from './units/unit06-family-people';
-import { unit07 } from './units/unit07-objects-things';
-import { unit08 } from './units/unit08-adjectives-descriptions';
-import { unit09 } from './units/unit09-verbs-actions';
-import { unit10 } from './units/unit10-basic-conversation';
+import { unit01 } from './units/unit01-exam-overview-strategies';
+import { unit02 } from './units/unit02-vocabulary-numbers-counters';
+import { unit03 } from './units/unit03-vocabulary-supplementary';
+import { unit04 } from './units/unit04-grammar-exam-patterns';
+import { unit05 } from './units/unit05-reading-signs-menus';
+import { unit06 } from './units/unit06-reading-short-passages';
+import { unit07 } from './units/unit07-listening-task-based';
+import { unit08 } from './units/unit08-listening-quick-response';
+import { unit09 } from './units/unit09-practice-test-1';
+import { unit10 } from './units/unit10-practice-test-2';
 
 // Export all units as an array
 export const N5_UNITS: JLPTUnit[] = [

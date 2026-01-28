@@ -1,20 +1,20 @@
-// JLPT N4 - Elementary Level
-// Themes: Self & Family, Home & Neighborhood, School & Study, Work & Office,
-// Shopping & Money, Health & Hospital, Travel & Transport, Seasons & Weather, Hobbies & Sports, Culture & Customs
+// JLPT N4 - Elementary Level (Exam-Focused Supplement to Genki II)
+// Focus: Test strategies, supplementary vocabulary, exam-style practice
+// Complements Genki II content rather than duplicating it
 
 import { JLPTUnit, JLPTUnitMeta } from '../types';
 
 // Import all N4 units
-import { unit01 } from './units/unit01-self-family';
-import { unit02 } from './units/unit02-home-neighborhood';
-import { unit03 } from './units/unit03-school-study';
-import { unit04 } from './units/unit04-work-office';
-import { unit05 } from './units/unit05-shopping-money';
-import { unit06 } from './units/unit06-health-hospital';
-import { unit07 } from './units/unit07-travel-transport';
-import { unit08 } from './units/unit08-seasons-weather';
-import { unit09 } from './units/unit09-hobbies-sports';
-import { unit10 } from './units/unit10-culture-customs';
+import { unit01 } from './units/unit01-exam-overview-strategies';
+import { unit02 } from './units/unit02-vocabulary-intermediate';
+import { unit03 } from './units/unit03-vocabulary-work-social';
+import { unit04 } from './units/unit04-grammar-intermediate';
+import { unit05 } from './units/unit05-grammar-complex-sentences';
+import { unit06 } from './units/unit06-reading-notices-instructions';
+import { unit07 } from './units/unit07-reading-essays-letters';
+import { unit08 } from './units/unit08-listening-conversations';
+import { unit09 } from './units/unit09-listening-integrated';
+import { unit10 } from './units/unit10-full-practice-test';
 
 // Export all units as an array
 export const N4_UNITS: JLPTUnit[] = [
