@@ -25,17 +25,36 @@ Establish a design system foundation with:
 4. **Decomposed screens** - thin route handlers delegating to focused components and hooks
 5. **Layer contracts** - enforced dependency direction for parallel workstreams
 
+### Component Taxonomy
+
+| Directory | Role | May import from |
+|-----------|------|-----------------|
+| `components/ui/` | Stateless primitives, tokens-only | `@/constants/tokens` only |
+| `components/common/` | Reusable composites that may touch stores/hooks | tokens, stores, hooks, lib |
+| `components/lesson/`, `components/jlpt/`, etc. | Domain-specific feature components | anything except other feature folders |
+
 ---
 
 ## Phase 1: Design Tokens
 
 > Formalize the ad-hoc patterns into a single source of truth.
 
+**Authority:** `constants/tokens.ts` is the single source of truth for all design values. `tailwind.config.js` defines the Tailwind theme (color palette, font families) but does not define semantic mappings. When adding or changing colors/aliases, update `tokens.ts` first, then sync `tailwind.config.js` only if a new Tailwind utility class is needed.
+
 ### 1.1 Create `/constants/tokens.ts`
 
 Centralize all design values currently scattered as raw strings/hex codes across the codebase.
 
 **Why className strings:** NativeWind requires static class names (no `text-${color}` interpolation). Pre-built strings work within this constraint and are the only way to have a centralized token that works with NativeWind's static extraction.
+
+#### Naming Convention
+
+All token names use **semantic** names (what they represent, not what color they are):
+- `text.primary`, `text.accent`, `bg.card` - semantic roles
+- `status.success`, `status.warning` - semantic status
+- `rawColors.sakura500` - palette-level escape hatch for RN props that require hex strings
+
+The `rawColors` object is the only place palette names appear. All other tokens use semantic names. This prevents confusion between the semantic layer (`colors.text.accent`) and the status layer (`status.success`).
 
 #### Semantic Colors
 
@@ -139,6 +158,12 @@ export const rawColors = {
 
 Add any missing semantic aliases to the theme. No breaking changes - all existing classes remain valid. This is minimal since the existing config already covers our primary colors.
 
+### Token Usage Guidance
+
+- **All new UI code** must use tokens from `@/constants/tokens` instead of inline className strings.
+- **Existing code** will be migrated incrementally as files are touched in Phases 2-4.
+- **Escape hatch:** Raw className strings are allowed only when a token doesn't exist yet. Add a `// TODO: add token` comment so it gets picked up in future passes.
+
 ### Files Created/Modified
 
 | File | Action |
@@ -146,11 +171,12 @@ Add any missing semantic aliases to the theme. No breaking changes - all existin
 | `/constants/tokens.ts` | **Create** |
 | `/tailwind.config.js` | **Modify** (add semantic aliases if needed) |
 
-### Verification
+### Definition of Done
 
-- `npx expo start` - app renders identically (no visual changes)
-- `npx tsc --noEmit` - no type errors
-- All existing className strings still work
+- [ ] `constants/tokens.ts` exports all token objects (`colors`, `status`, `typography`, `spacing`, `radii`, `iconSize`, `rawColors`)
+- [ ] `npx tsc --noEmit` passes with no type errors
+- [ ] `npx expo start` - app renders identically (no visual changes)
+- [ ] All existing className strings still work (no breaking Tailwind changes)
 
 ---
 
@@ -165,6 +191,17 @@ Add any missing semantic aliases to the theme. No breaking changes - all existin
 - Every interactive component includes accessibility attributes by default
 - `japanese` prop on Text ensures `font-japanese` is always applied correctly
 
+### Migration Strategy
+
+Replace existing inline patterns in this order to minimize churn (each step builds on the last):
+
+1. **ScreenHeader** - replace 7+ duplicated headers first (highest duplication, zero risk)
+2. **Text** - apply to the extracted screen components as they're touched
+3. **ProgressBar** - replace 6+ hand-built bars
+4. **IconBadge** - replace 7+ icon circle patterns
+5. **Chip** - replace duplicated tab patterns in SectionTabs and JLPT unit screen
+6. **Badge, InfoCard, SectionHeader** - apply opportunistically as components are touched
+
 ### 2.1 `Text.tsx` - Semantic Typography
 
 **Replaces:** 100+ instances of `text-gray-900 dark:text-white` / `text-lg font-semibold` scattered across files.
@@ -178,6 +215,11 @@ interface TextProps {
   children: React.ReactNode;
 }
 ```
+
+**Accessibility defaults:**
+- `allowFontScaling={true}` by default (respects system font size)
+- `maxFontSizeMultiplier={1.5}` for headings to prevent layout breakage
+- `accessibilityRole="header"` auto-applied when variant is `heading1`-`heading3`
 
 **Current patterns this replaces:**
 - `<Text className="text-lg font-semibold text-gray-900 dark:text-white">` -> `<Text variant="heading2">`
@@ -294,6 +336,11 @@ interface ScreenHeaderProps {
 }
 ```
 
+**Accessibility defaults:**
+- Back button: `accessibilityRole="button"`, `accessibilityLabel="Go back"`
+- Title: `accessibilityRole="header"`
+- When `onBack` is undefined, the back button is not rendered
+
 ### 2.7 `SectionHeader.tsx` - Content Section Title
 
 **Replaces:** The `text-sm font-semibold text-gray-500 uppercase` label pattern used in:
@@ -366,12 +413,16 @@ export { Chip } from './Chip';
 - `/components/common/Card.tsx` - className passthrough pattern
 - `/components/lesson/SectionTabs.tsx` - tab/chip selection pattern
 
-### Verification
+### Definition of Done
 
-- Each primitive renders correctly on iOS simulator + web
-- Dark mode works for all primitives
-- Japanese text renders with correct font
-- Accessibility inspector shows correct roles/labels
+- [ ] All 9 files created in `/components/ui/`
+- [ ] Each primitive renders correctly on iOS simulator + web
+- [ ] Dark mode works for all primitives
+- [ ] Japanese text renders with correct font in `<Text japanese>`
+- [ ] Accessibility inspector shows correct roles/labels (header role on headings, button role on back)
+- [ ] No store imports in any `/components/ui/` file
+- [ ] Every new primitive is used in at least one screen (verified via grep)
+- [ ] Before/after screenshots captured for Genki lesson screen, JLPT unit screen, and JLPT hub screen to verify no visual regressions
 
 ---
 
@@ -410,6 +461,13 @@ return <GrammarSection grammarPoints={grammarPoints as any} />;  // <-- as any
 ### 3.1 Create `/types/content.ts` - Unified Types
 
 Source-agnostic interfaces that cover the superset of fields from both Genki and JLPT:
+
+#### Fallback Conventions
+
+- **Unknown part of speech:** Map to `'other'`
+- **Missing optional strings** (`romaji`, `category`, `notes`, `culturalNote`, `formation`): Use `undefined` (not empty string)
+- **Missing `example`:** Use `undefined` (not an empty object)
+- **Source traceability:** The `id` field preserves the original source ID. The `source` field identifies which system it came from. Together they allow tracing back to the original Genki/JLPT/AI record.
 
 ```typescript
 // Union of part-of-speech values from both sources
@@ -456,6 +514,8 @@ interface ContentGrammar {
   source: 'genki' | 'jlpt' | 'ai';
 }
 ```
+
+**Runtime validation (future):** AI-generated content is unpredictable. When the AI content source is implemented, add zod schemas for `ContentVocabulary` and `ContentGrammar` to validate at the adapter boundary. Not needed for Genki/JLPT since those are statically typed at build time.
 
 ### 3.2 Create `/lib/adapters/genkiAdapter.ts`
 
@@ -553,18 +613,33 @@ return <GrammarSection grammarPoints={toContentGrammarList(section.content.gramm
 | `/app/jlpt/[level]/[unitId].tsx` | **Modify** - use adapter |
 | `/app/lesson/[topic].tsx` | **Modify** - use adapter in SectionRenderer |
 
-### Verification
+### Definition of Done
 
-- `npx tsc --noEmit` - zero `as any` casts for content types
-- Genki lesson vocabulary/grammar renders correctly
-- JLPT unit vocabulary/grammar renders correctly
-- Quiz works for both Genki and JLPT content sources
+- [ ] `npx tsc --noEmit` passes with zero `as any` casts for content types
+- [ ] Zero inline conversion code remaining in `app/jlpt/[level]/[unitId].tsx`
+- [ ] All vocabulary/grammar mapping goes through adapter functions
+- [ ] Genki lesson vocabulary/grammar renders correctly
+- [ ] JLPT unit vocabulary/grammar renders correctly
+- [ ] Quiz works for both Genki and JLPT content sources
+- [ ] `VocabularyList` gracefully handles missing `romaji` (no crash, conditionally hidden)
 
 ---
 
 ## Phase 4: Screen Decomposition
 
 > Break monolithic screens into thin composition layers.
+
+### Migration Strategy
+
+Extract in this order to reduce risk (each step is independently verifiable):
+
+1. **Extract hooks** (`useLessonCompletion`, `useDialogueAudio`, `useQuizSession`) - pure logic moves, no UI changes
+2. **Extract `SectionRenderer`** into its own file - already a standalone function, just move it
+3. **Extract `LessonContent`** (markdown renderer) - already a standalone function, just move it
+4. **Split `GenkiLessonScreen` and `AILessonScreen`** into separate files - wire up hooks + extracted components
+5. **Slim route handler** - delete the moved code from `[topic].tsx`
+6. **Repeat for JLPT** - extract `ReadingSection`, `ListeningSection`, `JLPTUnitScreen`
+7. **Replace inline headers** with `<ScreenHeader>` across all screens
 
 ### 4.1 Extract Hooks from `/app/lesson/[topic].tsx`
 
@@ -667,6 +742,15 @@ Screens to update:
 | `app/jlpt/[level]/mock-exam.tsx` | 413-419 | Back + exam title |
 | `components/practice/VocabQuiz.tsx` | 115-123 | Close + question counter |
 
+### Memoization Guidance
+
+When decomposing, apply memoization where parent re-renders would cause unnecessary child re-renders:
+
+- **`SectionRenderer`**: Wrap with `React.memo` since it receives the same section object unless the user switches tabs
+- **`LessonContent`**: Wrap with `React.memo` since markdown content doesn't change after generation
+- **`getLineAudioPath`**: Already wrapped in `useCallback` - preserve this when moving to `useDialogueAudio`
+- **Adapter calls** (`toContentVocabularyList`, etc.): Wrap in `useMemo` at the screen level since the source data is static per render
+
 ### Files Created/Modified
 
 | File | Action |
@@ -687,13 +771,16 @@ Screens to update:
 | `app/jlpt/[level]/index.tsx` | **Modify** - use ScreenHeader |
 | `app/jlpt/[level]/mock-exam.tsx` | **Modify** - use ScreenHeader |
 
-### Verification
+### Definition of Done
 
-- All screens render identically to before decomposition
-- Navigation (back buttons, tabs) works correctly
-- Audio playback works in Genki lesson dialogues
-- Quiz flow works end-to-end (open quiz -> answer -> results -> close)
-- No file exceeds ~150 lines
+- [ ] All screens render identically to before decomposition
+- [ ] Navigation (back buttons, tabs) works correctly
+- [ ] Audio playback works in Genki lesson dialogues
+- [ ] Quiz flow works end-to-end (open quiz -> answer -> results -> close)
+- [ ] No file exceeds ~150 lines
+- [ ] `app/lesson/[topic].tsx` is under 60 lines
+- [ ] `app/jlpt/[level]/[unitId].tsx` is under 50 lines
+- [ ] Before/after screenshots match for Genki lesson, AI lesson, JLPT unit screens
 
 ---
 
@@ -718,7 +805,7 @@ Stores (stores/)           -> AsyncStorage, no UI imports
 
 ### 5.2 Enforce via ESLint
 
-Create `/components/ui/.eslintrc.json`:
+Create `/components/ui/.eslintrc.json` for the strictest layer:
 
 ```json
 {
@@ -732,6 +819,8 @@ Create `/components/ui/.eslintrc.json`:
   }
 }
 ```
+
+**Future enforcement:** Consider adding `eslint-plugin-boundaries` or `import/no-restricted-paths` at the repo root to enforce the full dependency direction table above (not just `components/ui/`). This is not required for Phase 5 but is the recommended next step once the team is comfortable with the layer structure.
 
 ### 5.3 Create `/types/contracts.ts`
 
@@ -756,11 +845,12 @@ type SettingsSelector<T> = (state: SettingsState) => T;
 | `/components/ui/.eslintrc.json` | **Create** |
 | `/types/contracts.ts` | **Create** |
 
-### Verification
+### Definition of Done
 
-- ESLint reports error if someone adds a store import to `/components/ui/`
-- `npx tsc --noEmit` passes with contract types
-- All existing code still compiles
+- [ ] ESLint reports error if someone adds a store import to `/components/ui/`
+- [ ] `npx tsc --noEmit` passes with contract types
+- [ ] All existing code still compiles
+- [ ] Dependency direction table matches actual import graph (spot-check 3-4 files per layer)
 
 ---
 
@@ -793,7 +883,7 @@ Phase 4 -> Phase 5 (contracts formalize what Phase 4 established)
 
 ## Complete File Inventory
 
-### New Files (21 total)
+### New Files (25 total)
 
 | File | Phase | Est. Lines |
 |------|-------|-----------|
@@ -823,7 +913,7 @@ Phase 4 -> Phase 5 (contracts formalize what Phase 4 established)
 | `components/ui/.eslintrc.json` | 5 | ~12 |
 | `types/contracts.ts` | 5 | ~30 |
 
-### Modified Files (12 total)
+### Modified Files (10 total)
 
 | File | Phase | Change |
 |------|-------|--------|
@@ -849,3 +939,5 @@ Phase 4 -> Phase 5 (contracts formalize what Phase 4 established)
 | Content adapter missing fields | TypeScript strict mode catches missing required fields at compile time |
 | Screen decomposition breaking navigation | Expo Router routing stays in `app/` files; only the body is extracted |
 | Store imports sneaking into UI primitives | ESLint rule in Phase 5 catches this at lint time |
+| Performance regression from decomposition | Memoization guidance in Phase 4 covers key components |
+| Token/Tailwind drift | tokens.ts documented as authoritative source; sync checklist in Phase 1 |
