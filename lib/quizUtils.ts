@@ -1,4 +1,4 @@
-import { VocabularyItem } from '@/types/genki';
+import { ContentVocabulary } from '@/types/content';
 
 export interface QuizQuestion {
   id: string;
@@ -19,8 +19,8 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 function generateWrongOptions(
-  correctItem: VocabularyItem,
-  allVocab: VocabularyItem[],
+  correctItem: ContentVocabulary,
+  allVocab: ContentVocabulary[],
   type: 'jp-to-en' | 'en-to-jp',
   count: number = 3
 ): string[] {
@@ -33,7 +33,7 @@ function generateWrongOptions(
 }
 
 export function generateVocabQuiz(
-  vocabulary: VocabularyItem[],
+  vocabulary: ContentVocabulary[],
   questionCount: number = 10
 ): QuizQuestion[] {
   if (vocabulary.length === 0) return [];

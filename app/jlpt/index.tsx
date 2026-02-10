@@ -1,9 +1,11 @@
-import { View, Text, SafeAreaView, ScrollView, Pressable } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView } from 'react-native';
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
 import { LevelCard } from '@/components/jlpt';
 import { JLPTLevel } from '@/data/jlpt/types';
+import { ScreenHeader } from '@/components/ui/ScreenHeader';
+import { InfoCard } from '@/components/ui/InfoCard';
 
 const JLPT_LEVELS: {
   level: JLPTLevel;
@@ -56,26 +58,13 @@ export default function JLPTHubScreen() {
     router.push(`/jlpt/${level.toLowerCase()}` as any);
   };
 
-  const handleBack = () => {
-    router.back();
-  };
-
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
-      {/* Header */}
-      <View className="flex-row items-center px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-        <Pressable onPress={handleBack} className="p-2 -ml-2">
-          <FontAwesome name="arrow-left" size={20} color="#6b7280" />
-        </Pressable>
-        <View className="flex-1 ml-2">
-          <Text className="text-lg font-semibold text-gray-900 dark:text-white">
-            JLPT Courses
-          </Text>
-          <Text className="text-sm text-sakura-600">
-            Japanese Language Proficiency Test
-          </Text>
-        </View>
-      </View>
+      <ScreenHeader
+        title="JLPT Courses"
+        subtitle="Japanese Language Proficiency Test"
+        onBack={() => router.back()}
+      />
 
       <ScrollView className="flex-1" contentContainerClassName="px-4 py-6">
         {/* Introduction */}
@@ -111,17 +100,11 @@ export default function JLPTHubScreen() {
         </View>
 
         {/* Info Card */}
-        <View className="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4">
-          <View className="flex-row items-center mb-2">
-            <FontAwesome name="info-circle" size={16} color="#3b82f6" />
-            <Text className="text-sm font-medium text-blue-700 dark:text-blue-300 ml-2">
-              About JLPT Levels
-            </Text>
-          </View>
+        <InfoCard variant="info" title="About JLPT Levels" className="mt-6">
           <Text className="text-xs text-blue-600 dark:text-blue-400">
             N5 and N4 provide exam-focused content that supplements Genki textbooks. N3-N1 are complete courses with vocabulary, kanji, grammar, reading, and listening practice.
           </Text>
-        </View>
+        </InfoCard>
       </ScrollView>
     </SafeAreaView>
   );

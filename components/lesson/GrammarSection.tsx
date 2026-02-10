@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { View, Text, Pressable, Modal } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { ContentGrammar } from '@/types/content';
 import { GrammarPoint, GrammarComparison as GrammarComparisonType } from '@/types/genki';
 import { getComparisonsForGrammar, getComparison } from '@/data/genki/comparisons';
 import { GrammarComparisonModal } from './GrammarComparison';
 
 interface GrammarSectionProps {
-  grammarPoints: GrammarPoint[];
+  grammarPoints: ContentGrammar[];
 }
 
 export function GrammarSection({ grammarPoints }: GrammarSectionProps) {
@@ -21,8 +22,19 @@ export function GrammarSection({ grammarPoints }: GrammarSectionProps) {
       acc[point.id] = point;
       return acc;
     },
-    {} as Record<string, GrammarPoint>
+    {} as Record<string, ContentGrammar>
   );
+
+  // Convert ContentGrammar to GrammarPoint for the comparison modal
+  const toGrammarPoint = (cg: ContentGrammar): GrammarPoint => ({
+    id: cg.id,
+    title: cg.title || cg.pattern,
+    pattern: cg.pattern,
+    explanation: cg.explanation,
+    culturalNote: cg.culturalNote,
+    examples: cg.examples,
+    relatedGrammar: cg.relatedGrammar,
+  });
 
   const handleCompare = (grammarId: string, comparisonId: string) => {
     const comparison = getComparison(comparisonId);
@@ -34,8 +46,8 @@ export function GrammarSection({ grammarPoints }: GrammarSectionProps) {
     if (!grammarA || !grammarB) return;
 
     setSelectedComparison(comparison);
-    setComparisonGrammarA(grammarA);
-    setComparisonGrammarB(grammarB);
+    setComparisonGrammarA(toGrammarPoint(grammarA));
+    setComparisonGrammarB(toGrammarPoint(grammarB));
     setShowComparison(true);
   };
 
@@ -81,8 +93,8 @@ function GrammarCard({
   grammarMap,
   onCompare,
 }: {
-  point: GrammarPoint;
-  grammarMap: Record<string, GrammarPoint>;
+  point: ContentGrammar;
+  grammarMap: Record<string, ContentGrammar>;
   onCompare: (comparisonId: string) => void;
 }) {
   // Get comparisons available for this grammar point
@@ -94,15 +106,32 @@ function GrammarCard({
       {/* Pattern header */}
       <View className="bg-sakura-50 dark:bg-sakura-900/30 px-4 py-3">
         <Text className="text-lg font-bold text-sakura-700 dark:text-sakura-400 font-japanese">
-          {point.title}
+          {point.title || point.pattern}
         </Text>
-        <Text className="text-base text-gray-600 dark:text-gray-400 mt-1 font-mono font-japanese">
-          {point.pattern}
-        </Text>
+        {point.title && (
+          <Text className="text-base text-gray-600 dark:text-gray-400 mt-1 font-mono font-japanese">
+            {point.pattern}
+          </Text>
+        )}
+        {point.meaning && (
+          <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            {point.meaning}
+          </Text>
+        )}
       </View>
 
       {/* Explanation */}
       <View className="px-4 py-4">
+        {point.formation && (
+          <View className="mb-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-3">
+            <Text className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase mb-1">
+              Formation
+            </Text>
+            <Text className="text-sm text-indigo-800 dark:text-indigo-300 font-mono">
+              {point.formation}
+            </Text>
+          </View>
+        )}
         <Text className="text-base text-gray-700 dark:text-gray-300 leading-6">
           {point.explanation}
         </Text>
@@ -159,7 +188,7 @@ function GrammarCard({
                 ? comparison.grammarB
                 : comparison.grammarA;
               const otherGrammar = grammarMap[otherId];
-              const otherTitle = otherGrammar?.title || otherId;
+              const otherTitle = otherGrammar?.title || otherGrammar?.pattern || otherId;
 
               return (
                 <Pressable

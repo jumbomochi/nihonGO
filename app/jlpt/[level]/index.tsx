@@ -9,6 +9,7 @@ import { getN2Units } from '@/data/jlpt/n2';
 import { getN1Units } from '@/data/jlpt/n1';
 import { getN4Units } from '@/data/jlpt/n4';
 import { getN5Units } from '@/data/jlpt/n5';
+import { ScreenHeader } from '@/components/ui/ScreenHeader';
 
 export default function JLPTLevelScreen() {
   const { level } = useLocalSearchParams<{ level: string }>();
@@ -45,10 +46,6 @@ export default function JLPTLevelScreen() {
     router.push(`/jlpt/${level}/mock-exam` as any);
   };
 
-  const handleBack = () => {
-    router.back();
-  };
-
   const levelTitles: Record<JLPTLevel, string> = {
     N5: 'Beginner',
     N4: 'Elementary',
@@ -60,18 +57,11 @@ export default function JLPTLevelScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
-      {/* Header */}
-      <View className="flex-row items-center px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-        <Pressable onPress={handleBack} className="p-2 -ml-2">
-          <FontAwesome name="arrow-left" size={20} color="#6b7280" />
-        </Pressable>
-        <View className="flex-1 ml-2">
-          <Text className="text-lg font-semibold text-gray-900 dark:text-white">
-            JLPT {jlptLevel}
-          </Text>
-          <Text className="text-sm text-sakura-600">{levelTitle}</Text>
-        </View>
-      </View>
+      <ScreenHeader
+        title={`JLPT ${jlptLevel}`}
+        subtitle={levelTitle}
+        onBack={() => router.back()}
+      />
 
       <ScrollView className="flex-1" contentContainerClassName="px-4 py-6">
         {/* Progress Overview */}

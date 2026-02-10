@@ -1,11 +1,11 @@
 import { View, Text, Pressable } from 'react-native';
 import { useState } from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { VocabularyItem } from '@/types/genki';
+import { ContentVocabulary } from '@/types/content';
 import { Button } from '@/components/common/Button';
 
 interface VocabularyListProps {
-  vocabulary: VocabularyItem[];
+  vocabulary: ContentVocabulary[];
   showRomaji?: boolean;
   onPracticePress?: () => void;
   showPracticeButton?: boolean;
@@ -27,7 +27,7 @@ export function VocabularyList({
       acc[category].push(item);
       return acc;
     },
-    {} as Record<string, VocabularyItem[]>
+    {} as Record<string, ContentVocabulary[]>
   );
 
   return (
@@ -68,7 +68,7 @@ function VocabularyCard({
   item,
   showRomaji,
 }: {
-  item: VocabularyItem;
+  item: ContentVocabulary;
   showRomaji: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
@@ -84,7 +84,7 @@ function VocabularyCard({
             {item.japanese}
           </Text>
           <Text className="text-base text-sakura-600 font-japanese">{item.reading}</Text>
-          {showRomaji && (
+          {showRomaji && item.romaji && (
             <Text className="text-sm text-gray-500 italic">{item.romaji}</Text>
           )}
         </View>

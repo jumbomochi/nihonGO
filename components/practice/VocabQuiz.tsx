@@ -1,14 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
 import { View, Text, SafeAreaView, Pressable } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { VocabularyItem } from '@/types/genki';
+import { ContentVocabulary } from '@/types/content';
 import { QuizQuestion, generateVocabQuiz } from '@/lib/quizUtils';
 import { QuizOption } from './QuizOption';
 import { QuizResults } from './QuizResults';
 import { useProgressStore } from '@/stores/progressStore';
 
 interface VocabQuizProps {
-  vocabulary: VocabularyItem[];
+  vocabulary: ContentVocabulary[];
   lessonId: string;
   sectionId: string;
   onClose: () => void;

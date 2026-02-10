@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, ScrollView, Pressable, Alert } from 'react-na
 import { router, useLocalSearchParams } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
+import { ScreenHeader } from '@/components/ui/ScreenHeader';
 import {
   JLPTLevel,
   ExamQuestion,
@@ -410,14 +411,10 @@ export default function MockExamScreen() {
   if (examState.phase === 'intro') {
     return (
       <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
-        <View className="flex-row items-center px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-          <Pressable onPress={handleBack} className="p-2 -ml-2">
-            <FontAwesome name="arrow-left" size={20} color="#6b7280" />
-          </Pressable>
-          <Text className="flex-1 text-lg font-semibold text-gray-900 dark:text-white ml-2">
-            {jlptLevel} Mock Exam
-          </Text>
-        </View>
+        <ScreenHeader
+          title={`${jlptLevel} Mock Exam`}
+          onBack={handleBack}
+        />
 
         <ScrollView className="flex-1" contentContainerClassName="px-6 py-8">
           <View className="items-center mb-8">
@@ -491,11 +488,7 @@ export default function MockExamScreen() {
   if (examState.phase === 'results' && results) {
     return (
       <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
-        <View className="flex-row items-center px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-          <Text className="flex-1 text-lg font-semibold text-gray-900 dark:text-white">
-            Exam Results
-          </Text>
-        </View>
+        <ScreenHeader title="Exam Results" />
 
         <ScrollView className="flex-1" contentContainerClassName="px-6 py-8">
           {/* Score Circle */}
