@@ -92,6 +92,18 @@ export default function LearnScreen() {
           </Pressable>
         </View>
 
+        {/* Quick Practice Topics */}
+        <View className="mt-8">
+          <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            Quick Practice
+          </Text>
+          <View className="flex-row flex-wrap gap-3">
+            {PRACTICE_TOPICS.map((topic) => (
+              <PracticeTopicCard key={topic.id} topic={topic} />
+            ))}
+          </View>
+        </View>
+
         {/* Learning Style Info */}
         <View className="mt-8 bg-sakura-50 dark:bg-sakura-900/20 rounded-2xl p-5">
           <Text className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -318,3 +330,43 @@ const LessonCard = memo(function LessonCard({ lesson }: { lesson: GenkiLesson })
     </Pressable>
   );
 });
+
+type IconName = React.ComponentProps<typeof FontAwesome>['name'];
+
+const PRACTICE_TOPICS: { id: string; title: string; description: string; icon: IconName; color: string; bg: string }[] = [
+  { id: 'greetings', title: 'Greetings', description: 'Hello & goodbye', icon: 'commenting', color: '#ec4899', bg: 'bg-sakura-100 dark:bg-sakura-900/30' },
+  { id: 'self-intro', title: 'Self Intro', description: 'Introduce yourself', icon: 'user', color: '#8b5cf6', bg: 'bg-purple-100 dark:bg-purple-900/30' },
+  { id: 'numbers', title: 'Numbers', description: 'Counting basics', icon: 'sort-numeric-asc', color: '#3b82f6', bg: 'bg-blue-100 dark:bg-blue-900/30' },
+  { id: 'time', title: 'Telling Time', description: 'Hours & minutes', icon: 'clock-o', color: '#22c55e', bg: 'bg-green-100 dark:bg-green-900/30' },
+  { id: 'food', title: 'Ordering Food', description: 'Restaurant vocab', icon: 'cutlery', color: '#f97316', bg: 'bg-orange-100 dark:bg-orange-900/30' },
+  { id: 'directions', title: 'Directions', description: 'Ask the way', icon: 'compass', color: '#d97706', bg: 'bg-amber-100 dark:bg-amber-900/30' },
+];
+
+function PracticeTopicCard({ topic }: { topic: typeof PRACTICE_TOPICS[number] }) {
+  const handlePress = () => {
+    router.push({
+      pathname: '/lesson/[topic]',
+      params: { topic: topic.id },
+    });
+  };
+
+  return (
+    <Pressable
+      onPress={handlePress}
+      className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4"
+      style={{ width: '48%' }}
+      accessibilityRole="button"
+      accessibilityLabel={`${topic.title} practice lesson`}
+    >
+      <View className={`w-10 h-10 rounded-xl items-center justify-center mb-3 ${topic.bg}`}>
+        <FontAwesome name={topic.icon} size={18} color={topic.color} />
+      </View>
+      <Text className="text-base font-semibold text-gray-900 dark:text-white">
+        {topic.title}
+      </Text>
+      <Text className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+        {topic.description}
+      </Text>
+    </Pressable>
+  );
+}

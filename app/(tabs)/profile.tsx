@@ -84,7 +84,9 @@ export default function ProfileScreen() {
           <ProfileRow
             icon="globe"
             label="Native Language"
-            value={profile.nativeLanguage || 'English'}
+            value={profile.nativeLanguage
+              ? profile.nativeLanguage.charAt(0).toUpperCase() + profile.nativeLanguage.slice(1)
+              : 'English'}
           />
           <ProfileRow
             icon="signal"
@@ -115,7 +117,7 @@ export default function ProfileScreen() {
               Language Background
             </Text>
             <Text className="text-gray-600 dark:text-gray-400">
-              Prior languages: {profile.priorLanguages.join(', ')}
+              Prior languages: {profile.priorLanguages.map(l => l.charAt(0).toUpperCase() + l.slice(1)).join(', ')}
             </Text>
             {profile.knowsChinese && (
               <Text className="text-sakura-600 mt-2">
