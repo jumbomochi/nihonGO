@@ -36,14 +36,17 @@ export default function ChatScreen() {
     loadApiKey();
   }, []);
 
+  // Apple Intelligence and Ollama work offline
+  const needsNetwork = aiProvider === 'claude';
+
   const handleSend = useCallback(async () => {
-    if (inputValue.trim() && isOnline) {
+    if (inputValue.trim() && (!needsNetwork || isOnline)) {
       triggerImpact();
       const message = inputValue.trim();
       setInputValue('');
       await sendUserMessage(message);
     }
-  }, [inputValue, isOnline, sendUserMessage]);
+  }, [inputValue, isOnline, needsNetwork, sendUserMessage]);
 
   const handleSuggestionPress = useCallback((text: string) => {
     triggerImpact();
@@ -160,8 +163,8 @@ export default function ChatScreen() {
           onChangeText={setInputValue}
           onSend={handleSend}
           isLoading={isLoading}
-          disabled={!isOnline}
-          placeholder={isOnline ? "Ask me anything about Japanese..." : "Chat requires internet connection"}
+          disabled={needsNetwork && !isOnline}
+          placeholder={needsNetwork && !isOnline ? "Chat requires internet connection" : "Ask me anything about Japanese..."}
         />
       </KeyboardAvoidingView>
     </SafeAreaView>

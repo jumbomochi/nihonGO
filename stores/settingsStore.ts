@@ -87,7 +87,7 @@ export const useSettingsStore = create<SettingsState>((set) => ({
   isEnvKey: false,
 
   // AI Provider settings
-  aiProvider: 'ollama' as AIProvider,
+  aiProvider: 'apple' as AIProvider,
   ollamaUrl: DEFAULT_OLLAMA_URL,
   ollamaModel: DEFAULT_OLLAMA_MODEL,
 
@@ -154,7 +154,7 @@ export const useSettingsStore = create<SettingsState>((set) => ({
       ]);
 
       set({
-        aiProvider: (provider as AIProvider) || 'ollama',
+        aiProvider: (provider as AIProvider) || 'apple',
         ollamaUrl: url || DEFAULT_OLLAMA_URL,
         ollamaModel: model || DEFAULT_OLLAMA_MODEL,
       });

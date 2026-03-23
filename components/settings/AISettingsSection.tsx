@@ -4,6 +4,7 @@ import {
   Text,
   Pressable,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -13,6 +14,7 @@ import {
   RECOMMENDED_MODELS,
   DEFAULT_OLLAMA_URL,
 } from '@/lib/ollama';
+import * as AppleIntelligence from '@/modules/apple-intelligence/src';
 import { Input } from '@/components/common/Input';
 import { Button } from '@/components/common/Button';
 
@@ -35,6 +37,12 @@ export function AISettingsSection() {
     checking: boolean;
   }>({ running: false, models: [], checking: true });
 
+  const [appleStatus, setAppleStatus] = useState<{
+    status: string;
+    message: string;
+    checking: boolean;
+  }>({ status: 'unknown', message: '', checking: true });
+
   const [showOllamaConfig, setShowOllamaConfig] = useState(false);
   const [tempUrl, setTempUrl] = useState(ollamaUrl);
 
@@ -42,6 +50,20 @@ export function AISettingsSection() {
   useEffect(() => {
     loadAISettings();
   }, []);
+
+  // Check Apple Intelligence availability
+  const checkAppleStatus = useCallback(async () => {
+    setAppleStatus((s) => ({ ...s, checking: true }));
+    const status = await AppleIntelligence.getAvailabilityStatus();
+    const message = AppleIntelligence.getStatusMessage(status);
+    setAppleStatus({ status, message, checking: false });
+  }, []);
+
+  useEffect(() => {
+    if (aiProvider === 'apple') {
+      checkAppleStatus();
+    }
+  }, [aiProvider, checkAppleStatus]);
 
   // Check Ollama status when provider changes or URL changes
   const checkStatus = useCallback(async () => {
@@ -60,6 +82,8 @@ export function AISettingsSection() {
     await setAIProvider(provider);
     if (provider === 'ollama') {
       checkStatus();
+    } else if (provider === 'apple') {
+      checkAppleStatus();
     }
   };
 
@@ -81,6 +105,15 @@ export function AISettingsSection() {
 
       {/* Provider Selection */}
       <View className="flex-row gap-3 mb-4">
+        {Platform.OS === 'ios' && (
+          <ProviderButton
+            provider="apple"
+            currentProvider={aiProvider}
+            label="Apple"
+            icon="apple"
+            onPress={() => handleProviderChange('apple')}
+          />
+        )}
         <ProviderButton
           provider="claude"
           currentProvider={aiProvider}
@@ -96,6 +129,38 @@ export function AISettingsSection() {
           onPress={() => handleProviderChange('ollama')}
         />
       </View>
+
+      {/* Apple Intelligence Configuration */}
+      {aiProvider === 'apple' && (
+        <View className="mt-2">
+          <View className="flex-row items-center mb-3">
+            {appleStatus.checking ? (
+              <ActivityIndicator size="small" color="#ec4899" />
+            ) : (
+              <FontAwesome
+                name={appleStatus.status === 'available' ? 'check-circle' : 'info-circle'}
+                size={16}
+                color={appleStatus.status === 'available' ? '#22c55e' : '#f59e0b'}
+              />
+            )}
+            <Text className="text-gray-600 dark:text-gray-400 ml-2 text-sm flex-1">
+              {appleStatus.checking ? 'Checking availability...' : appleStatus.message}
+            </Text>
+            <Pressable
+              onPress={checkAppleStatus}
+              className="p-2"
+              disabled={appleStatus.checking}
+            >
+              <FontAwesome name="refresh" size={14} color="#9ca3af" />
+            </Pressable>
+          </View>
+          <View className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4">
+            <Text className="text-xs text-blue-600 dark:text-blue-400">
+              Runs entirely on-device using Apple Intelligence. No API key or internet required. Requires iPhone 16+, iPad M1+, or Mac M1+ with iOS 26+.
+            </Text>
+          </View>
+        </View>
+      )}
 
       {/* Claude Configuration */}
       {aiProvider === 'claude' && (

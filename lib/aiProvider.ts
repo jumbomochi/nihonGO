@@ -1,5 +1,5 @@
 // lib/aiProvider.ts
-// Unified AI provider that supports both Claude API and local Ollama
+// Unified AI provider that supports Claude API, local Ollama, and Apple Intelligence
 
 import { LearningStyle, ProficiencyLevel } from '@/stores/userStore';
 import { sendOllamaMessage, DEFAULT_OLLAMA_URL, DEFAULT_OLLAMA_MODEL } from './ollama';
@@ -10,8 +10,9 @@ import {
   ApiError,
   ValidationError,
 } from './errors';
+import * as AppleIntelligence from '@/modules/apple-intelligence/src';
 
-export type AIProvider = 'claude' | 'ollama';
+export type AIProvider = 'claude' | 'ollama' | 'apple';
 
 export interface AIProviderConfig {
   provider: AIProvider;
@@ -163,6 +164,38 @@ async function sendClaudeMessage(
 }
 
 /**
+ * Send message using Apple Intelligence (on-device)
+ */
+async function sendAppleIntelligenceMessage(
+  messages: Message[],
+  systemPrompt: string,
+): Promise<string> {
+  const isAvailable = await AppleIntelligence.isAvailable();
+  if (!isAvailable) {
+    const status = await AppleIntelligence.getAvailabilityStatus();
+    throw new ApiError(AppleIntelligence.getStatusMessage(status), 0);
+  }
+
+  // Build conversation context as a single prompt since Foundation Models
+  // uses a session-based API. We create a fresh session each time with the
+  // full history to keep it stateless from the JS side.
+  await AppleIntelligence.createSession(systemPrompt);
+
+  // Replay prior messages to build session context, then get the final response
+  for (let i = 0; i < messages.length - 1; i++) {
+    const msg = messages[i];
+    if (msg.role === 'user') {
+      // Send user message and discard the intermediate response
+      await AppleIntelligence.sendMessage(msg.content);
+    }
+  }
+
+  // Send the final user message and return the response
+  const lastMessage = messages[messages.length - 1];
+  return AppleIntelligence.sendMessage(lastMessage.content);
+}
+
+/**
  * Unified send message function that routes to the appropriate provider
  */
 export async function sendMessage(
@@ -176,6 +209,10 @@ export async function sendMessage(
   }
 
   const systemPrompt = buildSystemPrompt(userContext);
+
+  if (config.provider === 'apple') {
+    return sendAppleIntelligenceMessage(messages, systemPrompt);
+  }
 
   if (config.provider === 'ollama') {
     return sendOllamaMessage(messages, systemPrompt, {
@@ -224,6 +261,8 @@ export function getProviderName(provider: AIProvider): string {
       return 'Claude (Cloud)';
     case 'ollama':
       return 'Ollama (Local)';
+    case 'apple':
+      return 'Apple Intelligence';
     default:
       return 'Unknown';
   }
