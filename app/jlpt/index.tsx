@@ -33,7 +33,7 @@ const JLPT_LEVELS: {
     title: 'JLPT N3',
     subtitle: 'Intermediate',
     totalUnits: 10,
-    unlockRequirement: 'Complete Genki 2 to unlock',
+    unlockRequirement: 'Complete Intermediate lessons to unlock',
   },
   {
     level: 'N2',
@@ -102,7 +102,7 @@ export default function JLPTHubScreen() {
         {/* Info Card */}
         <InfoCard variant="info" title="About JLPT Levels" className="mt-6">
           <Text className="text-xs text-blue-600 dark:text-blue-400">
-            N5 and N4 provide exam-focused content that supplements Genki textbooks. N3-N1 are complete courses with vocabulary, kanji, grammar, reading, and listening practice.
+            N5 and N4 provide exam-focused content that supplements beginner lessons. N3-N1 are complete courses with vocabulary, kanji, grammar, reading, and listening practice.
           </Text>
         </InfoCard>
       </ScrollView>

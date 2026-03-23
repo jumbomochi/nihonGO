@@ -64,7 +64,7 @@ export default function LessonScreen() {
         </Text>
         <View className="mt-6 gap-3">
           <Button
-            title="Browse Genki Lessons"
+            title="Browse Lessons"
             onPress={() => router.replace('/(tabs)')}
           />
           <Button

@@ -37,9 +37,9 @@ export function CharacterCard({
   size = 'large',
 }: CharacterCardProps) {
   const sizeClasses = {
-    small: { container: 'p-2', char: 'text-3xl', reading: 'text-xs', divider: 'h-10' },
-    medium: { container: 'p-4', char: 'text-5xl', reading: 'text-sm', divider: 'h-14' },
-    large: { container: 'p-6', char: 'text-7xl', reading: 'text-base', divider: 'h-24' },
+    small: { container: 'p-3 pt-6', char: 'text-3xl', reading: 'text-xs', divider: 'h-12' },
+    medium: { container: 'p-5 pt-8', char: 'text-5xl', reading: 'text-sm', divider: 'h-16' },
+    large: { container: 'p-6 pt-12', char: 'text-7xl', reading: 'text-base', divider: 'h-28' },
   };
 
   const styles = sizeClasses[size];
@@ -49,12 +49,12 @@ export function CharacterCard({
       className={`bg-white dark:bg-gray-800 rounded-2xl ${styles.container} border border-gray-200 dark:border-gray-700`}
     >
       {/* Characters side by side */}
-      <View className="flex-row items-center justify-center gap-4">
+      <View className="flex-row items-center justify-center gap-6">
         {/* Hiragana */}
         <View className="items-center">
-          <Text className="text-xs text-gray-400 mb-1">Hiragana</Text>
+          <Text className="text-xs text-gray-400 mb-8">Hiragana</Text>
           <Text
-            className={`${styles.char} font-japanese text-gray-900 dark:text-white`}
+            className={`${styles.char} font-japanese text-gray-900 dark:text-white pt-3`}
           >
             {pair.hiragana.character}
           </Text>
@@ -65,9 +65,9 @@ export function CharacterCard({
 
         {/* Katakana */}
         <View className="items-center">
-          <Text className="text-xs text-gray-400 mb-1">Katakana</Text>
+          <Text className="text-xs text-gray-400 mb-8">Katakana</Text>
           <Text
-            className={`${styles.char} font-japanese text-gray-900 dark:text-white`}
+            className={`${styles.char} font-japanese text-gray-900 dark:text-white pt-3`}
           >
             {pair.katakana.character}
           </Text>

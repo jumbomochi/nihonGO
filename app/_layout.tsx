@@ -120,6 +120,11 @@ function RootLayoutNav() {
           <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="lesson/[topic]" options={{ headerShown: false }} />
+          <Stack.Screen name="alphabet/[lessonId]" options={{ headerShown: false }} />
+          <Stack.Screen name="jlpt/index" options={{ headerShown: false }} />
+          <Stack.Screen name="jlpt/[level]/index" options={{ headerShown: false }} />
+          <Stack.Screen name="jlpt/[level]/[unitId]" options={{ headerShown: false }} />
+          <Stack.Screen name="jlpt/[level]/mock-exam" options={{ headerShown: false }} />
         </Stack>
       </ThemeProvider>
     </CustomErrorBoundary>

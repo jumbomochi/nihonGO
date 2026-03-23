@@ -15,6 +15,15 @@ const STYLE_LABELS: Record<string, string> = {
   conversational: 'Conversation Mode',
 };
 
+const LANGUAGE_LABELS: Record<string, string> = {
+  english: 'English',
+  chinese_mandarin: 'Chinese (Mandarin)',
+  chinese_cantonese: 'Chinese (Cantonese)',
+  korean: 'Korean',
+  spanish: 'Spanish',
+  other: 'Other',
+};
+
 const GOAL_LABELS: Record<string, string> = {
   travel: 'Travel',
   work: 'Work & Business',
@@ -50,7 +59,7 @@ export default function CompleteScreen() {
           <View className="bg-sakura-50 dark:bg-gray-800 rounded-2xl p-5 mb-6">
             <ProfileItem
               label="Native Language"
-              value={profile.nativeLanguage || 'English'}
+              value={LANGUAGE_LABELS[profile.nativeLanguage] || profile.nativeLanguage || 'English'}
             />
             <ProfileItem
               label="Japanese Level"

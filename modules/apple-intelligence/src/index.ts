@@ -17,11 +17,16 @@ interface AppleIntelligenceModuleType {
   resetSession(): Promise<boolean>;
 }
 
-// Only load the native module on iOS
-const NativeModule: AppleIntelligenceModuleType | null =
-  Platform.OS === 'ios'
-    ? requireNativeModule<AppleIntelligenceModuleType>('AppleIntelligence')
-    : null;
+// Only load the native module on iOS, and gracefully handle Expo Go
+// where native modules aren't available
+let NativeModule: AppleIntelligenceModuleType | null = null;
+if (Platform.OS === 'ios') {
+  try {
+    NativeModule = requireNativeModule<AppleIntelligenceModuleType>('AppleIntelligence');
+  } catch {
+    // Native module not available (e.g. running in Expo Go)
+  }
+}
 
 export async function isAvailable(): Promise<boolean> {
   if (!NativeModule) return false;

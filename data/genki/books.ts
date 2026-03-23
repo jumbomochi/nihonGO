@@ -12,16 +12,16 @@ export interface BookInfo {
 export const GENKI_BOOKS: Record<GenkiBook, BookInfo> = {
   genki1: {
     id: 'genki1',
-    title: 'Genki I',
-    titleJapanese: 'げんき I',
+    title: 'Beginner',
+    titleJapanese: 'しょきゅう',
     description: 'Elementary Japanese for beginners. Covers basic greetings, self-introduction, daily activities, and foundational grammar.',
     lessonRange: [1, 12],
     totalLessons: 12,
   },
   genki2: {
     id: 'genki2',
-    title: 'Genki II',
-    titleJapanese: 'げんき II',
+    title: 'Intermediate',
+    titleJapanese: 'ちゅうきゅう',
     description: 'Continuation of elementary Japanese. Covers more complex grammar, honorific expressions, and intermediate vocabulary.',
     lessonRange: [13, 23],
     totalLessons: 11,

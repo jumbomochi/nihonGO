@@ -142,7 +142,7 @@ const BookSelector = memo(function BookSelector({
             : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
         }`}
         accessibilityRole="tab"
-        accessibilityLabel="Genki I, Lessons 1 through 12"
+        accessibilityLabel="Beginner, Lessons 1 through 12"
         accessibilityState={{ selected: selectedBook === 'genki1' }}
       >
         <Text
@@ -152,7 +152,7 @@ const BookSelector = memo(function BookSelector({
               : 'text-gray-600 dark:text-gray-400'
           }`}
         >
-          Genki I
+          {GENKI_BOOKS.genki1.title}
         </Text>
         <Text className="text-xs text-center text-gray-500 mt-1">
           Lessons 1-12
@@ -166,7 +166,7 @@ const BookSelector = memo(function BookSelector({
             : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
         }`}
         accessibilityRole="tab"
-        accessibilityLabel="Genki II, Lessons 13 through 23"
+        accessibilityLabel="Intermediate, Lessons 13 through 23"
         accessibilityState={{ selected: selectedBook === 'genki2' }}
       >
         <Text
@@ -176,7 +176,7 @@ const BookSelector = memo(function BookSelector({
               : 'text-gray-600 dark:text-gray-400'
           }`}
         >
-          Genki II
+          {GENKI_BOOKS.genki2.title}
         </Text>
         <Text className="text-xs text-center text-gray-500 mt-1">
           Lessons 13-23
