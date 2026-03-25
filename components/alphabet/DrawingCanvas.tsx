@@ -41,35 +41,40 @@ export function DrawingCanvas({
   const [currentPath, setCurrentPath] = useState<string>('');
   const pathIdRef = useRef(0);
   const pathsRef = useRef<PathData[]>([]);
+  const currentPathRef = useRef<string>('');
 
   const panGesture = Gesture.Pan()
+    .runOnJS(true)
     .onStart((e) => {
-      setCurrentPath(`M ${e.x} ${e.y}`);
+      const newPath = `M ${e.x} ${e.y}`;
+      currentPathRef.current = newPath;
+      setCurrentPath(newPath);
     })
     .onUpdate((e) => {
-      setCurrentPath((prev) => `${prev} L ${e.x} ${e.y}`);
+      currentPathRef.current += ` L ${e.x} ${e.y}`;
+      setCurrentPath(currentPathRef.current);
     })
     .onEnd(() => {
-      if (currentPath && isValidStroke(currentPath)) {
+      const pathData = currentPathRef.current;
+      if (pathData && isValidStroke(pathData)) {
         const newPath: PathData = {
           id: `path-${pathIdRef.current++}`,
-          d: currentPath,
+          d: pathData,
         };
         setPaths((prev) => {
           const updated = [...prev, newPath];
           pathsRef.current = updated;
           return updated;
         });
-        setCurrentPath('');
 
-        // Check if user has drawn enough strokes using ref to avoid stale closure
+        // Check if user has drawn enough strokes
         if (pathsRef.current.length >= strokeCount) {
           onComplete();
         }
-      } else {
-        // Invalid stroke (too short), just clear it
-        setCurrentPath('');
       }
+      // Reset current path
+      currentPathRef.current = '';
+      setCurrentPath('');
     });
 
   const handleClear = () => {

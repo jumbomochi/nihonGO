@@ -80,29 +80,27 @@ export function MatchingGame({
                 : c
             )
           );
-          setMatchedCount((m) => {
-            const newCount = m + 1;
-            if (newCount === pairCount) {
-              // Game complete
-              const endTime = Date.now();
-              const finalScore = calculateMatchingScore(
-                pairCount,
-                moves + 1,
-                endTime - startTime
-              );
-              setScore(finalScore);
-              setIsComplete(true);
-              recordMatchingGameWin();
-            }
-            return newCount;
-          });
-
-          // Update mastery for matched characters
-          updateCharacterMastery(selectedCard.id, true);
-          updateCharacterMastery(card.id, true);
+          const newMatchedCount = matchedCount + 1;
+          setMatchedCount(newMatchedCount);
 
           setSelectedCard(null);
           setIsProcessing(false);
+
+          // Side effects after state updates
+          updateCharacterMastery(selectedCard.id, true);
+          updateCharacterMastery(card.id, true);
+
+          if (newMatchedCount === pairCount) {
+            const endTime = Date.now();
+            const finalScore = calculateMatchingScore(
+              pairCount,
+              moves + 1,
+              endTime - startTime
+            );
+            setScore(finalScore);
+            setIsComplete(true);
+            recordMatchingGameWin();
+          }
         } else {
           // No match - show both selected briefly then hide
           setCards((prev) =>
@@ -127,7 +125,7 @@ export function MatchingGame({
         }
       }
     },
-    [selectedCard, isProcessing, pairCount, moves, startTime, recordMatchingGameWin, updateCharacterMastery]
+    [selectedCard, isProcessing, pairCount, moves, matchedCount, startTime, recordMatchingGameWin, updateCharacterMastery]
   );
 
   const handlePlayAgain = () => {

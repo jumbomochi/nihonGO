@@ -3,12 +3,12 @@ import { router, useLocalSearchParams } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
 import { UnitCard } from '@/components/jlpt';
-import { JLPTLevel, JLPTUnit } from '@/data/jlpt/types';
-import { getN3Units } from '@/data/jlpt/n3';
-import { getN2Units } from '@/data/jlpt/n2';
-import { getN1Units } from '@/data/jlpt/n1';
-import { getN4Units } from '@/data/jlpt/n4';
-import { getN5Units } from '@/data/jlpt/n5';
+import { JLPTLevel, JLPTUnitMeta } from '@/data/jlpt/types';
+import { getN3UnitMeta } from '@/data/jlpt/n3';
+import { getN2UnitMeta } from '@/data/jlpt/n2';
+import { getN1UnitMeta } from '@/data/jlpt/n1';
+import { getN4UnitMeta } from '@/data/jlpt/n4';
+import { getN5UnitMeta } from '@/data/jlpt/n5';
 import { ScreenHeader } from '@/components/ui/ScreenHeader';
 
 export default function JLPTLevelScreen() {
@@ -20,18 +20,18 @@ export default function JLPTLevelScreen() {
   const completedUnits = new Set(progress?.unitsCompleted || []);
 
   // Get units for this level
-  const getUnitsForLevel = (level: JLPTLevel): JLPTUnit[] => {
+  const getUnitsForLevel = (level: JLPTLevel): JLPTUnitMeta[] => {
     switch (level) {
       case 'N5':
-        return getN5Units();
+        return getN5UnitMeta();
       case 'N4':
-        return getN4Units();
+        return getN4UnitMeta();
       case 'N3':
-        return getN3Units();
+        return getN3UnitMeta();
       case 'N2':
-        return getN2Units();
+        return getN2UnitMeta();
       case 'N1':
-        return getN1Units();
+        return getN1UnitMeta();
       default:
         return [];
     }

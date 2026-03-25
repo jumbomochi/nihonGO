@@ -323,6 +323,7 @@ export function AlphabetLessonScreen({
           {/* Drawing canvas - fixed aspect ratio for square canvas */}
           <View className="w-full aspect-square max-h-[400px]">
             <DrawingCanvas
+              key={currentPair.romaji}
               targetCharacter={currentPair.hiragana.character}
               strokeCount={currentPair.hiragana.strokeCount}
               onComplete={handleWriteComplete}

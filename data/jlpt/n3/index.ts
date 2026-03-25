@@ -23,7 +23,7 @@ export const N3_UNITS: JLPTUnit[] = [
   unit09,
 ];
 
-export function getN3Units(): JLPTUnitMeta[] {
+export function getN3UnitMeta(): JLPTUnitMeta[] {
   return N3_UNITS.map((unit) => ({
     id: unit.id,
     level: unit.level,
@@ -35,6 +35,10 @@ export function getN3Units(): JLPTUnitMeta[] {
     kanjiCount: unit.sections.kanji.length,
     grammarCount: unit.sections.grammar.length,
   }));
+}
+
+export function getN3Units(): JLPTUnit[] {
+  return N3_UNITS;
 }
 
 export function getN3Unit(unitId: string): JLPTUnit | undefined {
