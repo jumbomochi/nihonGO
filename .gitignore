@@ -41,6 +41,9 @@ yarn-error.*
 /ios
 /android
 
+# Generated audio files (regenerate with scripts/generate-*-audio.py)
+assets/audio/generated/
+
 # Japanese learning resources (large files)
 japanese-resources/
 
