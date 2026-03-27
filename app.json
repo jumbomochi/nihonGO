@@ -8,6 +8,7 @@
     "scheme": "nihongo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "privacyUrl": "https://jumbomochi.github.io/nihonGO/privacy",
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
