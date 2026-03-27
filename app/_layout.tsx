@@ -13,6 +13,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 // import 'react-native-reanimated'; // Disabled for web compatibility
 
+import * as Sentry from '@sentry/react-native';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useUserStore } from '@/stores/userStore';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -30,10 +31,17 @@ export const unstable_settings = {
   initialRouteName: '(onboarding)',
 };
 
+Sentry.init({
+  dsn: process.env.EXPO_PUBLIC_SENTRY_DSN,
+  enabled: !__DEV__,
+  tracesSampleRate: 0.2,
+  enableAutoSessionTracking: true,
+});
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+function RootLayout() {
   const [fontsLoaded, fontsError] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
@@ -73,6 +81,8 @@ export default function RootLayout() {
 
   return <RootLayoutNav />;
 }
+
+export default Sentry.wrap(RootLayout);
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
