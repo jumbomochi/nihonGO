@@ -121,7 +121,7 @@ async def generate_audio(
     text: str,
     output_path: Path,
     voice: str = VOICE_FEMALE,
-    rate: str = "0%"
+    rate: str = "+0%"
 ) -> bool:
     """Generate audio file from Japanese text."""
     try:
@@ -141,7 +141,7 @@ async def generate_batch(items: List[Dict], semaphore: asyncio.Semaphore):
                 item['text'],
                 item['path'],
                 item.get('voice', VOICE_FEMALE),
-                item.get('rate', '0%')
+                item.get('rate', '+0%')
             )
 
     tasks = [generate_with_semaphore(item) for item in items]
@@ -218,7 +218,7 @@ async def generate_unit_audio(
             audio_items.append({
                 'text': vocab['example'],
                 'path': example_file,
-                'rate': '0%'
+                'rate': '+0%'
             })
             manifest['examples'].append({
                 'id': vocab['id'],
@@ -253,7 +253,7 @@ async def generate_unit_audio(
             audio_items.append({
                 'text': transcript,
                 'path': transcript_file,
-                'rate': '0%'
+                'rate': '+0%'
             })
             manifest['listening'].append({
                 'index': i,
