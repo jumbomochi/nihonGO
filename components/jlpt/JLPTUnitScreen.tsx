@@ -80,7 +80,13 @@ export function JLPTUnitScreen({ jlptLevel, unitId }: JLPTUnitScreenProps) {
         return <ReadingSection readings={unit.sections.reading} />;
 
       case 'listening':
-        return <ListeningSection listenings={unit.sections.listening} />;
+        return (
+          <ListeningSection
+            listenings={unit.sections.listening}
+            level={jlptLevel}
+            unitNumber={unit.unitNumber}
+          />
+        );
 
       default:
         return null;
