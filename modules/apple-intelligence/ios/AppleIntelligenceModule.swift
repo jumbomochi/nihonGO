@@ -6,9 +6,15 @@ import FoundationModels
 #endif
 
 public class AppleIntelligenceModule: Module {
+  // Store as Any? to avoid @available on stored properties
+  private var _session: Any?
+
   #if canImport(FoundationModels)
   @available(iOS 26.0, *)
-  private var session: LanguageModelSession?
+  private var session: LanguageModelSession? {
+    get { _session as? LanguageModelSession }
+    set { _session = newValue }
+  }
   #endif
 
   public func definition() -> ModuleDefinition {
