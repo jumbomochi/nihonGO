@@ -11,11 +11,10 @@ Pod::Spec.new do |s|
   s.homepage       = 'https://github.com/jumbomochi/nihonGO'
   s.platforms      = { :ios => '15.1' }
   s.source         = { git: '' }
-  s.static_framework = true
 
   s.dependency 'ExpoModulesCore'
 
-  s.source_files = '**/*.{h,m,mm,swift,hpp,cpp}'
+  s.source_files = 'ios/**/*.{h,m,mm,swift,hpp,cpp}'
 
   s.weak_frameworks = 'FoundationModels'
 end
