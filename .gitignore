@@ -43,6 +43,7 @@ yarn-error.*
 
 # Generated audio files (regenerate with scripts/generate-*-audio.py)
 assets/audio/generated/
+public/audio/generated/
 
 # Japanese learning resources (large files)
 japanese-resources/

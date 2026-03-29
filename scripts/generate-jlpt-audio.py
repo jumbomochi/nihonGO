@@ -31,7 +31,7 @@ VOICE_MALE = "ja-JP-KeitaNeural"     # Male voice
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DATA_DIR = PROJECT_DIR / "data" / "jlpt"
-AUDIO_DIR = PROJECT_DIR / "assets" / "audio" / "generated" / "jlpt"
+AUDIO_DIR = PROJECT_DIR / "public" / "audio" / "generated" / "jlpt"
 
 # Rate limits to avoid overwhelming the TTS service
 CONCURRENT_REQUESTS = 3

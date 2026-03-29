@@ -5,18 +5,7 @@ import { Platform } from 'react-native';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
 import { getKanaAudioPath } from '@/data/alphabet/audio';
-
-// Get the base URL for audio files
-function getAudioUrl(path: string): string {
-  if (Platform.OS === 'web') {
-    // For web, use the current origin
-    if (typeof window !== 'undefined') {
-      return `${window.location.origin}${path}`;
-    }
-  }
-  // For native, the path should work as-is from public folder
-  return path;
-}
+import { resolveAudioUri } from '@/lib/audioUri';
 
 // Web audio player using HTML5 Audio API
 async function playWebAudio(url: string): Promise<void> {
@@ -64,7 +53,7 @@ export function useKanaAudio(): UseKanaAudioReturn {
         // Try to load audio file first
         const audioPath = getKanaAudioPath(romaji);
         if (audioPath) {
-          const fullUrl = getAudioUrl(audioPath);
+          const fullUrl = resolveAudioUri(audioPath);
           console.log('Playing audio from:', fullUrl);
 
           // Use HTML5 Audio API on web for better compatibility

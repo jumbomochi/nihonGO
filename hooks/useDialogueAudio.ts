@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { GenkiLesson } from '@/types/genki';
 import { getFullDialogueAudioPath, getGeneratedDialogueAudioPath } from '@/data/genki/audio/audioManifest';
+import { resolveAudioUri } from '@/lib/audioUri';
 
 export function useDialogueAudio(lesson: GenkiLesson | null | undefined) {
   const [currentAudioUri, setCurrentAudioUri] = useState<string | null>(null);
@@ -9,7 +10,7 @@ export function useDialogueAudio(lesson: GenkiLesson | null | undefined) {
   const handlePlayFullDialogue = () => {
     if (!lesson) return;
     const uri = getFullDialogueAudioPath(lesson.book, lesson.lessonNumber);
-    setCurrentAudioUri(uri);
+    setCurrentAudioUri(resolveAudioUri(uri));
     setCurrentAudioTitle('Full Dialogue');
   };
 
@@ -32,7 +33,7 @@ export function useDialogueAudio(lesson: GenkiLesson | null | undefined) {
       filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speakerName}.mp3`;
     }
     const path = getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
-    return encodeURI(path);
+    return encodeURI(resolveAudioUri(path));
   }, [lesson]);
 
   return {

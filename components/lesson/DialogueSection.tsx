@@ -3,6 +3,7 @@ import { View, Text, Pressable, Platform, ActivityIndicator } from 'react-native
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Audio } from 'expo-av';
 import { Dialogue, AudioTrack } from '@/types/genki';
+import { resolveAudioUri } from '@/lib/audioUri';
 
 interface DialogueSectionProps {
   dialogue?: Dialogue; // Single dialogue (backward compatible)
@@ -49,9 +50,7 @@ export function DialogueSection({
   // Play a single audio file and return a promise that resolves when finished
   const playAudioAsync = useCallback((audioPath: string): Promise<void> => {
     return new Promise(async (resolve, reject) => {
-      const fullUrl = Platform.OS === 'web' && typeof window !== 'undefined'
-        ? `${window.location.origin}${audioPath}`
-        : audioPath;
+      const fullUrl = resolveAudioUri(audioPath);
 
       try {
         if (Platform.OS === 'web' && typeof window !== 'undefined') {
@@ -154,9 +153,7 @@ export function DialogueSection({
     await stopCurrentAudio();
 
     const audioPath = getLineAudioPath(dialogueIndex, lineIndex, speaker);
-    const fullUrl = Platform.OS === 'web' && typeof window !== 'undefined'
-      ? `${window.location.origin}${audioPath}`
-      : audioPath;
+    const fullUrl = resolveAudioUri(audioPath);
 
     setLoadingKey(key);
 
