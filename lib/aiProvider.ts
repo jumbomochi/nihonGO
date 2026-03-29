@@ -39,11 +39,15 @@ interface Message {
 
 const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
 
-function buildSystemPrompt(userContext: UserContext): string {
+function buildSystemPrompt(userContext: UserContext, provider: AIProvider): string {
   const level = userContext.proficiencyLevel.replace('_', ' ');
   const style = userContext.learningStyle === 'detailed' ? 'detailed explanations' : 'concise, practical';
-  const kanjiNote = userContext.knowsChinese ? ' Learner knows Chinese characters.' : '';
 
+  if (provider === 'apple') {
+    return `You are nihonGO, a friendly Japanese tutor. Speak naturally. Learner level: ${level}. Style: ${style}.`;
+  }
+
+  const kanjiNote = userContext.knowsChinese ? ' Learner knows Chinese characters.' : '';
   return `You are nihonGO, a Japanese tutor. Learner level: ${level}. Style: ${style}.${kanjiNote} Use Japanese with romaji in parentheses. Keep responses focused and concise.`;
 }
 
@@ -179,7 +183,7 @@ export async function sendMessage(
     throw new ValidationError('At least one message is required');
   }
 
-  const systemPrompt = buildSystemPrompt(userContext);
+  const systemPrompt = buildSystemPrompt(userContext, config.provider);
 
   if (config.provider === 'apple') {
     return sendAppleIntelligenceMessage(messages, systemPrompt);
