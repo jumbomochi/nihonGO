@@ -7,16 +7,6 @@ import { Audio } from 'expo-av';
 import { getKanaAudioPath } from '@/data/alphabet/audio';
 import { resolveAudioUri } from '@/lib/audioUri';
 
-// Web audio player using HTML5 Audio API
-async function playWebAudio(url: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const audio = new window.Audio(url);
-    audio.onended = () => resolve();
-    audio.onerror = (e) => reject(e);
-    audio.play().catch(reject);
-  });
-}
-
 interface UseKanaAudioReturn {
   playKana: (romaji: string) => Promise<void>;
   isPlaying: boolean;
@@ -25,7 +15,7 @@ interface UseKanaAudioReturn {
 
 export function useKanaAudio(): UseKanaAudioReturn {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [sound, setSound] = useState<Audio.Sound | null>(null);
+  const soundRef = useRef<Audio.Sound | null>(null);
   const webAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const stop = useCallback(() => {
@@ -33,76 +23,57 @@ export function useKanaAudio(): UseKanaAudioReturn {
       webAudioRef.current.pause();
       webAudioRef.current = null;
     }
-    if (sound) {
-      try {
-        sound.stopAsync();
-        sound.unloadAsync();
-      } catch {
-        // Sound may already be unloaded
-      }
-      setSound(null);
+    if (soundRef.current) {
+      soundRef.current.stopAsync().catch(() => {});
+      soundRef.current.unloadAsync().catch(() => {});
+      soundRef.current = null;
     }
     Speech.stop();
     setIsPlaying(false);
-  }, [sound]);
+  }, []);
 
   const playKana = useCallback(
     async (romaji: string) => {
-      // Stop any current playback
       stop();
-
       setIsPlaying(true);
 
       try {
-        // Try to load audio file first
         const audioPath = getKanaAudioPath(romaji);
         if (audioPath) {
           const fullUrl = resolveAudioUri(audioPath);
-          console.log('Playing audio from:', fullUrl);
 
-          // Use HTML5 Audio API on web for better compatibility
           if (Platform.OS === 'web' && typeof window !== 'undefined') {
-            try {
-              const audio = new window.Audio(fullUrl);
-              webAudioRef.current = audio;
-              audio.onended = () => {
-                setIsPlaying(false);
-                webAudioRef.current = null;
-              };
-              audio.onerror = (e) => {
-                console.log('Web audio error, falling back to TTS:', e);
-                fallbackToTTS(romaji);
-              };
-              await audio.play();
-              return;
-            } catch (webAudioError) {
-              console.log('Web audio failed:', webAudioError);
-            }
-          } else {
-            // Use expo-av for native
-            try {
-              const { sound: newSound } = await Audio.Sound.createAsync(
-                { uri: fullUrl },
-                { shouldPlay: true }
-              );
-              setSound(newSound);
-              newSound.setOnPlaybackStatusUpdate((status) => {
-                if (status.isLoaded && status.didJustFinish) {
-                  setIsPlaying(false);
-                  newSound.unloadAsync();
-                }
-              });
-              return;
-            } catch (audioError) {
-              console.log('Native audio failed, falling back to TTS:', audioError);
-            }
+            const audio = new window.Audio(fullUrl);
+            webAudioRef.current = audio;
+            audio.onended = () => {
+              setIsPlaying(false);
+              webAudioRef.current = null;
+            };
+            audio.onerror = () => fallbackToTTS(romaji);
+            await audio.play();
+            return;
           }
+
+          // Native: use expo-av
+          const { sound } = await Audio.Sound.createAsync(
+            { uri: fullUrl },
+            { shouldPlay: true }
+          );
+          soundRef.current = sound;
+          sound.setOnPlaybackStatusUpdate((status) => {
+            if (status.isLoaded && status.didJustFinish) {
+              setIsPlaying(false);
+              sound.unloadAsync().catch(() => {});
+              if (soundRef.current === sound) {
+                soundRef.current = null;
+              }
+            }
+          });
+          return;
         }
 
-        // Fallback to text-to-speech
         await fallbackToTTS(romaji);
-      } catch (error) {
-        console.error('Error playing kana audio:', error);
+      } catch {
         setIsPlaying(false);
       }
     },
