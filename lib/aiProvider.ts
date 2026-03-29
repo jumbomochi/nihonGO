@@ -39,6 +39,19 @@ interface Message {
 
 const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
 
+// Track whether an Apple Intelligence session is active.
+// The native LanguageModelSession accumulates conversation turns,
+// so we only create a session once and reuse it across messages.
+let hasActiveAppleSession = false;
+
+/**
+ * Reset the Apple Intelligence session. Call when clearing chat.
+ */
+export async function resetAppleSession(): Promise<void> {
+  hasActiveAppleSession = false;
+  await AppleIntelligence.resetSession();
+}
+
 function buildSystemPrompt(userContext: UserContext, provider: AIProvider): string {
   const level = userContext.proficiencyLevel.replace('_', ' ');
   const style = userContext.learningStyle === 'detailed' ? 'detailed explanations' : 'concise, practical';
@@ -140,10 +153,12 @@ async function sendClaudeMessage(
 }
 
 /**
- * Send message using Apple Intelligence (on-device)
+ * Send message using Apple Intelligence (on-device).
+ * Creates a session lazily on first call; subsequent messages reuse it.
+ * The native LanguageModelSession handles multi-turn context automatically.
  */
 async function sendAppleIntelligenceMessage(
-  messages: Message[],
+  message: string,
   systemPrompt: string,
 ): Promise<string> {
   const isAvailable = await AppleIntelligence.isAvailable();
@@ -152,22 +167,12 @@ async function sendAppleIntelligenceMessage(
     throw new ApiError(AppleIntelligence.getStatusMessage(status), 0);
   }
 
-  await AppleIntelligence.createSession(systemPrompt);
-
-  // Send only the last user message to avoid exceeding the small context window.
-  // For multi-turn conversations, include brief context from recent messages.
-  const lastMessage = messages[messages.length - 1];
-
-  if (messages.length > 1) {
-    // Include last 2 exchanges as brief context (max 4 messages)
-    const recentHistory = messages.slice(-5, -1);
-    const context = recentHistory
-      .map((m) => `${m.role === 'user' ? 'Student' : 'Tutor'}: ${m.content.slice(0, 150)}`)
-      .join('\n');
-    return AppleIntelligence.sendMessage(`Recent conversation:\n${context}\n\nStudent: ${lastMessage.content}`);
+  if (!hasActiveAppleSession) {
+    await AppleIntelligence.createSession(systemPrompt);
+    hasActiveAppleSession = true;
   }
 
-  return AppleIntelligence.sendMessage(lastMessage.content);
+  return AppleIntelligence.sendMessage(message);
 }
 
 /**
@@ -186,7 +191,8 @@ export async function sendMessage(
   const systemPrompt = buildSystemPrompt(userContext, config.provider);
 
   if (config.provider === 'apple') {
-    return sendAppleIntelligenceMessage(messages, systemPrompt);
+    const lastMessage = messages[messages.length - 1];
+    return sendAppleIntelligenceMessage(lastMessage.content, systemPrompt);
   }
 
   if (config.provider === 'ollama') {
