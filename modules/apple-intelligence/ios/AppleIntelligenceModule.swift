@@ -91,11 +91,10 @@ public class AppleIntelligenceModule: Module {
               userInfo: [NSLocalizedDescriptionKey: "The request was blocked by content safety filters."]
             )
           case .exceededContextWindowSize:
-            throw NSError(
-              domain: "AppleIntelligence",
-              code: 4,
-              userInfo: [NSLocalizedDescriptionKey: "Context window exceeded. Please reset the session and try again."]
-            )
+            // Reset session and retry with just this message
+            self.session = LanguageModelSession()
+            let retryResponse = try await self.session!.respond(to: message)
+            return retryResponse.content
           @unknown default:
             throw NSError(
               domain: "AppleIntelligence",

@@ -40,39 +40,11 @@ interface Message {
 const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
 
 function buildSystemPrompt(userContext: UserContext): string {
-  const styleInstructions = userContext.learningStyle === 'detailed'
-    ? `Provide detailed explanations with cultural context. Explain WHY natives choose specific expressions, not just grammar rules. Give multiple examples across different scenarios.`
-    : `Keep explanations concise and practical. Focus on immediate application through conversation. Less theory, more active practice.`;
+  const level = userContext.proficiencyLevel.replace('_', ' ');
+  const style = userContext.learningStyle === 'detailed' ? 'detailed explanations' : 'concise, practical';
+  const kanjiNote = userContext.knowsChinese ? ' Learner knows Chinese characters.' : '';
 
-  const chineseContext = userContext.knowsChinese
-    ? `The learner understands Chinese characters. When introducing kanji, you can reference Chinese origins and explain reading variations contextually.`
-    : `The learner does not know Chinese. Introduce kanji gradually with mnemonics and clear explanations of readings.`;
-
-  return `You are nihonGO, a friendly Japanese language tutor for beginners. Your approach is personalized and interactive, focusing on practical Japanese acquisition.
-
-## Learner Profile
-- Native language: ${userContext.nativeLanguage || 'English'}
-- Prior language experience: ${userContext.priorLanguages.length > 0 ? userContext.priorLanguages.join(', ') : 'None'}
-- Current level: ${userContext.proficiencyLevel.replace('_', ' ')}
-- Learning goals: ${userContext.learningGoals.length > 0 ? userContext.learningGoals.join(', ') : 'General Japanese proficiency'}
-
-## Teaching Style
-${styleInstructions}
-
-## Special Considerations
-${chineseContext}
-
-## Core Principles
-1. **Cultural Context First**: Always explain why natives choose specific expressions
-2. **Practical Examples**: Use real-world scenarios, not abstract textbook situations
-3. **Comparative Learning**: When teaching similar grammar points, compare them with native usage patterns
-4. **Encouragement**: Be supportive while maintaining accuracy
-
-## Formatting
-- Use Japanese text followed by romaji in parentheses for beginners
-- Include English translations
-- Break down complex concepts into digestible parts
-- Use bullet points for clarity when appropriate`;
+  return `You are nihonGO, a Japanese tutor. Learner level: ${level}. Style: ${style}.${kanjiNote} Use Japanese with romaji in parentheses. Keep responses focused and concise.`;
 }
 
 /**
@@ -176,22 +148,21 @@ async function sendAppleIntelligenceMessage(
     throw new ApiError(AppleIntelligence.getStatusMessage(status), 0);
   }
 
-  // Build conversation context as a single prompt since Foundation Models
-  // uses a session-based API. We create a fresh session each time with the
-  // full history to keep it stateless from the JS side.
   await AppleIntelligence.createSession(systemPrompt);
 
-  // Replay prior messages to build session context, then get the final response
-  for (let i = 0; i < messages.length - 1; i++) {
-    const msg = messages[i];
-    if (msg.role === 'user') {
-      // Send user message and discard the intermediate response
-      await AppleIntelligence.sendMessage(msg.content);
-    }
+  // Send only the last user message to avoid exceeding the small context window.
+  // For multi-turn conversations, include brief context from recent messages.
+  const lastMessage = messages[messages.length - 1];
+
+  if (messages.length > 1) {
+    // Include last 2 exchanges as brief context (max 4 messages)
+    const recentHistory = messages.slice(-5, -1);
+    const context = recentHistory
+      .map((m) => `${m.role === 'user' ? 'Student' : 'Tutor'}: ${m.content.slice(0, 150)}`)
+      .join('\n');
+    return AppleIntelligence.sendMessage(`Recent conversation:\n${context}\n\nStudent: ${lastMessage.content}`);
   }
 
-  // Send the final user message and return the response
-  const lastMessage = messages[messages.length - 1];
   return AppleIntelligence.sendMessage(lastMessage.content);
 }
 
@@ -241,15 +212,7 @@ export function createLessonPrompt(topic: string, userContext: UserContext): str
     intermediate: 'They can hold basic conversations and read simple texts.',
   };
 
-  return `Please teach me about: ${topic}
-
-Context: ${levelContext[userContext.proficiencyLevel]}
-
-Provide a structured mini-lesson that includes:
-1. Introduction to the concept
-2. Key vocabulary or grammar points
-3. Practical examples with cultural context
-4. A simple practice exercise`;
+  return `Teach me: ${topic}. ${levelContext[userContext.proficiencyLevel]} Include key vocabulary with romaji, examples, and a short exercise.`;
 }
 
 /**
