@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import { sendMessage, AIProviderConfig } from '@/lib/aiProvider';
+import { sendMessage, AIProviderConfig, resetAppleSession } from '@/lib/aiProvider';
 import { useUserStore } from '@/stores/userStore';
 
 interface Message {
@@ -95,6 +95,7 @@ export function useChat() {
     messagesRef.current = [];
     setMessages([]);
     setError(null);
+    resetAppleSession();
   }, []);
 
   return {
