@@ -33,7 +33,7 @@ export function useDialogueAudio(lesson: GenkiLesson | null | undefined) {
       filename = `${(lineIndex + 1).toString().padStart(3, '0')}_${speakerName}.mp3`;
     }
     const path = getGeneratedDialogueAudioPath(lesson.book, lesson.lessonNumber, filename);
-    return encodeURI(resolveAudioUri(path));
+    return encodeURI(path);
   }, [lesson]);
 
   return {

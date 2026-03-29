@@ -34,8 +34,12 @@ export function useKanaAudio(): UseKanaAudioReturn {
       webAudioRef.current = null;
     }
     if (sound) {
-      sound.stopAsync();
-      sound.unloadAsync();
+      try {
+        sound.stopAsync();
+        sound.unloadAsync();
+      } catch {
+        // Sound may already be unloaded
+      }
       setSound(null);
     }
     Speech.stop();
