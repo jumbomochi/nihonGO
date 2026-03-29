@@ -117,11 +117,8 @@ public class AppleIntelligenceModule: Module {
     AsyncFunction("resetSession") { () -> Bool in
       #if canImport(FoundationModels)
       if #available(iOS 26.0, *) {
-        if let currentSession = self.session {
-          let instructions = currentSession.instructions
-          self.session = LanguageModelSession(instructions: instructions)
-          return true
-        }
+        self.session = nil
+        return true
       }
       #endif
       return false
