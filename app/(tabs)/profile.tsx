@@ -9,11 +9,9 @@ import {
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useUserStore } from '@/stores/userStore';
-import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
 import { Button } from '@/components/common/Button';
 import { AchievementsList } from '@/components/common/AchievementsList';
-import { AISettingsSection } from '@/components/settings/AISettingsSection';
 
 const PROFICIENCY_LABELS: Record<string, string> = {
   complete_beginner: 'Complete Beginner',
@@ -38,11 +36,9 @@ const GOAL_LABELS: Record<string, string> = {
 
 export default function ProfileScreen() {
   const { profile, resetProfile } = useUserStore();
-  const { clearApiKey } = useSettingsStore();
   const { completedLessons, currentStreak, totalWordsLearned, resetProgress } = useProgressStore();
 
   const handleResetProfile = async () => {
-    await clearApiKey();
     resetProfile();
     resetProgress();
     router.replace('/(onboarding)/welcome');
@@ -126,9 +122,6 @@ export default function ProfileScreen() {
             )}
           </View>
         )}
-
-        {/* AI Settings */}
-        <AISettingsSection />
 
         {/* Learning Stats */}
         <View className="bg-sakura-50 dark:bg-sakura-900/20 rounded-2xl p-5 mb-6">

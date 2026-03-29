@@ -1,7 +1,6 @@
 import { useState, useCallback, useRef } from 'react';
 import { sendMessage, createLessonPrompt, AIProviderConfig } from '@/lib/aiProvider';
 import { useUserStore } from '@/stores/userStore';
-import { useSettingsStore } from '@/stores/settingsStore';
 
 interface LessonContent {
   topic: string;
@@ -14,12 +13,6 @@ export function useLesson() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const profile = useUserStore((state) => state.profile);
-
-  // Get AI settings from store
-  const aiProvider = useSettingsStore((state) => state.aiProvider);
-  const apiKey = useSettingsStore((state) => state.apiKey);
-  const ollamaUrl = useSettingsStore((state) => state.ollamaUrl);
-  const ollamaModel = useSettingsStore((state) => state.ollamaModel);
 
   // Track current request for cancellation
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -39,12 +32,8 @@ export function useLesson() {
       try {
         const prompt = createLessonPrompt(topicTitle, profile);
 
-        // Build AI provider config
         const config: AIProviderConfig = {
-          provider: aiProvider,
-          claudeApiKey: apiKey || undefined,
-          ollamaUrl,
-          ollamaModel,
+          provider: 'apple',
         };
 
         const response = await sendMessage(
@@ -69,7 +58,7 @@ export function useLesson() {
         setIsLoading(false);
       }
     },
-    [profile, aiProvider, apiKey, ollamaUrl, ollamaModel]
+    [profile]
   );
 
   const askFollowUp = useCallback(
@@ -86,17 +75,13 @@ export function useLesson() {
         { role: 'user' as const, content: question },
       ];
 
-      // Build AI provider config
       const config: AIProviderConfig = {
-        provider: aiProvider,
-        claudeApiKey: apiKey || undefined,
-        ollamaUrl,
-        ollamaModel,
+        provider: 'apple',
       };
 
       return sendMessage(messages, profile, config, abortController.signal);
     },
-    [lesson, profile, aiProvider, apiKey, ollamaUrl, ollamaModel]
+    [lesson, profile]
   );
 
   const clearLesson = useCallback(() => {

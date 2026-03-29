@@ -3,7 +3,6 @@ import { View, Text, SafeAreaView, ScrollView, ActivityIndicator } from 'react-n
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { router } from 'expo-router';
 import { useLesson } from '@/hooks/useLesson';
-import { useSettingsStore } from '@/stores/settingsStore';
 import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 import { ScreenHeader } from '@/components/ui/ScreenHeader';
@@ -54,7 +53,6 @@ export function AILessonScreen({ topic }: { topic: string }) {
       const aiProvider = await import('@/lib/aiProvider');
       const { useUserStore } = await import('@/stores/userStore');
       const profile = useUserStore.getState().profile;
-      const settings = useSettingsStore.getState();
 
       const messages = [
         {
@@ -64,10 +62,7 @@ export function AILessonScreen({ topic }: { topic: string }) {
       ];
 
       const config = {
-        provider: settings.aiProvider,
-        claudeApiKey: settings.apiKey || undefined,
-        ollamaUrl: settings.ollamaUrl,
-        ollamaModel: settings.ollamaModel,
+        provider: 'apple' as const,
       };
 
       const response = await aiProvider.sendMessage(messages, profile, config);

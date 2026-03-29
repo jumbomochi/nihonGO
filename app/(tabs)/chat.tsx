@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import {
   View,
   Text,
@@ -11,42 +11,24 @@ import {
 } from 'react-native';
 import { triggerImpact } from '@/lib/haptics';
 import { useChat } from '@/hooks/useChat';
-import { useSettingsStore } from '@/stores/settingsStore';
-const selectApiKey = (state: ReturnType<typeof useSettingsStore.getState>) => state.apiKey;
-const selectAiProvider = (state: ReturnType<typeof useSettingsStore.getState>) => state.aiProvider;
-const selectLoadApiKey = (state: ReturnType<typeof useSettingsStore.getState>) => state.loadApiKey;
-const selectIsLoading = (state: ReturnType<typeof useSettingsStore.getState>) => state.isLoading;
-const selectIsOnline = (state: ReturnType<typeof useSettingsStore.getState>) => state.isOnline;
 import { ChatBubble } from '@/components/chat/ChatBubble';
 import { ChatInput } from '@/components/chat/ChatInput';
-import { isNetworkError, getRetryMessage } from '@/lib/errors';
+import { getRetryMessage } from '@/lib/errors';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function ChatScreen() {
   const { messages, isLoading, error, sendUserMessage, clearChat } = useChat();
-  const apiKey = useSettingsStore(selectApiKey);
-  const aiProvider = useSettingsStore(selectAiProvider);
-  const loadApiKey = useSettingsStore(selectLoadApiKey);
-  const isLoadingApiKey = useSettingsStore(selectIsLoading);
-  const isOnline = useSettingsStore(selectIsOnline);
   const [inputValue, setInputValue] = useState('');
   const flatListRef = useRef<FlatList>(null);
 
-  useEffect(() => {
-    loadApiKey();
-  }, []);
-
-  // Apple Intelligence and Ollama work offline
-  const needsNetwork = aiProvider === 'claude';
-
   const handleSend = useCallback(async () => {
-    if (inputValue.trim() && (!needsNetwork || isOnline)) {
+    if (inputValue.trim()) {
       triggerImpact();
       const message = inputValue.trim();
       setInputValue('');
       await sendUserMessage(message);
     }
-  }, [inputValue, isOnline, needsNetwork, sendUserMessage]);
+  }, [inputValue, sendUserMessage]);
 
   const handleSuggestionPress = useCallback((text: string) => {
     triggerImpact();
@@ -62,21 +44,6 @@ export default function ChatScreen() {
       return () => clearTimeout(timer);
     }
   }, [messages]);
-
-  // Only require API key for Claude provider
-  if (aiProvider === 'claude' && !apiKey && !isLoadingApiKey) {
-    return (
-      <SafeAreaView className="flex-1 bg-white dark:bg-gray-900 items-center justify-center px-6">
-        <FontAwesome name="comments" size={48} color="#d1d5db" />
-        <Text className="text-lg font-semibold text-gray-900 dark:text-white mt-4 text-center">
-          API Key Required
-        </Text>
-        <Text className="text-gray-500 dark:text-gray-400 mt-2 text-center">
-          Please add your Claude API key in the Profile tab to start chatting
-        </Text>
-      </SafeAreaView>
-    );
-  }
 
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
@@ -163,8 +130,8 @@ export default function ChatScreen() {
           onChangeText={setInputValue}
           onSend={handleSend}
           isLoading={isLoading}
-          disabled={needsNetwork && !isOnline}
-          placeholder={needsNetwork && !isOnline ? "Chat requires internet connection" : "Ask me anything about Japanese..."}
+          disabled={false}
+          placeholder="Ask me anything about Japanese..."
         />
       </KeyboardAvoidingView>
     </SafeAreaView>
