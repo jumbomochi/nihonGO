@@ -23,8 +23,9 @@ let NativeModule: AppleIntelligenceModuleType | null = null;
 if (Platform.OS === 'ios') {
   try {
     NativeModule = requireNativeModule<AppleIntelligenceModuleType>('AppleIntelligence');
-  } catch {
-    // Native module not available (e.g. running in Expo Go)
+    console.log('[AppleIntelligence] Native module loaded successfully');
+  } catch (e) {
+    console.warn('[AppleIntelligence] Native module failed to load:', e);
   }
 }
 
