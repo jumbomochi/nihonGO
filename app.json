@@ -4,7 +4,7 @@
     "slug": "nihonGO",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/app_icon.png",
     "scheme": "nihongo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -53,7 +53,8 @@
           "organization": "nihongo",
           "project": "nihongo-mobile"
         }
-      ]
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true
