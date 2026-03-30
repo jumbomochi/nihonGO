@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { View, Text, Pressable, Platform, ActivityIndicator } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Audio } from 'expo-av';
@@ -31,6 +31,18 @@ export function DialogueSection({
   const soundRef = useRef<Audio.Sound | null>(null);
   const webAudioRef = useRef<HTMLAudioElement | null>(null);
   const fullPlaybackAbortRef = useRef<boolean>(false);
+
+  // Stop audio on unmount
+  useEffect(() => {
+    return () => {
+      fullPlaybackAbortRef.current = true;
+      if (soundRef.current) {
+        soundRef.current.stopAsync().catch(() => {});
+        soundRef.current.unloadAsync().catch(() => {});
+        soundRef.current = null;
+      }
+    };
+  }, []);
 
   const stopCurrentAudio = useCallback(async () => {
     fullPlaybackAbortRef.current = true; // Stop any full dialogue playback
