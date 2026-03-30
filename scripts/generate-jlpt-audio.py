@@ -103,14 +103,16 @@ def parse_typescript_file(file_path: Path) -> Dict[str, Any]:
         if len(passage) > 50:
             result['reading_passages'].append(passage)
 
-    # Extract listening transcripts (using template literals with backticks)
+    # Extract listening transcripts (backtick template literals or quoted strings)
     transcript_pattern = re.compile(
-        r"transcript:\s*`([^`]+)`",
+        r"(?<!\w)transcript:\s*(?:`([^`]+)`|'([^']*(?:\\.[^']*)*)')",
         re.DOTALL
     )
 
     for match in transcript_pattern.finditer(content):
-        transcript = match.group(1).strip()
+        transcript = (match.group(1) or match.group(2) or '').strip()
+        # Unescape \n in single-quoted strings
+        transcript = transcript.replace('\\n', '\n')
         if len(transcript) > 30:
             result['listening_transcripts'].append(transcript)
 
