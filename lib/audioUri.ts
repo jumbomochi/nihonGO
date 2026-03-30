@@ -1,8 +1,9 @@
 import { Platform, NativeModules } from 'react-native';
+import { Asset } from 'expo-asset';
+import audioManifest from '@/data/audioManifest.generated';
 
 /**
  * Get the Metro dev server base URL by extracting it from the JS bundle source URL.
- * This is reliable because the app already loaded its bundle from this server.
  */
 function getDevServerBaseUrl(): string | null {
   const scriptURL: string | undefined =
@@ -11,7 +12,6 @@ function getDevServerBaseUrl(): string | null {
 
   if (!scriptURL) return null;
 
-  // scriptURL looks like: http://192.168.1.100:8082/index.bundle?platform=ios&...
   const match = scriptURL.match(/^(https?:\/\/[^/]+)/);
   return match ? match[1] : null;
 }
@@ -19,10 +19,11 @@ function getDevServerBaseUrl(): string | null {
 let _cachedBaseUrl: string | null = null;
 
 /**
- * Resolve a public/ audio path to a full URI for the current platform.
+ * Resolve an audio path to a URI that works on the current platform.
  *
- * Web:    prepends window.location.origin
- * Native: prepends the Metro dev server URL so expo-av can fetch the file
+ * Production native: resolves from the bundled asset manifest
+ * Dev native:        resolves against the Metro dev server
+ * Web:               resolves against window.location.origin
  */
 export function resolveAudioUri(path: string): string {
   if (Platform.OS === 'web') {
@@ -32,7 +33,15 @@ export function resolveAudioUri(path: string): string {
     return path;
   }
 
-  // Native: resolve against the Metro dev server
+  // Native production: use bundled asset
+  const moduleId = audioManifest[path];
+  if (moduleId != null) {
+    const asset = Asset.fromModule(moduleId);
+    if (asset.localUri) return asset.localUri;
+    if (asset.uri) return asset.uri;
+  }
+
+  // Native dev: resolve against Metro server
   if (_cachedBaseUrl === null) {
     _cachedBaseUrl = getDevServerBaseUrl() ?? '';
   }

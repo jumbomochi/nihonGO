@@ -45,6 +45,9 @@ yarn-error.*
 assets/audio/generated/
 public/audio/generated/
 
+# Generated audio manifest (regenerate with scripts/generate-audio-manifest.js)
+data/audioManifest.generated.ts
+
 # Japanese learning resources (large files)
 japanese-resources/
 
