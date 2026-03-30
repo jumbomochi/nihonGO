@@ -38,7 +38,7 @@ export function GenkiLessonScreen({ lessonId }: { lessonId: string }) {
   const lesson = getLessonOrPlaceholder(lessonId);
 
   const { isMarkedComplete, wasAlreadyCompleted, handleMarkComplete } = useLessonCompletion(lessonId);
-  const { currentAudioUri, currentAudioTitle, handlePlayFullDialogue, clearAudio, getLineAudioPath } = useDialogueAudio(lesson);
+  const { currentAudioSource, currentAudioTitle, handlePlayFullDialogue, clearAudio, getLineAudioPath } = useDialogueAudio(lesson);
   const { showQuiz, quizVocabulary, quizSectionId, handleStartQuiz, handleCloseQuiz } = useQuizSession();
 
   useEffect(() => {
@@ -67,10 +67,10 @@ export function GenkiLessonScreen({ lessonId }: { lessonId: string }) {
       />
 
       {/* Audio Player (when playing) */}
-      {currentAudioUri && (
+      {currentAudioSource && (
         <View className="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
           <AudioPlayer
-            uri={currentAudioUri}
+            source={currentAudioSource}
             title={currentAudioTitle}
             onPlaybackComplete={clearAudio}
             compact

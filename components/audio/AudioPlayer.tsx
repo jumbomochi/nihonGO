@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { View, Text, Pressable, ActivityIndicator } from 'react-native';
-import { Audio, AVPlaybackStatus } from 'expo-av';
+import { Audio, AVPlaybackSource, AVPlaybackStatus } from 'expo-av';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Slider from '@react-native-community/slider';
 import { formatTime } from '@/lib/time';
@@ -11,7 +11,7 @@ import {
 } from '@/constants/audio';
 
 interface AudioPlayerProps {
-  uri: string;
+  source: AVPlaybackSource;
   title: string;
   titleJapanese?: string;
   onPlaybackComplete?: () => void;
@@ -19,7 +19,7 @@ interface AudioPlayerProps {
 }
 
 export function AudioPlayer({
-  uri,
+  source,
   title,
   titleJapanese,
   onPlaybackComplete,
@@ -68,7 +68,7 @@ export function AudioPlayer({
       });
 
       const { sound: newSound } = await Audio.Sound.createAsync(
-        { uri },
+        source,
         { shouldPlay: true },
         onPlaybackStatusUpdate
       );
@@ -79,7 +79,7 @@ export function AudioPlayer({
     } finally {
       setIsLoading(false);
     }
-  }, [uri, onPlaybackStatusUpdate]);
+  }, [source, onPlaybackStatusUpdate]);
 
   const handlePlayPause = async () => {
     if (!sound) {

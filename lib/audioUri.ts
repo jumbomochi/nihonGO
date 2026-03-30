@@ -1,5 +1,5 @@
 import { Platform, NativeModules } from 'react-native';
-import { Asset } from 'expo-asset';
+import { AVPlaybackSource } from 'expo-av';
 import audioManifest from '@/data/audioManifest.generated';
 
 /**
@@ -19,11 +19,8 @@ function getDevServerBaseUrl(): string | null {
 let _cachedBaseUrl: string | null = null;
 
 /**
- * Resolve an audio path to a URI that works on the current platform.
- *
- * Production native: resolves from the bundled asset manifest
- * Dev native:        resolves against the Metro dev server
- * Web:               resolves against window.location.origin
+ * Resolve an audio path to a URI string. Used for web HTML5 Audio
+ * and as a fallback when no bundled asset exists.
  */
 export function resolveAudioUri(path: string): string {
   if (Platform.OS === 'web') {
@@ -33,15 +30,6 @@ export function resolveAudioUri(path: string): string {
     return path;
   }
 
-  // Native production: use bundled asset
-  const moduleId = audioManifest[path];
-  if (moduleId != null) {
-    const asset = Asset.fromModule(moduleId);
-    if (asset.localUri) return asset.localUri;
-    if (asset.uri) return asset.uri;
-  }
-
-  // Native dev: resolve against Metro server
   if (_cachedBaseUrl === null) {
     _cachedBaseUrl = getDevServerBaseUrl() ?? '';
   }
@@ -51,4 +39,19 @@ export function resolveAudioUri(path: string): string {
   }
 
   return path;
+}
+
+/**
+ * Resolve an audio path to a source that expo-av can play.
+ *
+ * Returns the require() module ID if the asset is bundled (works offline),
+ * otherwise returns { uri } for dev server / web playback.
+ */
+export function resolveAudioSource(path: string): AVPlaybackSource {
+  if (Platform.OS !== 'web') {
+    const moduleId = audioManifest[path];
+    if (moduleId != null) return moduleId;
+  }
+
+  return { uri: resolveAudioUri(path) };
 }

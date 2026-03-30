@@ -5,7 +5,7 @@ import { Platform } from 'react-native';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
 import { getKanaAudioPath } from '@/data/alphabet/audio';
-import { resolveAudioUri } from '@/lib/audioUri';
+import { resolveAudioUri, resolveAudioSource } from '@/lib/audioUri';
 
 interface UseKanaAudioReturn {
   playKana: (romaji: string) => Promise<void>;
@@ -40,9 +40,8 @@ export function useKanaAudio(): UseKanaAudioReturn {
       try {
         const audioPath = getKanaAudioPath(romaji);
         if (audioPath) {
-          const fullUrl = resolveAudioUri(audioPath);
-
           if (Platform.OS === 'web' && typeof window !== 'undefined') {
+            const fullUrl = resolveAudioUri(audioPath);
             const audio = new window.Audio(fullUrl);
             webAudioRef.current = audio;
             audio.onended = () => {
@@ -54,9 +53,10 @@ export function useKanaAudio(): UseKanaAudioReturn {
             return;
           }
 
-          // Native: use expo-av
+          // Native: use expo-av with bundled asset or dev server
+          const source = resolveAudioSource(audioPath);
           const { sound } = await Audio.Sound.createAsync(
-            { uri: fullUrl },
+            source,
             { shouldPlay: true }
           );
           soundRef.current = sound;

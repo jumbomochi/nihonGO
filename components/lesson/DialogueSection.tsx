@@ -3,7 +3,7 @@ import { View, Text, Pressable, Platform, ActivityIndicator } from 'react-native
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Audio } from 'expo-av';
 import { Dialogue, AudioTrack } from '@/types/genki';
-import { resolveAudioUri } from '@/lib/audioUri';
+import { resolveAudioUri, resolveAudioSource } from '@/lib/audioUri';
 
 interface DialogueSectionProps {
   dialogue?: Dialogue; // Single dialogue (backward compatible)
@@ -62,10 +62,9 @@ export function DialogueSection({
   // Play a single audio file and return a promise that resolves when finished
   const playAudioAsync = useCallback((audioPath: string): Promise<void> => {
     return new Promise(async (resolve, reject) => {
-      const fullUrl = resolveAudioUri(audioPath);
-
       try {
         if (Platform.OS === 'web' && typeof window !== 'undefined') {
+          const fullUrl = resolveAudioUri(audioPath);
           const audio = new window.Audio(fullUrl);
           webAudioRef.current = audio;
           audio.onended = () => {
@@ -82,8 +81,9 @@ export function DialogueSection({
             playsInSilentModeIOS: true,
             staysActiveInBackground: false,
           });
+          const source = resolveAudioSource(audioPath);
           const { sound } = await Audio.Sound.createAsync(
-            { uri: fullUrl },
+            source,
             { shouldPlay: true }
           );
           soundRef.current = sound;
@@ -165,12 +165,12 @@ export function DialogueSection({
     await stopCurrentAudio();
 
     const audioPath = getLineAudioPath(dialogueIndex, lineIndex, speaker);
-    const fullUrl = resolveAudioUri(audioPath);
 
     setLoadingKey(key);
 
     try {
       if (Platform.OS === 'web' && typeof window !== 'undefined') {
+        const fullUrl = resolveAudioUri(audioPath);
         const audio = new window.Audio(fullUrl);
         webAudioRef.current = audio;
         audio.onended = () => {
@@ -189,8 +189,9 @@ export function DialogueSection({
           playsInSilentModeIOS: true,
           staysActiveInBackground: false,
         });
+        const source = resolveAudioSource(audioPath);
         const { sound } = await Audio.Sound.createAsync(
-          { uri: fullUrl },
+          source,
           { shouldPlay: true }
         );
         soundRef.current = sound;

@@ -3,7 +3,7 @@ import { View, Text, Pressable } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { JLPTListening, JLPTLevel } from '@/data/jlpt/types';
 import { AudioPlayer } from '@/components/audio/AudioPlayer';
-import { getListeningAudioUri } from '@/lib/jlptAudio';
+import { getListeningAudioSource } from '@/lib/jlptAudio';
 
 interface ListeningSectionProps {
   listenings: JLPTListening[];
@@ -26,7 +26,7 @@ export function ListeningSection({ listenings, level, unitNumber }: ListeningSec
   return (
     <View className="gap-4">
       {listenings.map((listening, index) => {
-        const audioUri = getListeningAudioUri(level, unitNumber, index + 1);
+        const audioSource = getListeningAudioSource(level, unitNumber, index + 1);
         const isAudioActive = activeAudioIndex === index;
 
         return (
@@ -42,7 +42,7 @@ export function ListeningSection({ listenings, level, unitNumber }: ListeningSec
             {isAudioActive ? (
               <View className="mb-4">
                 <AudioPlayer
-                  uri={audioUri}
+                  source={audioSource}
                   title={listening.title}
                   titleJapanese={listening.titleJapanese}
                   compact
