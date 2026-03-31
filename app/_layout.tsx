@@ -20,6 +20,7 @@ import { useSettingsStore } from '@/stores/settingsStore';
 import { useNetworkStatus } from '@/hooks/useNetworkStatus';
 import { ErrorBoundary as CustomErrorBoundary } from '@/components/common/ErrorBoundary';
 import { OfflineBanner } from '@/components/common/OfflineBanner';
+import { AnimatedSplash } from '@/components/common/AnimatedSplash';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -92,6 +93,7 @@ function RootLayoutNav() {
   const isOnline = useSettingsStore((state) => state.isOnline);
   const loadAISettings = useSettingsStore((state) => state.loadAISettings);
   const [isNavigationReady, setIsNavigationReady] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
   // Initialize network status monitoring
   useNetworkStatus();
@@ -126,6 +128,7 @@ function RootLayoutNav() {
     <CustomErrorBoundary>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <OfflineBanner visible={!isOnline} />
+        {showSplash && <AnimatedSplash onFinish={() => setShowSplash(false)} />}
         <Stack>
           <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

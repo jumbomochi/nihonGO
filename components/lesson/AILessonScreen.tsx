@@ -7,6 +7,7 @@ import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 import { ScreenHeader } from '@/components/ui/ScreenHeader';
 import { LessonContent } from './LessonContent';
+import { CompletionCelebration } from './CompletionCelebration';
 import { useLessonCompletion } from '@/hooks/useLessonCompletion';
 
 export const TOPIC_INFO: Record<string, { title: string; description: string }> = {
@@ -38,6 +39,12 @@ export function AILessonScreen({ topic }: { topic: string }) {
 
   const topicInfo = TOPIC_INFO[topic] || { title: topic, description: '' };
   const { isMarkedComplete, wasAlreadyCompleted, handleMarkComplete } = useLessonCompletion(topic);
+  const [showCelebration, setShowCelebration] = useState(false);
+
+  const onMarkComplete = () => {
+    handleMarkComplete();
+    setShowCelebration(true);
+  };
 
   useEffect(() => {
     if (topic && !lesson && !isLoading) {
@@ -128,7 +135,7 @@ export function AILessonScreen({ topic }: { topic: string }) {
                 <Button
                   title="Mark as Complete"
                   variant="secondary"
-                  onPress={handleMarkComplete}
+                  onPress={onMarkComplete}
                 />
               </View>
             ) : (
@@ -163,6 +170,12 @@ export function AILessonScreen({ topic }: { topic: string }) {
           </View>
         ) : null}
       </ScrollView>
+
+      <CompletionCelebration
+        visible={showCelebration}
+        lessonTitle={topicInfo.title}
+        onContinue={() => setShowCelebration(false)}
+      />
     </SafeAreaView>
   );
 }

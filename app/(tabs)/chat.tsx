@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { triggerImpact } from '@/lib/haptics';
 import { useChat } from '@/hooks/useChat';
+import { useUserStore } from '@/stores/userStore';
 import { ChatBubble } from '@/components/chat/ChatBubble';
 import { ChatInput } from '@/components/chat/ChatInput';
 import { getRetryMessage } from '@/lib/errors';
@@ -18,6 +19,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function ChatScreen() {
   const { messages, isLoading, error, sendUserMessage, clearChat } = useChat();
+  const profile = useUserStore((state) => state.profile);
   const [inputValue, setInputValue] = useState('');
   const flatListRef = useRef<FlatList>(null);
 
@@ -55,28 +57,51 @@ export default function ChatScreen() {
         {messages.length === 0 ? (
           <View className="flex-1 items-center justify-center px-6">
             <View className="w-20 h-20 bg-sakura-100 dark:bg-sakura-900/30 rounded-full items-center justify-center mb-4">
-              <Text className="text-4xl">🇯🇵</Text>
+              <Text className="text-4xl">🌸</Text>
             </View>
             <Text className="text-xl font-semibold text-gray-900 dark:text-white text-center">
-              Start a conversation
+              {profile.proficiencyLevel === 'complete_beginner'
+                ? 'Welcome! I\'m your Japanese tutor'
+                : 'Welcome back!'}
             </Text>
-            <Text className="text-gray-500 dark:text-gray-400 text-center mt-2 max-w-[280px]">
-              Ask me anything about Japanese! Grammar, vocabulary, culture, or just practice chatting.
+            <Text className="text-gray-500 dark:text-gray-400 text-center mt-2 max-w-[300px]">
+              {profile.proficiencyLevel === 'complete_beginner'
+                ? 'I\'ll help you take your first steps in Japanese. Pick a topic below, or ask me anything!'
+                : 'Ready to practise? Pick a topic or ask me anything about Japanese.'}
             </Text>
 
             <View className="mt-8 gap-3">
-              <SuggestionChip
-                text="How do I say 'hello'?"
-                onPress={() => handleSuggestionPress("How do I say 'hello' in Japanese?")}
-              />
-              <SuggestionChip
-                text="Teach me to count"
-                onPress={() => handleSuggestionPress("Can you teach me to count in Japanese?")}
-              />
-              <SuggestionChip
-                text="What's the difference between は and が?"
-                onPress={() => handleSuggestionPress("What's the difference between は and が?")}
-              />
+              {profile.proficiencyLevel === 'complete_beginner' ? (
+                <>
+                  <SuggestionChip
+                    text="Teach me to say hello"
+                    onPress={() => handleSuggestionPress("How do I say 'hello' in Japanese? Teach me the different greetings.")}
+                  />
+                  <SuggestionChip
+                    text="How do I introduce myself?"
+                    onPress={() => handleSuggestionPress("How do I introduce myself in Japanese?")}
+                  />
+                  <SuggestionChip
+                    text="What are hiragana and katakana?"
+                    onPress={() => handleSuggestionPress("What are hiragana and katakana? How do I start learning them?")}
+                  />
+                </>
+              ) : (
+                <>
+                  <SuggestionChip
+                    text="Quiz me on vocabulary"
+                    onPress={() => handleSuggestionPress("Quiz me on some Japanese vocabulary at my level.")}
+                  />
+                  <SuggestionChip
+                    text="Explain a grammar point"
+                    onPress={() => handleSuggestionPress("What's the difference between は and が?")}
+                  />
+                  <SuggestionChip
+                    text="Let's have a conversation"
+                    onPress={() => handleSuggestionPress("Let's practice a simple conversation in Japanese. You start!")}
+                  />
+                </>
+              )}
             </View>
           </View>
         ) : (

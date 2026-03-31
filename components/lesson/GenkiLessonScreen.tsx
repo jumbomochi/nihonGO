@@ -11,6 +11,7 @@ import { AudioPlayer } from '@/components/audio/AudioPlayer';
 import { SectionTabs } from '@/components/lesson/SectionTabs';
 import { VocabQuiz } from '@/components/practice/VocabQuiz';
 import { SectionRenderer } from './SectionRenderer';
+import { CompletionCelebration } from './CompletionCelebration';
 import { useLessonCompletion } from '@/hooks/useLessonCompletion';
 import { useDialogueAudio } from '@/hooks/useDialogueAudio';
 import { useQuizSession } from '@/hooks/useQuizSession';
@@ -38,6 +39,12 @@ export function GenkiLessonScreen({ lessonId }: { lessonId: string }) {
   const lesson = getLessonOrPlaceholder(lessonId);
 
   const { isMarkedComplete, wasAlreadyCompleted, handleMarkComplete } = useLessonCompletion(lessonId);
+  const [showCelebration, setShowCelebration] = useState(false);
+
+  const onMarkComplete = () => {
+    handleMarkComplete();
+    setShowCelebration(true);
+  };
   const { currentAudioSource, currentAudioTitle, handlePlayFullDialogue, clearAudio, getLineAudioPath } = useDialogueAudio(lesson);
   const { showQuiz, quizVocabulary, quizSectionId, handleStartQuiz, handleCloseQuiz } = useQuizSession();
 
@@ -128,7 +135,7 @@ export function GenkiLessonScreen({ lessonId }: { lessonId: string }) {
                   <Button
                     title="Mark as Complete"
                     variant="secondary"
-                    onPress={handleMarkComplete}
+                    onPress={onMarkComplete}
                   />
                 </View>
               ) : (
@@ -157,6 +164,13 @@ export function GenkiLessonScreen({ lessonId }: { lessonId: string }) {
           onClose={handleCloseQuiz}
         />
       </Modal>
+
+      {/* Completion Celebration */}
+      <CompletionCelebration
+        visible={showCelebration}
+        lessonTitle={lesson?.title || 'Lesson'}
+        onContinue={() => setShowCelebration(false)}
+      />
     </SafeAreaView>
   );
 }
