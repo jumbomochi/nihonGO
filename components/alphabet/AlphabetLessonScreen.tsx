@@ -4,6 +4,7 @@ import { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   SafeAreaView,
   ScrollView,
   Pressable,
@@ -393,7 +394,11 @@ export function AlphabetLessonScreen({
 
       {activeSection === 'quiz' && (
         <View className="flex-1 px-6 py-8 items-center justify-center">
-          <FontAwesome name="question-circle" size={64} color="#ec4899" />
+          <Image
+            source={require('@/assets/images/mascot/08_quiz.png')}
+            className="w-32 h-32"
+            resizeMode="contain"
+          />
           <Text className="text-xl font-semibold text-gray-900 dark:text-white mt-4">
             Ready for a quiz?
           </Text>

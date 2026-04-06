@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native';
+import { View, Text, Image, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { Button } from '@/components/common/Button';
 import { useUserStore } from '@/stores/userStore';
@@ -49,6 +49,13 @@ export default function CompleteScreen() {
     <SafeAreaView className="flex-1 bg-white dark:bg-gray-900">
       <View className="flex-1 px-6 pt-8 justify-between">
         <View>
+          <View className="items-center mb-4">
+            <Image
+              source={require('@/assets/images/mascot/11_onboarding_complete.png')}
+              className="w-28 h-28"
+              resizeMode="contain"
+            />
+          </View>
           <Text className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
             You're all set!
           </Text>

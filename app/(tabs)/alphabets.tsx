@@ -1,7 +1,7 @@
 // app/(tabs)/alphabets.tsx
 
 import { memo, useState } from 'react';
-import { View, Text, SafeAreaView, ScrollView, Pressable } from 'react-native';
+import { View, Text, Image, SafeAreaView, ScrollView, Pressable } from 'react-native';
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useProgressStore } from '@/stores/progressStore';
@@ -116,14 +116,16 @@ export default function AlphabetsScreen() {
         </View>
 
         {/* Kanji Section (Coming Soon) */}
-        <View className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5">
-          <View className="flex-row items-center mb-2">
-            <FontAwesome name="lock" size={16} color="#9ca3af" />
-            <Text className="text-lg font-semibold text-gray-400 ml-2">
-              Kanji
-            </Text>
-          </View>
-          <Text className="text-gray-400">
+        <View className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 items-center">
+          <Image
+            source={require('@/assets/images/mascot/05_locked_content-needtocleanup.png')}
+            className="w-24 h-24 mb-3"
+            resizeMode="contain"
+          />
+          <Text className="text-lg font-semibold text-gray-400 mb-1">
+            Kanji
+          </Text>
+          <Text className="text-gray-400 text-center">
             Complete kana lessons to unlock kanji learning.
           </Text>
         </View>

@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import {
   View,
   Text,
+  Image,
   SafeAreaView,
   FlatList,
   KeyboardAvoidingView,
@@ -56,9 +57,11 @@ export default function ChatScreen() {
       >
         {messages.length === 0 ? (
           <View className="flex-1 items-center justify-center px-6">
-            <View className="w-20 h-20 bg-sakura-100 dark:bg-sakura-900/30 rounded-full items-center justify-center mb-4">
-              <Text className="text-4xl">🌸</Text>
-            </View>
+            <Image
+              source={require('@/assets/images/mascot/03_chat_empty_state.png')}
+              className="w-32 h-32 mb-4"
+              resizeMode="contain"
+            />
             <Text className="text-xl font-semibold text-gray-900 dark:text-white text-center">
               {profile.proficiencyLevel === 'complete_beginner'
                 ? 'Welcome! I\'m your Japanese tutor'

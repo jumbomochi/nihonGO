@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import { router } from 'expo-router';
 import { OnboardingLayout } from '@/components/onboarding/OnboardingLayout';
 import { OptionButton } from '@/components/onboarding/OptionButton';
@@ -34,6 +34,13 @@ export default function WelcomeScreen() {
       subtitle="What's your native language?"
       currentStep={1}
     >
+      <View className="items-center mb-4">
+        <Image
+          source={require('@/assets/images/mascot/10_onboarding_welcome.png')}
+          className="w-28 h-28"
+          resizeMode="contain"
+        />
+      </View>
       <View className="flex-1">
         {LANGUAGE_OPTIONS.map((option) => (
           <OptionButton

@@ -26,8 +26,8 @@ export function AnimatedSplash({ onFinish }: AnimatedSplashProps) {
       className="absolute inset-0 z-50 bg-white dark:bg-gray-900 items-center justify-center"
     >
       <Image
-        source={require('@/assets/app_icon.png')}
-        className="w-28 h-28 rounded-3xl mb-4"
+        source={require('@/assets/images/mascot/02_splash_screen.png')}
+        className="w-40 h-40 mb-4"
         resizeMode="contain"
       />
       <Text className="text-3xl font-bold text-gray-900 dark:text-white">

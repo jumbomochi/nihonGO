@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { View, Text, Pressable } from 'react-native';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { View, Text, Image, Pressable } from 'react-native';
 
 interface Props {
   children: ReactNode;
@@ -39,9 +38,11 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         <View className="flex-1 bg-white dark:bg-gray-900 items-center justify-center px-6">
           <View className="items-center">
-            <View className="w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full items-center justify-center mb-6">
-              <FontAwesome name="exclamation-triangle" size={40} color="#ef4444" />
-            </View>
+            <Image
+              source={require('@/assets/images/mascot/07_error_state.png')}
+              className="w-32 h-32 mb-4"
+              resizeMode="contain"
+            />
             <Text className="text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center">
               Something went wrong
             </Text>

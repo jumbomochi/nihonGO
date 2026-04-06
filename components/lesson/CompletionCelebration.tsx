@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { View, Text, Modal, Animated } from 'react-native';
+import { View, Text, Image, Modal, Animated } from 'react-native';
 import { Button } from '@/components/common/Button';
 
 interface CompletionCelebrationProps {
@@ -46,7 +46,11 @@ export function CompletionCelebration({
           }}
           className="bg-white dark:bg-gray-800 rounded-3xl p-8 items-center w-full max-w-sm"
         >
-          <Text className="text-6xl mb-4">🎉</Text>
+          <Image
+            source={require('@/assets/images/mascot/04_lesson_completion.png')}
+            className="w-36 h-36 mb-2"
+            resizeMode="contain"
+          />
           <Text className="text-2xl font-bold text-gray-900 dark:text-white text-center">
             Lesson Complete!
           </Text>
