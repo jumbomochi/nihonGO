@@ -47,7 +47,7 @@ export function SpeedChallenge({
   const timerProgress = useSharedValue(1);
 
   const recordSpeedChallengeScore = useProgressStore((s) => s.recordSpeedChallengeScore);
-  const updateCharacterMastery = useProgressStore((s) => s.updateCharacterMastery);
+  const gradeSrsItem = useProgressStore((s) => s.gradeSrsItem);
 
   useEffect(() => {
     const generated = generateSpeedChallengeQuestions(
@@ -88,14 +88,19 @@ export function SpeedChallenge({
     setStreak(0);
 
     const currentQuestion = questions[currentIndex];
-    if (currentQuestion) {
-      updateCharacterMastery(currentQuestion.id, false);
+    if (currentQuestion && currentQuestion.kanaCharacterId) {
+      gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, false, {
+        kind: 'kana',
+        character: currentQuestion.character!,
+        romaji: currentQuestion.romaji!,
+        kanaType: currentQuestion.kanaType!,
+      });
     }
 
     setTimeout(() => {
       moveToNext();
     }, 500);
-  }, [currentIndex, questions, showFeedback, updateCharacterMastery, moveToNext]);
+  }, [currentIndex, questions, showFeedback, gradeSrsItem, moveToNext]);
 
   // Timer countdown
   useEffect(() => {
@@ -137,18 +142,32 @@ export function SpeedChallenge({
           return newStreak;
         });
         setShowFeedback('correct');
-        updateCharacterMastery(currentQuestion.id, true);
+        if (currentQuestion.kanaCharacterId) {
+          gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, true, {
+            kind: 'kana',
+            character: currentQuestion.character!,
+            romaji: currentQuestion.romaji!,
+            kanaType: currentQuestion.kanaType!,
+          });
+        }
       } else {
         setStreak(0);
         setShowFeedback('incorrect');
-        updateCharacterMastery(currentQuestion.id, false);
+        if (currentQuestion.kanaCharacterId) {
+          gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, false, {
+            kind: 'kana',
+            character: currentQuestion.character!,
+            romaji: currentQuestion.romaji!,
+            kanaType: currentQuestion.kanaType!,
+          });
+        }
       }
 
       setTimeout(() => {
         moveToNext();
       }, 500);
     },
-    [currentIndex, questions, showFeedback, moveToNext, updateCharacterMastery]
+    [currentIndex, questions, showFeedback, moveToNext, gradeSrsItem]
   );
 
   const timerStyle = useAnimatedStyle(() => ({

@@ -12,6 +12,7 @@ import {
   calculateMatchingScore,
 } from '@/lib/matchingGameUtils';
 import { useProgressStore } from '@/stores/progressStore';
+import { ALL_HIRAGANA, ALL_KATAKANA } from '@/data/alphabet';
 import { Button } from '@/components/common/Button';
 
 interface MatchingGameProps {
@@ -41,7 +42,21 @@ export function MatchingGame({
   const [isProcessing, setIsProcessing] = useState(false);
 
   const recordMatchingGameWin = useProgressStore((s) => s.recordMatchingGameWin);
-  const updateCharacterMastery = useProgressStore((s) => s.updateCharacterMastery);
+  const gradeSrsItem = useProgressStore((s) => s.gradeSrsItem);
+
+  const gradeCard = (card: MatchingCardType, correct: boolean) => {
+    if (!card.kanaCharacterId) return; // romaji cards aren't graded
+    const kanaType: 'hiragana' | 'katakana' = card.type === 'hiragana' ? 'hiragana' : 'katakana';
+    const corpus = kanaType === 'hiragana' ? ALL_HIRAGANA : ALL_KATAKANA;
+    const kana = corpus.find((k) => k.id === card.kanaCharacterId);
+    if (!kana) return;
+    gradeSrsItem(`kana:${card.kanaCharacterId}`, correct, {
+      kind: 'kana',
+      character: kana.character,
+      romaji: kana.romaji,
+      kanaType,
+    });
+  };
 
   useEffect(() => {
     const generatedCards = generateMatchingCards(pairs, pairType, pairCount);
@@ -87,8 +102,8 @@ export function MatchingGame({
           setIsProcessing(false);
 
           // Side effects after state updates
-          updateCharacterMastery(selectedCard.id, true);
-          updateCharacterMastery(card.id, true);
+          gradeCard(selectedCard, true);
+          gradeCard(card, true);
 
           if (newMatchedCount === pairCount) {
             const endTime = Date.now();
@@ -108,8 +123,8 @@ export function MatchingGame({
           );
 
           // Update mastery for incorrect match
-          updateCharacterMastery(selectedCard.id, false);
-          updateCharacterMastery(card.id, false);
+          gradeCard(selectedCard, false);
+          gradeCard(card, false);
 
           setTimeout(() => {
             setCards((prev) =>
@@ -125,7 +140,7 @@ export function MatchingGame({
         }
       }
     },
-    [selectedCard, isProcessing, pairCount, moves, matchedCount, startTime, recordMatchingGameWin, updateCharacterMastery]
+    [selectedCard, isProcessing, pairCount, moves, matchedCount, startTime, recordMatchingGameWin, gradeSrsItem]
   );
 
   const handlePlayAgain = () => {

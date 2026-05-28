@@ -33,6 +33,7 @@ export function generateMatchingCards(
           pairId,
           isMatched: false,
           isSelected: false,
+          kanaCharacterId: pair.hiragana.id,
         });
         cards.push({
           id: `${pairId}-romaji`,
@@ -52,6 +53,7 @@ export function generateMatchingCards(
           pairId,
           isMatched: false,
           isSelected: false,
+          kanaCharacterId: pair.katakana.id,
         });
         cards.push({
           id: `${pairId}-romaji`,
@@ -71,6 +73,7 @@ export function generateMatchingCards(
           pairId,
           isMatched: false,
           isSelected: false,
+          kanaCharacterId: pair.hiragana.id,
         });
         cards.push({
           id: `${pairId}-katakana`,
@@ -79,6 +82,7 @@ export function generateMatchingCards(
           pairId,
           isMatched: false,
           isSelected: false,
+          kanaCharacterId: pair.katakana.id,
         });
         break;
     }

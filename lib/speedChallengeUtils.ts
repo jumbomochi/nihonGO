@@ -23,9 +23,11 @@ export function generateSpeedChallengeQuestions(
   for (let i = 0; i < questionCount; i++) {
     const pair = pairs[i % pairs.length];
     const useHiragana = Math.random() > 0.5;
+    const kanaType: 'hiragana' | 'katakana' = useHiragana ? 'hiragana' : 'katakana';
     const character = useHiragana
       ? pair.hiragana.character
       : pair.katakana.character;
+    const kanaCharacterId = useHiragana ? pair.hiragana.id : pair.katakana.id;
 
     // Generate wrong options
     const wrongOptions = shuffleArray(
@@ -38,6 +40,10 @@ export function generateSpeedChallengeQuestions(
       correctAnswer: pair.romaji,
       options: shuffleArray([pair.romaji, ...wrongOptions]),
       timeLimit: timePerQuestion,
+      kanaCharacterId,
+      kanaType,
+      character,
+      romaji: pair.romaji,
     });
   }
 

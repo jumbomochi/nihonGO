@@ -9,6 +9,7 @@ export interface MatchingCard {
   pairId: string; // Links matching cards together
   isMatched: boolean;
   isSelected: boolean;
+  kanaCharacterId?: string; // real kana char id from KanaPair (only set for hiragana/katakana cards, not romaji)
 }
 
 export interface MatchingGameState {
@@ -27,6 +28,10 @@ export interface SpeedChallengeQuestion {
   correctAnswer: string;
   options: string[];
   timeLimit: number; // milliseconds
+  kanaCharacterId?: string; // real kana char id for SRS grading
+  kanaType?: 'hiragana' | 'katakana'; // which script was shown
+  character?: string; // the kana character shown as prompt
+  romaji?: string; // the correct romaji answer
 }
 
 export interface SpeedChallengeState {
