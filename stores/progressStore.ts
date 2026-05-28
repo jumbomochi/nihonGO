@@ -7,6 +7,7 @@ import { AlphabetProgress } from '@/types/alphabet';
 import { CharacterMastery } from '@/types/games';
 import { ACHIEVEMENTS } from '@/data/achievements';
 import { JLPTLevel, JLPTProgress, MockExamAttempt } from '@/data/jlpt/types';
+import { SrsItem, SrsItemType, SrsEnrollInput, SrsPayload, SRS_INTERVALS_DAYS } from '@/types/srs';
 
 interface LessonProgress {
   topicId: string;
@@ -66,6 +67,9 @@ interface ProgressState {
   // Character Mastery (SRS)
   characterMastery: Record<string, CharacterMastery>;
 
+  // Unified SRS items
+  srsItems: Record<string, SrsItem>;
+
   // Achievements
   unlockedAchievements: string[];
 
@@ -116,6 +120,12 @@ interface ProgressState {
   // Character Mastery (SRS)
   updateCharacterMastery: (characterId: string, correct: boolean) => void;
   getCharactersDueForReview: () => CharacterMastery[];
+
+  // Unified SRS actions
+  enrollSrsItem: (input: SrsEnrollInput) => void;
+  gradeSrsItem: (itemKey: string, correct: boolean, payload?: SrsPayload) => void;
+  getDueSrsItems: (type?: SrsItemType) => SrsItem[];
+  getDueCount: (type?: SrsItemType) => number;
 
   // Game Stats
   recordMatchingGameWin: () => void;
@@ -196,6 +206,7 @@ const defaultState = {
   lastActivityDate: null,
   streakFreezeAvailable: false,
   characterMastery: {} as Record<string, CharacterMastery>,
+  srsItems: {} as Record<string, SrsItem>,
   unlockedAchievements: [] as string[],
   matchingGamesWon: 0,
   speedChallengeHighScore: 0,
@@ -563,6 +574,109 @@ export const useProgressStore = create<ProgressState>()(
         const now = new Date().toISOString();
         const mastery = get().characterMastery;
         return Object.values(mastery).filter((m) => m.nextReviewDate <= now);
+      },
+
+      enrollSrsItem: (input: SrsEnrollInput) => {
+        const { srsItems } = get();
+        if (srsItems[input.itemKey]) return;
+
+        const now = new Date();
+        const correctCount = input.seedCorrect ? 1 : 0;
+        const incorrectCount = input.seedCorrect ? 0 : 1;
+        const masteryLevel = input.seedCorrect ? 1 : 0;
+        const intervalDays = SRS_INTERVALS_DAYS[masteryLevel];
+        const next = new Date(now.getTime() + intervalDays * 86400000);
+
+        set((state) => ({
+          srsItems: {
+            ...state.srsItems,
+            [input.itemKey]: {
+              itemKey: input.itemKey,
+              type: input.type,
+              refId: input.refId,
+              correctCount,
+              incorrectCount,
+              masteryLevel,
+              lastReviewedAt: now.toISOString(),
+              nextReviewDate: next.toISOString(),
+              payload: input.payload,
+            },
+          },
+        }));
+      },
+
+      gradeSrsItem: (itemKey: string, correct: boolean, payload?: SrsPayload) => {
+        const now = new Date();
+        set((state) => {
+          const existing = state.srsItems[itemKey];
+
+          if (!existing) {
+            if (!payload) return state;
+            const correctCount = correct ? 1 : 0;
+            const incorrectCount = correct ? 0 : 1;
+            const masteryLevel = correct ? 1 : 0;
+            const intervalDays = SRS_INTERVALS_DAYS[masteryLevel];
+            const next = new Date(now.getTime() + intervalDays * 86400000);
+            const [type] = itemKey.split(':') as [SrsItemType];
+            return {
+              srsItems: {
+                ...state.srsItems,
+                [itemKey]: {
+                  itemKey,
+                  type,
+                  refId: itemKey.split(':').slice(1).join(':'),
+                  correctCount,
+                  incorrectCount,
+                  masteryLevel,
+                  lastReviewedAt: now.toISOString(),
+                  nextReviewDate: next.toISOString(),
+                  payload,
+                },
+              },
+            };
+          }
+
+          const correctCount = existing.correctCount + (correct ? 1 : 0);
+          const incorrectCount = existing.incorrectCount + (correct ? 0 : 1);
+          const accuracy = correctCount / (correctCount + incorrectCount);
+          const totalAttempts = correctCount + incorrectCount;
+
+          let masteryLevel = 0;
+          if (totalAttempts >= 3 && accuracy >= 0.9) masteryLevel = 5;
+          else if (totalAttempts >= 3 && accuracy >= 0.8) masteryLevel = 4;
+          else if (totalAttempts >= 2 && accuracy >= 0.7) masteryLevel = 3;
+          else if (totalAttempts >= 2 && accuracy >= 0.6) masteryLevel = 2;
+          else if (totalAttempts >= 1) masteryLevel = 1;
+
+          const intervalDays = SRS_INTERVALS_DAYS[masteryLevel];
+          const next = new Date(now.getTime() + intervalDays * 86400000);
+
+          return {
+            srsItems: {
+              ...state.srsItems,
+              [itemKey]: {
+                ...existing,
+                correctCount,
+                incorrectCount,
+                masteryLevel,
+                lastReviewedAt: now.toISOString(),
+                nextReviewDate: next.toISOString(),
+              },
+            },
+          };
+        });
+      },
+
+      getDueSrsItems: (type?: SrsItemType) => {
+        const now = new Date().toISOString();
+        return Object.values(get().srsItems)
+          .filter((item) => item.nextReviewDate <= now)
+          .filter((item) => !type || item.type === type)
+          .sort((a, b) => a.nextReviewDate.localeCompare(b.nextReviewDate));
+      },
+
+      getDueCount: (type?: SrsItemType) => {
+        return get().getDueSrsItems(type).length;
       },
 
       // Game Stats
