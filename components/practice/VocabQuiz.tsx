@@ -29,8 +29,10 @@ export function VocabQuiz({
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [answeredVocab, setAnsweredVocab] = useState<{ vocabId: string; correct: boolean }[]>([]);
 
   const saveQuizScore = useProgressStore((state) => state.saveQuizScore);
+  const enrollSrsItem = useProgressStore((state) => state.enrollSrsItem);
 
   // Generate questions on mount
   useEffect(() => {
@@ -49,6 +51,10 @@ export function VocabQuiz({
       setSelectedAnswer(answer);
       setShowFeedback(true);
       setAnswers((prev) => [...prev, isCorrect]);
+      setAnsweredVocab((prev) => [
+        ...prev,
+        { vocabId: currentQuestion.vocabularyId, correct: isCorrect },
+      ]);
 
       // Auto-advance after feedback delay
       setTimeout(() => {
@@ -61,6 +67,28 @@ export function VocabQuiz({
             score: finalScore,
             totalQuestions: questions.length,
           });
+          // Enroll all vocab items into SRS pool
+          const finalResults = [
+            ...answeredVocab,
+            { vocabId: currentQuestion.vocabularyId, correct: isCorrect },
+          ];
+          finalResults.forEach(({ vocabId, correct }) => {
+            const v = vocabulary.find((x) => x.id === vocabId);
+            if (!v) return;
+            enrollSrsItem({
+              itemKey: `vocab:${vocabId}`,
+              type: 'vocab',
+              refId: vocabId,
+              payload: {
+                kind: 'vocab',
+                japanese: v.japanese,
+                reading: v.reading,
+                english: v.english,
+                lessonId,
+              },
+              seedCorrect: correct,
+            });
+          });
           setShowResults(true);
         } else {
           // Next question
@@ -70,7 +98,7 @@ export function VocabQuiz({
         }
       }, FEEDBACK_DELAY_MS);
     },
-    [currentQuestion, currentIndex, questions.length, score, showFeedback, lessonId, sectionId, saveQuizScore]
+    [currentQuestion, currentIndex, questions.length, score, showFeedback, lessonId, sectionId, saveQuizScore, enrollSrsItem, answeredVocab, vocabulary]
   );
 
   const handleRetry = useCallback(() => {
@@ -81,6 +109,7 @@ export function VocabQuiz({
     setSelectedAnswer(null);
     setShowFeedback(false);
     setShowResults(false);
+    setAnsweredVocab([]);
   }, [vocabulary]);
 
   const getOptionState = (option: string) => {
