@@ -64,9 +64,6 @@ interface ProgressState {
   lastActivityDate: string | null;
   streakFreezeAvailable: boolean;
 
-  // Character Mastery (SRS)
-  characterMastery: Record<string, CharacterMastery>;
-
   // Unified SRS items
   srsItems: Record<string, SrsItem>;
 
@@ -116,10 +113,6 @@ interface ProgressState {
 
   // Additional streak method
   useStreakFreeze: () => void;
-
-  // Character Mastery (SRS)
-  updateCharacterMastery: (characterId: string, correct: boolean) => void;
-  getCharactersDueForReview: () => CharacterMastery[];
 
   // Unified SRS actions
   enrollSrsItem: (input: SrsEnrollInput) => void;
@@ -218,7 +211,6 @@ const defaultState = {
   lastXpDate: null,
   lastActivityDate: null,
   streakFreezeAvailable: false,
-  characterMastery: {} as Record<string, CharacterMastery>,
   srsItems: {} as Record<string, SrsItem>,
   unlockedAchievements: [] as string[],
   matchingGamesWon: 0,
@@ -536,59 +528,6 @@ export const useProgressStore = create<ProgressState>()(
         set({ streakFreezeAvailable: false });
       },
 
-      // Character Mastery (SRS)
-      updateCharacterMastery: (characterId: string, correct: boolean) => {
-        const now = new Date().toISOString();
-        set((state) => {
-          const existing = state.characterMastery[characterId] || {
-            characterId,
-            correctCount: 0,
-            incorrectCount: 0,
-            lastPracticed: now,
-            masteryLevel: 0,
-            nextReviewDate: now,
-          };
-
-          const newCorrect = existing.correctCount + (correct ? 1 : 0);
-          const newIncorrect = existing.incorrectCount + (correct ? 0 : 1);
-
-          // Calculate mastery level (0-5)
-          const accuracy = newCorrect / (newCorrect + newIncorrect);
-          const totalAttempts = newCorrect + newIncorrect;
-          let masteryLevel = 0;
-          if (totalAttempts >= 3 && accuracy >= 0.9) masteryLevel = 5;
-          else if (totalAttempts >= 3 && accuracy >= 0.8) masteryLevel = 4;
-          else if (totalAttempts >= 2 && accuracy >= 0.7) masteryLevel = 3;
-          else if (totalAttempts >= 2 && accuracy >= 0.6) masteryLevel = 2;
-          else if (totalAttempts >= 1) masteryLevel = 1;
-
-          // Calculate next review date based on mastery (SRS intervals)
-          const intervals = [1, 2, 4, 7, 14, 30]; // days
-          const daysUntilReview = intervals[masteryLevel] || 1;
-          const nextReview = new Date(Date.now() + daysUntilReview * MS_PER_DAY);
-
-          return {
-            characterMastery: {
-              ...state.characterMastery,
-              [characterId]: {
-                characterId,
-                correctCount: newCorrect,
-                incorrectCount: newIncorrect,
-                lastPracticed: now,
-                masteryLevel,
-                nextReviewDate: nextReview.toISOString(),
-              },
-            },
-          };
-        });
-      },
-
-      getCharactersDueForReview: () => {
-        const now = new Date().toISOString();
-        const mastery = get().characterMastery;
-        return Object.values(mastery).filter((m) => m.nextReviewDate <= now);
-      },
-
       enrollSrsItem: (input: SrsEnrollInput) => {
         const { srsItems } = get();
         if (srsItems[input.itemKey]) return;
@@ -736,8 +675,8 @@ export const useProgressStore = create<ProgressState>()(
               shouldUnlock = state.speedChallengeHighScore >= req.score;
               break;
             case 'characters_mastered':
-              const masteredChars = Object.values(state.characterMastery).filter(
-                (m) => m.masteryLevel >= 4
+              const masteredChars = Object.values(state.srsItems).filter(
+                (m) => m.type === 'kana' && m.masteryLevel >= 4
               ).length;
               shouldUnlock = masteredChars >= req.count;
               break;
@@ -848,12 +787,14 @@ export const useProgressStore = create<ProgressState>()(
       storage: createJSONStorage(() => AsyncStorage),
       onRehydrateStorage: () => (state) => {
         if (!state) return;
-        const hasOldData = state.characterMastery && Object.keys(state.characterMastery).length > 0;
+        // state.characterMastery may still exist in persisted JSON even if ProgressState no longer has it
+        const oldCharacterMastery = (state as unknown as { characterMastery?: Record<string, CharacterMastery> }).characterMastery;
+        const hasOldData = oldCharacterMastery && Object.keys(oldCharacterMastery).length > 0;
         const hasNewData = state.srsItems && Object.keys(state.srsItems).length > 0;
         if (hasOldData && !hasNewData) {
           // Use require to avoid a circular import at module-eval time
           const { migrateCharacterMasteryToSrs } = require('@/lib/srs/migration');
-          state.srsItems = migrateCharacterMasteryToSrs(state.characterMastery);
+          state.srsItems = migrateCharacterMasteryToSrs(oldCharacterMastery);
         }
       },
     }
