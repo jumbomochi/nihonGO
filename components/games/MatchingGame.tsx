@@ -44,20 +44,6 @@ export function MatchingGame({
   const recordMatchingGameWin = useProgressStore((s) => s.recordMatchingGameWin);
   const gradeSrsItem = useProgressStore((s) => s.gradeSrsItem);
 
-  const gradeCard = (card: MatchingCardType, correct: boolean) => {
-    if (!card.kanaCharacterId) return; // romaji cards aren't graded
-    const kanaType: 'hiragana' | 'katakana' = card.type === 'hiragana' ? 'hiragana' : 'katakana';
-    const corpus = kanaType === 'hiragana' ? ALL_HIRAGANA : ALL_KATAKANA;
-    const kana = corpus.find((k) => k.id === card.kanaCharacterId);
-    if (!kana) return;
-    gradeSrsItem(`kana:${card.kanaCharacterId}`, correct, {
-      kind: 'kana',
-      character: kana.character,
-      romaji: kana.romaji,
-      kanaType,
-    });
-  };
-
   useEffect(() => {
     const generatedCards = generateMatchingCards(pairs, pairType, pairCount);
     setCards(generatedCards);
@@ -102,8 +88,34 @@ export function MatchingGame({
           setIsProcessing(false);
 
           // Side effects after state updates
-          gradeCard(selectedCard, true);
-          gradeCard(card, true);
+          if (selectedCard.kanaCharacterId) {
+            const kanaType: 'hiragana' | 'katakana' = selectedCard.type === 'hiragana' ? 'hiragana' : 'katakana';
+            const kana = (kanaType === 'hiragana' ? ALL_HIRAGANA : ALL_KATAKANA).find(
+              (k) => k.id === selectedCard.kanaCharacterId
+            );
+            if (kana) {
+              gradeSrsItem(`kana:${selectedCard.kanaCharacterId}`, true, {
+                kind: 'kana',
+                character: kana.character,
+                romaji: kana.romaji,
+                kanaType,
+              });
+            }
+          }
+          if (card.kanaCharacterId) {
+            const kanaType: 'hiragana' | 'katakana' = card.type === 'hiragana' ? 'hiragana' : 'katakana';
+            const kana = (kanaType === 'hiragana' ? ALL_HIRAGANA : ALL_KATAKANA).find(
+              (k) => k.id === card.kanaCharacterId
+            );
+            if (kana) {
+              gradeSrsItem(`kana:${card.kanaCharacterId}`, true, {
+                kind: 'kana',
+                character: kana.character,
+                romaji: kana.romaji,
+                kanaType,
+              });
+            }
+          }
 
           if (newMatchedCount === pairCount) {
             const endTime = Date.now();
@@ -123,8 +135,34 @@ export function MatchingGame({
           );
 
           // Update mastery for incorrect match
-          gradeCard(selectedCard, false);
-          gradeCard(card, false);
+          if (selectedCard.kanaCharacterId) {
+            const kanaType: 'hiragana' | 'katakana' = selectedCard.type === 'hiragana' ? 'hiragana' : 'katakana';
+            const kana = (kanaType === 'hiragana' ? ALL_HIRAGANA : ALL_KATAKANA).find(
+              (k) => k.id === selectedCard.kanaCharacterId
+            );
+            if (kana) {
+              gradeSrsItem(`kana:${selectedCard.kanaCharacterId}`, false, {
+                kind: 'kana',
+                character: kana.character,
+                romaji: kana.romaji,
+                kanaType,
+              });
+            }
+          }
+          if (card.kanaCharacterId) {
+            const kanaType: 'hiragana' | 'katakana' = card.type === 'hiragana' ? 'hiragana' : 'katakana';
+            const kana = (kanaType === 'hiragana' ? ALL_HIRAGANA : ALL_KATAKANA).find(
+              (k) => k.id === card.kanaCharacterId
+            );
+            if (kana) {
+              gradeSrsItem(`kana:${card.kanaCharacterId}`, false, {
+                kind: 'kana',
+                character: kana.character,
+                romaji: kana.romaji,
+                kanaType,
+              });
+            }
+          }
 
           setTimeout(() => {
             setCards((prev) =>

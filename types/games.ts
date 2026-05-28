@@ -28,10 +28,10 @@ export interface SpeedChallengeQuestion {
   correctAnswer: string;
   options: string[];
   timeLimit: number; // milliseconds
-  kanaCharacterId?: string; // real kana char id for SRS grading
-  kanaType?: 'hiragana' | 'katakana'; // which script was shown
-  character?: string; // the kana character shown as prompt
-  romaji?: string; // the correct romaji answer
+  kanaCharacterId: string; // real kana char id for SRS grading
+  kanaType: 'hiragana' | 'katakana'; // which script was shown
+  character: string; // the kana character shown as prompt
+  romaji: string; // the correct romaji answer
 }
 
 export interface SpeedChallengeState {

@@ -88,12 +88,12 @@ export function SpeedChallenge({
     setStreak(0);
 
     const currentQuestion = questions[currentIndex];
-    if (currentQuestion && currentQuestion.kanaCharacterId) {
+    if (currentQuestion) {
       gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, false, {
         kind: 'kana',
-        character: currentQuestion.character!,
-        romaji: currentQuestion.romaji!,
-        kanaType: currentQuestion.kanaType!,
+        character: currentQuestion.character,
+        romaji: currentQuestion.romaji,
+        kanaType: currentQuestion.kanaType,
       });
     }
 
@@ -142,25 +142,21 @@ export function SpeedChallenge({
           return newStreak;
         });
         setShowFeedback('correct');
-        if (currentQuestion.kanaCharacterId) {
-          gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, true, {
-            kind: 'kana',
-            character: currentQuestion.character!,
-            romaji: currentQuestion.romaji!,
-            kanaType: currentQuestion.kanaType!,
-          });
-        }
+        gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, true, {
+          kind: 'kana',
+          character: currentQuestion.character,
+          romaji: currentQuestion.romaji,
+          kanaType: currentQuestion.kanaType,
+        });
       } else {
         setStreak(0);
         setShowFeedback('incorrect');
-        if (currentQuestion.kanaCharacterId) {
-          gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, false, {
-            kind: 'kana',
-            character: currentQuestion.character!,
-            romaji: currentQuestion.romaji!,
-            kanaType: currentQuestion.kanaType!,
-          });
-        }
+        gradeSrsItem(`kana:${currentQuestion.kanaCharacterId}`, false, {
+          kind: 'kana',
+          character: currentQuestion.character,
+          romaji: currentQuestion.romaji,
+          kanaType: currentQuestion.kanaType,
+        });
       }
 
       setTimeout(() => {
