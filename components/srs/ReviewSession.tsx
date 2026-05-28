@@ -29,8 +29,8 @@ export function ReviewSession({ visible, onClose }: ReviewSessionProps) {
 
   const questions = useMemo<SessionQuestion[]>(() => {
     if (!visible) return [];
-    const due = getDueSrsItems().slice(0, SESSION_CAP);
     const allDue = getDueSrsItems();
+    const due = allDue.slice(0, SESSION_CAP);
     return due.map((item) => {
       const adapter = srsAdapters[item.type];
       const correct = adapter.answerText(item);
@@ -38,7 +38,8 @@ export function ReviewSession({ visible, onClose }: ReviewSessionProps) {
       const options = [...distractors, correct].sort(() => Math.random() - 0.5);
       return { item, options, correctAnswer: correct };
     });
-  }, [visible, getDueSrsItems]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- getDueSrsItems is a stable Zustand action reference
+  }, [visible]);
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -85,10 +86,10 @@ export function ReviewSession({ visible, onClose }: ReviewSessionProps) {
   );
 
   useEffect(() => {
-    if (isComplete && questions.length > 0 && correctCount === questions.length) {
+    if (visible && isComplete && questions.length > 0 && correctCount === questions.length) {
       recordPerfectQuiz();
     }
-  }, [isComplete, correctCount, questions.length, recordPerfectQuiz]);
+  }, [visible, isComplete, correctCount, questions.length, recordPerfectQuiz]);
 
   if (!visible) return null;
 
@@ -194,7 +195,7 @@ function QuestionView({
                 : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800';
             return (
               <Pressable
-                key={`${question.item.itemKey}-${i}`}
+                key={`${question.item.itemKey}-${option}`}
                 disabled={showFeedback}
                 onPress={() => onAnswer(option)}
                 className={`p-4 rounded-xl border-2 ${bg}`}
