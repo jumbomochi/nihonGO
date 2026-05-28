@@ -38,6 +38,8 @@ export default function TabLayout() {
         options={{
           title: 'Lessons',
           tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
+          tabBarBadge: dueCount > 0 ? dueCount : undefined,
+          tabBarBadgeStyle: { backgroundColor: '#f97316', color: '#ffffff' },
         }}
       />
       <Tabs.Screen
@@ -59,8 +61,6 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
-          tabBarBadge: dueCount > 0 ? dueCount : undefined,
-          tabBarBadgeStyle: { backgroundColor: '#f97316', color: '#ffffff' },
         }}
       />
     </Tabs>

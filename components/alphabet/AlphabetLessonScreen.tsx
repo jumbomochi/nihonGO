@@ -19,6 +19,7 @@ import { CharacterQuiz } from './CharacterQuiz';
 import { Button } from '@/components/common/Button';
 import { MatchingGame, SpeedChallenge } from '@/components/games';
 import { MatchingPairType } from '@/types/games';
+import { useProgressStore } from '@/stores/progressStore';
 
 type Section = 'learn' | 'write' | 'practice' | 'quiz';
 
@@ -37,6 +38,8 @@ export function AlphabetLessonScreen({
   onSectionComplete,
   progress,
 }: AlphabetLessonScreenProps) {
+  const enrollSrsItem = useProgressStore((s) => s.enrollSrsItem);
+
   const [activeSection, setActiveSection] = useState<Section>('learn');
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [showQuiz, setShowQuiz] = useState(false);
@@ -79,6 +82,23 @@ export function AlphabetLessonScreen({
 
   const handleQuizComplete = (score: number, total: number) => {
     onSectionComplete('quiz', score, total);
+    const passed = score >= Math.ceil(total * 0.7);
+    for (const pair of lesson.pairs) {
+      for (const char of [pair.hiragana, pair.katakana]) {
+        enrollSrsItem({
+          itemKey: `kana:${char.id}`,
+          type: 'kana',
+          refId: char.id,
+          payload: {
+            kind: 'kana',
+            character: char.character,
+            romaji: char.romaji,
+            kanaType: char.type,
+          },
+          seedCorrect: passed,
+        });
+      }
+    }
   };
 
   const sections: { id: Section; label: string; icon: string }[] = [
