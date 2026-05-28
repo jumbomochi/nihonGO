@@ -3,6 +3,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import { useProgressStore } from '@/stores/progressStore';
 
 // Sakura theme colors matching the app's design
 const TINT_COLOR = '#ec4899';
@@ -16,6 +17,7 @@ function TabBarIcon(props: {
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const dueCount = useProgressStore((s) => s.getDueCount());
 
   return (
     <Tabs
@@ -57,6 +59,8 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          tabBarBadge: dueCount > 0 ? dueCount : undefined,
+          tabBarBadgeStyle: { backgroundColor: '#f97316', color: '#ffffff' },
         }}
       />
     </Tabs>

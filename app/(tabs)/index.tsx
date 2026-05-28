@@ -17,6 +17,7 @@ import {
   getAllLessonIds,
   getLessonOrPlaceholder,
 } from '@/data/genki';
+import { DailyReviewCard } from '@/components/srs/DailyReviewCard';
 
 export default function LearnScreen() {
   const { profile } = useUserStore();
@@ -45,6 +46,8 @@ export default function LearnScreen() {
             {greeting}
           </Text>
         </View>
+
+        <DailyReviewCard />
 
         {/* Book Selector */}
         <BookSelector
