@@ -162,11 +162,24 @@ function createDefaultLessonProgress(
   };
 }
 
+const MS_PER_DAY = 86_400_000;
+
+function computeMastery(correctCount: number, incorrectCount: number): number {
+  const totalAttempts = correctCount + incorrectCount;
+  const accuracy = totalAttempts > 0 ? correctCount / totalAttempts : 0;
+  if (totalAttempts >= 3 && accuracy >= 0.9) return 5;
+  if (totalAttempts >= 3 && accuracy >= 0.8) return 4;
+  if (totalAttempts >= 2 && accuracy >= 0.7) return 3;
+  if (totalAttempts >= 2 && accuracy >= 0.6) return 2;
+  if (totalAttempts >= 1) return 1;
+  return 0;
+}
+
 function calculateStreak(streaks: DailyStreak[]): number {
   if (streaks.length === 0) return 0;
 
   const today = getToday();
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - MS_PER_DAY).toISOString().split('T')[0];
 
   // Use Set for O(1) lookup instead of O(n log n) sorting
   const streakDates = new Set(streaks.map((s) => s.date));
@@ -552,7 +565,7 @@ export const useProgressStore = create<ProgressState>()(
           // Calculate next review date based on mastery (SRS intervals)
           const intervals = [1, 2, 4, 7, 14, 30]; // days
           const daysUntilReview = intervals[masteryLevel] || 1;
-          const nextReview = new Date(Date.now() + daysUntilReview * 86400000);
+          const nextReview = new Date(Date.now() + daysUntilReview * MS_PER_DAY);
 
           return {
             characterMastery: {
@@ -585,7 +598,7 @@ export const useProgressStore = create<ProgressState>()(
         const incorrectCount = input.seedCorrect ? 0 : 1;
         const masteryLevel = input.seedCorrect ? 1 : 0;
         const intervalDays = SRS_INTERVALS_DAYS[masteryLevel];
-        const next = new Date(now.getTime() + intervalDays * 86400000);
+        const next = new Date(now.getTime() + intervalDays * MS_PER_DAY);
 
         set((state) => ({
           srsItems: {
@@ -612,12 +625,14 @@ export const useProgressStore = create<ProgressState>()(
 
           if (!existing) {
             if (!payload) return state;
+            const rawType = itemKey.split(':')[0];
+            if (rawType !== 'kana' && rawType !== 'vocab') return state;
+            const type: SrsItemType = rawType;
             const correctCount = correct ? 1 : 0;
             const incorrectCount = correct ? 0 : 1;
-            const masteryLevel = correct ? 1 : 0;
+            const masteryLevel = computeMastery(correctCount, incorrectCount);
             const intervalDays = SRS_INTERVALS_DAYS[masteryLevel];
-            const next = new Date(now.getTime() + intervalDays * 86400000);
-            const [type] = itemKey.split(':') as [SrsItemType];
+            const next = new Date(now.getTime() + intervalDays * MS_PER_DAY);
             return {
               srsItems: {
                 ...state.srsItems,
@@ -638,18 +653,9 @@ export const useProgressStore = create<ProgressState>()(
 
           const correctCount = existing.correctCount + (correct ? 1 : 0);
           const incorrectCount = existing.incorrectCount + (correct ? 0 : 1);
-          const accuracy = correctCount / (correctCount + incorrectCount);
-          const totalAttempts = correctCount + incorrectCount;
-
-          let masteryLevel = 0;
-          if (totalAttempts >= 3 && accuracy >= 0.9) masteryLevel = 5;
-          else if (totalAttempts >= 3 && accuracy >= 0.8) masteryLevel = 4;
-          else if (totalAttempts >= 2 && accuracy >= 0.7) masteryLevel = 3;
-          else if (totalAttempts >= 2 && accuracy >= 0.6) masteryLevel = 2;
-          else if (totalAttempts >= 1) masteryLevel = 1;
-
+          const masteryLevel = computeMastery(correctCount, incorrectCount);
           const intervalDays = SRS_INTERVALS_DAYS[masteryLevel];
-          const next = new Date(now.getTime() + intervalDays * 86400000);
+          const next = new Date(now.getTime() + intervalDays * MS_PER_DAY);
 
           return {
             srsItems: {
