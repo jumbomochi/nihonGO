@@ -129,3 +129,34 @@ describe('SRS actions', () => {
     expect(useProgressStore.getState().getDueCount('kana')).toBe(0);
   });
 });
+
+describe('migration on rehydration', () => {
+  it('migrates characterMastery to srsItems on first load if srsItems empty', async () => {
+    const AsyncStorage = require('@react-native-async-storage/async-storage');
+    await AsyncStorage.setItem(
+      'nihongo-progress-storage',
+      JSON.stringify({
+        state: {
+          characterMastery: {
+            'hiragana-a': {
+              characterId: 'hiragana-a',
+              correctCount: 5,
+              incorrectCount: 1,
+              masteryLevel: 4,
+              lastPracticed: '2026-01-01T00:00:00.000Z',
+              nextReviewDate: '2026-01-15T00:00:00.000Z',
+            },
+          },
+          srsItems: {},
+        },
+        version: 0,
+      })
+    );
+
+    await useProgressStore.persist.rehydrate();
+
+    const items = useProgressStore.getState().srsItems;
+    expect(items['kana:hiragana-a']).toBeDefined();
+    expect(items['kana:hiragana-a'].correctCount).toBe(5);
+  });
+});

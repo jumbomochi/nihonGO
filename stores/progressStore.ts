@@ -846,6 +846,16 @@ export const useProgressStore = create<ProgressState>()(
     {
       name: 'nihongo-progress-storage',
       storage: createJSONStorage(() => AsyncStorage),
+      onRehydrateStorage: () => (state) => {
+        if (!state) return;
+        const hasOldData = state.characterMastery && Object.keys(state.characterMastery).length > 0;
+        const hasNewData = state.srsItems && Object.keys(state.srsItems).length > 0;
+        if (hasOldData && !hasNewData) {
+          // Use require to avoid a circular import at module-eval time
+          const { migrateCharacterMasteryToSrs } = require('@/lib/srs/migration');
+          state.srsItems = migrateCharacterMasteryToSrs(state.characterMastery);
+        }
+      },
     }
   )
 );
