@@ -18,7 +18,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function pickThreeUnique(candidates: string[], exclude: string): string[] {
+function pickUpToThreeUnique(candidates: string[], exclude: string): string[] {
   const filtered = Array.from(new Set(candidates)).filter((c) => c !== exclude);
   return shuffle(filtered).slice(0, 3);
 }
@@ -26,19 +26,19 @@ function pickThreeUnique(candidates: string[], exclude: string): string[] {
 const kanaAdapter: SrsAdapter = {
   promptText: (item) => {
     if (item.payload.kind !== 'kana') return '';
-    return (item.payload as KanaPayload).character;
+    return item.payload.character;
   },
   answerText: (item) => {
     if (item.payload.kind !== 'kana') return '';
-    return (item.payload as KanaPayload).romaji;
+    return item.payload.romaji;
   },
   generateDistractors: (item, pool) => {
     if (item.payload.kind !== 'kana') return [];
-    const kanaPayload = item.payload as KanaPayload;
+    const kanaPayload = item.payload;
     const correct = kanaPayload.romaji;
 
     const poolRomaji = pool
-      .filter((p) => p.payload.kind === 'kana' && (p.payload as KanaPayload).kanaType === kanaPayload.kanaType)
+      .filter((p) => p.payload.kind === 'kana' && p.payload.kanaType === kanaPayload.kanaType)
       .map((p) => (p.payload as KanaPayload).romaji);
 
     const corpusRomaji =
@@ -46,26 +46,26 @@ const kanaAdapter: SrsAdapter = {
         ? ALL_HIRAGANA.map((k) => k.romaji)
         : ALL_KATAKANA.map((k) => k.romaji);
 
-    return pickThreeUnique([...poolRomaji, ...corpusRomaji], correct);
+    return pickUpToThreeUnique([...poolRomaji, ...corpusRomaji], correct);
   },
 };
 
 const vocabAdapter: SrsAdapter = {
   promptText: (item) => {
     if (item.payload.kind !== 'vocab') return '';
-    return (item.payload as VocabPayload).japanese;
+    return item.payload.japanese;
   },
   promptHint: (item) => {
     if (item.payload.kind !== 'vocab') return '';
-    return (item.payload as VocabPayload).reading;
+    return item.payload.reading;
   },
   answerText: (item) => {
     if (item.payload.kind !== 'vocab') return '';
-    return (item.payload as VocabPayload).english;
+    return item.payload.english;
   },
   generateDistractors: (item, pool) => {
     if (item.payload.kind !== 'vocab') return [];
-    const correct = (item.payload as VocabPayload).english;
+    const correct = item.payload.english;
 
     const poolEnglish = pool
       .filter((p) => p.payload.kind === 'vocab')
@@ -73,7 +73,7 @@ const vocabAdapter: SrsAdapter = {
 
     const corpusEnglish = getAllVocabularyForLevel().map((v) => v.english);
 
-    return pickThreeUnique([...poolEnglish, ...corpusEnglish], correct);
+    return pickUpToThreeUnique([...poolEnglish, ...corpusEnglish], correct);
   },
 };
 

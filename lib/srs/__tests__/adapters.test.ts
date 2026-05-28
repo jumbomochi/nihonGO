@@ -1,4 +1,5 @@
 import { srsAdapters } from '@/lib/srs/adapters';
+import { _resetCacheForTesting } from '@/lib/srs/vocabCorpus';
 import { SrsItem } from '@/types/srs';
 
 const kanaItem: SrsItem = {
@@ -79,5 +80,34 @@ describe('vocab adapter', () => {
     const corpus: SrsItem[] = [vocabItem];
     const distractors = adapter.generateDistractors(vocabItem, corpus);
     expect(distractors).not.toContain('Hello');
+  });
+
+  it('vocab generateDistractors degrades gracefully when corpus is depleted', () => {
+    // Replace the real genki data with a stub that only has the correct answer.
+    // _resetCacheForTesting clears the module-level cache so the stub takes effect.
+    jest.mock('@/data/genki', () => ({
+      getBookLessons: () => [
+        {
+          sections: [
+            {
+              content: {
+                vocabulary: [{ english: 'Hello', japanese: 'こんにちは', reading: 'こんにちは' }],
+              },
+            },
+          ],
+        },
+      ],
+    }));
+    _resetCacheForTesting();
+
+    const distractors = adapter.generateDistractors(vocabItem, []);
+
+    // With only the correct answer in the corpus, pickUpToThreeUnique returns 0 items.
+    expect(distractors.length).toBeLessThanOrEqual(3);
+    expect(distractors).not.toContain('Hello');
+
+    // Restore state for subsequent tests.
+    jest.unmock('@/data/genki');
+    _resetCacheForTesting();
   });
 });
